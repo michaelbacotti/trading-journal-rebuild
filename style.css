@@ -350,15 +350,10 @@ hr {
  transform: translateX(-50%);
 }
 
-/* When chart sits inside a trade-hero-wrap grid, fill the column instead of
-   the 1100px standalone break-out. Otherwise it overlaps the fields panel. */
-.trade-hero-wrap > .trade-hero-chart {
- max-width: 100%;
- margin: 0;
- transform: none;
- padding: 1rem 1.25rem 1.25rem;
-}
+/* (legacy .trade-hero-wrap chart-overlap rule removed 2026-07-14 14:22 ET;
+   chart now sits alone at the top of the article, no sibling) */
 
+/* Trade-fields panel (sidebar inside .position-payoff-layout) */
 .trade-hero-chart .hero-label {
  font-size: 0.7rem;
  text-transform: uppercase;
@@ -377,30 +372,35 @@ hr {
  border-radius: 4px;
 }
 
-/* Trade hero split: chart (left) + trade-fields panel (right) at breakout width.
-   Mike directive 2026-07-14: place the trade-fields table in a column
-   next to the Position Payoff chart instead of below it. */
-.trade-hero-wrap {
+/* Position Payoff + trade-fields sidebar layout.
+   Mike directive 2026-07-14 14:22 ET: chart stays alone at the top; the
+   trade-fields panel now sits to the right of the "Position Payoff ..."
+   section of the body so the reader sees the field reference next to the
+   chart interpretation instead of above it. */
+.position-payoff-layout {
  display: grid;
  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
- gap: 1.25rem;
+ gap: 1.5rem;
  max-width: 1100px;
- margin: 1.5rem auto 0.5rem;
- padding: 0 1.5rem;
+ margin: 1.25rem auto 2rem;
+ padding: 0 0;
+ align-items: start;
 }
 
 /* Breakout from article-body 760px column */
-.article-body .trade-hero-wrap {
+.article-body .position-payoff-layout {
  width: calc(100vw / 0.76 * 0.66);
  max-width: 1100px;
  margin-left: 50%;
  transform: translateX(-50%);
- padding: 0;
 }
 
+.position-payoff-content { min-width: 0; }
+.position-payoff-content h2:first-child { margin-top: 0; }
+
 @media (max-width: 860px) {
- .trade-hero-wrap,
- .article-body .trade-hero-wrap {
+ .position-payoff-layout,
+ .article-body .position-payoff-layout {
  grid-template-columns: 1fr;
  width: 100%;
  max-width: 760px;
@@ -409,6 +409,7 @@ hr {
  transform: none;
  padding: 0 1.5rem;
  }
+ .article-body .position-payoff-layout { padding: 0; }
 }
 
 .trade-hero-fields {
@@ -452,6 +453,29 @@ hr {
  margin: 0;
  word-wrap: break-word;
  overflow-wrap: anywhere;
+}
+
+/* Solo card (no chart): break out of article-body to match chart width.
+   Used by closed trades like XSP/SPX where there's no P/L curve image. */
+.article-body > .trade-hero-fields--solo {
+ width: calc((100vw - 760px) / 2 + 760px);
+ max-width: 1100px;
+ margin-left: 50%;
+ transform: translateX(-50%);
+ margin-top: 1rem;
+ margin-bottom: 1.5rem;
+ box-sizing: border-box;
+}
+
+@media (max-width: 860px) {
+ .article-body > .trade-hero-fields--solo {
+ width: 100%;
+ max-width: 760px;
+ margin-left: auto;
+ margin-right: auto;
+ transform: none;
+ padding: 0;
+ }
 }
 
 /* Default table styling for any remaining <table> in article body
