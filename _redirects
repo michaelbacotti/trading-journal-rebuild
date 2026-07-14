@@ -17,3 +17,10 @@
 /forecasts /forecasts/ 301
 /markets /markets/ 301
 /tools /tools/ 301
+
+# ============================================================
+# TRADE LOG POST SLUG FIXES
+# ============================================================
+
+# RUT Diagonal Call Spread: entry date corrected Apr 13 → Apr 24 2026
+/trade-log/2026-04-13-rut-diagonal-call-spread /trade-log/2026-04-24-rut-diagonal-call-spread/ 301
