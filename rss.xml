@@ -2,56 +2,56 @@
 <rss version="2.0">
 <channel>
   <title>The Trading Journal</title>
-  <link>https://trading-journal.pages.dev/</link>
+  <link>https://trading-journal-rebuild.pages.dev/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 14 Jul 2026 00:38:20 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 14 Jul 2026 00:41:42 GMT</lastBuildDate>
   <item>
     <title>SPX Vertical Credit Spread — July 13, 2026: Iron-Condor Lattice on a Quiet Tape</title>
-    <link>https://trading-journal.pages.dev/trade-log/2026-07-13-spx-vertical-credit-spread/</link>
-    <guid>https://trading-journal.pages.dev/trade-log/2026-07-13-spx-vertical-credit-spread/</guid>
+    <link>https://trading-journal-rebuild.pages.dev/trade-log/2026-07-13-spx-vertical-credit-spread/</link>
+    <guid>https://trading-journal-rebuild.pages.dev/trade-log/2026-07-13-spx-vertical-credit-spread/</guid>
     <pubDate>2026-07-13</pubDate>
     <description>Opened a 0DTE SPX put credit spread 15-wide at the 5,560/5,545 strikes, collecting $1.05 against $15 of risk. Premium-to-width ratio of 7% met the day's edge threshold.</description>
   </item>
   <item>
     <title>XSP Iron Condor — July 10, 2026: Post-CPI Pin the Strike, Ride Theta Into Friday</title>
-    <link>https://trading-journal.pages.dev/trade-log/2026-07-10-xsp-iron-condor/</link>
-    <guid>https://trading-journal.pages.dev/trade-log/2026-07-10-xsp-iron-condor/</guid>
+    <link>https://trading-journal-rebuild.pages.dev/trade-log/2026-07-10-xsp-iron-condor/</link>
+    <guid>https://trading-journal-rebuild.pages.dev/trade-log/2026-07-10-xsp-iron-condor/</guid>
     <pubDate>2026-07-10</pubDate>
     <description>Opened a 7DTE XSP iron condor at the 558/553 puts and 568/573 calls. Pre-CPI vol was 13.8 with rank 65 — high enough to sell premium but not so high that protection was expensive. Closed at 50% of max profit on day 4.</description>
   </item>
   <item>
     <title>Risk vs Reward: The Asymmetry That Drives Every Trade</title>
-    <link>https://trading-journal.pages.dev/education/2026-07-08-risk-vs-reward/</link>
-    <guid>https://trading-journal.pages.dev/education/2026-07-08-risk-vs-reward/</guid>
+    <link>https://trading-journal-rebuild.pages.dev/education/2026-07-08-risk-vs-reward/</link>
+    <guid>https://trading-journal-rebuild.pages.dev/education/2026-07-08-risk-vs-reward/</guid>
     <pubDate>2026-07-08</pubDate>
     <description>The expected-value math behind every trade, why a 2:1 reward-to-risk ratio is the floor not the goal, and how to think about positive expectancy when the win rate is below 50%.</description>
   </item>
   <item>
     <title>Market Probabilities: How to Think About Strike Odds</title>
-    <link>https://trading-journal.pages.dev/education/2026-07-07-probabilities/</link>
-    <guid>https://trading-journal.pages.dev/education/2026-07-07-probabilities/</guid>
+    <link>https://trading-journal-rebuild.pages.dev/education/2026-07-07-probabilities/</link>
+    <guid>https://trading-journal-rebuild.pages.dev/education/2026-07-07-probabilities/</guid>
     <pubDate>2026-07-07</pubDate>
     <description>Why option-implied probabilities and historical probabilities are different, the difference between risk-neutral and real-world probabilities, and how to use probability of profit (POP) without over-relying on it.</description>
   </item>
   <item>
     <title>Standard Deviations in Options Trading: The Math of 'One-Sigma Moves'</title>
-    <link>https://trading-journal.pages.dev/education/2026-07-06-standard-deviations/</link>
-    <guid>https://trading-journal.pages.dev/education/2026-07-06-standard-deviations/</guid>
+    <link>https://trading-journal-rebuild.pages.dev/education/2026-07-06-standard-deviations/</link>
+    <guid>https://trading-journal-rebuild.pages.dev/education/2026-07-06-standard-deviations/</guid>
     <pubDate>2026-07-06</pubDate>
     <description>What one, two, and three-sigma moves actually mean for SPX positioning, how implied vol maps to expected moves, and why the strike selection in a spread book should be sigma-anchored not delta-anchored.</description>
   </item>
   <item>
     <title>The Playbook: How Every Trade Is Sized, Entered, and Exited</title>
-    <link>https://trading-journal.pages.dev/playbook/2026-07-05-sop/</link>
-    <guid>https://trading-journal.pages.dev/playbook/2026-07-05-sop/</guid>
+    <link>https://trading-journal-rebuild.pages.dev/playbook/2026-07-05-sop/</link>
+    <guid>https://trading-journal-rebuild.pages.dev/playbook/2026-07-05-sop/</guid>
     <pubDate>2026-07-05</pubDate>
     <description>The standard operating procedure for the journal: position sizing by sigma distance and NLV, the daily and weekly drawdown limits, the entry checklist, the management rules, and the exit criteria. The single document that defines how the book is run.</description>
   </item>
   <item>
     <title>Bull Put Spread: The Workhorse Credit Structure</title>
-    <link>https://trading-journal.pages.dev/strategies/2026-07-04-bull-put-spread/</link>
-    <guid>https://trading-journal.pages.dev/strategies/2026-07-04-bull-put-spread/</guid>
+    <link>https://trading-journal-rebuild.pages.dev/strategies/2026-07-04-bull-put-spread/</link>
+    <guid>https://trading-journal-rebuild.pages.dev/strategies/2026-07-04-bull-put-spread/</guid>
     <pubDate>2026-07-04</pubDate>
     <description>Anatomy of a bull put spread: when to use it, the entry criteria, the 50%/2x management rule, the IV-rank filter, and the failure modes to avoid.</description>
   </item>
