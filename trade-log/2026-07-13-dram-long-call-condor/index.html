@@ -142,6 +142,69 @@
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Acceptable — debit was paid assuming sideways drift; the long wings hold time value through month 4.</td>
 </tr>
 </tbody></table></div>
+<h2>Position Payoff at Three Time Horizons</h2>
+<p>The P/L diagram below shows the position's profit/loss as a function of DRAM's price at three evaluation dates: today (185 days to expiry), an intermediate horizon at 139 DTE (Nov 30), and at expiration. The now-curve carries the most time premium on the long wings; the mid-curve shows early theta harvest on the body strikes; the expiration curve is the classic condor payoff — capped at $1,207.50 between strikes 60–80 and capped at the debit paid ($792.50) below 40 or above 90.</p>
+<figure style="margin:2rem 0;text-align:center;"><img src="images/pl-curve.png" alt="DRAM Long Call Condor P/L curve at three time horizons. Net debit $792.50, max profit $1,207.50 between strikes $60–$80, max loss $792.50 below $40 or above $90. Spot $57.21, IV 93%." loading="lazy" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 2px 12px rgba(0,0,0,0.08);"></figure>
+<p><strong>Key levels on the chart:</strong></p>
+<ul>
+  <li><strong>Spot $57.21</strong> — current DRAM price. Position is slightly negative on a mark-to-market basis at this price because the short body strikes are still expensive relative to the wings (185 DTE of theta to harvest).</li>
+  <li><strong>Lower breakeven $47.93</strong> — DRAM would need to drop ~16% from spot to wipe out the debit paid.</li>
+  <li><strong>Upper breakeven $82.08</strong> — DRAM needs to rally ~44% from spot for the trade to exit at breakeven via the upper side.</li>
+  <li><strong>Max profit plateau $1,207.50</strong> — DRAM closes anywhere in the $60–$80 range at expiration.</li>
+  <li><strong>Max loss $792.50</strong> — DRAM closes below $40 or above $90 at expiration.</li>
+</ul>
+<h2>How the Trade Has Moved Against the Underlying</h2>
+<p>The chart below compares DRAM's spot price (left axis) to the strategy's premium (right axis) over the last month of trading. The two lines track closely — when DRAM rallies, the strategy premium expands; when DRAM sells off, the strategy compresses. The 1-month window captures a meaningful down-leg in DRAM from ~$80 to $57.21, with the strategy premium declining from ~$9.40/share to ~$7.27/share.</p>
+<figure style="margin:2rem 0;text-align:center;"><img src="images/dual-history.png" alt="DRAM spot vs strategy premium, last 30 trading days. DRAM declined from ~$80 to $57.21; strategy premium declined from ~$9.40 to ~$7.27 per share." loading="lazy" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 2px 12px rgba(0,0,0,0.08);"></figure>
+<p>The wider observation: this is a <em>directional</em> trade dressed up as a range-bound condor. The body strikes (60/80) only collect meaningful theta if DRAM stays in the zone. If DRAM drifts sideways for 4–6 months, the body theta erodes the wings' time value and the position approaches max profit. If DRAM trends hard in either direction, one of the long wings gains most of the intrinsic value, but the structure caps the upside and the debit is at risk on a down move.</p>
+<h2>Greeks Snapshot (Black-Scholes, IV=93%, r=4.5%)</h2>
+<p>Greeks are computed at the entry spot ($57.21), 185 days to expiry, IV surface anchored at 93%, risk-free rate 4.5%, no dividend yield. Numbers below are <strong>per-contract</strong> (×100 shares).</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greek</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Per-contract value</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Interpretation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Delta (Δ)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+13.3</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net long delta. Position gains ~$13.30 per $1 DRAM rally. Small net long bias at entry.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Gamma (Γ)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−0.35</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slightly negative gamma at entry. Delta compresses as DRAM rises past the short strikes, expands as DRAM falls toward the long wings. The structure is mildly "anti-convex."</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Theta (Θ)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$1.36/day</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net long theta — the body strikes (60/80) are decaying faster than the long wings. Earns ~$1.36 per day at entry.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Vega (ν)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−$5.43 per 1% IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net short vega at entry. A drop from IV 93% to 92% gains ~$5.43/contract; a rise from 93% to 94% costs the same.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Rho (ρ)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$0.15 per 1% rate</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Roughly rate-neutral. A 1% Fed cut is worth ~$0.15/contract — negligible.</td>
+</tr>
+</tbody></table></div>
+<p>The Greeks are computed per-contract using Black-Scholes for each leg, then summed by sign:</p>
+<p><code>`</code></p>
+<p>Strike  Sign    Price     Delta   Gamma   Theta   Vega   Rho</p>
+<p>40       +1    $23.46    +0.818   +0.007  −0.030 +0.108 +0.118</p>
+<p>60       −1    $14.32    −0.615   −0.010  +0.042 −0.156 −0.106</p>
+<p>80       −1    $8.90     −0.444   −0.010  +0.043 −0.161 −0.084</p>
+<p>90       +1    $7.08     +0.375   +0.010  −0.041 +0.154 +0.073</p>
+<p>────────────────────────────────────────────────────────────────</p>
+<p>TOTAL              $7.32    +0.133   −0.004  +0.014 −0.054 +0.001</p>
+<p><code>`</code></p>
+<p>The position price ($7.32/share at the entry spot) implies a fair value of ~$732/contract — close to but not identical to the entry debit ($792.50/contract). The gap is bid-ask spread and skew across the four strikes.</p>
+<p><strong>Why theta is positive today:</strong> at $57.21 spot, the short body strikes (60/80) are closer to the money than the long wings (40, 90). Near-the-money short options carry more theta than further-from-the-money long options, so the body decays faster than the wings → net long theta. This reverses if DRAM rallies above 80 (the body moves ITM and stops decaying; the 90 wing gets closer to the money and starts decaying faster).</p>
 <h2>Intraday Setup (entry)</h2>
 <p>(TO_FILL — describe entry day: what was DRAM at? Why that day? What was the IV rank? Was this a manual order or a limit that took multiple fills?)</p>
 <h2>Management Plan</h2>
