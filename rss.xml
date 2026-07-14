@@ -5,7 +5,7 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 14 Jul 2026 22:35:32 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 14 Jul 2026 22:51:23 GMT</lastBuildDate>
   <item>
     <title>DRAM Long Call Condor — Jan 15 '27 40/60/80/90: A LEAPS Bet on Memory</title>
     <link>https://tredey.com/trade-log/2026-07-13-dram-long-call-condor/</link>
@@ -75,6 +75,13 @@
     <guid>https://tredey.com/trade-log/2026-04-24-rut-diagonal-call-spread/</guid>
     <pubDate>2026-04-24</pubDate>
     <description>Opened a long call diagonal on RUT 2900/2950 with front-month Dec 18 short and back-month Dec 31 long. Defined-risk bullish-to-neutral, funded by front-month theta harvest.</description>
+  </item>
+  <item>
+    <title>RUT Bull Call Spread 2700/2750 — Dec 18 2026: A Defined-Risk Small-Cap Long on the Mid-Q2 Rebound</title>
+    <link>https://tredey.com/trade-log/2026-04-13-rut-bull-call-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-04-13-rut-bull-call-spread/</guid>
+    <pubDate>2026-04-13</pubDate>
+    <description>Opened a long call vertical spread on RUT 2700/2750 for Dec 18 2026, paying a debit for a defined-risk bullish bet on small-caps. RUT was breaking out of a 6-week range on tariff-shock reversal.</description>
   </item>
 </channel>
 </rss>
