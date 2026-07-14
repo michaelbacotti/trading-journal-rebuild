@@ -280,6 +280,93 @@ hr {
 .sidebar-article h4 a { color: var(--color-text); }
 .sidebar-article h4 a:hover { color: var(--color-accent); text-decoration: none; }
 
+/* Trade-log hero — at-a-glance stats strip (4-up grid) + wider chart panel */
+.trade-hero-stats {
+ max-width: 1100px;
+ margin: 2rem auto 1.5rem;
+ padding: 1.25rem 1.5rem;
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 1rem;
+ background: linear-gradient(180deg, #fafaf7 0%, #f4f3ee 100%);
+ border: 1px solid #e3e2dc;
+ border-radius: 8px;
+ box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+@media (max-width: 720px) {
+ .trade-hero-stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+.trade-hero-stat {
+ text-align: left;
+ padding: 0.25rem 0.5rem;
+ border-left: 3px solid var(--color-accent);
+}
+
+.trade-hero-stat .label {
+ font-size: 0.7rem;
+ text-transform: uppercase;
+ letter-spacing: 0.08em;
+ color: #888;
+ font-weight: 600;
+ margin: 0 0 0.25rem;
+}
+
+.trade-hero-stat .value {
+ font-size: 1.5rem;
+ font-weight: 700;
+ color: var(--color-text);
+ line-height: 1.15;
+ margin: 0;
+ font-family: var(--font-display);
+}
+
+.trade-hero-stat .sub {
+ font-size: 0.78rem;
+ color: #666;
+ margin: 0.25rem 0 0;
+}
+
+.trade-hero-stat.hot { border-left-color: #b8401f; }
+.trade-hero-stat.cool { border-left-color: #2c5d63; }
+.trade-hero-stat.neutral { border-left-color: #b89a3b; }
+
+.trade-hero-chart {
+ max-width: 1100px;
+ margin: 1.5rem auto 0.5rem;
+ padding: 1rem 1.5rem 1.5rem;
+ background: #ffffff;
+ border: 1px solid #e3e2dc;
+ border-radius: 8px;
+}
+
+/* Breakout from the article-body 760px column */
+.article-body .trade-hero-chart {
+ width: calc(100vw / 0.76 * 0.66);
+ max-width: 1100px;
+ margin-left: 50%;
+ transform: translateX(-50%);
+}
+
+.trade-hero-chart .hero-label {
+ font-size: 0.7rem;
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ color: #888;
+ font-weight: 600;
+ margin: 0 0 0.5rem;
+ text-align: center;
+}
+
+.trade-hero-chart figure { margin: 0; }
+.trade-hero-chart figure img {
+ display: block;
+ width: 100%;
+ height: auto;
+ border-radius: 4px;
+}
+
 /* 8. Date + category */
 .date-text {
  font-size: 0.75rem;

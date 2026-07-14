@@ -49,6 +49,35 @@
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
   <h2>Trade: DRAM Jan 15 '27 Long Call Condor</h2>
+<div class="trade-hero-stats">
+<div class="trade-hero-stat hot">
+<p><p class="label">Max Profit</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+<p><p class="value">$1,207.50</p></p>
+<p><p class="sub">between strikes $60–$80</p></p>
+</div>
+<div class="trade-hero-stat cool">
+<p><p class="label">Max Loss</p></p>
+<p><p class="value">$792.50</p></p>
+<p><p class="sub">defined risk = net debit</p></p>
+</div>
+<div class="trade-hero-stat neutral">
+<p><p class="label">Net Debit</p></p>
+<p><p class="value">$792.50</p></p>
+<p><p class="sub">per condor ($7.93/share × 100)</p></p>
+</div>
+<div class="trade-hero-stat">
+<p><p class="label">Spot / IV</p></p>
+<p><p class="value">$57.21</p></p>
+<p><p class="sub">DRAM @ entry · IV 93%</p></p>
+</div>
+</div>
 <table>
 <thead>
 <tr><th>Field</th><th>Value</th></tr>
@@ -79,16 +108,12 @@
 </tbody>
 </table>
 <h2>Position Payoff at Three Time Horizons</h2>
-<p><strong>At a glance:</strong> pay $792.50 to make up to $1,207.50. Maximum loss is the debit paid; maximum profit hits if DRAM closes anywhere in $60–$80 at expiration. Position has 185 days to expiry at entry and carries a small bullish bias (net delta +13.3).</p>
-
-<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
-  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
-  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+<div class="trade-hero-chart">
+<p><p class="hero-label">P/L Curve — Three Time Horizons</p></p>
+<figure><img src="images/pl-curve.png" alt="DRAM Long Call Condor P/L curve at three time horizons. Net debit $792.50, max profit $1,207.50 between strikes $60–$80, max loss $792.50 below $40 or above $90. Spot $57.21, IV 93%." loading="lazy"></figure>
 </div>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
-<p>The chart below shows the position's P/L as a function of DRAM's price at three evaluation dates: today (185 DTE), an intermediate horizon at 139 DTE (Nov 30), and at expiration. Three colored curves — green for today, blue for the mid-life, gold for expiration. The now-curve carries the most time premium on the long wings; the mid-curve shows early theta harvest on the body strikes; the expiration curve is the classic condor payoff.</p>
-<figure style="margin:2rem 0;text-align:center;"><img src="images/pl-curve.png" alt="DRAM Long Call Condor P/L curve at three time horizons. Net debit $792.50, max profit $1,207.50 between strikes $60–$80, max loss $792.50 below $40 or above $90. Spot $57.21, IV 93%." loading="lazy" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 2px 12px rgba(0,0,0,0.08);"></figure>
+<p><strong>At a glance:</strong> pay $792.50 to make up to $1,207.50. Maximum loss is the debit paid; maximum profit hits if DRAM closes anywhere in $60–$80 at expiration. Position has 185 days to expiry at entry and carries a small bullish bias (net delta +13.3).</p>
+<p>The chart above shows the position's P/L as a function of DRAM's price at three evaluation dates: today (185 DTE), an intermediate horizon at 139 DTE (Nov 30), and at expiration. Three colored curves — green for today, blue for the mid-life, gold for expiration. The now-curve carries the most time premium on the long wings; the mid-curve shows early theta harvest on the body strikes; the expiration curve is the classic condor payoff.</p>
 <p><strong>Read the chart:</strong></p>
 <ul>
   <li><strong>Spot $57.21</strong> is below the lower breakeven of $47.93 only on a 16% sell-off — the position is currently in the <em>negative</em> P/L region but only marginally, because the long wings still carry meaningful time value.</li>
@@ -144,15 +169,15 @@
 </tr>
 </tbody></table></div>
 <p>The Greeks are computed per-contract using Black-Scholes for each leg, then summed by sign:</p>
-<p><code>`</code></p>
-<p>Strike  Sign    Price     Delta   Gamma   Theta   Vega   Rho</p>
-<p>40       +1    $23.46    +0.818   +0.007  −0.030 +0.108 +0.118</p>
-<p>60       −1    $14.32    −0.615   −0.010  +0.042 −0.156 −0.106</p>
-<p>80       −1    $8.90     −0.444   −0.010  +0.043 −0.161 −0.084</p>
-<p>90       +1    $7.08     +0.375   +0.010  −0.041 +0.154 +0.073</p>
-<p>────────────────────────────────────────────────────────────────</p>
-<p>TOTAL              $7.32    +0.133   −0.004  +0.014 −0.054 +0.001</p>
-<p><code>`</code></p>
+<pre><code class="language-plain">
+Strike  Sign    Price     Delta   Gamma   Theta   Vega   Rho
+40       +1    $23.46    +0.818   +0.007  −0.030 +0.108 +0.118
+60       −1    $14.32    −0.615   −0.010  +0.042 −0.156 −0.106
+80       −1    $8.90     −0.444   −0.010  +0.043 −0.161 −0.084
+90       +1    $7.08     +0.375   +0.010  −0.041 +0.154 +0.073
+────────────────────────────────────────────────────────────────
+TOTAL              $7.32    +0.133   −0.004  +0.014 −0.054 +0.001
+</pre>
 <p>The position price ($7.32/share at the entry spot) implies a fair value of ~$732/contract — close to but not identical to the entry debit ($792.50/contract). The gap is bid-ask spread and skew across the four strikes.</p>
 <p><strong>Why theta is positive today:</strong> at $57.21 spot, the short body strikes (60/80) are closer to the money than the long wings (40, 90). Near-the-money short options carry more theta than further-from-the-money long options, so the body decays faster than the wings → net long theta. This reverses if DRAM rallies above 80 (the body moves ITM and stops decaying; the 90 wing gets closer to the money and starts decaying faster).</p>
 <h2>Why This Structure</h2>
