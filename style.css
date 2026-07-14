@@ -372,6 +372,27 @@ hr {
  border-radius: 4px;
 }
 
+/* Optionstrat affiliate caption below the P/L chart image. */
+.chart-affiliate {
+  margin: 0.5rem 0 0;
+  font-size: 0.78rem;
+  color: #5a6a7a;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.chart-affiliate a {
+  color: #2563eb;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.chart-affiliate a:hover {
+  text-decoration: underline;
+}
+
 /* Position Payoff + trade-fields sidebar layout.
    Mike directive 2026-07-14 14:22 ET: chart stays alone at the top; the
    trade-fields panel now sits to the right of the "Position Payoff ..."
