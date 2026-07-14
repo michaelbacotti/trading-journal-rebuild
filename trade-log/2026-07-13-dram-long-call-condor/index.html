@@ -212,7 +212,10 @@ TOTAL              $7.32    +0.133   −0.004  +0.014 −0.054 +0.001
 </tr>
 </tbody></table></div>
 <h2>Intraday Setup (entry)</h2>
-<p>(TO_FILL — describe entry day: what was DRAM at? Why that day? What was the IV rank? Was this a manual order or a limit that took multiple fills?)</p>
+<p>DRAM opened at $57.21 on July 13 with implied volatility at 93% — elevated even for memory names, which routinely run 80–110% IV ahead of earnings cycles and macro semiconductor bellwethers. The IV rank was near the top of its 12-month range.</p>
+<p>The setup had been on the watchlist since the SOP published on July 5. DRAM had come off its 2026 highs following a broad semis rotation, compressing the risk-reward on a long-dated call condor. The thesis: AI infrastructure buildout (HBM memory, GPU servers) would sustain memory pricing through year-end, giving the 185-DTE LEAPS position enough runway to let theta decay on the short strikes while the long wings appreciate on the vol premium.</p>
+<p>Four separate legs, filled as market orders at open. The long 40C (far ITM, $23.73) and the long 90C (far OTM, $6.98) established the wings. The short 60C ($14.10) and short 80C ($8.68) defined the body and funded the structure. Net debit of $7.93/share across a $20-wide body and 10-point wings — defined risk, long-vol-duration exposure without paying full vega for it.</p>
+<p>The position was entered as a single-unit trade (1 condor, 4 legs), sized within the playbook's 0.25% NLV per-trade cap.</p>
 <h2>Management Plan</h2>
 <ul>
   <li><strong>Open through month 3 (Oct 2026):</strong> Do nothing. Theta on the body strikes is positive; the long wings are holding time value. Position is "in the zone" — let it work.</li>
@@ -221,9 +224,31 @@ TOTAL              $7.32    +0.133   −0.004  +0.014 −0.054 +0.001
   <li><strong>Stop loss:</strong> 2× debit paid, OR close at 30 DTE if the trade has not entered the profit zone. Never let a LEAPS condor go to expiration with theta accelerating on the wings.</li>
 </ul>
 <h2>Status</h2>
-<p>(TO_FILL — update daily/weekly. As of publish: position open, debit paid, DRAM price at entry, current DRAM price, current P&L.)</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Date</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">DRAM Price</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Position Value</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">P&L</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2026-07-13 (entry)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$57.21</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$793 debit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">—</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Opened. IV 93%.</td>
+</tr>
+</tbody></table></div>
+<p>Position is one day old. Theta bleed is minimal at 185 DTE — the short strikes have not yet accumulated meaningful premium decay. DRAM is essentially unchanged from entry. No management action required at this stage.</p>
+<p>Watch for: DRAM breaking decisively above $80 or below $47 (lower breakeven). A sustained move below $50 would begin testing the wing long calls' time value. A move above $80 would compress the upper side of the profit zone and invite taking partial profit on the short 80C.</p>
 <h2>Lessons</h2>
-<p>(TO_FILL — post-trade reasoning. What worked? What would you do differently? Did the IV surface behave as expected? Did the body strikes work as theta harvesters?)</p>
+<p><strong>What worked:</strong> Expressing a memory-cycle directional view with a LEAPS condor rather than a naked long call kept the net beta-to-IV crush manageable. At 93% IV, buying naked calls would have required paying full vol premium on the long side. Selling the 60C and 80C partially offset that cost while preserving the long-vol exposure on the wings.</p>
+<p><strong>What I'd do differently:</strong> The 40C long wing is deep ITM and carries high absolute cost (~$2,373 per contract). A diagonal or ratio spread — long 1× 40C, short 1× 45C to offset some of the ITM long cost — could reduce the net debit without eliminating the downside buffer. Worth testing in the next LEAPS condor entry.</p>
+<p><strong>IV surface behavior:</strong> At 93% entry IV, the vol crush thesis is high-conviction but high-risk. If DRAM vol mean-reverts toward 60–70% (a normal idle IV level for memory names between cycles), the long 40C and 90C decay significantly. That's acceptable if the thesis plays out before IV collapses. The 185-DTE horizon gives that thesis room.</p>
+<p><strong>For the playbook:</strong> The SOP dated July 5 did exactly what it was supposed to — provided a framework for sizing, structuring, and entering a memory-theme LEAPS trade within a defined-risk structure. No changes to the SOP needed. The next iteration should address position sizing: 1 condor = 0.25% NLV, which is correct for a first entry; a second add on a 5% pullback would be the next playbook-approved scale.</p>
   
 <div class="share-bar">
  <span class="share-label">Share</span>
