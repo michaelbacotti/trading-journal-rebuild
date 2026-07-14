@@ -20,9 +20,11 @@
  <meta name="twitter:description" content="Opened a Jan 2027 LEAPS long call condor on DRAM with strikes at 40/60/80/90. Wide profit zone, debit-defined risk, long-dated theta play on a memory-cycle setup.">
  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
  <link rel="manifest" href="/site.webmanifest">
- <link rel="preload" href="/style.css" as="style">
- <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
- <noscript><link rel="stylesheet" href="/style.css"></noscript>
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
  <!-- Google tag (gtag.js) — GA4 (Trading Journal property — pending) -->
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENDING"></script>
@@ -48,7 +50,28 @@
   <p style="font-size:1.05rem;color:#666;line-height:1.6;">Opened a Jan 2027 LEAPS long call condor on DRAM with strikes at 40/60/80/90. Wide profit zone, debit-defined risk, long-dated theta play on a memory-cycle setup.</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
-  <div class="trade-hero-chart"><p class="hero-label">P/L Curve — Three Time Horizons</p><figure><img src="images/pl-curve.png" alt="DRAM Long Call Condor P/L curve at three time horizons. Net debit $792.50, max profit $1,207.50 between strikes $60–$80, max loss $792.50 below $40 or above $90. Spot $57.21, IV 93%." loading="lazy"></figure></div>
+  <div class="trade-hero-wrap"><div class="trade-hero-chart"><p class="hero-label">P/L Curve — Three Time Horizons</p><figure><img src="images/pl-curve.png" alt="DRAM Long Call Condor P/L curve at three time horizons. Net debit $792.50, max profit $1,207.50 between strikes $60–$80, max loss $792.50 below $40 or above $90. Spot $57.21, IV 93%." loading="lazy"></figure></div><div class="trade-hero-fields"><p class="hero-label">Trade: DRAM Jan 15 '27 Long Call Condor</p><dl><dt>Instrument</dt><dd>DRAM LEAPS, Jan 15, 2027 expiry</dd>
+<dt>Underlying</dt><dd>DRAM (memory/semis)</dd>
+<dt>Structure</dt><dd>Long Call Condor — 4 legs</dd>
+<dt>Strikes</dt><dd>40 / 60 / 80 / 90 (all calls)</dd>
+<dt>Leg 1</dt><dd>BUY 40C (long wing, far ITM)</dd>
+<dt>Leg 2</dt><dd>SELL 60C (short body, lower)</dd>
+<dt>Leg 3</dt><dd>SELL 80C (short body, upper)</dd>
+<dt>Leg 4</dt><dd>BUY 90C (long wing, far OTM)</dd>
+<dt>Width</dt><dd>20-point body (60 → 80); 10-point wings (40–60, 80–90)</dd>
+<dt>Expiration</dt><dd>2027-01-15 (185 DTE at entry)</dd>
+<dt>Net debit</dt><dd>$(TO_FILL — pull from OptionStrat link)</dd>
+<dt>Contracts</dt><dd>(TO_FILL)</dd>
+<dt>Total debit</dt><dd>$(TO_FILL)</dd>
+<dt>Max profit zone</dt><dd>60 → 80 at expiry</dd>
+<dt>Max profit</dt><dd>$20 − debit per share (TO_FILL with exact figure)</dd>
+<dt>Max loss</dt><dd>Net debit paid (defined)</dd>
+<dt>Lower breakeven</dt><dd>40 + debit</dd>
+<dt>Upper breakeven</dt><dd>90 − debit</dd>
+<dt>IV at entry</dt><dd>(TO_FILL)</dd>
+<dt>Entry time</dt><dd>(TO_FILL)</dd>
+<dt>Management rule</dt><dd>50% of max profit OR close before last 30 DTE if OTM</dd>
+<dt>Stop loss</dt><dd>2× debit OR 30 DTE rule (whichever first)</dd></dl></div></div>
 <div class="trade-hero-stats"><div class="trade-hero-stat hot"><p class="label">Max Profit</p><p class="value">$1,207.50</p><p class="sub">between strikes $60–$80</p></div><div class="trade-hero-stat cool"><p class="label">Max Loss</p><p class="value">$792.50</p><p class="sub">defined risk = net debit</p></div><div class="trade-hero-stat neutral"><p class="label">Net Debit</p><p class="value">$792.50</p><p class="sub">per condor ($7.93/share × 100)</p></div><div class="trade-hero-stat"><p class="label">Spot / IV</p><p class="value">$57.21</p><p class="sub">DRAM @ entry · IV 93%</p></div></div>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
@@ -58,36 +81,8 @@
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 
-<h2>Trade: DRAM Jan 15 '27 Long Call Condor</h2>
-<table>
-<thead>
-<tr><th>Field</th><th>Value</th></tr>
-</thead>
-<tbody>
-<tr><td>Instrument</td><td>DRAM LEAPS, Jan 15, 2027 expiry</td></tr>
-<tr><td>Underlying</td><td>DRAM (memory/semis)</td></tr>
-<tr><td>Structure</td><td>Long Call Condor — 4 legs</td></tr>
-<tr><td>Strikes</td><td>40 / 60 / 80 / 90 (all calls)</td></tr>
-<tr><td>Leg 1</td><td>BUY 40C (long wing, far ITM)</td></tr>
-<tr><td>Leg 2</td><td>SELL 60C (short body, lower)</td></tr>
-<tr><td>Leg 3</td><td>SELL 80C (short body, upper)</td></tr>
-<tr><td>Leg 4</td><td>BUY 90C (long wing, far OTM)</td></tr>
-<tr><td>Width</td><td>20-point body (60 → 80); 10-point wings (40–60, 80–90)</td></tr>
-<tr><td>Expiration</td><td>2027-01-15 (185 DTE at entry)</td></tr>
-<tr><td>Net debit</td><td>$(TO_FILL — pull from OptionStrat link)</td></tr>
-<tr><td>Contracts</td><td>(TO_FILL)</td></tr>
-<tr><td>Total debit</td><td>$(TO_FILL)</td></tr>
-<tr><td>Max profit zone</td><td>60 → 80 at expiry</td></tr>
-<tr><td>Max profit</td><td>$20 − debit per share (TO_FILL with exact figure)</td></tr>
-<tr><td>Max loss</td><td>Net debit paid (defined)</td></tr>
-<tr><td>Lower breakeven</td><td>40 + debit</td></tr>
-<tr><td>Upper breakeven</td><td>90 − debit</td></tr>
-<tr><td>IV at entry</td><td>(TO_FILL)</td></tr>
-<tr><td>Entry time</td><td>(TO_FILL)</td></tr>
-<tr><td>Management rule</td><td>50% of max profit OR close before last 30 DTE if OTM</td></tr>
-<tr><td>Stop loss</td><td>2× debit OR 30 DTE rule (whichever first)</td></tr>
-</tbody>
-</table>
+
+
 <h2>Position Payoff at Three Time Horizons</h2>
 <p>The chart above shows the position's P/L as a function of DRAM's price at three evaluation dates: today (185 DTE), an intermediate horizon at 139 DTE (Nov 30), and at expiration. Three colored curves — green for today, blue for the mid-life, gold for expiration. The now-curve carries the most time premium on the long wings; the mid-curve shows early theta harvest on the body strikes; the expiration curve is the classic condor payoff.</p>
 <p><strong>Read the chart:</strong></p>

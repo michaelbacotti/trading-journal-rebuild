@@ -20,9 +20,11 @@
  <meta name="twitter:description" content="How to get in touch.">
  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
  <link rel="manifest" href="/site.webmanifest">
- <link rel="preload" href="/style.css" as="style">
- <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
- <noscript><link rel="stylesheet" href="/style.css"></noscript>
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
  <!-- Google tag (gtag.js) — GA4 (Trading Journal property — pending) -->
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENDING"></script>

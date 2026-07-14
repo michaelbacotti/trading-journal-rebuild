@@ -20,9 +20,11 @@
  <meta name="twitter:description" content="Opened a 7DTE XSP iron condor at the 558/553 puts and 568/573 calls. Pre-CPI vol was 13.8 with rank 65 — high enough to sell premium but not so high that protection was expensive. Closed at 50% of max profit on day 4.">
  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
  <link rel="manifest" href="/site.webmanifest">
- <link rel="preload" href="/style.css" as="style">
- <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
- <noscript><link rel="stylesheet" href="/style.css"></noscript>
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
  <!-- Google tag (gtag.js) — GA4 (Trading Journal property — pending) -->
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENDING"></script>
@@ -48,7 +50,20 @@
   <p style="font-size:1.05rem;color:#666;line-height:1.6;">Opened a 7DTE XSP iron condor at the 558/553 puts and 568/573 calls. Pre-CPI vol was 13.8 with rank 65 — high enough to sell premium but not so high that protection was expensive. Closed at 50% of max profit on day 4.</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
-  <div class="trade-hero-stats"><div class="trade-hero-stat hot"><p class="label">Max Profit</p><p class="value">$1,850.00</p><p class="sub">10 condors × $1.85 credit</p></div><div class="trade-hero-stat cool"><p class="label">Max Loss</p><p class="value">$3,150.00</p><p class="sub">$3.15/condor × 10 (defined)</p></div><div class="trade-hero-stat neutral"><p class="label">Credit / Width</p><p class="value">$1.85 / $3.15</p><p class="sub">59% POP at entry</p></div><div class="trade-hero-stat"><p class="label">IV at Entry</p><p class="value">13.8 (rank 65)</p><p class="sub">elevated post-CPI</p></div></div>
+  <div class="trade-hero-wrap"><div class="trade-hero-fields"><p class="hero-label">Trade: XSP 7DTE Iron Condor</p><dl><dt>Instrument</dt><dd>XSP options (S&P 500 mini, $10 multiplier)</dd>
+<dt>Structure</dt><dd>Iron condor — short 558P / long 553P, short 568C / long 573C</dd>
+<dt>Width</dt><dd>5 points each side</dd>
+<dt>Expiration</dt><dd>2026-07-17 (7DTE)</dd>
+<dt>Total credit</dt><dd>$1.85 per condor</dd>
+<dt>Max risk</dt><dd>$3.15 per condor (width − credit)</dd>
+<dt>Contracts</dt><dd>10</dd>
+<dt>Total credit</dt><dd>$1,850.00</dd>
+<dt>Total max risk</dt><dd>$3,150.00</dd>
+<dt>IV at entry</dt><dd>13.8 (rank 65 — high IV regime)</dd>
+<dt>Entry time</dt><dd>10:18 AM ET (45 min after CPI release)</dd>
+<dt>Profit target</dt><dd>50% of max profit ($0.925 per condor)</dd>
+<dt>Stop loss</dt><dd>2× credit ($3.70 per condor)</dd></dl></div></div>
+<div class="trade-hero-stats"><div class="trade-hero-stat hot"><p class="label">Max Profit</p><p class="value">$1,850.00</p><p class="sub">10 condors × $1.85 credit</p></div><div class="trade-hero-stat cool"><p class="label">Max Loss</p><p class="value">$3,150.00</p><p class="sub">$3.15/condor × 10 (defined)</p></div><div class="trade-hero-stat neutral"><p class="label">Credit / Width</p><p class="value">$1.85 / $3.15</p><p class="sub">59% POP at entry</p></div><div class="trade-hero-stat"><p class="label">IV at Entry</p><p class="value">13.8 (rank 65)</p><p class="sub">elevated post-CPI</p></div></div>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
@@ -57,27 +72,8 @@
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 
-<h2>Trade: XSP 7DTE Iron Condor</h2>
-<table>
-<thead>
-<tr><th>Field</th><th>Value</th></tr>
-</thead>
-<tbody>
-<tr><td>Instrument</td><td>XSP options (S&P 500 mini, $10 multiplier)</td></tr>
-<tr><td>Structure</td><td>Iron condor — short 558P / long 553P, short 568C / long 573C</td></tr>
-<tr><td>Width</td><td>5 points each side</td></tr>
-<tr><td>Expiration</td><td>2026-07-17 (7DTE)</td></tr>
-<tr><td>Total credit</td><td>$1.85 per condor</td></tr>
-<tr><td>Max risk</td><td>$3.15 per condor (width − credit)</td></tr>
-<tr><td>Contracts</td><td>10</td></tr>
-<tr><td>Total credit</td><td>$1,850.00</td></tr>
-<tr><td>Total max risk</td><td>$3,150.00</td></tr>
-<tr><td>IV at entry</td><td>13.8 (rank 65 — high IV regime)</td></tr>
-<tr><td>Entry time</td><td>10:18 AM ET (45 min after CPI release)</td></tr>
-<tr><td>Profit target</td><td>50% of max profit ($0.925 per condor)</td></tr>
-<tr><td>Stop loss</td><td>2× credit ($3.70 per condor)</td></tr>
-</tbody>
-</table>
+
+
 <h2>Reasoning</h2>
 <p>CPI came in at 2.7% YoY (vs. 2.8% expected), with Core CPI at 3.0% (vs. 3.1% expected). Both were a touch soft. The market initially sold off (ES −0.4% in the first 5 minutes) on the "soft CPI = growth scare" read, then reversed and rallied as the soft print was reframed as "disinflation continues, Fed has room."</p>
 <p>Pre-CPI, XSP IV was bid at 15.2 (rank 78). At 10:18 AM, IV had come in to 13.8 (rank 65). The crush was real but not finished — typically post-CPI vol decay plays out over 2–3 days for a soft-print scenario.</p>
