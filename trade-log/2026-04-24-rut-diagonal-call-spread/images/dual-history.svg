@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" font-family="Georgia, serif">
+<rect width="1200" height="600" fill="#fafaf7"/>
+
+<text x="600.0" y="32" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e3a5f">
+  RUT Spot vs Diagonal Strategy Premium — 30 Days to Entry
+</text>
+<text x="600.0" y="52" text-anchor="middle" font-size="13" fill="#666">
+  Apr 24, 2026 entry · 2900/2950 diagonal · IV 30% anchored
+</text>
+<line x1="100" y1="520.0" x2="1100" y2="520.0" stroke="#f0e6c0" stroke-width="1"/>
+<text x="1110" y="524.0" font-size="11" fill="#b08900">$1,652</text>
+<line x1="100" y1="428.0" x2="1100" y2="428.0" stroke="#f0e6c0" stroke-width="1"/>
+<text x="1110" y="432.0" font-size="11" fill="#b08900">$1,947</text>
+<line x1="100" y1="336.0" x2="1100" y2="336.0" stroke="#f0e6c0" stroke-width="1"/>
+<text x="1110" y="340.0" font-size="11" fill="#b08900">$2,242</text>
+<line x1="100" y1="244.0" x2="1100" y2="244.0" stroke="#f0e6c0" stroke-width="1"/>
+<text x="1110" y="248.0" font-size="11" fill="#b08900">$2,538</text>
+<line x1="100" y1="152.0" x2="1100" y2="152.0" stroke="#f0e6c0" stroke-width="1"/>
+<text x="1110" y="156.0" font-size="11" fill="#b08900">$2,833</text>
+<line x1="100" y1="60.0" x2="1100" y2="60.0" stroke="#f0e6c0" stroke-width="1"/>
+<text x="1110" y="64.0" font-size="11" fill="#b08900">$3,128</text>
+<text x="90" y="524.0" text-anchor="end" font-size="11" fill="#1e3a5f">$2,366</text>
+<text x="90" y="432.0" text-anchor="end" font-size="11" fill="#1e3a5f">$2,462</text>
+<text x="90" y="340.0" text-anchor="end" font-size="11" fill="#1e3a5f">$2,559</text>
+<text x="90" y="248.0" text-anchor="end" font-size="11" fill="#1e3a5f">$2,656</text>
+<text x="90" y="156.0" text-anchor="end" font-size="11" fill="#1e3a5f">$2,752</text>
+<text x="90" y="64.0" text-anchor="end" font-size="11" fill="#1e3a5f">$2,849</text>
+<text x="100.0" y="540" text-anchor="middle" font-size="10" fill="#666">Mar 16</text>
+<line x1="100.0" y1="520" x2="100.0" y2="524" stroke="#666" stroke-width="1"/>
+<text x="242.9" y="540" text-anchor="middle" font-size="10" fill="#666">Mar 20</text>
+<line x1="242.9" y1="520" x2="242.9" y2="524" stroke="#666" stroke-width="1"/>
+<text x="385.7" y="540" text-anchor="middle" font-size="10" fill="#666">Mar 26</text>
+<line x1="385.7" y1="520" x2="385.7" y2="524" stroke="#666" stroke-width="1"/>
+<text x="528.6" y="540" text-anchor="middle" font-size="10" fill="#666">Apr 01</text>
+<line x1="528.6" y1="520" x2="528.6" y2="524" stroke="#666" stroke-width="1"/>
+<text x="671.4" y="540" text-anchor="middle" font-size="10" fill="#666">Apr 08</text>
+<line x1="671.4" y1="520" x2="671.4" y2="524" stroke="#666" stroke-width="1"/>
+<text x="814.3" y="540" text-anchor="middle" font-size="10" fill="#666">Apr 14</text>
+<line x1="814.3" y1="520" x2="814.3" y2="524" stroke="#666" stroke-width="1"/>
+<text x="957.1" y="540" text-anchor="middle" font-size="10" fill="#666">Apr 20</text>
+<line x1="957.1" y1="520" x2="957.1" y2="524" stroke="#666" stroke-width="1"/>
+<text x="1100.0" y="540" text-anchor="middle" font-size="10" fill="#666">Apr 24</text>
+<line x1="1100.0" y1="520" x2="1100.0" y2="524" stroke="#666" stroke-width="1"/>
+<text x="600.0" y="580" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Trading Day</text>
+<text x="20" y="300.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a5f" transform="rotate(-90 20 300.0)">RUT Spot</text>
+<text x="1180" y="300.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#b08900" transform="rotate(90 1180 300.0)">Strategy Premium ($/contract)</text>
+<path d="M100.0,389.0 L135.7,373.1 L171.4,412.5 L207.1,397.2 L242.9,450.8 L278.6,397.6 L314.3,387.0 L350.0,357.5 L385.7,398.5 L421.4,440.0 L457.1,474.0 L492.9,395.6 L528.6,380.4 L564.3,363.5 L600.0,353.4 L635.7,349.3 L671.4,277.4 L707.1,262.4 L742.9,267.8 L778.6,229.8 L814.3,196.3 L850.0,188.7 L885.7,183.0 L921.4,128.5 L957.1,113.2 L992.9,139.8 L1028.6,120.4 L1064.3,130.2 L1100.0,118.9" fill="none" stroke="#1e3a5f" stroke-width="2.5"/>
+<path d="M100.0,398.4 L135.7,382.0 L171.4,423.5 L207.1,407.8 L242.9,464.1 L278.6,409.6 L314.3,398.6 L350.0,367.6 L385.7,411.5 L421.4,455.8 L457.1,492.9 L492.9,410.0 L528.6,394.0 L564.3,376.2 L600.0,366.3 L635.7,362.1 L671.4,283.9 L707.1,267.6 L742.9,273.6 L778.6,232.3 L814.3,196.0 L850.0,187.7 L885.7,181.5 L921.4,123.3 L957.1,106.4 L992.9,134.3 L1028.6,113.4 L1064.3,123.5 L1100.0,111.2" fill="none" stroke="#d4a017" stroke-width="2.5" stroke-dasharray="5 3"/>
+<line x1="1100.0" y1="60" x2="1100.0" y2="520" stroke="#c33" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text x="1092.0" y="74.0" text-anchor="end" font-size="11" font-weight="bold" fill="#c33">Entry Apr 24</text>
+<rect x="810" y="432" width="280" height="60" fill="white" stroke="#999" stroke-width="1" rx="4"/>
+<line x1="820" y1="450" x2="850" y2="450" stroke="#1e3a5f" stroke-width="2.5"/>
+<text x="858" y="454" font-size="11" fill="#333">RUT Spot (left axis)</text>
+<line x1="820" y1="470" x2="850" y2="470" stroke="#d4a017" stroke-width="2.5" stroke-dasharray="5 3"/>
+<text x="858" y="474" font-size="11" fill="#333">Strategy Premium (right axis)</text>
+</svg>
