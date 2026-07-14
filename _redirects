@@ -4,6 +4,8 @@
 
 /index.html / 301
 
+https://trdey.com/* https://tredey.com/:splat 301
+
 /about /about/ 301
 /disclaimer /disclaimer/ 301
 /privacy /privacy/ 301

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://trdey.com/sitemap.xml
+Sitemap: https://tredey.com/sitemap.xml
