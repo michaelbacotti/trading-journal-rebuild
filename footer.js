@@ -48,7 +48,7 @@
    ' </div>',
    ' <div class="footer-bottom">',
    '  <p>&copy; 2026 The Trading Journal. All rights reserved. Operated by Tredey.</p>',
-   '  <p><strong>Not investment advice.</strong> tredey.com is operated by Dependability Holdings LLC. The content on this site is for informational and educational purposes only. '
+   '  <p><strong>Not investment advice.</strong> The content on this site is for informational and educational purposes only. '
    +    'Options trading involves substantial risk of loss. Past performance does not guarantee future results. '
    +    'You are solely responsible for your own investment decisions. See the <a href="/disclaimer/">full disclaimer</a>.</p>',
    ' </div>',

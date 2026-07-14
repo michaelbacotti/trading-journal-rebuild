@@ -5,7 +5,7 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 14 Jul 2026 19:12:34 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 14 Jul 2026 21:45:40 GMT</lastBuildDate>
   <item>
     <title>DRAM Long Call Condor — Jan 15 '27 40/60/80/90: A LEAPS Bet on Memory</title>
     <link>https://tredey.com/trade-log/2026-07-13-dram-long-call-condor/</link>
@@ -61,6 +61,13 @@
     <guid>https://tredey.com/strategies/2026-07-04-bull-put-spread/</guid>
     <pubDate>2026-07-04</pubDate>
     <description>Anatomy of a bull put spread: when to use it, the entry criteria, the 50%/2x management rule, the IV-rank filter, and the failure modes to avoid.</description>
+  </item>
+  <item>
+    <title>QQQ Long Call Condor — Dec 18 '26 755/770/830/840: A 6-Month LEAPS Bet on a QQQ Rally</title>
+    <link>https://tredey.com/trade-log/2026-06-26-qqq-long-call-condor/</link>
+    <guid>https://tredey.com/trade-log/2026-06-26-qqq-long-call-condor/</guid>
+    <pubDate>2026-06-26</pubDate>
+    <description>Opened a Dec 2026 LEAPS long call condor on QQQ with strikes at 755/770/830/840. Wide 60-point profit zone, debit-defined risk, 6-month asymmetric bullish-to-neutral bet on a Nasdaq 100 rally.</description>
   </item>
 </channel>
 </rss>
