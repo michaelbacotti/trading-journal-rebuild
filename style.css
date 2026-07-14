@@ -339,14 +339,24 @@ hr {
  background: #ffffff;
  border: 1px solid #e3e2dc;
  border-radius: 8px;
+ box-sizing: border-box;
 }
 
 /* Breakout from the article-body 760px column */
-.article-body .trade-hero-chart {
- width: calc(100vw / 0.76 * 0.66);
+.article-body > .trade-hero-chart {
+ width: calc((100vw - 760px) / 2 + 760px);
  max-width: 1100px;
  margin-left: 50%;
  transform: translateX(-50%);
+}
+
+/* When chart sits inside a trade-hero-wrap grid, fill the column instead of
+   the 1100px standalone break-out. Otherwise it overlaps the fields panel. */
+.trade-hero-wrap > .trade-hero-chart {
+ max-width: 100%;
+ margin: 0;
+ transform: none;
+ padding: 1rem 1.25rem 1.25rem;
 }
 
 .trade-hero-chart .hero-label {
