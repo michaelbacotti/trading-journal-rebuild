@@ -1,0 +1,19 @@
+# ============================================================
+# THE TRADING JOURNAL — Section 301 Redirects (CF Pages 308 fix)
+# ============================================================
+
+/index.html / 301
+
+/about /about/ 301
+/disclaimer /disclaimer/ 301
+/privacy /privacy/ 301
+/terms /terms/ 301
+/contact /contact/ 301
+/premium /premium/ 301
+/trade-log /trade-log/ 301
+/education /education/ 301
+/playbook /playbook/ 301
+/strategies /strategies/ 301
+/forecasts /forecasts/ 301
+/markets /markets/ 301
+/tools /tools/ 301

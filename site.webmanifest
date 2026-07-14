@@ -1,0 +1,12 @@
+{
+  "name": "The Trading Journal",
+  "short_name": "Trading Journal",
+  "description": "Daily SPX/XSP options trades, lessons, and the math behind the decisions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafaf7",
+  "theme_color": "#1e3a5f",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

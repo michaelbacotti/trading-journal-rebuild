@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Market Probabilities: How to Think About Strike Odds | The Trading Journal</title>
+ <meta name="description" content="Why option-implied probabilities and historical probabilities are different, the difference between risk-neutral and real-world probabilities, and how to use probability of profit (POP) without over-relying on it.">
+ <link rel="canonical" href="https://trading-journal.pages.dev/education/2026-07-07-probabilities/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Market Probabilities: How to Think About Strike Odds | The Trading Journal">
+ <meta property="og:description" content="Why option-implied probabilities and historical probabilities are different, the difference between risk-neutral and real-world probabilities, and how to use probability of profit (POP) without over-relying on it.">
+ <meta property="og:image" content="https://trading-journal.pages.dev/og-image.svg">
+ <meta property="og:url" content="https://trading-journal.pages.dev/education/2026-07-07-probabilities/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Market Probabilities: How to Think About Strike Odds | The Trading Journal">
+ <meta name="twitter:description" content="Why option-implied probabilities and historical probabilities are different, the difference between risk-neutral and real-world probabilities, and how to use probability of profit (POP) without over-relying on it.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <link rel="preload" href="/style.css" as="style">
+ <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
+ <noscript><link rel="stylesheet" href="/style.css"></noscript>
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 (Trading Journal property — pending) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENDING"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PENDING');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">July 07, 2026 &middot; EDUCATION / PROBABILITY</div>
+  <h1>Market Probabilities: How to Think About Strike Odds</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">Why option-implied probabilities and historical probabilities are different, the difference between risk-neutral and real-world probabilities, and how to use probability of profit (POP) without over-relying on it.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>The probability that an option expires in-the-money is one of the most-cited numbers in options trading, and one of the most-misused. Option chains display implied probability through delta; backtesting tools display historical probability through frequency counts; the OptionsStrat calculator displays model probability through a Black-Scholes fit. These three numbers are different, and conflating them is one of the most common mistakes in retail options trading.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<p>This piece walks through what each probability means, how to use it, and how to think about expected value when the probabilities don't agree.</p>
+<h2>The Three Probabilities</h2>
+<h3>1. Risk-Neutral Probability (Implied by Option Prices)</h3>
+<p>The option market prices options using a <em>risk-neutral</em> probability measure, not a <em>real-world</em> probability measure. The risk-neutral measure is the probability that would prevail in a world where every investor was indifferent to risk — it is a mathematical construct used to derive the Black-Scholes price, not a prediction of what will actually happen.</p>
+<p>The risk-neutral probability that SPX closes above a strike at expiration is what the option chain implies through delta. A 0.20Δ call has a 20% risk-neutral probability of being ITM at expiration.</p>
+<p>The reason this is not the real-world probability is that options are priced to include a <em>volatility risk premium</em> — the market systematically overestimates future realized volatility relative to what actually happens. The risk-neutral probability is therefore <em>lower</em> (for calls) and <em>higher</em> (for puts) than the real-world probability of the same event.</p>
+<h3>2. Real-World Probability (Historical Frequency)</h3>
+<p>The real-world probability is the empirical frequency with which the event has happened in the past. For a 1.0σ move in SPX over 7 days, the real-world probability is about 32% (the normal distribution says 16%, but fat tails push it to about 32% over a 7-day window in the historical data).</p>
+<p>The real-world probability is what a trader's edge is built on. If the risk-neutral probability is 16% but the real-world probability is 32%, the trader is being paid for a 16% event that happens 32% of the time. That is a structural edge.</p>
+<h3>3. Model Probability (Black-Scholes Fit)</h3>
+<p>The Black-Scholes model assumes lognormal returns and constant volatility. The probability it produces is neither risk-neutral nor real-world — it is the probability under the model's assumptions. OptionsStrat and most option-chain displays use the Black-Scholes-implied probability.</p>
+<p>When the model assumptions are violated (which is most of the time, especially for short-dated options and after macro events), the model probability is wrong in systematic ways. For 0DTE options, the model underestimates the probability of a fat-tail move. For 30DTE options after a vol crush, the model overestimates the probability of a large move.</p>
+<h2>The POP Trap</h2>
+<p>Probability of profit (POP) is the probability that the trade closes at a profit. For a vertical credit spread with the short strike 1.0σ below spot at 7DTE, the POP is roughly 84% under a normal-distribution assumption.</p>
+<p>The trap is treating POP as the win rate. It is not. POP is the probability that, at expiration, the position is in the profit zone. The actual win rate depends on how the position is managed:</p>
+<ul>
+  <li>If the position is held to expiration and the short strike is never tested, the win rate is the POP</li>
+  <li>If the position is closed at 50% of credit (a 50% profit target), the win rate is <em>higher</em> than the POP, because some trades that would have ended OTM and lost slightly to time decay are now winners</li>
+  <li>If the position is closed at 2× credit (the stop), the win rate is <em>lower</em> than the POP, because some trades that would have ended OTM are now losers (the 2× stop fired first)</li>
+</ul>
+<p>For a typical 0DTE vertical credit spread with a 50% target and 2× stop, the actual realized win rate over a year of data is:</p>
+<ul>
+  <li>POP at entry: 88% (1.16σ short put, 1-day)</li>
+  <li>Realized win rate with 50% target / 2× stop: ~75%</li>
+</ul>
+<p>The 13-point gap is real. Some trades that the model says are winners end up stopped out because the 2× stop fires before the position can recover. Some trades that the model says are losers end up profitable because the position is closed at 50% before the underlying moves far enough to test the short strike.</p>
+<h2>The Correct Use of Probability</h2>
+<p>The right way to use probability in a spread book is to think of it as a <em>filter</em> for trade selection, not a <em>predictor</em> of outcomes. The probability of profit tells you whether the modeled edge is positive. The realized win rate tells you whether the strategy is working.</p>
+<p>A practical workflow:</p>
+<ol>
+  <li><strong>At entry</strong>, calculate the model POP and the risk-neutral probability. If the model POP is below the strategy's threshold (e.g., below 65% for a 7DTE condor), pass on the trade.</li>
+  <li><strong>At entry</strong>, calculate the expected value per dollar of risk. If the EV is negative (i.e., the risk/reward is bad), pass on the trade.</li>
+  <li><strong>At exit</strong>, do not look at the probability — look at the price. The 50% target fires at a specific price; the 2× stop fires at a specific price. The probability was the entry filter; the price is the exit trigger.</li>
+  <li><strong>After 30+ trades</strong>, calculate the realized win rate and the realized EV per trade. Compare to the model. If the realized EV is negative, the strategy is not working and the playbook is updated.</li>
+  <li><strong>Quarterly</strong>, calculate the realized POP (the actual frequency of trades that were profitable at exit). Compare to the model POP. If the gap is wider than 10 points, the model is miscalibrated and the strategy parameters (sigma distance, target, stop) need review.</li>
+</ol>
+<h2>The Probability Trap in Option Selling</h2>
+<p>The biggest trap in option selling is the <em>high-POP-illusion</em>. A 0.95Δ option (95% POP) is "almost certain" to expire worthless. But "almost certain" means 1 in 20 trades loses — and when it loses, it loses 20× the credit received. The math:</p>
+<blockquote>95% @ 1:19: EV = (0.95 × $1) − (0.05 × $19) = $0.95 − $0.95 = <strong>$0 per trade</strong></blockquote>
+<p>A 95% POP trade with 1:19 reward-to-risk is exactly break-even. To have positive EV, the win rate must be <em>higher</em> than 1/(1 + reward-to-risk), or equivalently, the reward-to-risk must be <em>higher</em> than (1/win rate) − 1.</p>
+<p>For a 0.95 POP trade, the break-even reward-to-risk is 0.0526 — i.e., the credit must be at least 5% of the width. Below 5%, the trade is negative EV no matter how high the POP.</p>
+<p>This is why the playbook's 5–10% premium-to-width threshold for 0DTE verticals is the floor. A 4% premium-to-width trade with 95% POP is break-even at best. A 7% premium-to-width trade with 88% POP is positive EV.</p>
+<h2>Practical Rules</h2>
+<ul>
+  <li><strong>Use the model POP as a filter, not a target.</strong> The filter is "is the POP above the strategy threshold?" The target is "is the EV positive per dollar of risk?"</li>
+  <li><strong>Calculate EV per dollar of risk at every entry.</strong> If EV is negative, pass.</li>
+  <li><strong>Track realized win rate separately from POP.</strong> Realized win rate is the actual data; POP is the model.</li>
+  <li><strong>Avoid the 95%-POP-illusion.</strong> High POP with low premium-to-width is a losing trade.</li>
+  <li><strong>Do not change the strategy because a high-POP trade lost.</strong> The 1-in-20 loss is part of the model. The discipline is to take the next trade, not to abandon the strategy.</li>
+  <li><strong>Re-calibrate quarterly.</strong> After 30+ trades, compare realized POP to model POP. If the gap is large, update the strategy parameters.</li>
+</ul>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

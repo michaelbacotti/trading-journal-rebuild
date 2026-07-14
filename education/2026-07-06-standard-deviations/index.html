@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Standard Deviations in Options Trading: The Math of 'One-Sigma Moves' | The Trading Journal</title>
+ <meta name="description" content="What one, two, and three-sigma moves actually mean for SPX positioning, how implied vol maps to expected moves, and why the strike selection in a spread book should be sigma-anchored not delta-anchored.">
+ <link rel="canonical" href="https://trading-journal.pages.dev/education/2026-07-06-standard-deviations/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Standard Deviations in Options Trading: The Math of 'One-Sigma Moves' | The Trading Journal">
+ <meta property="og:description" content="What one, two, and three-sigma moves actually mean for SPX positioning, how implied vol maps to expected moves, and why the strike selection in a spread book should be sigma-anchored not delta-anchored.">
+ <meta property="og:image" content="https://trading-journal.pages.dev/og-image.svg">
+ <meta property="og:url" content="https://trading-journal.pages.dev/education/2026-07-06-standard-deviations/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Standard Deviations in Options Trading: The Math of 'One-Sigma Moves' | The Trading Journal">
+ <meta name="twitter:description" content="What one, two, and three-sigma moves actually mean for SPX positioning, how implied vol maps to expected moves, and why the strike selection in a spread book should be sigma-anchored not delta-anchored.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <link rel="preload" href="/style.css" as="style">
+ <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
+ <noscript><link rel="stylesheet" href="/style.css"></noscript>
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 (Trading Journal property — pending) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENDING"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PENDING');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">July 06, 2026 &middot; EDUCATION / MATH</div>
+  <h1>Standard Deviations in Options Trading: The Math of 'One-Sigma Moves'</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">What one, two, and three-sigma moves actually mean for SPX positioning, how implied vol maps to expected moves, and why the strike selection in a spread book should be sigma-anchored not delta-anchored.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>Every options trader hears "the market moved three sigmas today" or "that was a one-sigma move" in commentary. The language is borrowed from statistics, but the application to markets is full of subtleties. This piece walks through what standard deviations actually mean in a trading context, how they map to option strikes, and why the <em>strike selection</em> in a spread book should be built around sigmas — not around the delta of the option.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<h2>The Statistical Core</h2>
+<p>A standard deviation (σ) is a measure of dispersion. For a normal distribution:</p>
+<ul>
+  <li>68.3% of observations fall within ±1σ of the mean</li>
+  <li>95.4% of observations fall within ±2σ</li>
+  <li>99.7% of observations fall within ±3σ</li>
+</ul>
+<p>The 1.96σ and 2.33σ thresholds are common in finance because they correspond to 95% and 99% one-sided confidence intervals. The 1.64σ level is the 95th percentile (one-sided), the 2.33σ level is the 99th percentile.</p>
+<p>For a trader's purposes, the practical question is: <em>what is the probability that the underlying ends up beyond a particular level by expiration?</em> That is a direct application of the cumulative normal distribution, and the answer depends on the time horizon.</p>
+<h2>Mapping σ to Strikes: The One-Day Move</h2>
+<p>For SPX with a current IV of 12 (annualized), the <em>one-day expected move</em> is:</p>
+<blockquote>1-day σ = Spot × (IV / √252) = Spot × (0.12 / √252) ≈ Spot × 0.00755</blockquote>
+<p>For SPX at 5,650, that is a 1-day move of roughly ±43 points (one sigma). The two-sigma one-day move is ±85 points; the three-sigma one-day move is ±128 points.</p>
+<p>These are the <em>expected</em> moves under a lognormal random-walk assumption. Actual SPX one-day moves are not normally distributed — they have fat tails, especially during macro events — but the approximation is close enough for strike selection.</p>
+<p>If you are selling a 0DTE put spread with the short strike 50 points below spot, you are selling a strike that is roughly 1.16σ below the current price. The market is pricing in roughly an 88% probability that SPX stays above that strike by the close (using a one-sided cumulative normal at 1.16σ). Your premium should reflect that probability — the higher the probability of staying OTM, the less premium you collect, but the higher your win rate.</p>
+<h2>Mapping σ to Strikes: The Weekly Move</h2>
+<p>For a 7DTE expiration, the expected move is the one-day move scaled by √7 (because variance scales linearly with time, but standard deviation scales by the square root):</p>
+<blockquote>7-day σ = 1-day σ × √7 = ±43 × 2.65 ≈ ±113 points</blockquote>
+<p>For an XSP iron condor with the short strikes 7 points away from spot (the 558/563 condor in the July 10 trade log), the short put is 0.85σ below spot for a 7-day horizon. The probability of staying OTM at expiration is roughly 80%. The 7DTE XSP iron condor collects ~$1.85 against $3.15 of risk, which is a 59% credit-to-width ratio, which is consistent with the 80% POP — the seller is being compensated for the 20% probability of a breach.</p>
+<h2>Delta vs. Sigma — Which to Use for Strike Selection</h2>
+<p>Most option chains display <em>delta</em> rather than sigma distance. Delta is the option's sensitivity to a $1 move in the underlying, and for an at-the-money option with 30 days to expiration, delta is roughly 0.50 (50-Δ). Out-of-the-money options have lower delta — a 0.15Δ put has a 15% probability of being ITM at expiration, all else equal.</p>
+<p>The problem with delta-based strike selection is that delta is <em>time-dependent</em> and <em>vol-dependent</em>. A 0.15Δ strike today is a 0.30Δ strike in 7 days if IV collapses. A 0.15Δ strike at IV 12 is a different strike than a 0.15Δ strike at IV 30 — the 0.15Δ at high IV is much further OTM in absolute terms.</p>
+<p>Sigma-based strike selection removes the time and vol confounders. A 1.0σ strike is a 1.0σ strike regardless of days to expiration and regardless of IV level. The probability of that strike being breached at expiration is roughly 16% (one-sided) under a normal distribution.</p>
+<p>The playbook uses sigma-anchored strike selection:</p>
+<ul>
+  <li><strong>0DTE verticals:</strong> short strike at 1.0–1.5σ below spot (1-day horizon)</li>
+  <li><strong>7DTE iron condors:</strong> short strikes at 0.7–1.0σ on either side (7-day horizon)</li>
+  <li><strong>30DTE calendars/diagonals:</strong> short strike at 0.3–0.5σ (30-day horizon)</li>
+</ul>
+<p>The sigma range for each strategy is calibrated to the historical win rate and average credit captured. The range narrows when the strategy is "more right" more often (a 7DTE condor at 0.7σ has an 80% POP) and widens when the strategy is "more wrong" less often (a 30DTE calendar at 0.4σ has a 65% POP but the tail is small).</p>
+<h2>The Fat-Tail Problem</h2>
+<p>The sigma framework assumes normal returns. Real market returns are not normal — they have fatter tails (more extreme moves than the normal distribution predicts) and negative skew (downside moves are larger than upside moves of the same frequency).</p>
+<p>The empirical SPX 1-day move distribution looks like this:</p>
+<ul>
+  <li>1σ: ~70% of days (vs. 68.3% predicted)</li>
+  <li>2σ: ~5% of days (vs. 4.55% predicted) — <em>slightly more than predicted</em></li>
+  <li>3σ: ~0.5% of days (vs. 0.27% predicted) — <em>about twice as often as predicted</em></li>
+  <li>4σ: ~0.05% of days (vs. 0.003% predicted) — <em>15× as often as predicted</em></li>
+</ul>
+<p>The tails are fat. A "three-sigma day" is not a once-in-a-century event — it happens every couple of years. A "four-sigma day" is not impossible; it happens every 20 years or so.</p>
+<p>For a 0DTE vertical seller, the implication is that the rare 3σ+ days will produce the bulk of the losing trades. The 0.15% NLV max-risk cap is the protection against a 4σ day wiping out a year of small wins. <strong>Position sizing is the sigma framework's most important input.</strong></p>
+<h2>Practical Rules</h2>
+<ul>
+  <li>Calculate the σ-distance to every short strike before entry. Use the formula: σ-distance = (Strike − Spot) / (Spot × IV × √(DTE/252))</li>
+  <li>Match the σ-distance to the strategy's calibrated range (see playbook)</li>
+  <li>If a strategy calls for a 1.0σ short strike and IV is too low for that strike to be a reasonable distance from spot, pass on the trade — the strike would be too close for the win rate</li>
+  <li>If IV is elevated and the same 1.0σ strike is well below spot, that is the high-edge setup</li>
+  <li>Use OptionsStrat or a similar tool to visualize the σ-distance and POP at entry</li>
+  <li>Position-size to the <em>sigma-implied</em> max loss, not the structural max loss</li>
+</ul>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

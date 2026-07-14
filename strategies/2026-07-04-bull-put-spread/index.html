@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Bull Put Spread: The Workhorse Credit Structure | The Trading Journal</title>
+ <meta name="description" content="Anatomy of a bull put spread: when to use it, the entry criteria, the 50%/2x management rule, the IV-rank filter, and the failure modes to avoid.">
+ <link rel="canonical" href="https://trading-journal.pages.dev/strategies/2026-07-04-bull-put-spread/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Bull Put Spread: The Workhorse Credit Structure | The Trading Journal">
+ <meta property="og:description" content="Anatomy of a bull put spread: when to use it, the entry criteria, the 50%/2x management rule, the IV-rank filter, and the failure modes to avoid.">
+ <meta property="og:image" content="https://trading-journal.pages.dev/og-image.svg">
+ <meta property="og:url" content="https://trading-journal.pages.dev/strategies/2026-07-04-bull-put-spread/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Bull Put Spread: The Workhorse Credit Structure | The Trading Journal">
+ <meta name="twitter:description" content="Anatomy of a bull put spread: when to use it, the entry criteria, the 50%/2x management rule, the IV-rank filter, and the failure modes to avoid.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <link rel="preload" href="/style.css" as="style">
+ <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
+ <noscript><link rel="stylesheet" href="/style.css"></noscript>
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 (Trading Journal property — pending) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENDING"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PENDING');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">July 04, 2026 &middot; STRATEGY / CREDIT</div>
+  <h1>Bull Put Spread: The Workhorse Credit Structure</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">Anatomy of a bull put spread: when to use it, the entry criteria, the 50%/2x management rule, the IV-rank filter, and the failure modes to avoid.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>The bull put spread is the most-used credit structure in this book. It is the cleanest expression of a directional view (bullish or neutral) with defined risk, and it is the structure that most of the trade log entries are built around.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<p>This piece walks through the structure, the entry criteria, the management rules, and the failure modes. It is a working reference — if the strategy ever drifts from these rules, the journal will note the drift and the reasoning.</p>
+<h2>The Structure</h2>
+<p>A bull put spread is the simultaneous sale of a put and the purchase of a lower-strike put. The two legs have the same expiration. The structure:</p>
+<ul>
+  <li><strong>Short put</strong> (the leg you sell): higher strike</li>
+  <li><strong>Long put</strong> (the leg you buy): lower strike, same expiration</li>
+  <li><strong>Width</strong>: the difference between the two strikes (in points)</li>
+  <li><strong>Credit</strong>: the net premium received (short premium − long premium)</li>
+  <li><strong>Max loss</strong>: width × 100 (SPX) or width × 10 (XSP) minus the credit received</li>
+</ul>
+<p>For a 0DTE SPX bull put spread at the 5,560/5,545 strikes:</p>
+<ul>
+  <li>Width: 15 points</li>
+  <li>Credit: $1.05 per spread (in mid-July 2026 IV conditions)</li>
+  <li>Max loss: $15.00 − $1.05 = <strong>$13.95 per spread</strong></li>
+  <li>Reward-to-risk: 1:13.3 at entry</li>
+</ul>
+<p>The structural reward-to-risk is bad — the max loss is 13× the credit. But the POP is high (88% under normal-distribution assumptions for a 1.16σ short put, 1-day horizon), so the EV math is positive (see the July 13 trade log entry for a real example).</p>
+<h2>When to Use It</h2>
+<p>The bull put spread is used when:</p>
+<ol>
+  <li><strong>The IV rank is in the workable range</strong> (20–80). Below 20, the premium is too thin to make the trade worth the risk. Above 80, the protection (long put) is too expensive.</li>
+  <li><strong>The outlook is neutral-to-bullish on the underlying.</strong> The structure profits if the underlying stays above the short strike. It is not a hedge for a bearish view; for that, use a bear call spread.</li>
+  <li><strong>The sigma-distance to the short strike is in the calibrated range.</strong> For 0DTE, that's 1.0–1.5σ below spot. For 7DTE, 0.7–1.0σ. For 14DTE, 0.4–0.6σ.</li>
+  <li><strong>The expiration aligns with the trade thesis.</strong> A 0DTE spread is a same-day thesis. A 7DTE spread is a week-long thesis. The thesis must match the DTE.</li>
+</ol>
+<p>The structure is <em>not</em> used when:</p>
+<ol>
+  <li>The IV rank is below 20 (premium too thin)</li>
+  <li>The IV rank is above 80 (protection too expensive — consider an iron condor instead)</li>
+  <li>The underlying is in a strong trend (a counter-trend bull put spread has a low POP)</li>
+  <li>There is a major event within the expiration window (FOMC, CPI, NFP) that the trade is not specifically designed for</li>
+</ol>
+<h2>Entry Criteria</h2>
+<p>Before entering a bull put spread, the following are checked:</p>
+<ol>
+  <li><strong>Sigma-distance of the short strike</strong> is in the calibrated range for the DTE</li>
+  <li><strong>Premium-to-width ratio</strong> is at least 5% for 0DTE, 20% for 7DTE</li>
+  <li><strong>IV rank</strong> is 20–80</li>
+  <li><strong>Position size</strong> is within the per-trade, per-day, and per-week limits</li>
+  <li><strong>Open position count</strong> is below 5</li>
+  <li><strong>Exit orders</strong> are placed at entry: 50% target buyback, 2× credit stop</li>
+</ol>
+<p>The 50% target and 2× stop are placed as GTC orders immediately after the position is opened. The trader does not monitor the position manually for exit.</p>
+<h2>Management Rules</h2>
+<p>The 50%/2× management is the heart of the strategy:</p>
+<ul>
+  <li><strong>50% target</strong>: when the spread's value decays to 50% of the original credit (i.e., the buyback price is half the original credit), close the position. Example: $1.05 credit → $0.525 buyback target.</li>
+  <li><strong>2× stop</strong>: when the spread's value expands to 2× the original credit (i.e., the buyback price is 2× the original credit), close the position. Example: $1.05 credit → $2.10 buyback stop.</li>
+</ul>
+<p>The reasoning for the 50% target: capturing half the credit in the first half of the trade's life is the most efficient use of capital. The remaining half of the credit would take another equal amount of time to decay, so the time-per-dollar-decay is twice as efficient at the 50% point.</p>
+<p>The reasoning for the 2× stop: a 2× expansion in the spread's value means the underlying has moved roughly 1 sigma against the position. Beyond that, the loss accelerates non-linearly (the position is short gamma), and the realized loss-per-day becomes worse than taking the loss and finding a new setup.</p>
+<p>The 50% target fires on roughly 70% of winning trades. The 2× stop fires on roughly 25% of trades (the remaining 5% expire worthless or are closed at expiration with a small gain).</p>
+<h2>Failure Modes</h2>
+<p>The bull put spread fails in five specific ways:</p>
+<ol>
+  <li><strong>The short strike is too close to spot.</strong> If the sigma-distance is below the calibrated range, the POP is too low and the stop fires too often. The premium is higher, but the realized win rate is too low to compensate.</li>
+  <li><strong>The IV rank is below 20.</strong> The premium is too thin and the stop-to-credit ratio is too tight. The trade has negative EV.</li>
+  <li><strong>The position is held through a major event.</strong> If FOMC, CPI, or NFP falls within the expiration window and the position is not specifically designed for the event, the gap risk can produce a 5+ sigma move that blows through both strikes.</li>
+  <li><strong>The 50% target is "adjusted" to wait for more profit.</strong> The target is the target. If the trader holds past the target hoping for more, the spread often retraces and the trade ends at a loss.</li>
+  <li><strong>The position is averaged down.</strong> A losing position is closed at the stop. A new position is a new position. Adding to a loser is a violation of the playbook and the most common cause of large account drawdowns.</li>
+</ol>
+<h2>Adjustments</h2>
+<p>Adjustments to a bull put spread are not standard. The default action when the spread is challenged is to close at the stop. The one exception is a <em>rolling</em> adjustment — closing the current spread and opening a new spread at a later expiration, further OTM. This is done only when:</p>
+<ul>
+  <li>The current spread is at a small loss (less than 1× credit)</li>
+  <li>There is at least 7 DTE remaining in the new expiration</li>
+  <li>The new short strike is at least 1σ below the current spot</li>
+  <li>The net effect of the roll is a credit (i.e., the new spread collects more than the cost of closing the current one)</li>
+</ul>
+<p>The roll is not done if the current spread is past the 2× stop. The stop is the stop.</p>
+<h2>Variants</h2>
+<p>The bull put spread has two main variants in the book:</p>
+<ul>
+  <li><strong>0DTE SPX bull put spread:</strong> 1.0–1.5σ short strike, 5–10% premium-to-width, closed at 50% target or 2× stop</li>
+  <li><strong>7DTE XSP bull put spread (in iron condor):</strong> 0.7–1.0σ short strike, 25–35% premium-to-width, same management rules</li>
+</ul>
+<p>The 7DTE variant is one side of an iron condor. The other side is a bear call spread. See the iron condor strategy piece for the combined structure.</p>
+<h2>Practical Rules</h2>
+<ul>
+  <li><strong>Use the playbook's sigma-distance and IV-rank filters.</strong> Do not enter a spread that does not meet all the criteria.</li>
+  <li><strong>Place the 50% target and 2× stop as GTC orders at entry.</strong> Do not watch the position for exit.</li>
+  <li><strong>If the trade is challenged, take the loss.</strong> The next setup is more important than this one.</li>
+  <li><strong>Do not adjust past the stop.</strong> The stop is the stop.</li>
+  <li><strong>Track the realized win rate and EV per dollar of risk.</strong> Compare to the model. If the realized EV is below the model for 30+ trades, the strategy needs review.</li>
+</ul>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

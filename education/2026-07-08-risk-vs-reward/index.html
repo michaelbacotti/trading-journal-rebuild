@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Risk vs Reward: The Asymmetry That Drives Every Trade | The Trading Journal</title>
+ <meta name="description" content="The expected-value math behind every trade, why a 2:1 reward-to-risk ratio is the floor not the goal, and how to think about positive expectancy when the win rate is below 50%.">
+ <link rel="canonical" href="https://trading-journal.pages.dev/education/2026-07-08-risk-vs-reward/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Risk vs Reward: The Asymmetry That Drives Every Trade | The Trading Journal">
+ <meta property="og:description" content="The expected-value math behind every trade, why a 2:1 reward-to-risk ratio is the floor not the goal, and how to think about positive expectancy when the win rate is below 50%.">
+ <meta property="og:image" content="https://trading-journal.pages.dev/og-image.svg">
+ <meta property="og:url" content="https://trading-journal.pages.dev/education/2026-07-08-risk-vs-reward/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Risk vs Reward: The Asymmetry That Drives Every Trade | The Trading Journal">
+ <meta name="twitter:description" content="The expected-value math behind every trade, why a 2:1 reward-to-risk ratio is the floor not the goal, and how to think about positive expectancy when the win rate is below 50%.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <link rel="preload" href="/style.css" as="style">
+ <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
+ <noscript><link rel="stylesheet" href="/style.css"></noscript>
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 (Trading Journal property — pending) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENDING"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PENDING');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">July 08, 2026 &middot; EDUCATION / RISK</div>
+  <h1>Risk vs Reward: The Asymmetry That Drives Every Trade</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">The expected-value math behind every trade, why a 2:1 reward-to-risk ratio is the floor not the goal, and how to think about positive expectancy when the win rate is below 50%.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>When a trader says "the risk/reward is good," what they mean is that the math works out over a large number of trades even if individual trades are losers. The idea is straightforward, but most retail traders get it backwards — they fixate on the win rate and ignore the asymmetry.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<p>This piece walks through the math, the traps, and the practical rules for thinking about risk vs reward in an options-spread book.</p>
+<h2>The Core Equation</h2>
+<p>Expected value per trade is the sum of the win probability times the win size, minus the loss probability times the loss size:</p>
+<blockquote><strong>EV = (P<sub>win</sub> × Avg Win) − (P<sub>loss</sub> × Avg Loss)</strong></blockquote>
+<p>If a trade has a 40% chance of making $200 and a 60% chance of losing $100:</p>
+<blockquote>EV = (0.40 × $200) − (0.60 × $100) = $80 − $60 = <strong>+$20 per trade</strong></blockquote>
+<p>A positive EV trade is a good trade, even with a sub-50% win rate. Win rate is not a metric of strategy quality; <strong>expected value per dollar risked</strong> is.</p>
+<h2>Why Win Rate Is the Wrong Question</h2>
+<p>A 90% win-rate strategy that wins $1 and loses $100 has an EV of:</p>
+<blockquote>EV = (0.90 × $1) − (0.10 × $100) = $0.90 − $10 = <strong>−$9.10 per trade</strong></blockquote>
+<p>You win 9 out of 10 trades. You go broke anyway. This is the trap that catches every trader who optimizes for win rate — they feel competent because they "win a lot" while the account bleeds out from the rare, catastrophic losers.</p>
+<p>The opposite problem is a 30% win-rate strategy with massive winners. The math can work — a strategy that wins 30% of the time with 5:1 reward-to-risk is:</p>
+<blockquote>EV = (0.30 × $500) − (0.70 × $100) = $150 − $70 = <strong>+$80 per trade</strong></blockquote>
+<p>That's a high-quality strategy even though you lose 7 trades out of 10 on average.</p>
+<h2>Reward-to-Risk Floor — And Why "2:1" Is a Marketing Line</h2>
+<p>The finance-influencer version of this idea is "always take trades with at least 2:1 reward-to-risk." That is a useful starting rule but it is also oversimplified in two important ways.</p>
+<p>First, 2:1 is the <em>floor</em> for a strategy to break even at a 33% win rate. You need win rate × reward > loss rate × 1, so win rate × 2 > (1 − win rate), or 3 × win rate > 1, or win rate > 33%. At exactly 33% win rate with exactly 2:1 reward-to-risk, EV is zero. Anything above 33% with anything above 2:1 is positive EV. The "2:1 rule" is essentially saying "EV must be positive." It's a floor, not a target.</p>
+<p>Second, the right reward-to-risk number depends on your actual win rate. A strategy that wins 60% of the time can be profitable with a 1:1 reward-to-risk — in fact, the <em>edge</em> from a 60% win rate at 1:1 is larger than the edge from a 40% win rate at 2:1:</p>
+<blockquote>60% @ 1:1: EV = (0.60 × $100) − (0.40 × $100) = <strong>+$20 per trade</strong></blockquote>
+<blockquote>40% @ 2:1: EV = (0.40 × $200) − (0.60 × $100) = <strong>+$20 per trade</strong></blockquote>
+<p>Same EV. The 60% strategy looks safer psychologically (more winners) but the per-trade dollar EV is identical.</p>
+<p>What you actually want is to maximize <strong>EV per dollar of risk</strong>. That is the metric that matters for account growth.</p>
+<h2>The Asymmetry Standard in This Book</h2>
+<p>For a 0DTE vertical credit spread, the typical structure is:</p>
+<ul>
+  <li>Width: 15 points (SPX) or 5 points (XSP)</li>
+  <li>Premium collected: 5–10% of width</li>
+  <li>Max loss: 90–95% of width</li>
+  <li><strong>Reward-to-risk at entry</strong>: 1:9 to 1:19 — heavily asymmetric <em>against</em> the seller</li>
+</ul>
+<p>This looks terrible on a per-trade basis, but the win rate is 80–95% (the short strike is far enough OTM that the spread settles worthless the vast majority of the time). The math:</p>
+<blockquote>90% @ 1:14: EV = (0.90 × $1) − (0.10 × $14) = $0.90 − $1.40 = <strong>−$0.50 per trade</strong></blockquote>
+<p>Wait, that is negative. So why is this a viable strategy?</p>
+<p>Because the win rate on 0DTE verticals is not 90% — it is closer to 75% in the data, and the max loss is not 14× the credit because the position is managed actively (closed at 2× credit, not held to expiration). The realized reward-to-risk on a <em>managed</em> 0DTE vertical is closer to:</p>
+<blockquote>75% @ 1:2.5: EV = (0.75 × $1) − (0.25 × $2.5) = $0.75 − $0.625 = <strong>+$0.125 per trade</strong></blockquote>
+<p>That is positive EV, and over hundreds of trades per year it compounds.</p>
+<p>The point is: <strong>stated risk/reward at entry is not the same as realized risk/reward after management.</strong> A spread that looks like 1:14 on day 0 is actually closer to 1:2.5 after the 2× stop fires. Your <em>edge</em> is the active management, not the structural shape of the trade.</p>
+<h2>The Three Asymmetries to Look For</h2>
+<ol>
+  <li><strong>Structural asymmetry</strong> — the option chain gives you a structural edge. SPX/XSP options have European exercise and cash settlement, which removes early assignment and pin risk that single-name equity options carry. That is a structural edge over traders using equity options.</li>
+  <li><strong>Volatility asymmetry</strong> — implied vol is consistently elevated relative to realized vol in equity index options. The "vol risk premium" is real and has averaged 2–4 vol points in SPX over the last 30 years. Selling premium captures that premium. That is a volatility edge.</li>
+  <li><strong>Information asymmetry</strong> — you have a structured playbook with defined entry and exit criteria, which means your behavior is consistent. Most retail traders are inconsistent, and the edge from a disciplined system is the edge of having a system at all. That is a behavioral edge.</li>
+</ol>
+<p>The combination of the three is what makes a spread-selling book viable.</p>
+<h2>Practical Rules</h2>
+<ul>
+  <li><strong>Use OptionsStrat or a similar tool to model every trade before entry.</strong> See the reward/risk at the strike level. See the breakevens. See the POP. See the Greeks.</li>
+  <li><strong>Trade only when the modeled EV per dollar of risk is positive.</strong> This is the single most important filter.</li>
+  <li><strong>Set a stop at 2× credit and a target at 50% of credit.</strong> This converts the bad-looking structural reward/risk into a workable managed reward/risk.</li>
+  <li><strong>Track realized win rate, realized avg win, realized avg loss separately from modeled values.</strong> The model is the entry filter; the realized numbers are what you actually trade on.</li>
+  <li><strong>Do not let a single trade be more than 0.25% of NLV.</strong> Position sizing is the floor of risk management; it does not matter how good the EV is on a single trade if one bad outcome can blow up the account.</li>
+</ul>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>
