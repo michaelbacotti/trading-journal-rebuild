@@ -433,11 +433,15 @@ hr {
  .article-body .position-payoff-layout { padding: 0; }
 }
 
+/* Trade-fields card. Updated 2026-07-17 to cap dt column width — long
+   labels like "PoP (Black-Scholes ~115% IV, 553 DTE)" were stretching the
+   dt grid track to ~350px on USAR bull call spread, leaving the dd column
+   narrow and the box feeling oversized (Mike directive 13:10 ET). */
 .trade-hero-fields {
  background: #ffffff;
  border: 1px solid #e3e2dc;
  border-radius: 8px;
- padding: 1rem 1.25rem 1.25rem;
+ padding: 0.85rem 1rem 1rem;
  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
  align-self: start;
 }
@@ -448,18 +452,18 @@ hr {
  letter-spacing: 0.1em;
  color: #888;
  font-weight: 600;
- margin: 0 0 0.75rem;
- padding-bottom: 0.5rem;
+ margin: 0 0 0.6rem;
+ padding-bottom: 0.4rem;
  border-bottom: 1px solid var(--color-border, #e3e2dc);
 }
 
 .trade-hero-fields dl {
  margin: 0;
  display: grid;
- grid-template-columns: minmax(96px, auto) 1fr;
- gap: 0.4rem 0.9rem;
- font-size: 0.88rem;
- line-height: 1.45;
+ grid-template-columns: minmax(96px, 150px) 1fr;
+ gap: 0.35rem 0.85rem;
+ font-size: 0.86rem;
+ line-height: 1.4;
 }
 
 .trade-hero-fields dt {
