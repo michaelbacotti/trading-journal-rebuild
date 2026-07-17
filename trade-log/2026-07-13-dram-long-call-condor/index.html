@@ -103,7 +103,7 @@
 <dt>Stop loss</dt><dd>2× debit OR 30 DTE rule (whichever first)</dd></dl></aside></div>
 
 <h2>How the Trade Has Moved Against the Underlying</h2>
-<p>The chart below compares DRAM's spot price (left axis) to the strategy's premium (right axis) over the last month of trading. The two lines track closely — when DRAM rallies, the strategy premium expands; when DRAM sells off, the strategy compresses. The 1-month window captures a meaningful down-leg in DRAM from ~$80 to $57.21, with the strategy premium declining from ~$9.40/share to ~$7.27/share.</p>
+<p>The chart below compares DRAM's spot price (left axis) to the strategy's premium (right axis) over the last month of trading. The two lines track closely — when DRAM rallies, the strategy premium expands; when DRAM sells off, the strategy compresses. The 1-month window captures a meaningful down-leg in DRAM from ~$80 to $57.21, with the strategy premium declining from ~$9.40 per share to ~$7.27 per share.</p>
 <figure style="margin:2rem 0;text-align:center;"><img src="images/dual-history.png" alt="DRAM spot vs strategy premium, last 30 trading days. DRAM declined from ~$80 to $57.21; strategy premium declined from ~$9.40 to ~$7.27 per share." loading="lazy" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 2px 12px rgba(0,0,0,0.08);"></figure>
 <p>The wider observation: this is a <em>directional</em> trade dressed up as a range-bound condor. The body strikes (60/80) only collect meaningful theta if DRAM stays in the zone. If DRAM drifts sideways for 4–6 months, the body theta erodes the wings' time value and the position approaches max profit. If DRAM trends hard in either direction, one of the long wings gains most of the intrinsic value, but the structure caps the upside and the debit is at risk on a down move.</p>
 <h2>Greeks Snapshot (Black-Scholes, IV=93%, r=4.5%)</h2>
@@ -262,7 +262,7 @@
 <h2>Intraday Setup (entry)</h2>
 <p>DRAM opened at $57.21 on July 13 with implied volatility at 93% — elevated even for memory names, which routinely run 80–110% IV ahead of earnings cycles and macro semiconductor bellwethers. The IV rank was near the top of its 12-month range.</p>
 <p>The setup had been on the watchlist since the SOP published on July 5. DRAM had come off its 2026 highs following a broad semis rotation, compressing the risk-reward on a long-dated call condor. The thesis: AI infrastructure buildout (HBM memory, GPU servers) would sustain memory pricing through year-end, giving the 185-DTE LEAPS position enough runway to let theta decay on the short strikes while the long wings appreciate on the vol premium.</p>
-<p>Four separate legs, filled as market orders at open. The long 40C (far ITM, $23.73) and the long 90C (far OTM, $6.98) established the wings. The short 60C ($14.10) and short 80C ($8.68) defined the body and funded the structure. Net debit of $7.93/share across a $20-wide body and 10-point wings — defined risk, long-vol-duration exposure without paying full vega for it.</p>
+<p>Four separate legs, filled as market orders at open. The long 40C (far ITM, $23.73) and the long 90C (far OTM, $6.98) established the wings. The short 60C ($14.10) and short 80C ($8.68) defined the body and funded the structure. Net debit of $7.93 per share across a $20-wide body and 10-point wings — defined risk, long-vol-duration exposure without paying full vega for it.</p>
 <p>The position was entered as a single-unit trade (1 condor, 4 legs), sized within the playbook's 0.25% NLV per-trade cap.</p>
 <h2>Management Plan</h2>
 <ul>
