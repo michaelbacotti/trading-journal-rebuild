@@ -5,13 +5,13 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Fri, 17 Jul 2026 00:21:27 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 17 Jul 2026 00:44:00 GMT</lastBuildDate>
   <item>
-    <title>SKHY Bull Call Spread — Sep 18 '26 195/200: A Memory-Cycle Lottery Ticket</title>
+    <title>SKHY Bull Call Spread — Sep 18 '26 195/200: A Memory-Cycle HBM Position</title>
     <link>https://tredey.com/trade-log/2026-07-16-skhy-bull-call-spread/</link>
     <guid>https://tredey.com/trade-log/2026-07-16-skhy-bull-call-spread/</guid>
     <pubDate>2026-07-16</pubDate>
-    <description>Opened an SKHY Sep 18 195/200 bull call spread, OTM speculative structure betting on a memory-cycle rally. $80 defined risk, $420 max profit (5.25:1 R/R), 64 DTE.</description>
+    <description>Opened an SKHY Sep 18 195/200 bull call spread, OTM speculative structure expressing a memory-cycle rally thesis. $80 defined risk, $420 max profit (5.25:1 R/R), 64 DTE.</description>
   </item>
   <item>
     <title>DRAM Diagonal Call Spread — Dec 18 / Jan 15 '27 70/50: A Pullback Theta-Forward Lean</title>
@@ -25,10 +25,10 @@
     <link>https://tredey.com/trade-log/2026-07-15-qqq-inverse-diagonal-call-spread/</link>
     <guid>https://tredey.com/trade-log/2026-07-15-qqq-inverse-diagonal-call-spread/</guid>
     <pubDate>2026-07-15</pubDate>
-    <description>Opened a QQQ inverse diagonal call spread, long 740C Dec 31 / short 700C Dec 18, betting on a QQQ rally into year-end. $2,519.50 defined risk; max profit $1,786 if QQQ closes at $740.</description>
+    <description>Opened a QQQ inverse diagonal call spread, long 740C Dec 31 / short 700C Dec 18, expressing a QQQ-rally thesis into year-end. $2,519.50 defined risk; max profit $1,786 if QQQ closes at $740.</description>
   </item>
   <item>
-    <title>DRAM Long Call Condor — Jan 15 '27 40/60/80/90: A LEAPS Bet on Memory</title>
+    <title>DRAM Long Call Condor — Jan 15 '27 40/60/80/90: A LEAPS Position on Memory</title>
     <link>https://tredey.com/trade-log/2026-07-13-dram-long-call-condor/</link>
     <guid>https://tredey.com/trade-log/2026-07-13-dram-long-call-condor/</guid>
     <pubDate>2026-07-13</pubDate>
@@ -84,14 +84,14 @@
     <description>Anatomy of a bull put spread: when to use it, the entry criteria, the 50%/2x management rule, the IV-rank filter, and the failure modes to avoid.</description>
   </item>
   <item>
-    <title>QQQ Long Call Condor — Dec 18 '26 755/770/830/840: A 6-Month LEAPS Bet on a QQQ Rally</title>
+    <title>QQQ Long Call Condor — Dec 18 '26 755/770/830/840: A 6-Month LEAPS Position on a QQQ Rally</title>
     <link>https://tredey.com/trade-log/2026-06-26-qqq-long-call-condor/</link>
     <guid>https://tredey.com/trade-log/2026-06-26-qqq-long-call-condor/</guid>
     <pubDate>2026-06-26</pubDate>
-    <description>Opened a Dec 2026 LEAPS long call condor on QQQ with strikes at 755/770/830/840. Wide 60-point profit zone, debit-defined risk, 6-month asymmetric bullish-to-neutral bet on a Nasdaq 100 rally.</description>
+    <description>Opened a Dec 2026 LEAPS long call condor on QQQ with strikes at 755/770/830/840. Wide 60-point profit zone, debit-defined risk, 6-month asymmetric bullish-to-neutral position on a Nasdaq 100 rally.</description>
   </item>
   <item>
-    <title>RUT Diagonal Call Spread — Dec 18 / Dec 31 2900/2950: A Bullish 8-Month Bet on Small-Caps</title>
+    <title>RUT Diagonal Call Spread — Dec 18 / Dec 31 2900/2950: A Bullish 8-Month Position on Small-Caps</title>
     <link>https://tredey.com/trade-log/2026-04-24-rut-diagonal-call-spread/</link>
     <guid>https://tredey.com/trade-log/2026-04-24-rut-diagonal-call-spread/</guid>
     <pubDate>2026-04-24</pubDate>
@@ -102,7 +102,7 @@
     <link>https://tredey.com/trade-log/2026-04-13-rut-bull-call-spread/</link>
     <guid>https://tredey.com/trade-log/2026-04-13-rut-bull-call-spread/</guid>
     <pubDate>2026-04-13</pubDate>
-    <description>Opened a long call vertical spread on RUT 2700/2750 for Dec 18 2026, paying a debit for a defined-risk bullish bet on small-caps. RUT was breaking out of a 6-week range on tariff-shock reversal.</description>
+    <description>Opened a long call vertical spread on RUT 2700/2750 for Dec 18 2026, paying a debit for a defined-risk bullish position on small-caps. RUT was breaking out of a 6-week range on tariff-shock reversal.</description>
   </item>
 </channel>
 </rss>
