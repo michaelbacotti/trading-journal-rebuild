@@ -51,7 +51,7 @@
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
   <div class="trade-hero-chart"><p class="hero-label">P/L Curve — Three Time Horizons</p><figure><img src="images/pl-curve.png" alt="RUT Diagonal Call Spread P/L curve. Long 2900C Dec 31 / short 2950C Dec 18, net debit $2,870. Max profit $4,849 in the 2900-3000 zone at intermediate horizons; max loss $2,870 if RUT closes below 2,929 at Dec 18. Lower breakeven $2,928.70. Spot $2,787 at entry." loading="lazy"><figcaption class="chart-affiliate">Build and track this trade at <a href="https://optionstrat.com/siNAvUhSK5ZG?ref=ventureprise" target="_blank" rel="noopener">Optionstrat ↗</a></figcaption></figure></div>
-<div class="trade-hero-stats"><div class="trade-hero-stat hot"><p class="label">Max Profit</p><p class="value">$4,849.08</p><p class="sub">intermediate time horizon</p></div><div class="trade-hero-stat cool"><p class="label">Max Loss</p><p class="value">$2,870.00</p><p class="sub">defined = net debit</p></div><div class="trade-hero-stat neutral"><p class="label">Net Debit</p><p class="value">$28.70 per share</p><p class="sub">1 contract · $2,870</p></div><div class="trade-hero-stat"><p class="label">Spot / IV</p><p class="value">$2,787.00</p><p class="sub">RUT @ entry · IV ~30%</p></div></div>
+<div class="trade-hero-stats"><div class="trade-hero-stat hot"><p class="label">Max Profit</p><p class="value">$4,849.08</p><p class="sub">intermediate time horizon</p></div><div class="trade-hero-stat cool"><p class="label">Max Loss</p><p class="value">$2,870.00</p><p class="sub">defined = net debit</p></div><div class="trade-hero-stat neutral"><p class="label">Net Debit</p><p class="value">$28.70</p><p class="sub">1 diagonal call spread · $2,870 total</p></div><div class="trade-hero-stat"><p class="label">Spot / IV</p><p class="value">$2,787.00</p><p class="sub">RUT @ entry · IV ~30%</p></div></div>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
@@ -66,7 +66,7 @@
 <h2>Position Payoff at Three Time Horizons</h2>
 <p>The chart above shows the position's P/L as a function of RUT's price at three evaluation dates: at entry (the trade just opened), at mid-life (~125 DTE, halfway between entry and front expiration), and at front expiration (Dec 18, 2026 — when the short leg expires). Two curves are drawn — the mid-life curve (blue) and the at-expiration curve (gold dashed).</p>
 <p>The mid-life curve is the more interesting of the two. At ~125 DTE, the long 2900C still has substantial time value remaining (about 137 days left), while the short 2950C has shed most of its time premium on the way to its Dec 18 expiry. That asymmetric time-value decay is what produces the "hump" in the blue curve — the position reaches its max profit of $4,849 at intermediate time horizons when the strike spread ($50) is captured plus a meaningful time-value differential.</p>
-<p>The at-expiration curve is the diagonal's terminal shape: capped profit of $50 − debit = $21.30 per share ($2,130/contract) for any RUT close above $2,950 at Dec 18, and a loss zone from $0 up to the lower breakeven at $2,928.70. Below $2,900 the position is at max loss (both legs expire worthless or deep OTM).</p>
+<p>The at-expiration curve is the diagonal's terminal shape: capped profit of $50 − debit = $21.30 ($2,130/contract) for any RUT close above $2,950 at Dec 18, and a loss zone from $0 up to the lower breakeven at $2,928.70. Below $2,900 the position is at max loss (both legs expire worthless or deep OTM).</p>
 <p><strong>Read the chart:</strong></p>
 <ul>
   <li><strong>Spot $2,787</strong> is currently below the lower breakeven of $2,928.70 — the position is in a small loss at entry. RUT needs to rally ~5% by Dec 18 for the trade to print.</li>
@@ -90,7 +90,7 @@
 <dt>Width</dt><dd>50-point strike spread (2900 → 2950)</dd>
 <dt>Expiration (front)</dt><dd>2026-12-18 (249 DTE at entry)</dd>
 <dt>Expiration (back)</dt><dd>2026-12-31 (262 DTE at entry)</dd>
-<dt>Net debit</dt><dd>$28.70 per share</dd>
+<dt>Net debit</dt><dd>$28.70</dd>
 <dt>Contracts</dt><dd>1 diagonal</dd>
 <dt>Total debit</dt><dd>$2,870.00</dd>
 <dt>Max profit zone</dt><dd>2,900 → 3,000 at intermediate time horizons</dd>
@@ -213,7 +213,7 @@
 <p><strong>Why this structure over alternatives:</strong></p>
 <ul>
   <li><strong>vs. Naked long 2950C Dec 31:</strong> A naked long would cost ~$190/contract (the long leg premium alone) and have undefined downside if RUT sells off. The diagonal costs $2,870 — more expensive than the naked long, but with theta harvest on the short and a capped loss profile.</li>
-  <li><strong>vs. Bull call spread (e.g., 2900/2950 same expiration):</strong> A same-expiration bull call spread would be cheaper (~$15-20 per share debit) but would cap profit at the $50 spread width, with no time-value differential to exploit. The diagonal's extra back-month leg adds the hump profit at intermediate horizons ($4,849 vs $2,130 at expiration).</li>
+  <li><strong>vs. Bull call spread (e.g., 2900/2950 same expiration):</strong> A same-expiration bull call spread would be cheaper (~$15-20 debit) but would cap profit at the $50 spread width, with no time-value differential to exploit. The diagonal's extra back-month leg adds the hump profit at intermediate horizons ($4,849 vs $2,130 at expiration).</li>
   <li><strong>vs. Calendar (same strike, different expirations):</strong> A calendar at strike 2900 (long Dec 31, short Dec 18) would have similar theta dynamics but would be entirely OTM-bullish. The diagonal adds a 50-point strike spread that creates a defined profit zone and a clean breakeven.</li>
 </ul>
 <p><strong>Why not a credit diagonal:</strong> A credit diagonal (long higher strike, short lower strike) at 2900/2950 would have been possible — the front-month 2900C is more expensive than the back-month 2950C because the strike spread outweighs the time-value differential. But a credit diagonal profits from time decay only, not from direction. The thesis here was directional (bullish on small-caps), so the debit diagonal was the right structure.</p>
@@ -255,7 +255,7 @@
 <h2>Intraday Setup (entry)</h2>
 <p>RUT opened at $2,747.69 on April 24, 2026, with implied volatility around 30% — elevated even for the index, which routinely trades in the 18-25% IV range in calm conditions. The April tariff announcement cycle had pushed realized vol higher, and the 30% IV reflected ongoing uncertainty.</p>
 <p>The setup had been on the watchlist since late March. RUT had rallied 11.3% off the March 30 lows ($2,414 → $2,787) over 4 weeks and was testing the upper end of the Q1 trading range near $2,800. The trade thesis: small-cap relative-value compression was due for a mean-reversion move higher, and a defined-risk long diagonal gave exposure to a sustained 5-10% RUT rally by year-end without taking on undefined risk.</p>
-<p>Two separate legs, filled as limit orders mid-day. The long 2900C Dec 31 (262 DTE, deep ITM) at ~$213 per share and the short 2950C Dec 18 (249 DTE, OTM) at ~$188 per share established the diagonal. Net debit of $28.70 per share across a $50 strike spread — defined risk of $2,870 per contract, with the option to capture the mid-life theta hump if RUT moves into the 2,900-3,000 zone over the summer.</p>
+<p>Two separate legs, filled as limit orders mid-day. The long 2900C Dec 31 (262 DTE, deep ITM) at ~$213 and the short 2950C Dec 18 (249 DTE, OTM) at ~$188 established the diagonal. Net debit of $28.70 across a $50 strike spread — defined risk of $2,870 per contract, with the option to capture the mid-life theta hump if RUT moves into the 2,900-3,000 zone over the summer.</p>
 <p>The position was entered as a single-unit trade (1 diagonal, 2 legs), sized within the playbook's 0.25% NLV per-trade cap.</p>
 <h2>Management Plan</h2>
 <ul>
@@ -293,9 +293,9 @@
 <p>RUT rallied from $2,787 at entry to $2,965 as of July 14 — a 6.4% move that has put the trade into profit territory well ahead of the Dec 18 front expiration. The long 2900C Dec 31 has $64.76 of intrinsic value plus remaining time premium; the short 2950C Dec 18 is slightly ITM ($14.76 intrinsic) with ~5 months of time value left.</p>
 <p>Current position value (Black-Scholes, IV 22-30%, r=4.5%):</p>
 <ul>
-  <li>Long 2900C Dec 31 (170 DTE remaining) at S=$2,964.76: ~$228-304 per share (intrinsic + time value)</li>
-  <li>Short 2950C Dec 18 (157 DTE remaining) at S=$2,964.76: ~$191-267 per share (intrinsic + time value)</li>
-  <li>Position value: ~$36-37 per share = <strong>$3,670-3,730 per contract</strong></li>
+  <li>Long 2900C Dec 31 (170 DTE remaining) at S=$2,964.76: ~$228-304 (intrinsic + time value)</li>
+  <li>Short 2950C Dec 18 (157 DTE remaining) at S=$2,964.76: ~$191-267 (intrinsic + time value)</li>
+  <li>Position value: ~$36-37 = <strong>$3,670-3,730 per contract</strong></li>
   <li>P/L: <strong>+$800-865 per contract (+28-30% of debit)</strong></li>
 </ul>
 <p>The trade is performing as designed — RUT has rallied past the diagonal's $2,929 lower breakeven and the position is showing a meaningful gain. The hump profit ($4,849) is achievable if RUT continues into the $2,900-3,000 zone at intermediate time horizons (Aug-Oct 2026) and is closed then. Management decision pending: take 50% profit at the hump region, or hold for full max profit if RUT extends higher into Q4.</p>

@@ -50,8 +50,8 @@
   <p style="font-size:1.05rem;color:#666;line-height:1.6;">Opened a Jan 2027 LEAPS long call condor on DRAM with strikes at 40/60/80/90. Wide profit zone, debit-defined risk, long-dated theta play on a memory-cycle setup.</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
-  <div class="trade-hero-chart"><p class="hero-label">P/L Curve — Three Time Horizons</p><figure><img src="images/pl-curve.png" alt="DRAM Long Call Condor P/L curve at three time horizons. Net debit $7.93 per share ($793/contract), max profit $1,206.50 between strikes $60–$80, max loss $793.00 below $40 or above $90. Spot $57.21, IV 93%." loading="lazy"><figcaption class="chart-affiliate">Build and track this trade at <a href="https://optionstrat.com/qibwnByL22tR?ref=ventureprise" target="_blank" rel="noopener">Optionstrat ↗</a></figcaption></figure></div>
-<div class="trade-hero-stats"><div class="trade-hero-stat hot"><p class="label">Max Profit</p><p class="value">$1,207.50</p><p class="sub">between strikes $60–$80</p></div><div class="trade-hero-stat cool"><p class="label">Max Loss</p><p class="value">$792.50</p><p class="sub">defined risk = net debit</p></div><div class="trade-hero-stat neutral"><p class="label">Net Debit</p><p class="value">$7.93</p><p class="sub">1 contract · $793 debit</p></div><div class="trade-hero-stat"><p class="label">Spot / IV</p><p class="value">$57.21</p><p class="sub">DRAM @ entry · IV 93%</p></div></div>
+  <div class="trade-hero-chart"><p class="hero-label">P/L Curve — Three Time Horizons</p><figure><img src="images/pl-curve.png" alt="DRAM Long Call Condor P/L curve at three time horizons. Net debit $7.93 ($793/contract), max profit $1,206.50 between strikes $60–$80, max loss $793.00 below $40 or above $90. Spot $57.21, IV 93%." loading="lazy"><figcaption class="chart-affiliate">Build and track this trade at <a href="https://optionstrat.com/qibwnByL22tR?ref=ventureprise" target="_blank" rel="noopener">Optionstrat ↗</a></figcaption></figure></div>
+<div class="trade-hero-stats"><div class="trade-hero-stat hot"><p class="label">Max Profit</p><p class="value">$1,207.50</p><p class="sub">between strikes $60–$80</p></div><div class="trade-hero-stat cool"><p class="label">Max Loss</p><p class="value">$792.50</p><p class="sub">defined risk = net debit</p></div><div class="trade-hero-stat neutral"><p class="label">Net Debit</p><p class="value">$7.93</p><p class="sub">1 long call condor · $793 total</p></div><div class="trade-hero-stat"><p class="label">Spot / IV</p><p class="value">$57.21</p><p class="sub">DRAM @ entry · IV 93%</p></div></div>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
@@ -89,7 +89,7 @@
 <dt>Leg 4</dt><dd>BUY 90C (long wing, far OTM)</dd>
 <dt>Width</dt><dd>20-point body (60 → 80); 10-point wings (40–60, 80–90)</dd>
 <dt>Expiration</dt><dd>2027-01-15 (185 DTE at entry)</dd>
-<dt>Net debit</dt><dd>$7.93 per share</dd>
+<dt>Net debit</dt><dd>$7.93</dd>
 <dt>Contracts</dt><dd>1 condor</dd>
 <dt>Total debit</dt><dd>$793.00</dd>
 <dt>Max profit zone</dt><dd>60 → 80 at expiry</dd>
@@ -103,8 +103,8 @@
 <dt>Stop loss</dt><dd>2× debit OR 30 DTE rule (whichever first)</dd></dl></aside></div>
 
 <h2>How the Trade Has Moved Against the Underlying</h2>
-<p>The chart below compares DRAM's spot price (left axis) to the strategy's premium (right axis) over the last month of trading. The two lines track closely — when DRAM rallies, the strategy premium expands; when DRAM sells off, the strategy compresses. The 1-month window captures a meaningful down-leg in DRAM from ~$80 to $57.21, with the strategy premium declining from ~$9.40 per share to ~$7.27 per share.</p>
-<figure style="margin:2rem 0;text-align:center;"><img src="images/dual-history.png" alt="DRAM spot vs strategy premium, last 30 trading days. DRAM declined from ~$80 to $57.21; strategy premium declined from ~$9.40 to ~$7.27 per share." loading="lazy" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 2px 12px rgba(0,0,0,0.08);"></figure>
+<p>The chart below compares DRAM's spot price (left axis) to the strategy's premium (right axis) over the last month of trading. The two lines track closely — when DRAM rallies, the strategy premium expands; when DRAM sells off, the strategy compresses. The 1-month window captures a meaningful down-leg in DRAM from ~$80 to $57.21, with the strategy premium declining from ~$9.40 to ~$7.27.</p>
+<figure style="margin:2rem 0;text-align:center;"><img src="images/dual-history.png" alt="DRAM spot vs strategy premium, last 30 trading days. DRAM declined from ~$80 to $57.21; strategy premium declined from ~$9.40 to ~$7.27." loading="lazy" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 2px 12px rgba(0,0,0,0.08);"></figure>
 <p>The wider observation: this is a <em>directional</em> trade dressed up as a range-bound condor. The body strikes (60/80) only collect meaningful theta if DRAM stays in the zone. If DRAM drifts sideways for 4–6 months, the body theta erodes the wings' time value and the position approaches max profit. If DRAM trends hard in either direction, one of the long wings gains most of the intrinsic value, but the structure caps the upside and the debit is at risk on a down move.</p>
 <h2>Greeks Snapshot (Black-Scholes, IV=93%, r=4.5%)</h2>
 <p>Greeks are computed at the entry spot ($57.21), 185 days to expiry, IV surface anchored at 93%, risk-free rate 4.5%, no dividend yield. Numbers below are <strong>per-contract</strong> (×100 shares).</p>
@@ -262,7 +262,7 @@
 <h2>Intraday Setup (entry)</h2>
 <p>DRAM opened at $57.21 on July 13 with implied volatility at 93% — elevated even for memory names, which routinely run 80–110% IV ahead of earnings cycles and macro semiconductor bellwethers. The IV rank was near the top of its 12-month range.</p>
 <p>The setup had been on the watchlist since the SOP published on July 5. DRAM had come off its 2026 highs following a broad semis rotation, compressing the risk-reward on a long-dated call condor. The thesis: AI infrastructure buildout (HBM memory, GPU servers) would sustain memory pricing through year-end, giving the 185-DTE LEAPS position enough runway to let theta decay on the short strikes while the long wings appreciate on the vol premium.</p>
-<p>Four separate legs, filled as market orders at open. The long 40C (far ITM, $23.73) and the long 90C (far OTM, $6.98) established the wings. The short 60C ($14.10) and short 80C ($8.68) defined the body and funded the structure. Net debit of $7.93 per share across a $20-wide body and 10-point wings — defined risk, long-vol-duration exposure without paying full vega for it.</p>
+<p>Four separate legs, filled as market orders at open. The long 40C (far ITM, $23.73) and the long 90C (far OTM, $6.98) established the wings. The short 60C ($14.10) and short 80C ($8.68) defined the body and funded the structure. Net debit of $7.93 across a $20-wide body and 10-point wings — defined risk, long-vol-duration exposure without paying full vega for it.</p>
 <p>The position was entered as a single-unit trade (1 condor, 4 legs), sized within the playbook's 0.25% NLV per-trade cap.</p>
 <h2>Management Plan</h2>
 <ul>

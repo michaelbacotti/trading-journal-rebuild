@@ -51,7 +51,7 @@
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
   <div class="trade-hero-chart"><p class="hero-label">P/L Curve — Three Time Horizons</p><figure><img src="images/pl-curve.png" alt="DRAM Diagonal Call Spread P/L curve at three time horizons. Long 50C Jan 15 '27 / Short 70C Dec 18 '26. Net debit $837.50, max profit $1,231.44 above $70 at short expiration, max loss $837.50. Spot $57.21, IV 88%." loading="lazy"><figcaption class="chart-affiliate">Build and track this trade at <a href="https://optionstrat.com/4T83lec7ojwo?ref=ventureprise" target="_blank" rel="noopener">Optionstrat ↗</a></figcaption></figure></div>
-<div class="trade-hero-stats"><div class="trade-hero-stat hot"><p class="label">Max Profit</p><p class="value">$1,231.44</p><p class="sub">above $70 at Dec 18 expiry</p></div><div class="trade-hero-stat cool"><p class="label">Max Loss</p><p class="value">$837.50</p><p class="sub">defined risk = net debit</p></div><div class="trade-hero-stat neutral"><p class="label">Net Debit</p><p class="value">$8.38 per share</p><p class="sub">1 diagonal · $837.50 total</p></div><div class="trade-hero-stat"><p class="label">Spot / IV</p><p class="value">$57.21</p><p class="sub">DRAM @ entry · IV 88%</p></div></div>
+<div class="trade-hero-stats"><div class="trade-hero-stat hot"><p class="label">Max Profit</p><p class="value">$1,231.44</p><p class="sub">above $70 at Dec 18 expiry</p></div><div class="trade-hero-stat cool"><p class="label">Max Loss</p><p class="value">$837.50</p><p class="sub">defined risk = net debit</p></div><div class="trade-hero-stat neutral"><p class="label">Net Debit</p><p class="value">$8.38</p><p class="sub">1 diagonal call spread · $837.50 total</p></div><div class="trade-hero-stat"><p class="label">Spot / IV</p><p class="value">$57.21</p><p class="sub">DRAM @ entry · IV 88%</p></div></div>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
@@ -91,7 +91,7 @@
 <dt>Calendar spread</dt><dd>+28 days (long Jan '27 vs short Dec 18 '26)</dd>
 <dt>Expiration (short)</dt><dd>2026-12-18 (156 DTE at entry)</dd>
 <dt>Expiration (long)</dt><dd>2027-01-15 (184 DTE at entry)</dd>
-<dt>Net debit</dt><dd>$8.375 per share</dd>
+<dt>Net debit</dt><dd>$8.375</dd>
 <dt>Contracts</dt><dd>1 diagonal</dd>
 <dt>Total debit</dt><dd>$837.50</dd>
 <dt>Max profit zone</dt><dd>DRAM ≥ $70 at short expiration</dd>
@@ -106,7 +106,7 @@
 
 <h2>How the Trade Has Moved Against the Underlying</h2>
 <p>The chart below compares DRAM's spot price (left axis) to the strategy's premium (right axis) over the last month of trading. The two lines track closely — when DRAM rallies, the strategy premium expands; when DRAM sells off, the strategy compresses. The 1-month window captures a meaningful down-leg in DRAM from ~$80 to $57.21, with the strategy premium declining from ~$1,236/contract to ~$847/contract.</p>
-<figure style="margin:2rem 0;text-align:center;"><img src="images/dual-history.png" alt="DRAM spot vs strategy premium, last 30 trading days. DRAM declined from ~$80 to $57.21; strategy premium declined from ~$12.36 to ~$8.47 per share." loading="lazy" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 2px 12px rgba(0,0,0,0.08);"></figure>
+<figure style="margin:2rem 0;text-align:center;"><img src="images/dual-history.png" alt="DRAM spot vs strategy premium, last 30 trading days. DRAM declined from ~$80 to $57.21; strategy premium declined from ~$12.36 to ~$8.47." loading="lazy" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 2px 12px rgba(0,0,0,0.08);"></figure>
 <p>The wider observation: DRAM has now corrected -28% from its June peak ($80 → $57.21). This diagonal is a "buy the dip with theta help" structure. The short 70C is funding most of the long 50C carry; if DRAM reclaims $70 by mid-November, the short leg expires worthless and the long leg collects full intrinsic plus remaining time value. If DRAM stays range-bound or drifts down slowly, the theta differential between the two legs slowly closes the debit.</p>
 <p>The risk is a vol crush on the long leg. At 88% IV, the long 50C carries significant extrinsic value. If DRAM mean-reverts and IV collapses to 60% (a normal idle level for memory names between cycles), the long leg decays by roughly half even if DRAM stays at $57. The short leg also decays, but proportionally less. Net effect: the debit holds but doesn't grow meaningfully until DRAM moves.</p>
 <h2>Greeks Snapshot (Black-Scholes, IV=88%, r=4.5%)</h2>
@@ -195,8 +195,8 @@
 <p>A diagonal call spread with long 50C Jan '27 (back month, lower strike, longer-dated) and short 70C Dec 18 (front month, higher strike, shorter-dated) is a <strong>theta-forward debit structure</strong> that expresses a bullish-but-not-violent view on DRAM with a defined-risk cap. The 20-point strike spread more than offsets the 28-day extra time value on the back month, producing a net debit that's roughly 70% the cost of a naked long 50C LEAP.</p>
 <p>The structure is built off three sources of edge:</p>
 <ol>
-  <li><strong>Strike spread economics.</strong> Long 50C pays $17.425; short 70C collects $9.05. Net debit $8.375 per share. The $20 strike spread contributes ~$8 per share of intrinsic "lift" to the position (long 50C is $7.21 ITM at $57.21, capturing intrinsic that the short 70C doesn't yet have). The short leg's intrinsic will only activate if DRAM crosses $70.</li>
-  <li><strong>Time-value arbitrage.</strong> Front-month theta (short 70C at 156 DTE decays at ~$0.044/day) is harvesting faster than back-month theta (long 50C at 184 DTE decays at ~$0.036/day). Net daily theta = +$0.85/contract/day, or +$0.0085 per share. Over 100 days, that's ~$0.85/day × 100 = ~$85 harvested from time alone — recovering 10% of the debit even if DRAM doesn't move.</li>
+  <li><strong>Strike spread economics.</strong> Long 50C pays $17.425; short 70C collects $9.05. Net debit $8.375. The $20 strike spread contributes ~$8 of intrinsic "lift" to the position (long 50C is $7.21 ITM at $57.21, capturing intrinsic that the short 70C doesn't yet have). The short leg's intrinsic will only activate if DRAM crosses $70.</li>
+  <li><strong>Time-value arbitrage.</strong> Front-month theta (short 70C at 156 DTE decays at ~$0.044/day) is harvesting faster than back-month theta (long 50C at 184 DTE decays at ~$0.036/day). Net daily theta = +$0.85/contract/day, or +$0.0085. Over 100 days, that's ~$0.85/day × 100 = ~$85 harvested from time alone — recovering 10% of the debit even if DRAM doesn't move.</li>
   <li><strong>Pullback entry.</strong> DRAM sold off to $57.21 today, down 6.56% from yesterday's close. The 50C LEAP at $17.43 is meaningfully cheaper than it would have been at the June $80 peak (~$25+ implied). Buying the long leg into a -28% drawdown gives better convexity.</li>
 </ol>
 <p>The 156 DTE short expiration (Dec 18) is the natural management horizon. If DRAM reclaims $70 by then, the short leg expires worthless and the position becomes equivalent to a long 50C LEAP with $1,231 of locked-in profit. If DRAM stays below $70, the short leg is ITM at expiration — net assignment of $70 minus residual long intrinsic, capping the upside but still profitable above $55.45.</p>
@@ -209,8 +209,8 @@
 </ul>
 <p><strong>Why a diagonal over alternatives:</strong></p>
 <ul>
-  <li><strong>Over a naked long 50C LEAP:</strong> Saves $9.05 per share ($905/contract) by selling the 70C front-month against it. That's a 52% reduction in debit cost for a structure that has a defined risk cap (max loss = debit, vs. naked long = lose all premium paid).</li>
-  <li><strong>Over a vertical 50/70 call spread (same expiry):</strong> Captures the calendar theta differential. A same-expiry 50/70 spread costs ~$5.50 per share and has a max profit of $20 - $5.50 = $14.50 per share at short expiration. The diagonal costs $8.38 per share but caps out at $20 - $8.38 + residual TV = ~$11.62 per share at short expiration — similar reward/risk, but the diagonal wins if DRAM stays range-bound for months (theta harvest) while the vertical doesn't.</li>
+  <li><strong>Over a naked long 50C LEAP:</strong> Saves $9.05 ($905/contract) by selling the 70C front-month against it. That's a 52% reduction in debit cost for a structure that has a defined risk cap (max loss = debit, vs. naked long = lose all premium paid).</li>
+  <li><strong>Over a vertical 50/70 call spread (same expiry):</strong> Captures the calendar theta differential. A same-expiry 50/70 spread costs ~$5.50 and has a max profit of $20 - $5.50 = $14.50 at short expiration. The diagonal costs $8.38 but caps out at $20 - $8.38 + residual TV = ~$11.62 at short expiration — similar reward/risk, but the diagonal wins if DRAM stays range-bound for months (theta harvest) while the vertical doesn't.</li>
   <li><strong>Over a calendar (same strike, different expiry):</strong> A 50C Dec/Jan calendar would be more pure theta, but it has unlimited downside risk past $50 (the front-month goes ITM with no back-month protection). The diagonal's $20 strike spread provides a hard floor on the long-leg intrinsic contribution, making the structure defined-risk.</li>
   <li><strong>Over a debit put spread:</strong> Expressing a bullish view with calls keeps the long-leg convexity past $70. A put spread caps out at the short strike — diagonal lets you ride a rally.</li>
 </ul>
@@ -261,7 +261,7 @@
 <h2>Intraday Setup (entry)</h2>
 <p>DRAM opened at $57.21 on July 15 with implied volatility at 88% — elevated for a memory name that typically runs 70–95% IV around memory-cycle inflection points. The IV rank was in the upper half of its 12-month range.</p>
 <p>The setup had been on the watchlist since the previous trade log (2026-07-13 DRAM Long Call Condor) — same underlying, same memory-cycle thesis, but a different structure to express a more aggressive bullish view with lower net debit. Today's -6.56% one-day selloff, taking DRAM from $61.23 to $57.21, put the 50C LEAP at $17.43 — meaningfully below its $25+ June peak. The pullback offered better entry on the long leg than waiting for a full reversal.</p>
-<p>Two separate legs, filled as limit orders mid-day. The long 50C Jan '27 at $17.425 and the short 70C Dec 18 at $9.05 established the diagonal. Net debit of $8.375 per share = $837.50/contract — defined risk, theta-positive exposure with built-in lower-breakeven cushion.</p>
+<p>Two separate legs, filled as limit orders mid-day. The long 50C Jan '27 at $17.425 and the short 70C Dec 18 at $9.05 established the diagonal. Net debit of $8.375 = $837.50/contract — defined risk, theta-positive exposure with built-in lower-breakeven cushion.</p>
 <p>The position was entered as a single-unit trade (1 diagonal, 2 legs), sized within the playbook's 0.25% NLV per-trade cap.</p>
 <h2>Management Plan</h2>
 <ul>
