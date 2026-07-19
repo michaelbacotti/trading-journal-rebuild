@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Iron Condor: The Range-Bound, IV-Rich Theta Engine | The Trading Journal</title>
+ <meta name="description" content="Anatomy of the iron condor: a four-leg structure that collects premium in both wings when the underlying stays inside a defined range. The highest-theta structure in the playbook, paired with the tightest management rule.">
+ <link rel="canonical" href="https://tredey.com/strategies/2026-07-19-iron-condor/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Iron Condor: The Range-Bound, IV-Rich Theta Engine | The Trading Journal">
+ <meta property="og:description" content="Anatomy of the iron condor: a four-leg structure that collects premium in both wings when the underlying stays inside a defined range. The highest-theta structure in the playbook, paired with the tightest management rule.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/strategies/2026-07-19-iron-condor/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Iron Condor: The Range-Bound, IV-Rich Theta Engine | The Trading Journal">
+ <meta name="twitter:description" content="Anatomy of the iron condor: a four-leg structure that collects premium in both wings when the underlying stays inside a defined range. The highest-theta structure in the playbook, paired with the tightest management rule.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 (Trading Journal property — pending) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENDING"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PENDING');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">July 19, 2026 &middot; STRATEGY / RANGE-BOUND</div>
+  <h1>Iron Condor: The Range-Bound, IV-Rich Theta Engine</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">Anatomy of the iron condor: a four-leg structure that collects premium in both wings when the underlying stays inside a defined range. The highest-theta structure in the playbook, paired with the tightest management rule.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>The iron condor is the structure that lets a seller's book harvest theta in a defined-risk, defined-reward package. When the journal needs to express the view "the underlying will stay roughly here until expiry," the condor is the canonical expression. The 2026-07-10 XSP trade in the trade-log is the working example.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<h2>The Structure</h2>
+<p>The condor is two verticals stacked together — a short put vertical below the market and a short call vertical above. All four legs share the same expiration.</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Leg</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Action</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Role</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Long put</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">BUY</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Lower wing</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Caps downside risk</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Short put</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">SELL</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Above long put</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">The "body" of the put wing</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Short call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">SELL</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Above spot</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">The "body" of the call wing</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Long call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">BUY</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Higher wing</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Caps upside risk</td>
+</tr>
+</tbody></table></div>
+<p>For a 0DTE XSP 580/581.5 condor at the 580 strikes with 12 days to expiry:</p>
+<ul>
+  <li><strong>Credit</strong>: $0.45 per spread × 2 wings × 100 = <strong>$90 per condor</strong></li>
+  <li><strong>Max loss</strong> (one side tested): width × 100 − credit = $150 − $90 = <strong>$60 per condor</strong> (occurs if either short strike is breached)</li>
+  <li><strong>Width</strong>: 1.5 points on each wing (chosen so the short strikes sit at the ±1σ expected move)</li>
+  <li><strong>Breakevens</strong>: short put strike − $0.90 (downside BE) ; short call strike + $0.90 (upside BE)</li>
+  <li><strong>Theta</strong>: net positive across both wings (~−$15/day at this DTE)</li>
+  <li><strong>Vega</strong>: net negative (the condor wants IV to <em>fall</em> after entry)</li>
+</ul>
+<h2>Why this structure over the alternatives</h2>
+<p>Compared to a strangle or single short vertical, the condor has two structural advantages and one structural cost:</p>
+<ul>
+  <li><strong>Advantage 1</strong>: Defined risk on both sides. A naked short strangle has unbounded risk on at least one side. The condor caps each side at the wing width.</li>
+  <li><strong>Advantage 2</strong>: Theta is collected at two strikes, not one. Every day the underlying stays inside the range, theta works twice — once for the put wing, once for the call wing.</li>
+  <li><strong>Cost</strong>: The credit received is lower per dollar of width than a strangle (the long wings eat into the credit). The trade-off is the cap on the maximum payout.</li>
+</ul>
+<h2>Entry criteria (Playbook-aligned)</h2>
+<p>Condors are sensitive to IV regime and to expected move pricing. The entry checklist:</p>
+<ul>
+  <li>[ ] <strong>IV rank ≥ 25</strong> — the condor needs elevated vol to pay. In low-IV regimes, the credit does not justify the wing width.</li>
+  <li>[ ] <strong>Expected move model</strong>: short strikes are placed roughly at ±1σ of the option-strat oracles of the chosen DTE (or a 1-standard-deviation recent move estimate).</li>
+  <li>[ ] <strong>DTE 14-45</strong> for swing condors (held through the duration); 0-1 DTE for intraday income variants.</li>
+  <li>[ ] <strong>Wing widths equal</strong> — typically the put width equals the call width. Asymmetric wings change the breakeven geometry and the P&L tail.</li>
+  <li>[ ] <strong>Sizing</strong>: max loss per condor must respect <a href="/playbook/2026-07-05-sop/">Section 1 of the Playbook</a> (0.25% NLV default).</li>
+  <li>[ ] <strong>Earnings / FOMC calendar</strong>: avoid entries within 5 days of a major catalyst. IV expansion after the event can blow through one or both wings before the thesis has time to play.</li>
+</ul>
+<h2>Management rule</h2>
+<p>The condor's theta decays fastest in the final 14 days. The management rules:</p>
+<ul>
+  <li><strong>At +50% of credit</strong>: close the trade. Theta is now working against the remaining 50%. The risk/reward of holding is no longer asymmetric.</li>
+  <li><strong>At +25% of credit</strong>: close one wing. Take the higher-conviction side off the table; leave the weaker side running with partial exposure.</li>
+  <li><strong>At 7 DTE</strong>: if not closed, the trade is now in gamma-acceleration territory. Either close, or roll the threatened wing out in time for a net credit.</li>
+  <li><strong>One wing breached but expires OTM (came back inside)</strong>: close the winning wing for profit, then the threatened wing at the close. Holding the threatened wing into expiry is the highest-skull move in the playbook.</li>
+</ul>
+<p>The 2026-07-10 XSP trade in the journal closed at +52% of credit on day 7, which is the canonical good outcome.</p>
+<h2>Failure modes</h2>
+<ol>
+  <li><strong>Condor through an event.</strong> Selling an XSP condor the day before CPI (or any vol-expansion catalyst) is asking for the long wing on one side to be tested and stay tested through expiry. The thesis ("the market will stay inside ±1σ") ignores the asymmetric risk of event-day gaps.</li>
+  <li><strong>Wings too tight for the regime.</strong> Selling a 1-point XSP condor in a regime that trends $5 a day means one wing will be tested. The 50%/2x rule from the Playbook is the only thing that saves the trade from a max loss.</li>
+  <li><strong>No +50% management discipline.</strong> Closing at +25% on day 4 because "it might go higher" leaves the trade to theta-decay the credit back. The management rule is not optional; it is part of the structure.</li>
+  <li><strong>Rolling into a worse position.</strong> A losing wing is rolled by closing the threatened wing and opening a new one further out. Rolling through the short strike of the same wing is a small loss expanded into a bigger one.</li>
+</ol>
+<h2>When this appears in the trade-log</h2>
+<p>The 2026-07-10 XSP iron condor is the working example. Pattern: short-term IV rank uptick, range-bound tape, closed at +52% of credit on day 7.</p>
+<p><strong>Disclosure:</strong> This page is educational material drawn from a working trading journal. It is <strong>not investment advice</strong>. Options trading involves substantial risk, and the condor's defined-risk package is not a guarantee against loss. Discuss any strategy with a qualified professional before risking capital. We use <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">OptionsStrat</a> to visualize these structures.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

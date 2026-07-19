@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Long Straddle: The Volatility Expression | The Trading Journal</title>
+ <meta name="description" content="Anatomy of the long straddle: ATM call + ATM put, same strike, same expiry. The cleanest expression of 'I do not know the direction, but I expect volatility.' Used around earnings, FOMC, and known catalysts.">
+ <link rel="canonical" href="https://tredey.com/strategies/2026-07-19-straddle/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Long Straddle: The Volatility Expression | The Trading Journal">
+ <meta property="og:description" content="Anatomy of the long straddle: ATM call + ATM put, same strike, same expiry. The cleanest expression of 'I do not know the direction, but I expect volatility.' Used around earnings, FOMC, and known catalysts.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/strategies/2026-07-19-straddle/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Long Straddle: The Volatility Expression | The Trading Journal">
+ <meta name="twitter:description" content="Anatomy of the long straddle: ATM call + ATM put, same strike, same expiry. The cleanest expression of 'I do not know the direction, but I expect volatility.' Used around earnings, FOMC, and known catalysts.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 (Trading Journal property — pending) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENDING"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PENDING');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">July 19, 2026 &middot; STRATEGY / VOLATILITY</div>
+  <h1>Long Straddle: The Volatility Expression</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">Anatomy of the long straddle: ATM call + ATM put, same strike, same expiry. The cleanest expression of 'I do not know the direction, but I expect volatility.' Used around earnings, FOMC, and known catalysts.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>The long straddle is the structure that expresses a view on magnitude, not direction. When the trade-log needs to position for a binary catalyst (earnings, FOMC, regulatory decision) but the direction is unclear, the long straddle — or the cheaper short-put short-call strangle cousin — is the structure used. It is the inverse of the iron condor: the condor wants the market to stay still, the straddle wants the market to move.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<p>This page covers the long straddle proper. The short strangle is the income complement and lives at a sister page in this section.</p>
+<h2>The Structure</h2>
+<p>A long straddle is the simultaneous purchase of an at-the-money call and an at-the-money put, same strike, same expiry.</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Leg</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Action</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Expiry</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Premium</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greeks</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Long call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">BUY</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">ATM</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">14-45 DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$X.XX</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+delta, +vega, −theta</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Long put</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">BUY</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">ATM (same strike)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">14-45 DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$X.XX</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−delta, +vega, −theta</td>
+</tr>
+</tbody></table></div>
+<p><strong>Max loss</strong>: total premium paid (both legs combined) × 100.</p>
+<p><strong>Max profit</strong>: unlimited upside / limited downside to zero (the stock can't go below zero).</p>
+<p><strong>Breakevens</strong>: strike + total premium ; strike − total premium.</p>
+<p><strong>Debit</strong>: full premium of both legs up front.</p>
+<p>For a 30-DTE SPY 743 straddle (SPY at $743.29, IV rank ~22):</p>
+<ul>
+  <li>Strike: $743 (ATM)</li>
+  <li>Call premium: ~$14.40 (estimated)</li>
+  <li>Put premium: ~$14.20</li>
+  <li><strong>Total debit</strong>: ~$28.60 per share, $2,860 per spread</li>
+  <li><strong>Max loss</strong>: $2,860 (both legs expire worthless)</li>
+  <li><strong>Upper breakeven</strong>: $771.60 (stock needs to rise 3.8%)</li>
+  <li><strong>Lower breakeven</strong>: $714.40 (stock needs to fall 3.9%)</li>
+  <li><strong>Required move</strong>: ~3.85% in 30 days to break even — bigger than SPY's typical 30-day realized move</li>
+</ul>
+<h2>Why this is structural, not directional</h2>
+<p>The straddle is a thesis that realized vol will exceed implied vol. The position has three components:</p>
+<ul>
+  <li><strong>Direction is zero</strong>. ATM call and ATM put have equal delta magnitudes with opposite signs, so net delta is roughly zero. The position does not care which way the stock moves.</li>
+  <li><strong>Vega is doubled</strong>. Long call is +vega, long put is +vega. The position is long two ATM options' worth of vega. If IV expands, the position gains even if the stock doesn't move.</li>
+  <li><strong>Theta is doubled (and negative)</strong>. The position bleeds value every session. This is the cost of the volatility expression.</li>
+</ul>
+<p>The trade works when <strong>realized vol > implied vol AND/OR implied vol expands</strong>. If the stock moves more than the breakevens require, the position captures the move. If IV expands, the position captures the vega. Either path produces a winning trade; both can happen together.</p>
+<h2>When to use</h2>
+<ol>
+  <li><strong>Earnings / FOMC / regulatory event</strong> where the direction is uncertain but the magnitude is expected to be large.</li>
+  <li><strong>Volatility regime expansion</strong> (front-month IV below realized vol over the recent window) — the position is long the underpriced vol.</li>
+  <li><strong>Single-name binary catalysts</strong> (FDA decision, product launch, court ruling). Single-name IV pre-event is often 80-150%; the straddle is positive-vega-bigger than the theta bleed for the 1-2 weeks before the event.</li>
+</ol>
+<h2>When NOT to use</h2>
+<ul>
+  <li><strong>No known catalyst</strong>. "I think the market is going to move" without a date is not a straddle thesis. The position will pay theta until it expires.</li>
+  <li><strong>IV already elevated</strong>. If pre-event IV is already 80-150%, the price of the straddle is high; breakevens are wide. The trade requires larger moves to pay.</li>
+  <li><strong>Long-DTE with low-IV regime</strong>. 60-90 DTE straddles in a 10% IV-rank environment have small premiums and huge breakevens. The structure does not make sense outside event windows.</li>
+</ul>
+<h2>Variations</h2>
+<ul>
+  <li><strong>Long strangle</strong>: OTM call + OTM put, lower debit, wider breakevens. Cheaper than the straddle; needs a bigger move.</li>
+  <li><strong>Short strangle (income)</strong>: opposite direction. Sells an OTM call and OTM put. Wins if the underlying stays between the strikes. Highest theta, can have unbounded risk on tails. Used cautiously.</li>
+</ul>
+<h2>Entry criteria (Playbook-aligned)</h2>
+<ul>
+  <li>[ ] <strong>Known catalyst with a date</strong> (the thesis is timing, not just "some vol")</li>
+  <li>[ ] <strong>IV rank comparison</strong>: implied vol < recent realized vol (the position is long the underpriced side)</li>
+  <li>[ ] <strong>DTE 7-30</strong> for event trades (entering too early means burning theta with no vega yet)</li>
+  <li>[ ] <strong>Sizing</strong>: max loss (full debit) must respect <a href="/playbook/2026-07-05-sop/">Section 1 of the Playbook</a> (0.25% NLV default)</li>
+  <li>[ ] <strong>Exit criteria pre-set</strong>: close at +50% of debit, close at 50% of debit in loss, close the day after the event to capture IV crush on the long-vol leg</li>
+</ul>
+<h2>Management rule</h2>
+<p>The straddle's lifetime is short and event-anchored:</p>
+<ul>
+  <li><strong>Pre-event</strong>: hold to capture the vega expansion + potential IV build into the event</li>
+  <li><strong>Day of event</strong>: theta is maximal; gamma is maximal. Choose either to close pre-event or close post-event depending on whether the move satisfied the breakeven.</li>
+  <li><strong>Post-event</strong>: if the move was insufficient, close immediately. The straddle's vega collapses; what remains is a long stock substitute with no tail advantage. Do not hold into next week.</li>
+  <li><strong>At +50% of debit</strong>: close half; let the rest ride for the duration.</li>
+  <li><strong>At −50% of debit</strong>: close. The thesis was wrong about the magnitude.</li>
+</ul>
+<h2>Failure modes</h2>
+<ol>
+  <li><strong>Straddle into a non-event.</strong> AAPL earnings on a Tuesday at 5pm ET means the straddle's window is the Tuesday session, not the prior week. Entering 14 days before and selling after the print means paying 10 sessions of theta for 1 session of potential payoff.</li>
+  <li><strong>Straddle with no exit plan.</strong> The position goes through earnings, the stock moves but not enough to clear the upper breakeven, the position bleeds theta afterward, expires at zero. The +50% rule would have prevented this.</li>
+  <li><strong>Straddle too short-DTE.</strong> A 3-DTE straddle has theta acceleration that overwhelms any gamma positioning. The 7-30 DTE window is the workable range.</li>
+  <li><strong>Straddle into an event that's already priced.</strong> Pre-event IV is already 90%+; the position is paying for vol that's already there. Wait for the next catalyst.</li>
+</ol>
+<h2>When this appears in the trade-log</h2>
+<p>The long straddle / strangle is not yet in the trade-log as a single structure — the journal is still building the long-vol leg of its volatility book. This is the canonical reference for when it gets used.</p>
+<p><strong>Disclosure:</strong> This page is educational material drawn from a working trading journal. It is <strong>not investment advice</strong>. Long volatility positions are subject to total loss of premium, and the +50% of debit management rule is structural, not optional. Discuss any strategy with a qualified professional before risking capital. We use <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">OptionsStrat</a> to visualize these structures.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

@@ -5,7 +5,7 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Sun, 19 Jul 2026 23:30:13 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 19 Jul 2026 23:48:16 GMT</lastBuildDate>
   <item>
     <title>Monday Pre-Market Brief — SPY Setup: A Low-IV Bull Call Spread Into a Tight Range</title>
     <link>https://tredey.com/forecasts/2026-07-20-monday-brief/</link>
@@ -14,11 +14,46 @@
     <description>Pre-market forecast for Mon 2026-07-20: SPY at $743.29 with low IV rank favors a defined-risk 14–21 DTE bull call spread. One structure, one OptionsStrat build, why NOT the obvious alternative.</description>
   </item>
   <item>
+    <title>Bear Call Spread: The Compliment to the Bull Put</title>
+    <link>https://tredey.com/strategies/2026-07-19-call-credit-spread-vertical/</link>
+    <guid>https://tredey.com/strategies/2026-07-19-call-credit-spread-vertical/</guid>
+    <pubDate>2026-07-19</pubDate>
+    <description>Anatomy of a bear call vertical credit spread: the symmetric counter to the bull put. Used as a standalone bearish/neutral expression or as the upper half of an iron condor.</description>
+  </item>
+  <item>
+    <title>Covered Call: The Income Overlay on Equity You Already Own</title>
+    <link>https://tredey.com/strategies/2026-07-19-covered-call/</link>
+    <guid>https://tredey.com/strategies/2026-07-19-covered-call/</guid>
+    <pubDate>2026-07-19</pubDate>
+    <description>Anatomy of the covered call: sell a call against 100 shares you own. The simplest income strategy in options, with one structural risk that defines the whole position.</description>
+  </item>
+  <item>
+    <title>Iron Condor: The Range-Bound, IV-Rich Theta Engine</title>
+    <link>https://tredey.com/strategies/2026-07-19-iron-condor/</link>
+    <guid>https://tredey.com/strategies/2026-07-19-iron-condor/</guid>
+    <pubDate>2026-07-19</pubDate>
+    <description>Anatomy of the iron condor: a four-leg structure that collects premium in both wings when the underlying stays inside a defined range. The highest-theta structure in the playbook, paired with the tightest management rule.</description>
+  </item>
+  <item>
     <title>Playbook Lessons — Five Months of Trades, Six Rules Worth Testing for v1.1</title>
     <link>https://tredey.com/playbook/2026-07-19-lessons-from-five-months-of-trades/</link>
     <guid>https://tredey.com/playbook/2026-07-19-lessons-from-five-months-of-trades/</guid>
     <pubDate>2026-07-19</pubDate>
     <description>Six 'For the playbook:' items captured from the trade-log since v1.0 shipped. Each maps to a candidate rule change for v1.1 — deep-OTM directional structures, LEAPS verticals, inverse diagonals, rolling diagonals, 5% pullback scale-ins, and long-dated diagonals. v1.0 remains canonical until v1.1 ships.</description>
+  </item>
+  <item>
+    <title>Long Call: The Single-Leg Directional Building Block</title>
+    <link>https://tredey.com/strategies/2026-07-19-long-call/</link>
+    <guid>https://tredey.com/strategies/2026-07-19-long-call/</guid>
+    <pubDate>2026-07-19</pubDate>
+    <description>Anatomy of a long call: max loss capped at premium paid, infinite upside, vega-positive and theta-negative. When single-leg directional exposure fits the playbook better than a vertical.</description>
+  </item>
+  <item>
+    <title>Long Straddle: The Volatility Expression</title>
+    <link>https://tredey.com/strategies/2026-07-19-straddle/</link>
+    <guid>https://tredey.com/strategies/2026-07-19-straddle/</guid>
+    <pubDate>2026-07-19</pubDate>
+    <description>Anatomy of the long straddle: ATM call + ATM put, same strike, same expiry. The cleanest expression of 'I do not know the direction, but I expect volatility.' Used around earnings, FOMC, and known catalysts.</description>
   </item>
   <item>
     <title>USAR Bull Call Spread — Jan 21 '28 20/25: A Long-Dated US Critical-Minerals Position</title>
@@ -110,27 +145,6 @@
     <guid>https://tredey.com/strategies/2026-07-04-bull-put-spread/</guid>
     <pubDate>2026-07-04</pubDate>
     <description>Anatomy of a bull put spread: when to use it, the entry criteria, the 50%/2x management rule, the IV-rank filter, and the failure modes to avoid.</description>
-  </item>
-  <item>
-    <title>QQQ Long Call Condor — Dec 18 '26 755/770/830/840: A 6-Month LEAPS Position on a QQQ Rally</title>
-    <link>https://tredey.com/trade-log/2026-06-26-qqq-long-call-condor/</link>
-    <guid>https://tredey.com/trade-log/2026-06-26-qqq-long-call-condor/</guid>
-    <pubDate>2026-06-26</pubDate>
-    <description>Opened a Dec 2026 LEAPS long call condor on QQQ with strikes at 755/770/830/840. Wide 60-point profit zone, debit-defined risk, 6-month asymmetric bullish-to-neutral position on a Nasdaq 100 rally.</description>
-  </item>
-  <item>
-    <title>RUT Diagonal Call Spread — Dec 18 / Dec 31 2900/2950: A Bullish 8-Month Position on Small-Caps</title>
-    <link>https://tredey.com/trade-log/2026-04-24-rut-diagonal-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-04-24-rut-diagonal-call-spread/</guid>
-    <pubDate>2026-04-24</pubDate>
-    <description>Opened a long call diagonal on RUT 2900/2950 with front-month Dec 18 short and back-month Dec 31 long. Defined-risk bullish-to-neutral, funded by front-month theta harvest.</description>
-  </item>
-  <item>
-    <title>RUT Bull Call Spread 2700/2750 — Dec 18 2026: A Defined-Risk Small-Cap Long on the Mid-Q2 Rebound</title>
-    <link>https://tredey.com/trade-log/2026-04-13-rut-bull-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-04-13-rut-bull-call-spread/</guid>
-    <pubDate>2026-04-13</pubDate>
-    <description>Opened a long call vertical spread on RUT 2700/2750 for Dec 18 2026, paying a debit for a defined-risk bullish position on small-caps. RUT was breaking out of a 6-week range on tariff-shock reversal.</description>
   </item>
 </channel>
 </rss>
