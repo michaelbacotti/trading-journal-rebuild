@@ -25,6 +25,7 @@
    ' <div class="tab-bar-inner">',
    '  <a href="/">Overview</a>',
    '  <a href="/trade-log/">Trade Log</a>',
+   '  <a href="/forecasts/">Forecasts</a>',
    '  <a href="/education/">Education</a>',
    '  <a href="/playbook/">Playbook</a>',
    '  <a href="/strategies/">Strategies</a>',
