@@ -5,13 +5,20 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Sun, 19 Jul 2026 23:28:24 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 19 Jul 2026 23:30:13 GMT</lastBuildDate>
   <item>
     <title>Monday Pre-Market Brief — SPY Setup: A Low-IV Bull Call Spread Into a Tight Range</title>
     <link>https://tredey.com/forecasts/2026-07-20-monday-brief/</link>
     <guid>https://tredey.com/forecasts/2026-07-20-monday-brief/</guid>
     <pubDate>2026-07-20</pubDate>
     <description>Pre-market forecast for Mon 2026-07-20: SPY at $743.29 with low IV rank favors a defined-risk 14–21 DTE bull call spread. One structure, one OptionsStrat build, why NOT the obvious alternative.</description>
+  </item>
+  <item>
+    <title>Playbook Lessons — Five Months of Trades, Six Rules Worth Testing for v1.1</title>
+    <link>https://tredey.com/playbook/2026-07-19-lessons-from-five-months-of-trades/</link>
+    <guid>https://tredey.com/playbook/2026-07-19-lessons-from-five-months-of-trades/</guid>
+    <pubDate>2026-07-19</pubDate>
+    <description>Six 'For the playbook:' items captured from the trade-log since v1.0 shipped. Each maps to a candidate rule change for v1.1 — deep-OTM directional structures, LEAPS verticals, inverse diagonals, rolling diagonals, 5% pullback scale-ins, and long-dated diagonals. v1.0 remains canonical until v1.1 ships.</description>
   </item>
   <item>
     <title>USAR Bull Call Spread — Jan 21 '28 20/25: A Long-Dated US Critical-Minerals Position</title>
