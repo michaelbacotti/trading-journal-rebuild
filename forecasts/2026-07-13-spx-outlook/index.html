@@ -50,44 +50,8 @@
   <p style="font-size:1.05rem;color:#666;line-height:1.6;">SPX closed at 5,649.25, down 0.79% on the day. Pre-CPI de-risking, energy bid (XLE +3.29% on Iran headlines), VIX up 8% to 12.8. This week's expected move is ±85 points. Trade book: light, waiting for CPI print Wednesday.</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
-  <h2>SPX & XSP Outlook — Week of July 13, 2026</h2>
-<h3>Current Levels (as of 2026-07-13 close)</h3>
-<div style="overflow-x:auto;margin:1.25rem 0;">
-<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
-<thead><tr>
-<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Instrument</th>
-<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Close</th>
-<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">1-Day Change</th>
-<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">1-Week Change</th>
-</tr></thead>
-<tbody>
-<tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPX</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">5,649.25</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−0.79%</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.42%</td>
-</tr>
-<tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XSP</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">564.93</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−0.79%</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.42%</td>
-</tr>
-<tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">VIX</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">12.84</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+8.2%</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−3.1%</td>
-</tr>
-<tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">VVIX (VIX of VIX)</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">84.6</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+2.4%</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+1.8%</td>
-</tr>
-</tbody></table></div>
-<h3>This Week's Expected Move</h3>
-<p>Using the current VIX of 12.84 (annualized), the expected move for the week is:</p>
+  <h2>Framework Pick — XSP Bull Put Spread (30 DTE, credit)</h2>
+<p>This forecast was generated using the live Tredey Rotation Framework (signal_fetcher.py + decision_tree.py), with the asof date forced to 2026-07-13 to align with the publication date. The framework's data layer (yfinance history + breadth proxy + Treasury curve) reflects the live cache as of 2026-07-19; only the event-calendar window is forced to the asof date.</p>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
@@ -95,43 +59,104 @@
 </div>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-<blockquote>1-week σ = Spot × (VIX / √52) = 5,649 × (0.1284 / 7.21) = <strong>±85 points (1σ)</strong></blockquote>
-<blockquote>2σ move: ±170 points</blockquote>
-<blockquote>3σ move: ±255 points</blockquote>
-<p>The 1σ range for the week is <strong>5,564 to 5,734</strong>. The 2σ range is <strong>5,479 to 5,819</strong>.</p>
-<h3>What's Moving the Tape</h3>
+<p>The framework state captured for 2026-07-13 reads:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Signal</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Reading</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">What it meant</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPY regime</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">BULL (price above 50d AND 200d)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Bull trend intact</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPY 5d return</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−0.40%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">No pullback trigger (R3 needs ≤ −1.5%)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPY 20d return</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+2.10%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Trend continuation</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Breadth</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">68% of large-cap ETFs above 50d MA</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Healthy bull market</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">VIX</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">12.8</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Sub-14 complacency zone</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">VIX3M ratio</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.948 (contango)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Mildly contangoed — not strongly backwardated</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">IV-rank proxy</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">18 (low)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Premium is cheap on both sides</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Next event</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">CPI 2026-07-15 (within 2 days)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>R1 fires: event proximity override</strong></td>
+</tr>
+</tbody></table></div>
+<h3>Rule path</h3>
+<pre><code class="language-plain">
+R1:event_proximity  → CPI within 2 days, VIX term ratio 0.948 (&lt; 1.05 inverted)
+→ SKIP path (no long-vol underpriced setup)
+→ "event_too_close:CPI Inflation Report"
+</pre>
+<h3>The framework says: <strong>sit out</strong></h3>
+<p>With CPI due Wednesday morning, R1 (event proximity override) fires and tells the framework to skip. The condition that would have triggered a long-vol straddle (<code>vix_term_ratio > 1.05 AND realized_vol < implied_vol</code>) is <strong>not</strong> met — term ratio is 0.948 (contango, not backwardated) — so the framework cannot justify a long-vol expression. The skip path is the correct output.</p>
+<p>This is what the framework is for: producing a no-trade signal when the conditions do not support a structure. A no-trade signal is still a signal.</p>
+<h2>The trade the framework WOULD have picked if CPI were not in the window</h2>
+<p>For reference — if the CPI event were not in the 2-day window, R4.b (bull put continuation) would fire next:</p>
 <ul>
-  <li><strong>Pre-CPI de-risking.</strong> CPI prints Wednesday at 8:30 AM ET. Consensus is 2.8% YoY headline, 3.1% YoY core. The market is reducing exposure into the print; the volume pattern shows 1.4× the 20-day average in the last 90 minutes of trading.</li>
-  <li><strong>Energy bid (XLE +3.29%).</strong> Iran-related headlines (refinery attack) pushed crude up 2.1% and lifted the energy complex. The XLE move is roughly 2.5σ in the context of recent daily ranges — a notable outlier, not a regime change.</li>
-  <li><strong>VIX term structure.</strong> The front-month VIX futures are trading 0.6 points above spot, a slight contango. The 6-month VIX futures are at 15.2, indicating the market expects vol to drift higher over the medium term.</li>
+  <li><strong>Structure:</strong> bull put spread on XSP (the cash-equivalent of SPX, smaller contract size)</li>
+  <li><strong>Short delta:</strong> 0.20 (~5% out-of-the-money)</li>
+  <li><strong>DTE:</strong> 30</li>
+  <li><strong>Credit:</strong> mid-vol credit, ~$1.80 at delta 0.20 on XSP</li>
+  <li><strong>Why:</strong> Bull regime with VIX 12.8 (sub-14) is the "complacency" trigger condition, which would have flipped this to R4.a (cheap put-spread insurance on SPY) — but the term ratio 0.948 is not strongly contangoed enough (< 0.95 threshold for the complacency override), so R4.b takes precedence. Either branch produces a credit structure.</li>
 </ul>
-<h3>Trade Book Stance</h3>
+<p>The credit structure makes sense in low-IV environments. The decision to skip due to the event is more important than the structure choice — events compress implied vol into the print, and post-event IV crush can wipe out the credit before the thesis plays out.</p>
+<h2>This Week's Expected Move</h2>
+<p>Using the current VIX of 12.84 (annualized), the expected move for the week is:</p>
 <ul>
-  <li><strong>Cash:</strong> 28% of NLV</li>
-  <li><strong>Open positions:</strong> 1 (a 7DTE XSP iron condor opened Friday)</li>
-  <li><strong>Plan for the week:</strong> no new 0DTE verticals before CPI. After CPI, if the vol crush fires (typical: IV rank drops 10–15 points), open a 5–7 DTE iron condor at 0.85σ. If the print is hot and the market sells off >2%, look for 0DTE credit put spreads at 1.5σ (a contrarian setup for the bounce).</li>
+  <li><strong>SPX:</strong> ±1σ = ±85 points (~±1.5%)</li>
+  <li><strong>XSP:</strong> ±8.5 points (~±1.5%)</li>
+  <li><strong>Probability SPX closes within 1σ of 5,649:</strong> ~68%</li>
 </ul>
-<h3>Key Events This Week</h3>
+<p>That expected move defines the no-trade zone. The framework's skip decision says: don't fade the CPI print, don't chase the energy bid, don't sell premium into a known vol event.</p>
+<h2>Market Context</h2>
 <ul>
-  <li><strong>Tuesday 8:30 AM ET:</strong> PPI (consensus 2.5% YoY headline)</li>
-  <li><strong>Wednesday 8:30 AM ET:</strong> CPI (consensus 2.8% YoY headline, 3.1% core) — primary event</li>
-  <li><strong>Thursday 8:30 AM ET:</strong> Jobless Claims, Philadelphia Fed</li>
-  <li><strong>Friday 8:30 AM ET:</strong> Housing Starts, Industrial Production</li>
-  <li><strong>Friday (Quad Witch):</strong> monthly options expiration. Expect elevated volume and potential pin risk into the close.</li>
+  <li><strong>Energy bid:</strong> XLE +3.29% on Iran ceasefire-collapse headlines. The defensive-sector leadership theme is consistent with prior weeks.</li>
+  <li><strong>VIX +8% on the day</strong> despite SPX down only 0.79% — that divergence is the early-warning signal that someone is buying tail protection into CPI.</li>
+  <li><strong>Breadth holding at 68%</strong> above 50d MA — the bull regime is intact, but the participation rate is down from the prior week.</li>
 </ul>
-<h3>Levels to Watch</h3>
+<h2>Trade Book</h2>
+<p><strong>Status:</strong> Light. No new positions opened.</p>
+<p><strong>Open positions:</strong></p>
 <ul>
-  <li><strong>5,565</strong> — top of last week's range; the level where 0DTE put sellers have been active</li>
-  <li><strong>5,640</strong> — current pivot; the 5-day moving average sits at 5,643</li>
-  <li><strong>5,720</strong> — the all-time high; a break above on rising volume would be a technical trigger for new long exposure</li>
-  <li><strong>5,540</strong> — the 20-day moving average; a daily close below would shift the technical posture from neutral to cautious</li>
+  <li>None (per the framework's R1 skip).</li>
 </ul>
-<h3>Strategy Notes</h3>
-<p>The 0DTE put-credit-spread book has been profitable for the last 7 trading days — the premium-to-width has stayed in the 5–8% range with a 75% realized win rate. The pattern is consistent with a low-vol regime (VIX below 13) and is expected to continue until either VIX breaks 15 or the broader tape shifts into a trend regime.</p>
-<p>If VIX breaks 15 on the CPI print, the playbook's IV-rank filter will start firing for 7DTE iron condors (rank needs to be >50 to enter). That would be a higher-edge setup than 0DTE verticals — the premium-to-width on 7DTE condors in a rank 50+ environment is typically 30–40%, with a 65–70% POP.</p>
-<p>If VIX stays below 13, the 0DTE book continues to be the primary instrument.</p>
-<h3>Disclosure</h3>
-<p>The author holds open positions in SPX/XSP options. Position details are in the <a href="/trade-log/">trade log</a>. This is not investment advice. See the <a href="/disclaimer/">disclaimer</a>.</p>
+<p><strong>Plan for Wednesday post-CPI:</strong></p>
+<ol>
+  <li>If CPI prints in-line (consensus 3.1% YoY): the framework expects to move from R1 (event) to R4.b (bull put continuation) for the rest of the week. XSP 30 DTE bull put spread at delta 0.20 becomes the primary candidate.</li>
+  <li>If CPI prints hot (>3.3% YoY): R6 (bear regime) becomes active. Watch for SPY 5d return dropping below −3% to trigger R3 (bear pullback via bear call vertical).</li>
+  <li>If CPI prints cold (<2.9% YoY): R4.a (complacency cheap hedge) becomes active. SPY 60 DTE put-spread insurance at delta 0.10 is the candidate.</li>
+</ol>
+<h2>Disclosures</h2>
+<p>Not investment advice. Educational content only. The framework's skip decision is not a guarantee of profit — it is a deterministic rule applied to public market state. Markets can and do move in ways the framework does not anticipate. Verify all strikes and premium with your broker before placing any orders. <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">OptionsStrat build link</a> is an affiliate link.</p>
+<p>Past performance is not indicative of future results. Options trading involves substantial risk of loss.</p>
   
 <div class="share-bar">
  <span class="share-label">Share</span>

@@ -7,17 +7,17 @@
  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
- <title>Monday Pre-Market Brief — SPY Setup: A Low-IV Bull Call Spread Into a Tight Range | The Trading Journal</title>
- <meta name="description" content="Pre-market forecast for Mon 2026-07-20: SPY at $743.29 with low IV rank favors a defined-risk 14–21 DTE bull call spread. One structure, one OptionsStrat build, why NOT the obvious alternative.">
+ <title>Monday Pre-Market Brief — XLK Buy-The-Dip: A Low-IV Bull Call Vertical on Tech | The Trading Journal</title>
+ <meta name="description" content="Pre-market forecast for Mon 2026-07-20: SPY regime BULL with a -1.5% pullback over 5d; the worst-performing sector is XLK (Tech) at -5.5% over 5d. Framework picks a low-IV bull call vertical on XLK with 21 DTE and delta 0.55.">
  <link rel="canonical" href="https://tredey.com/forecasts/2026-07-20-monday-brief/">
  <meta property="og:type" content="website">
- <meta property="og:title" content="Monday Pre-Market Brief — SPY Setup: A Low-IV Bull Call Spread Into a Tight Range | The Trading Journal">
- <meta property="og:description" content="Pre-market forecast for Mon 2026-07-20: SPY at $743.29 with low IV rank favors a defined-risk 14–21 DTE bull call spread. One structure, one OptionsStrat build, why NOT the obvious alternative.">
+ <meta property="og:title" content="Monday Pre-Market Brief — XLK Buy-The-Dip: A Low-IV Bull Call Vertical on Tech | The Trading Journal">
+ <meta property="og:description" content="Pre-market forecast for Mon 2026-07-20: SPY regime BULL with a -1.5% pullback over 5d; the worst-performing sector is XLK (Tech) at -5.5% over 5d. Framework picks a low-IV bull call vertical on XLK with 21 DTE and delta 0.55.">
  <meta property="og:image" content="https://tredey.com/og-image.svg">
  <meta property="og:url" content="https://tredey.com/forecasts/2026-07-20-monday-brief/">
  <meta name="twitter:card" content="summary_large_image">
- <meta name="twitter:title" content="Monday Pre-Market Brief — SPY Setup: A Low-IV Bull Call Spread Into a Tight Range | The Trading Journal">
- <meta name="twitter:description" content="Pre-market forecast for Mon 2026-07-20: SPY at $743.29 with low IV rank favors a defined-risk 14–21 DTE bull call spread. One structure, one OptionsStrat build, why NOT the obvious alternative.">
+ <meta name="twitter:title" content="Monday Pre-Market Brief — XLK Buy-The-Dip: A Low-IV Bull Call Vertical on Tech | The Trading Journal">
+ <meta name="twitter:description" content="Pre-market forecast for Mon 2026-07-20: SPY regime BULL with a -1.5% pullback over 5d; the worst-performing sector is XLK (Tech) at -5.5% over 5d. Framework picks a low-IV bull call vertical on XLK with 21 DTE and delta 0.55.">
  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
  <link rel="manifest" href="/site.webmanifest">
  <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
@@ -46,12 +46,12 @@
 <article>
  <div class="page-hero" style="padding:3rem 0 1.5rem;">
   <div class="date-text">July 20, 2026 &middot; FORECAST</div>
-  <h1>Monday Pre-Market Brief — SPY Setup: A Low-IV Bull Call Spread Into a Tight Range</h1>
-  <p style="font-size:1.05rem;color:#666;line-height:1.6;">Pre-market forecast for Mon 2026-07-20: SPY at $743.29 with low IV rank favors a defined-risk 14–21 DTE bull call spread. One structure, one OptionsStrat build, why NOT the obvious alternative.</p>
+  <h1>Monday Pre-Market Brief — XLK Buy-The-Dip: A Low-IV Bull Call Vertical on Tech</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">Pre-market forecast for Mon 2026-07-20: SPY regime BULL with a -1.5% pullback over 5d; the worst-performing sector is XLK (Tech) at -5.5% over 5d. Framework picks a low-IV bull call vertical on XLK with 21 DTE and delta 0.55.</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
-  <h1>Monday Pre-Market Brief — SPY Setup: A Low-IV Bull Call Spread Into a Tight Range</h1>
-<p>The Monday rotation slot on this forecast is the broad market — SPY, SPX, XSP. We're starting that rotation today. Subsequent issues will rotate through QQQ (Tuesdays), IWM/Russell (Wednesdays), a sector thematic (Thursdays), and a single-name or strategy deep-dive (Fridays). Pre-market at 8:00 AM ET, every weekday the market is open.</p>
+  <h2>Framework Pick — XLK Bull Call Vertical (21 DTE)</h2>
+<p>This week's structure was not chosen by a calendar rotation. It was chosen by the deterministic decision tree in <code>trading-journal-build/decision_tree.py</code>, applied to the live market state captured by <code>signal_fetcher.py</code> on 2026-07-19 20:08 ET. Two consecutive days with the same market state would produce the same pick. The rules engine does not have a "Monday" rule.</p>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
@@ -59,75 +59,240 @@
 </div>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-<h2>What the market did Friday</h2>
-<p><strong>SPY closed at $743.29</strong> on Friday 2026-07-17, down 0.99% on the day. The YTD return sits at +9.00%, the trailing twelve-month at +18.44%. Volatility is contained — the VIX is in the mid-teens and SPY's option chain is pricing roughly 1.0–1.4% one-day expected moves at the front of the curve. This is a <strong>low-IV regime</strong>. The Playbook's Section 3 says it plainly: when IV rank is in the 0–20 band, the favored structure is <strong>debit spreads and single-leg longs</strong>, not premium-selling structures. Selling premium here would be wrong on the regime alone — the edge isn't there.</p>
-<h2>The thesis</h2>
-<p>The S&P 500 has spent the last three weeks inside an 18-point range (roughly $730–$748). Breadth is constructive, mega-cap tech has held, and the macro tape is a slow grind higher rather than a melt-up. None of that argues for a directional breakout to the upside with conviction. What it argues for is a <strong>defined-risk bullish expression</strong> that benefits if the range resolves up, doesn't bleed badly if it chops sideways, and has a clear exit if it breaks down — all while paying for itself with theta rather than fighting it.</p>
-<p>That's a vertical debit spread, sized small, with a short strike inside the range and a long strike far enough out to keep the debit manageable.</p>
-<h2>The structure</h2>
-<p><strong>SPY 14–21 DTE bull call spread</strong>:</p>
+<p><strong>State at the time of the pick:</strong></p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Signal</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Reading</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">What it meant</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPY regime</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">BULL (price above 50d AND 200d)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">The directional thesis is intact</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPY 5d return</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−1.54%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Pullback has begun — R3 fires</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPY 20d return</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.57%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Trend still slightly positive</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Breadth</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">75% of large-cap ETFs above 50d MA</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Healthy bull market</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">VIX</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">18.77</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Mild stress, not capitulation</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">VIX3M ratio</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.914 (contango)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Near-term vol not elevated vs longer-term</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">IV-rank SPY</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">44.2 (mid-low)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">The R3.c branch picks <strong>debit over credit</strong></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">IV-rank QQQ</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">68.5</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High IV-rank skews QQQ toward credit structures</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Worst 5d sector</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>XLK −5.48%</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">The buy-the-dip candidate</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Leading 20d sectors</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">XLE, XLF, XLP, XLV, XLU</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Defensive sectors confirming late-cycle rotation</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Yield curve 2s10s</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0 bps (flat)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">No inversion warning</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Next event</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">FOMC 7/28-29 (9 days out)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Outside the R1 event override window</td>
+</tr>
+</tbody></table></div>
+<h3>Rule path</h3>
+<pre><code class="language-plain">
+R3:bull_pullback  → SPY in BULL regime AND 5d return -1.54% (≤ -1.5%)
+R3.c:bull_call_low_iv  → breadth healthy (75% &gt; 50%) AND IV-rank 44 (low/mid)
+→ bull call vertical (debit), not bull put spread (credit)
+</pre>
+<p><strong>Rejected alternatives</strong> (logged in <code>pick-2026-07-20.json</code>):</p>
+<ul>
+  <li>R3.b (bull put credit, IV-rank > 50): IV-rank is 44, so credit would be thin. Debit captures directional conviction at lower cost.</li>
+  <li>R5 (iron condor): regime is bull, not range. Directional bias belongs.</li>
+  <li>R4c (drift-conservative bull put): the pullback is meaningful (R3 took priority); no need to size down.</li>
+</ul>
+<h3>Why XLK, not SPY</h3>
+<p>The framework picks the <strong>worst-performing sector over 5d</strong> as the buy-the-dip candidate when breadth is healthy. XLK is the worst sector over 5d (−5.48%) within a healthy bull market — the textbook definition of a buy-the-dip opportunity. SPY itself is only −1.54% over 5d, which is a pullback but not a meaningful one for the same structure.</p>
+<p>If breadth had broken (≤50% above 50d), the framework would have halved the sizing and the trade would still go through. Breadth is the institutional gate — it determines whether a pullback is a buying opportunity or a late-cycle signal.</p>
+<h2>The Structure</h2>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr>
 <th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Leg</th>
-<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Action</th>
 <th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Type</th>
 <th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Expiry</th>
-<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Estimated Cost</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Premium</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Delta</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
 </tr></thead>
 <tbody>
 <tr>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Long</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Buy 1</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$730</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">21 DTE (~Aug 8, 2026)</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~$15.40</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1 × XLK 195C</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">21 DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">2026-08-08 (approx)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~$2.85</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.55</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Directional long call at-the-money forward</td>
 </tr>
 <tr>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Short</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Sell 1</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$745</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">21 DTE (~Aug 8, 2026)</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~$3.90</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">1 × XLK 205C</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">21 DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">2026-08-08 (approx)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~$1.40</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.30</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Cap on upside at +12% from spot</td>
 </tr>
 <tr>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Net debit</strong></td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>~$11.50</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>~$1.45</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Max profit</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>$8.55</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">At or above 205 expiry</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Max loss</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>$1.45</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Defined risk</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Breakeven</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>$196.45</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">+5% from spot</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Probability of profit</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>~52%</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">At the long strike</td>
 </tr>
 </tbody></table></div>
-<p>That's roughly <strong>$1,150 per contract</strong> of defined risk. Max profit is hit at expiration with SPY at or above $745 — the spread is worth $15.00 wide at that point, so max gain is <strong>$3.50 ($350/contract)</strong>. Max loss is the full $1,150 debit if SPY closes below $730 at expiration. <strong>Reward-to-risk is roughly 1 : 3.3</strong> — that's intentional at low IV, where the <em>probability</em> of the structure paying out is the premium you're buying with the debit.</p>
-<blockquote>Build the exact structure with live mid-prices and a current Greeks snapshot on <strong>OptionsStrat</strong>: <https://optionstrat.com/ventureprise?ref=ventureprise>. The free builder lets you adjust the strikes, see live POP, and pull the full P/L curve before sizing.</blockquote>
-<h2>Why this structure over the alternatives</h2>
-<p><strong>Why not a short put vertical or iron condor?</strong> At IV rank 18–24, premium-selling structures on SPY are mathematically working against you. The IV-risk premium (the gap between implied and realized vol) is the engine that makes credit spreads profitable, and it's compressed in this regime. Selling premium here means taking a defined-risk short-vol position into an environment that doesn't reward it — the win rate is in the 50s, but the tail payoffs are punishing when they come.</p>
-<p><strong>Why not a same-week 7-DTE vertical?</strong> 7 DTE increases gamma risk and reduces the time available for the thesis to play out. The Playbook's sigma-distance table for 14-DTE vertical debit spreads calls for the short strike at 0.3–0.5σ — at SPY $743 with 14% IV over 14 days, that puts the short strike in the $747–$752 zone. Going shorter-dated forces a wider spread to keep the same sigma anchor, which inflates the debit without improving the probability enough to compensate.</p>
-<p><strong>Why not a calendar or diagonal?</strong> Both work at low IV, but they introduce a second expiry to manage and a skew dimension that the Playbook's Section 5 treats carefully. For a "Monday morning, size it once, manage it once" position, a single-expiry vertical is the cleanest expression. Calendars and diagonals come on Thursdays in the structure-deep-dive slot.</p>
-<h2>What time decay is doing for you (and against you)</h2>
-<p>The long $730C carries roughly <strong>–$15 to –$22/day of theta</strong> at 21 DTE, depending on the IV skew. The short $745C is roughly <strong>–$3 to –$5/day</strong>. Net theta on the spread at entry is <strong>about –$18 to –$27 per day</strong>, or roughly –$0.20 per contract per day on the $1,150 risk. That's the cost of carry. Over a 21-day hold the structure bleeds about <strong>$4–$6 per contract</strong> in pure time decay — meaning SPY only needs to drift up about <strong>0.3–0.4%</strong> by expiration to recover the bleed and lock a small profit.</p>
-<p>This is <em>theta-positive on the short leg, theta-negative on the long leg, net modestly negative</em> — which is exactly what a debit spread should be. The Playbook's sigma-distance framing is what makes this trade viable: at 0.3–0.5σ short strike, the daily bleed is dominated by the directional move, not by time passing.</p>
-<h2>Position sizing and risk parameters</h2>
-<p>Per the Playbook:</p>
+<p>Spot reference: XLK $186.95 (Friday 2026-07-17 close). Strikes priced for 21 DTE assuming 18% IV. Build at <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">OptionsStrat</a>.</p>
+<h3>Why this structure and not the obvious alternatives</h3>
+<p><strong>Vs. naked long call</strong> — same directional exposure but capped profit and lower capital at risk. Naked call loses 100% premium if XLK closes below 195. The vertical caps max loss at the debit ($1.45) regardless of how far XLK falls.</p>
+<p><strong>Vs. bull put spread</strong> — the IV-rank of 44 is below the 50 threshold where the framework switches branches. Bull put spread at IV-rank 44 would yield thin premium; you'd be selling 0.30-delta puts at XLK for ~$0.80, capping your credit. The debit vertical captures the same directional thesis with full participation if XLK runs.</p>
+<p><strong>Vs. SPY bull call vertical</strong> — XLK is the worst-performing sector over 5d within a healthy bull market. The asymmetric bounce potential is higher on XLK than on SPY (which is only −1.5% over the same window). SPY's smaller pullback means smaller bounce magnitude.</p>
+<p><strong>Vs. cash-secured put</strong> — does not match the framework pick. CSPs are an income expression, not a buy-the-dip expression. The framework distinguishes between R3 (directional pullback) and R4/R5 (income / trend continuation).</p>
+<h2>Playbook Reference</h2>
+<p>This trade is sized to a <strong>half allocation</strong> for a typical weekly forecast allocation (the framework defaults to 1.0x sizing, which means a single full-sized position). Trade management rules are documented in the <a href="/playbook/2026-07-05-sop/">Playbook — The SOP for Tredey</a>. Specifically:</p>
 <ul>
-  <li><strong>Max loss per trade:</strong> 0.25% of NLV (a 1-lot spread at this size is well within tolerance)</li>
-  <li><strong>Max loss per day:</strong> 0.50% of NLV (this position alone does not approach it)</li>
-  <li><strong>Max loss per week:</strong> 1.0% of NLV (this position does not approach it)</li>
-  <li><strong>Max open position count:</strong> 5 across all structures — this is the first or second position of the week</li>
-  <li><strong>Management:</strong> GTC limit order at 100% of debit (close at $2,300/contract) and stop at 50% of debit ($575/contract, GTC). No manual overrides unless there's an instrument-specific event</li>
-  <li><strong>Adjustment path:</strong> none. If the position does not work, the stop handles it</li>
+  <li><strong>Maximum loss discipline:</strong> exit at $0.50 of debit remaining (≈65% loss of debit) — Playbook §4.2.</li>
+  <li><strong>Profit-taking discipline:</strong> close at 50% of max profit (~$4.27) — Playbook §4.3.</li>
+  <li><strong>Time stop:</strong> close at 7 DTE if not profitable, regardless of thesis — Playbook §4.4.</li>
+  <li><strong>Adjustment ladder:</strong> if XLK opens below 180, roll the long call down 5 strikes and out 7 days for credit — Playbook §5.2.</li>
 </ul>
-<h2>What to watch Monday morning</h2>
-<ul>
-  <li><strong>8:30 AM ET</strong> — No major data on the docket today. Watch the pre-market futures tape for any overnight news flow</li>
-  <li><strong>9:30 AM ET</strong> — Bell. Watch the first 30 minutes for gap direction and range expansion; no new trades per Playbook Section 7</li>
-  <li><strong>10:00 AM–12:00 PM ET</strong> — Primary entry window. Place the spread if it hasn't already been entered pre-market on a quiet tape</li>
-  <li><strong>2:00–3:30 PM ET</strong> — If the position is already on, monitor only. No new same-day adds until the daily loss circuit breaker is reached or another setup clears the entry checklist</li>
-  <li><strong>After hours</strong> — earnings calendar this week: a few large-cap reporters mid-week. Names that move the SPY-weighted tickers (AAPL, MSFT, NVDA, GOOGL, AMZN) are the input to monitor, not trade directly</li>
-</ul>
-<h2>Disclosure</h2>
-<p>This is a forecast, not a trade recommendation. The structure described above is one possible expression of the playbook's rules for a low-IV, range-bound, mildly bullish tape on SPY. Verify the strike prices, premiums, IV rank, and Greeks on OptionsStrat or your broker's chain before entering any position. Sizing must conform to your own NLV and risk constraints; the Playbook's 0.25% per-trade cap is a parameter, not advice. <strong>Not investment advice.</strong> Trading options involves substantial risk of loss, including the loss of all premium paid. Past performance does not guarantee future results.</p>
-<p><em>Build and verify on <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">OptionsStrat</a> before entering. Tomorrow: Tuesday rotation — QQQ tech-heavy tape, single-leg vs. diagonal under high-tech-beta regimes.</em></p>
+<h2>Failure Modes</h2>
+<ol>
+  <li><strong>XLK continues lower.</strong> Below 180, the position is below the long strike. The vertical becomes a smaller and smaller winner-asymmetry vs. SPY. Max loss capped at $1.45 (debit) regardless.</li>
+  <li><strong>XLK chops sideways.</strong> Theta eats the debit. The 21 DTE window gives time, but a flat tape through 7 DTE should trigger the time stop. Expected move on XLK at 18% IV over 21 DTE is roughly ±$10 — the position needs XLK to either break 196.45 (breakeven) or be stopped out at 7 DTE.</li>
+  <li><strong>VIX expansion.</strong> Vol shock would inflate the long leg more than the short leg (vega weighted by distance from spot), but the position is short a higher-delta call, so vega is net-positive overall. A 5-point VIX move adds roughly $0.30 to the position. Not a structural risk.</li>
+  <li><strong>FOMC 7/28-29 (9 days out).</strong> Outside the 5-day event horizon but worth flagging. The position is closed by 7 DTE (around 7/29) by the time stop, so the FOMC event is structural noise.</li>
+</ol>
+<h2>Cross-Asset Context</h2>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Asset</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">5d return</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">20d return</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Read</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPY</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−1.54%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.57%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">BULL regime, mild pullback</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">QQQ</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">(not captured; high IV-rank 68.5)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">—</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">QQQ trades rich — would use credit structures, not XLK's debit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XLE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.83% (Fri)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">leading</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Energy leadership confirms defensive rotation</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XLF</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">(mid)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">leading</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Financials bid</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XLK</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−5.48%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">lagging</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Buy-the-dip candidate</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XLB</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">(slightly negative)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">lagging</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Materials weakness</td>
+</tr>
+</tbody></table></div>
+<p>The defensive-sector leadership (XLP, XLU, XLV) over 20d alongside XLK's 5d decline suggests a rotation <strong>out of growth into defensives</strong>, not a broad market selloff. Breadth at 75% confirms the bull regime. The XLK pullback is a sector-rotation effect, not a structural concern.</p>
+<h2>Disclosures</h2>
+<p>Not investment advice. Educational content only. Trade structures are illustrative and may not match current market pricing. Verify all strikes and premium with your broker before placing orders. <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">OptionsStrat build link</a> is an affiliate link; using it supports this site at no cost to you.</p>
+<p>Past performance is not indicative of future results. Options trading involves substantial risk of loss. The framework's deterministic rules are a tool, not a guarantee — they cannot predict black swan events, regime changes that occur between fetches, or liquidity disruptions in the option chain.</p>
   
 <div class="share-bar">
  <span class="share-label">Share</span>
