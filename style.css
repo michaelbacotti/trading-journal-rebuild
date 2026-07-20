@@ -539,8 +539,11 @@ hr {
 .article-body table td:first-child {
  font-weight: 600;
  color: #444;
- width: 32%;
- white-space: nowrap;
+ /* Allow wrapping so long Risk-row descriptions don't force horizontal
+    overflow. The trade-fields card uses <dl>/<dt>/<dd> grid (not <table>),
+    so this rule only affects MD-authored tables (Risk / Greeks / Status / etc.). */
+ word-wrap: break-word;
+ overflow-wrap: break-word;
 }
 .article-body table td:nth-child(2) { color: #1a1a1a; }
 
