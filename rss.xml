@@ -5,7 +5,7 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 20 Jul 2026 10:15:02 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 20 Jul 2026 16:48:25 GMT</lastBuildDate>
   <item>
     <title>Monday Pre-Market Brief — SPX Bull Put Spread at $7,457 Spot: $7,170 / $7,155, Aug 21 AM-Settled Expiry</title>
     <link>https://tredey.com/forecasts/2026-07-20-bull-put-continuation-spx/</link>
@@ -19,6 +19,13 @@
     <guid>https://tredey.com/forecasts/2026-07-20-monday-brief/</guid>
     <pubDate>2026-07-20T06:00:00-04:00</pubDate>
     <description>SPX closed Friday at $7,457.69 with VIX 18.77, FOMC 9 days out. SPX Aug 21 (AM-settled) 7125/7135 bull put spread, ~$130 credit, ~$870 max loss, ~80% POP.</description>
+  </item>
+  <item>
+    <title>XSP Bull Put Spread — Jul 31 '26 742/740: A Short-Dated Index Pin</title>
+    <link>https://tredey.com/trade-log/2026-07-20-xsp-bull-put-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-07-20-xsp-bull-put-spread/</guid>
+    <pubDate>2026-07-20</pubDate>
+    <description>Opened an XSP Jul 31 742/740 bull put spread, an 11-DTE index-level short-premium structure with 6.93-point OTM cushion. $237.50 total credit, $762.50 defined max loss, ~67% short-leg POP.</description>
   </item>
   <item>
     <title>Bear Call Spread: The Compliment to the Bull Put</title>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/education/2026-07-06-standard-deviations/</guid>
     <pubDate>2026-07-06</pubDate>
     <description>What one, two, and three-sigma moves actually mean for SPX positioning, how implied vol maps to expected moves, and why the strike selection in a spread book should be sigma-anchored not delta-anchored.</description>
-  </item>
-  <item>
-    <title>The Playbook: How Every Trade Is Sized, Entered, and Exited</title>
-    <link>https://tredey.com/playbook/2026-07-05-sop/</link>
-    <guid>https://tredey.com/playbook/2026-07-05-sop/</guid>
-    <pubDate>2026-07-05</pubDate>
-    <description>The standard operating procedure for the journal: position sizing by sigma distance and NLV, the daily and weekly drawdown limits, the entry checklist, the management rules, and the exit criteria. The single document that defines how the book is run.</description>
   </item>
 </channel>
 </rss>
