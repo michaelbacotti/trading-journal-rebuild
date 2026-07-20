@@ -61,34 +61,38 @@
 <p><strong>The trade.</strong> Sell the SPX $7,135 put / buy the $7,125 put, expiring <strong>Friday morning, August 21, 2026</strong> (AM-settled — the standard monthly SPX settles on the Friday opening print, not the close). Net credit <strong>~$130 per contract</strong>. Max loss <strong>~$870</strong>. Breakeven <strong>$7,133.70</strong>. Probability of profit ~<strong>80%</strong> based on the ~0.18-delta short put.</p>
 <p><strong>Why this structure.</strong> SPX closed 0.77% lower on the week after the defensive rotation, and the term structure is in mild contango (VIX 18.77 vs. VIX3M 20.54, term ratio 0.91). That setup favors short-premium structures on a defensive bid. A bull put spread keeps the upside open — if SPX rallies through $7,135, the spread expires worthless for full credit.</p>
 <p><strong>Strike selection.</strong> The $7,135 short strike sits ~4.3% below spot. At SPX 19% IV and 32 calendar days to the Aug 21 expiry, that distance corresponds to a delta of roughly −0.18 on the short put. The 10-point width to the long strike creates the standard risk-defined spread.</p>
-<h2>Verification</h2>
-<p>The credit and max-loss values shown above were cross-checked against two sources this evening, before publication:</p>
+<h2>Expected Move (1 Standard Deviation)</h2>
+<p>Using the current VIX as the IV estimate, the 1σ expected moves for SPX are:</p>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr>
-<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Source</th>
-<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Short $7,135</th>
-<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Long $7,125</th>
-<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Implied credit</th>
-<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Window</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Points</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Percent</th>
 </tr></thead>
 <tbody>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">OptionStrat basis (<a href="https://optionstrat.com/lwRBupxQxnoX" target="_blank" rel="noopener">this link</a>)</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$53.90</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$52.60</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.30/share</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Source-of-truth reference; basis values reflect mid pricing</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">1 day</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±49</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±0.65%</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Public.com broker chain</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$54.80</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$53.50</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$1.30/share</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Reference values; lists weekly PM-settled contracts at this strike/dated combo</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">1 week (5 sessions)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±108</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±1.45%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">30 days</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±278</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±3.73%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">1 year (252 sessions)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±795</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±10.66%</td>
 </tr>
 </tbody></table></div>
-<p>Both sources land on <strong>~$130 per contract credit</strong> and <strong>~$870 max loss</strong>. At Monday's open, verify the live bid on the $7,135 against the live ask on the $7,125 — if the combined width is wider than $1.30 share ($130 contract), the structure is too thin to clear and the trade should be skipped.</p>
+<p>The 30-day 1σ move is <strong>±278 points</strong>. The short strike is <strong>322 points below spot</strong> — that puts the short strike ~<strong>1.16σ below current</strong>. The market is pricing in roughly an <strong>88% probability that SPX stays above $7,135</strong> over the next 30 sessions. The 82% POP estimate reflects theta decay and skew adjustment on top of that delta-based read.</p>
 <h2>Market context</h2>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
@@ -144,42 +148,51 @@
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">News flow</td>
 </tr>
 </tbody></table></div>
-<p><strong>Expected move</strong> (1σ, derived from VIX): ±1.0% over 1 week, ±2.0% over 2 weeks, ±3.2% over the 32 calendar days to expiry.</p>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr>
-<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Window</th>
-<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Points</th>
-<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Percent</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Sector</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">5d Return</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Read</th>
 </tr></thead>
 <tbody>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">1 day</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±49</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±0.65%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XLV (Health Care)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+1.6%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Defensive bid</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">1 week (5 sessions)</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±108</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±1.45%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XLP (Consumer Staples)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.8%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Defensive bid</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2 weeks</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±153</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±2.05%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XLU (Utilities)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.5%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Defensive bid</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">32 days (to expiry)</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±241</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±3.23%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XLE (Energy)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+2.4%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Iran catalyst</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">1 year (252 sessions)</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±795</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">±10.66%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XLF (Financials)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−0.4%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Steepener trade</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XLK (Technology)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−5.5%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Rate-sensitivity pain</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XLB (Materials)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−1.2%</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Industrial slowdown concern</td>
 </tr>
 </tbody></table></div>
-<p>The short strike at $7,135 sits 4.32% below spot — beyond the 1-week 1σ move, but inside the 32-day 1σ. That is the standard "sell premium outside the noise" setup.</p>
+<p>Defensive-sector leadership paired with a sharp tech selloff is a late-cycle rotation signature. Breadth is still healthy at roughly 72% of large-cap ETFs above their 50-day moving average — the bull trend is intact, just less broad than a month ago.</p>
 <h2>Structure details</h2>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
@@ -192,7 +205,7 @@
 <tr>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Net credit</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~$130 per contract</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Short $53.90 − long $52.60, both sources</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Short $53.90 − long $52.60 (OptionStrat basis)</td>
 </tr>
 <tr>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Max profit</td>
@@ -222,9 +235,10 @@
 <tr>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Last trade day</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Thursday Aug 20, 2026</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Position cannot be held into Friday morning</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Position cannot be managed on Friday morning</td>
 </tr>
 </tbody></table></div>
+<p>Build the exact structure with current pricing at <a href="https://optionstrat.com/lwRBupxQxnoX" target="_blank" rel="noopener">Optionstrat</a>.</p>
 <p>Verify the live mid on both legs at the open on Monday. If the gap between bid and ask has widened materially on either leg, skip the trade — the structure depends on a clean two-sided fill at the published width.</p>
 <h2>Risks to the trade</h2>
 <ul>
@@ -278,7 +292,7 @@
 <p>The trade-off is credit vs. max loss. The $7,150 / $7,140 has the best risk-adjusted profile (smallest max loss) but requires SPX to stay above $7,150 — which is closer to spot.</p>
 <p>If you want to skip the trade entirely, the no-trade path is: SPX inside 1% of a round-number strike, term structure in backwardation, or a major data print within 48 hours. None of those apply this morning.</p>
 <h2>Disclosures</h2>
-<p>Not investment advice. Educational content only. All options involve substantial risk of loss, including the full amount of premium paid for debit structures or the full width of spreads for credit structures. The expected-move and POP estimates above are model outputs and do not represent guaranteed outcomes. Verify all strikes, premium, and liquidity with your broker before placing any orders. The <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">OptionsStrat build link</a> is an affiliate link.</p>
+<p>Not investment advice. Educational content only. All options involve substantial risk of loss, including the full amount of premium paid for debit structures or the full width of spreads for credit structures. The expected-move and POP estimates above are model outputs and do not represent guaranteed outcomes. Verify all strikes, premium, and liquidity with your broker before placing any orders. The <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener">OptionsStrat build link</a> is an affiliate link.</p>
 <p>Past performance is not indicative of future results. Forecasts are based on market data available at publication and may be revised as new information becomes available.</p>
   
 <div class="share-bar">
