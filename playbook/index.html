@@ -61,15 +61,6 @@
   <div style="font-size:.75rem;color:#888;margin-top:.5rem;">July 05, 2026</div>
 </div>
  </div>
-
-<h2>About the playbook</h2>
-<p>The playbook is the standard operating procedure that governs every trade in the journal. It defines position sizing by sigma distance and net liquidation value, the daily and weekly drawdown limits, the entry checklist, the management rules, the adjustment rules, and the exit criteria. Every position in the trade log is run according to the playbook's current version. The playbook is treated as a working document — when evidence from the trade log suggests a rule should change, a candidate revision is documented and the prior version is preserved in the archive.</p>
-<p>The current canonical version is v1.0, published July 5, 2026. A v1.1 candidate is in development as of mid-July 2026 based on six rule-change candidates drawn from the trade log since v1.0 shipped. The candidate items are: deep-OTM directional structures, LEAPS verticals, inverse diagonals, rolling diagonals, 5% pullback scale-ins, and long-dated diagonals. Until v1.1 ships, v1.0 is the binding document and every trade is run according to its rules.</p>
-
-<h2>How the playbook is structured</h2>
-<p>The playbook has seven sections. The position sizing section defines how many contracts to trade based on the distance from current spot to the strike being sold or bought, expressed in standard deviations. The risk limits section defines the daily and weekly drawdown caps that, if hit, stop trading for the rest of the day or week. The entry checklist section defines the pre-trade verification — confirm sizing, confirm the VIX term structure is in the expected regime, confirm no scheduled catalysts within the holding period that would invalidate the thesis.</p>
-<p>The management section defines how to adjust open positions when price moves against them: roll up/down, roll out in time, close for a loss, or hold and let the structure expire. The adjustment rules are deliberately conservative — the default action when in doubt is to do nothing. The exit criteria section defines when to take profits (typically at 50% of max profit) and when to cut losses (typically at 1.5x to 2x the credit received, depending on the structure).</p>
-<p>The trade log section links every historical trade to the specific playbook rules it followed. The lessons section captures rule-change candidates drawn from observed trade outcomes — what worked, what did not, what should be revised in the next version. The archive section preserves prior versions of the playbook with a changelog explaining what was changed and why.</p>
 </div>
 
  </main>
