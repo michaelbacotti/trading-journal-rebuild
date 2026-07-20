@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 20 Jul 2026 03:09:13 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 20 Jul 2026 10:15:02 GMT</lastBuildDate>
+  <item>
+    <title>Monday Pre-Market Brief — SPX Bull Put Spread at $7,457 Spot: $7,170 / $7,155, Aug 21 AM-Settled Expiry</title>
+    <link>https://tredey.com/forecasts/2026-07-20-bull-put-continuation-spx/</link>
+    <guid>https://tredey.com/forecasts/2026-07-20-bull-put-continuation-spx/</guid>
+    <pubDate>2026-07-20T06:00:00-04:00</pubDate>
+    <description>SPX closed Friday at $7,457.69. BULL regime with 20d trend still positive but a mild 1.5% 5d pullback. SPX Aug 21 AM-settled 7170/7155 bull put spread, ~$300 credit, ~$1,200 max loss, ~80% POP.</description>
+  </item>
   <item>
     <title>Monday Pre-Market Brief: SPX Bull Put Spread at $7,457 Spot, Expiring Aug 21, 2026</title>
     <link>https://tredey.com/forecasts/2026-07-20-monday-brief/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/playbook/2026-07-05-sop/</guid>
     <pubDate>2026-07-05</pubDate>
     <description>The standard operating procedure for the journal: position sizing by sigma distance and NLV, the daily and weekly drawdown limits, the entry checklist, the management rules, and the exit criteria. The single document that defines how the book is run.</description>
-  </item>
-  <item>
-    <title>Bull Put Spread: The Workhorse Credit Structure</title>
-    <link>https://tredey.com/strategies/2026-07-04-bull-put-spread/</link>
-    <guid>https://tredey.com/strategies/2026-07-04-bull-put-spread/</guid>
-    <pubDate>2026-07-04</pubDate>
-    <description>Anatomy of a bull put spread: when to use it, the entry criteria, the 50%/2x management rule, the IV-rank filter, and the failure modes to avoid.</description>
   </item>
 </channel>
 </rss>
