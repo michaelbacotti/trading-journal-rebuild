@@ -81,18 +81,6 @@
   <div style="font-size:.75rem;color:#888;margin-top:.5rem;">July 04, 2026</div>
 </div>
  </div>
-
-<h2>About the strategy library</h2>
-<p>The strategy library walks through the spread structures used in the journal: verticals (bull put and bear call), iron condors, calendars, and diagonals. Each strategy has its own page with anatomy (how the structure is built), when to use it (market regime, volatility conditions, time horizon), the entry criteria, the management rules, the exit criteria, and the known failure modes. The library is the reference set for the playbook; every position in the trade log links to the relevant strategy page.</p>
-<p>The strategies are presented in roughly increasing complexity: single-leg and two-leg structures first (long call, long put, bull put spread, bear call spread), then four-leg structures (iron condor), then time-spread structures (calendar, diagonal). Readers new to the journal should read the strategies in this order; readers familiar with a particular structure can jump straight to that page.</p>
-
-<h2>How strategy pages are organized</h2>
-<p>Each strategy page has the same structure for easy cross-reference. The anatomy section shows the structure visually (a payoff diagram) and explains the components: which legs are long, which are short, the strikes involved, the expiration, the net debit or credit. The when-to-use section describes the market regime and volatility conditions under which the strategy is appropriate. The entry criteria section lists the specific conditions that must be met before the strategy is entered: VIX term structure, time to expiration, distance from spot to the short strike in standard deviations, and any catalyst considerations.</p>
-<p>The management section explains how to adjust the position if price moves against it: roll the short strike, roll the long strike, roll out in time, or close for a loss. The exit criteria section defines when to take profits (typically at 50% of max profit) and when to cut losses (typically at 1.5x to 2x the credit received, depending on the structure). The known failure modes section describes the conditions under which the strategy historically does not work — for example, a bull put spread fails when the underlying sells off hard in a short period, breaching the short strike with little time remaining for the position to recover.</p>
-
-<h2>Choosing a strategy</h2>
-<p>The strategy you choose should be driven by the market regime, not the other way around. In a BULL regime with low realized volatility, bull put spreads are the most efficient expression. In a BEAR regime with rising volatility, bear call spreads or long puts are appropriate. In a RANGE-BOUND regime with elevated implied vol, iron condors capture the most premium. In a VOLATILE regime ahead of a known catalyst (FOMC, earnings), long straddles or long strangles can be appropriate, though they require active management and a clear view on the size of the expected move.</p>
-<p>The strategy library is a reference set, not a recommendation. The actual strategy chosen for any given day depends on the trader's read of the regime, the volatility conditions, the time horizon, and the trader's risk tolerance. The trade journal entries show how the strategies are combined with the regime read in practice.</p>
 </div>
 
  </main>

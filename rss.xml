@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 20 Jul 2026 19:02:31 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 21 Jul 2026 10:46:25 GMT</lastBuildDate>
+  <item>
+    <title>Tuesday Pre-Market Brief — SPX Long Strangle at $7,443 Spot: $7,095 Put / $7,890 Call, Aug 21 AM-Settled Expiry</title>
+    <link>https://tredey.com/forecasts/2026-07-21-transition-vol-spx/</link>
+    <guid>https://tredey.com/forecasts/2026-07-21-transition-vol-spx/</guid>
+    <pubDate>2026-07-21T06:30:00-04:00</pubDate>
+    <description>SPX closed Monday at $7,443.28. TRANSITION regime — price between MA50 and MA200, no clear trend. SPX Aug 21 AM-settled long strangle 7095/7890, $4,285 debit, ~32% POP, vol expansion play.</description>
+  </item>
   <item>
     <title>Monday Pre-Market Brief — SPX Bull Put Spread at $7,457 Spot: $7,170 / $7,155, Aug 21 AM-Settled Expiry</title>
     <link>https://tredey.com/forecasts/2026-07-20-bull-put-continuation-spx/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/education/2026-07-08-risk-vs-reward/</guid>
     <pubDate>2026-07-08</pubDate>
     <description>The expected-value math behind every trade, why a 2:1 reward-to-risk ratio is the floor not the goal, and how to think about positive expectancy when the win rate is below 50%.</description>
-  </item>
-  <item>
-    <title>Market Probabilities: How to Think About Strike Odds</title>
-    <link>https://tredey.com/education/2026-07-07-probabilities/</link>
-    <guid>https://tredey.com/education/2026-07-07-probabilities/</guid>
-    <pubDate>2026-07-07</pubDate>
-    <description>Why option-implied probabilities and historical probabilities are different, the difference between risk-neutral and real-world probabilities, and how to use probability of profit (POP) without over-relying on it.</description>
   </item>
 </channel>
 </rss>
