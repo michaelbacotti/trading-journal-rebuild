@@ -5,13 +5,20 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 21 Jul 2026 10:46:25 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 21 Jul 2026 19:18:44 GMT</lastBuildDate>
   <item>
     <title>Tuesday Pre-Market Brief — SPX Long Strangle at $7,443 Spot: $7,095 Put / $7,890 Call, Aug 21 AM-Settled Expiry</title>
     <link>https://tredey.com/forecasts/2026-07-21-transition-vol-spx/</link>
     <guid>https://tredey.com/forecasts/2026-07-21-transition-vol-spx/</guid>
     <pubDate>2026-07-21T06:30:00-04:00</pubDate>
     <description>SPX closed Monday at $7,443.28. TRANSITION regime — price between MA50 and MA200, no clear trend. SPX Aug 21 AM-settled long strangle 7095/7890, $4,285 debit, ~32% POP, vol expansion play.</description>
+  </item>
+  <item>
+    <title>NASA Bull Put Spread — Jan 15 '27 25/20: Long-Dated Space-ETF Premium</title>
+    <link>https://tredey.com/trade-log/2026-07-21-nasa-bull-put-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-07-21-nasa-bull-put-spread/</guid>
+    <pubDate>2026-07-21</pubDate>
+    <description>Opened a NASA ETF Jan 15 2027 25/20 bull put spread, a 178-DTE long-dated short-premium structure on the Tema Space Innovators ETF. Live mid credit $2.525, max loss $247.50/contract × 4 = $990 total. ~60% short-leg POP, ~1¢/day theta.</description>
   </item>
   <item>
     <title>Monday Pre-Market Brief — SPX Bull Put Spread at $7,457 Spot: $7,170 / $7,155, Aug 21 AM-Settled Expiry</title>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-10-xsp-iron-condor/</guid>
     <pubDate>2026-07-10</pubDate>
     <description>Opened a 7DTE XSP iron condor at the 558/553 puts and 568/573 calls. Pre-CPI vol was 13.8 with rank 65 — high enough to sell premium but not so high that protection was expensive. Closed at 50% of max profit on day 4.</description>
-  </item>
-  <item>
-    <title>Risk vs Reward: The Asymmetry That Drives Every Trade</title>
-    <link>https://tredey.com/education/2026-07-08-risk-vs-reward/</link>
-    <guid>https://tredey.com/education/2026-07-08-risk-vs-reward/</guid>
-    <pubDate>2026-07-08</pubDate>
-    <description>The expected-value math behind every trade, why a 2:1 reward-to-risk ratio is the floor not the goal, and how to think about positive expectancy when the win rate is below 50%.</description>
   </item>
 </channel>
 </rss>
