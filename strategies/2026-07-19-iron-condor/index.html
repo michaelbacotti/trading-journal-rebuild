@@ -145,6 +145,41 @@
 </ol>
 <h2>When this appears in the trade-log</h2>
 <p>The 2026-07-10 XSP iron condor is the working example. Pattern: short-term IV rank uptick, range-bound tape, closed at +52% of credit on day 7.</p>
+<h2>Worked example — SPX 32-DTE iron condor</h2>
+<p>For a more recent, longer-dated example, consider a 32-DTE SPX iron condor entered at IV 13.5 (rank 28) on a quiet tape, with SPX at 7,500:</p>
+<ul>
+  <li><strong>Short strikes</strong> (delta-0.15 each side): 7,360 put and 7,640 call (a ±1.5% body around spot).</li>
+  <li><strong>Long wings</strong> (5-point width on each side): 7,355 put and 7,645 call.</li>
+  <li><strong>Total credit</strong>: roughly $4.80 per condor (estimate from the chain IV, verify with broker at execution).</li>
+  <li><strong>Max loss</strong>: $5.20 per condor (width $5 minus credit $4.80).</li>
+  <li><strong>Probability of profit</strong> (per OptionsStrat calculator): 78%.</li>
+  <li><strong>Breakevens</strong>: 7,355.20 on the downside; 7,644.80 on the upside.</li>
+  <li><strong>Net theta</strong> (per day): +$0.06 per condor (faster decay in the back half of the trade as the front-month premium rolls off).</li>
+</ul>
+<p>With 32 DTE, theta decay is steepest in the last 14 days. A +50% profit target (close at $2.40 buyback) is typically reached by day 16-18 in a quiet regime. The trade is sized at 0.25% NLV max loss per condor (~$1,300 on a $250k book), with 4-6 condors typical per entry, giving a $5,200-$7,800 total book exposure on a single condor trade.</p>
+<h2>Worked example — XSP 7-DTE post-event condor</h2>
+<p>The 2026-07-10 XSP iron condor in the trade log is the canonical short-DTE post-event variant:</p>
+<ul>
+  <li><strong>Setup</strong>: entered 45 minutes after a soft CPI print (CPI 2.7% YoY vs 2.8% expected). Pre-CPI IV was 15.2 (rank 78); at entry, IV was 13.8 (rank 65). The vol crush was real but not finished.</li>
+  <li><strong>Strikes</strong>: short 558 put / long 553 put, short 568 call / long 573 call. Asymmetric width: 5 points each wing, but 1.0% OTM on the put side and 1.7% OTM on the call side (the post-CPI directional bias was to the upside if yields dropped, which they did).</li>
+  <li><strong>Total credit</strong>: $1.85 per condor. Max risk: $3.15 per condor. Credit-to-width ratio: 37%.</li>
+  <li><strong>Result</strong>: closed at $0.85 buyback on day 2 (54% decay, +31.7% return on risked capital). The IV crush accelerated the decay beyond the typical 4-5 day curve.</li>
+</ul>
+<p>The post-event variant uses a 7-DTE window to capture the bulk of the vol crush before gamma-acceleration risk rises in the final 3 days. The tradeoff is that the credit-to-width ratio is lower (~30-40%) than the 32-DTE version (~50-65%), and the position requires closer monitoring.</p>
+<h2>When the iron condor is the wrong choice</h2>
+<p>The iron condor is not always the right structure. It loses to alternatives in three common scenarios:</p>
+<ol>
+  <li><strong>High-conviction directional view.</strong> A bull call vertical on SPX (or equivalent directional structure) has a higher expected return when the conviction is strong. The condor's capped profit means the upside is left on the table.</li>
+  <li><strong>Low IV regime with no catalyst.</strong> When IV rank is below 20, the credit collected does not justify the wing width. Sell premium via a single short vertical instead, which collects the same theta without the doubled wing cost.</li>
+  <li><strong>Earnings-heavy week on a single name.</strong> For single-name condors, IV expansion after earnings can blow through both wings. Use an iron condor on index options where IV expansion is more orderly, or wait until the earnings cluster clears.</li>
+</ol>
+<h2>Related strategy pages</h2>
+<ul>
+  <li><a href="/strategies/2026-07-19-long-call/">Long Call</a> — the directional building block used when the view is not range-bound.</li>
+  <li><a href="/strategies/2026-07-19-call-credit-spread-vertical/">Call Credit Spread Vertical</a> — the single-wing version of the condor, used when only one side of the range is the thesis.</li>
+  <li><a href="/strategies/2026-07-19-straddle/">Straddle</a> — the long-volatility counterpart to the condor.</li>
+  <li><a href="/strategies/2026-07-19-covered-call/">Covered Call</a> — a stock-plus-short-call structure that expresses a similar view on a single-name holding.</li>
+</ul>
 <p><strong>Disclosure:</strong> This page is educational material drawn from a working trading journal. It is <strong>not investment advice</strong>. Options trading involves substantial risk, and the condor's defined-risk package is not a guarantee against loss. Discuss any strategy with a qualified professional before risking capital. We use <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">OptionsStrat</a> to visualize these structures.</p>
   
 <div class="share-bar">

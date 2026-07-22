@@ -140,6 +140,41 @@
 </ol>
 <h2>When this appears in the trade-log</h2>
 <p>The 2026-07-17 USAR trade and the 2026-07-16 SKHY trade both open with single-leg long calls as the directional anchor, with the bull call spread constructed on top after the underlying thesis is confirmed. The lessons from that pattern are folded into the candidate rules at <code>/playbook/2026-07-19-lessons-from-five-months-of-trades/</code>.</p>
+<h2>Worked example — SPY 30-DTE long call</h2>
+<p>For a clean long-call entry, consider a SPY 30-DTE ATM long call at the start of a directional swing trade:</p>
+<ul>
+  <li><strong>Strike</strong>: $743 (ATM with SPY at $743.29).</li>
+  <li><strong>Expiry</strong>: 30 DTE (mid-cycle theta, modest gamma).</li>
+  <li><strong>Premium</strong>: ~$14.40 (estimate from chain IV 22, verify at execution).</li>
+  <li><strong>Max loss</strong>: $1,440 per contract (the full premium).</li>
+  <li><strong>Breakeven</strong>: $757.40 (strike plus premium).</li>
+  <li><strong>Delta</strong>: ~0.50 at entry.</li>
+  <li><strong>Theta</strong>: roughly −$0.06/day (the daily bleed).</li>
+  <li><strong>Vega</strong>: +$0.18 per 1% IV change (long volatility).</li>
+</ul>
+<p>Sizing at 0.25% NLV ($1,440 max loss on a $576k book) means the trade can be sized up to 1 contract per $576k of capital. The 30-DTE window gives theta time to work against the position gradually; the 21-45 DTE range is the sweet spot for single-leg long calls.</p>
+<h2>Worked example — converting to a vertical after a move</h2>
+<p>The single-leg long call is often the entry structure, with a bull call vertical constructed on top after the underlying confirms the thesis. A worked example from the playbook:</p>
+<ul>
+  <li><strong>Day 0</strong>: Buy 1 long call at $5.00 debit (delta 0.55, 30 DTE).</li>
+  <li><strong>Day 5</strong>: Underlying moves up 4%. Long call is now worth $8.50 (+70%). Convert to a vertical by selling a higher-strike call against the long: sell 1 short call $5 wide above the long, collect $5.50 credit.</li>
+  <li><strong>Net position</strong>: bull call vertical with $10-wide body, $0 net debit (the original $5 debit is offset by the $5.50 credit, less $0.50 of time decay). The vertical now has positive theta, defined risk, and a clear max-profit target.</li>
+  <li><strong>Management</strong>: take 50% of the width at expiry, or close at 50% of max profit at +50% of remaining debit (now $0).</li>
+</ul>
+<p>The conversion recovers the theta economics of the original long call and locks in the directional gain. The trade is no longer bleeding daily; it has a defined exit.</p>
+<h2>When the long call is the wrong choice</h2>
+<p>The single-leg long call loses to alternatives in three common scenarios:</p>
+<ol>
+  <li><strong>High-conviction directional view at low IV.</strong> A bull call vertical at delta 0.30 / 0.15 has higher expected return when IV rank is below 25 and conviction is strong. The long call's uncapped upside is wasted when the view has a reasonable profit target.</li>
+  <li><strong>Strong catalyst with elevated IV.</strong> Wait for IV to compress before entry. Buying a long call into an earnings event means paying the IV premium, then watching IV crush after the print.</li>
+  <li><strong>Spread is too wide for the structure.</strong> A $20-wide single-leg long call at 14 DTE behaves like a leveraged directional view with high gamma and very steep theta. Either wrap it in a vertical or take the trade at a longer DTE.</li>
+</ol>
+<h2>Related strategy pages</h2>
+<ul>
+  <li><a href="/strategies/2026-07-19-iron-condor/">Iron Condor</a> — the range-bound counterpart to the long call.</li>
+  <li><a href="/strategies/2026-07-19-straddle/">Straddle</a> — the long-volatility structure used when the thesis is "big move, direction unknown."</li>
+  <li><a href="/strategies/2026-07-19-call-credit-spread-vertical/">Call Credit Spread Vertical</a> — the income structure that shares the long call's underlying instrument.</li>
+</ul>
 <p><strong>Disclosure:</strong> This page is educational material drawn from a working trading journal. It is <strong>not investment advice</strong>. Options trading involves substantial risk and is not suitable for all investors. Discuss any strategy with a qualified professional before risking capital. We use <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">OptionsStrat</a> to visualize these structures.</p>
   
 <div class="share-bar">

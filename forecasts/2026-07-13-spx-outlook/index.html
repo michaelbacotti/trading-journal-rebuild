@@ -193,6 +193,27 @@
 <h2>Alternative Post-CPI Scenarios</h2>
 <p><strong>If CPI prints hot (>3.3% YoY).</strong> Risk assets sell off. VIX likely spikes 4–6 points. Wait for the vol spike to settle (typically 2–3 sessions), then reassess. If SPX 5-day return drops below −3%, a bear-call vertical on SPX becomes the candidate.</p>
 <p><strong>If CPI prints cold (<2.9% YoY).</strong> Rate-sensitive sectors (XLK, XLF) likely rally. VIX likely drops 2–4 points. SPX bull put spread at delta 0.15 (a slightly further OTM short strike) captures the lower-vol regime.</p>
+<p><strong>If CPI prints mixed (headline hot, core cold, or vice versa).</strong> Sector dispersion typically widens. The cleanest expression is sector-specific verticals rather than an index-level structure. Wait for sector-level data (10-K reads, sector breadth) to settle before initiating.</p>
+<h2>Why 32 DTE on the Post-CPI Structure</h2>
+<p>The Aug 21, 2026 expiry is 32 calendar days out at entry, which sits at the lower end of the sweet spot for a post-event short premium. The reasoning:</p>
+<ul>
+  <li><strong>Theta curve is steepest between 14 and 45 DTE</strong> for short-premium structures at delta 0.20. A 32-DTE structure captures most of the daily theta without paying the gamma-acceleration premium that 7-14 DTE structures carry.</li>
+  <li><strong>Post-event vol crush typically plays out over 2-5 sessions.</strong> A 32-DTE structure gives the trade enough runway for the IV normalization to work through the position's value.</li>
+  <li><strong>Avoids earnings clustering.</strong> Aug 21 lands after the bulk of Q2 earnings (which cluster in late July through early August) but before the Jackson Hole meeting (typically late August). The structure avoids the second-order catalysts that would add event risk to the thesis.</li>
+</ul>
+<h2>Strike Selection Logic</h2>
+<p>The proposed $7,320 short strike (15-wide body, $7,305 long wing) sits 195 points below the Monday close. As a fraction of spot, that is about 2.6% — the standard delta-0.20 placement for SPX 32-DTE verticals. The POP of 80% reflects the typical post-event regime where realized vol has been tracking below IV.</p>
+<p>A more aggressive placement ($7,350 short, delta 0.12) would improve POP to 87% but cut credit by roughly 30%, leaving the position too small to justify the trade's setup cost. A more conservative placement ($7,280 short, delta 0.30) would collect more credit but reduce POP to 68%, below the playbook's 70% threshold for new positions.</p>
+<h2>Risk Management for the Post-CPI Trade</h2>
+<ul>
+  <li><strong>Stop loss</strong>: 2× credit ($612 per contract). The structure's max loss is $1,194, so the 2× stop is well inside the defined-risk envelope.</li>
+  <li><strong>Profit target</strong>: 50% of credit ($153 per contract) before the trade has time to test either side. Faster profit-taking is acceptable if IV crush plays out faster than expected.</li>
+  <li><strong>Time stop</strong>: close at 14 DTE if the trade hasn't closed at the 50% target. Theta decay slows materially below 14 DTE; the gamma-acceleration risk rises.</li>
+  <li><strong>Adjustment if tested</strong>: if SPX trades through $7,320 intraday but closes back above, evaluate closing the put side for a partial loss and rolling the long wing down to lock in a smaller max loss. If SPX closes below $7,320, evaluate rolling the entire put side out in time for a net credit.</li>
+</ul>
+<h2>How This Forecast Will Be Updated</h2>
+<p>This forecast is published as a static reference; the live state in the frontmatter is the authoritative version (spot $7,515.34, VIX 12.84, IV 12.84%, expected moves as listed). After the CPI print resolves on Wednesday morning, the trade journal will publish a follow-up forecast with the realized vol response, the actual credit at execution, and any adjustment to the post-CPI structure if the print deviates from consensus.</p>
+<p>To find the follow-up, check the <a href="/forecasts/">forecasts index</a> or the <a href="/rss.xml">RSS feed</a>.</p>
 <h2>Trade Book</h2>
 <p>Open positions: None.</p>
 <p>Plan for Wednesday afternoon: see the post-CPI forecast after the print resolves.</p>

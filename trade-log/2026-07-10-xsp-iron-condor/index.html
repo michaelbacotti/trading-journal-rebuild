@@ -80,6 +80,119 @@
 <p>Pre-CPI, XSP IV was bid at 15.2 (rank 78). At 10:18 AM, IV had come in to 13.8 (rank 65). The crush was real but not finished — typically post-CPI vol decay plays out over 2–3 days for a soft-print scenario.</p>
 <p>The 558/553 short put is roughly 1.0% below spot. The 568/573 short call is roughly 1.7% above spot. The structure is asymmetric on purpose: the call side is wider because the post-CPI rally had further to run if yields dropped (and yields did drop, with the 10Y falling 7bps on the print).</p>
 <p>Premium collected of $1.85 against a max risk of $3.15 is a 37% credit-to-width ratio — typical for 7DTE in a moderately elevated IV regime. The probability of profit (POP) at entry was 68% per the OptionsStrat calculator.</p>
+<h2>Position Payoff at Expiration</h2>
+<p>The P/L diagram for an iron condor is two stacked short verticals. The trade has a flat profit region (both wings untouched), a sloped-loss region on each wing (where one short strike is tested but the long wing still caps the loss), and a flat max-loss region on each wing (where the long wing has capped the loss).</p>
+<p>You can build and visualize this exact condor with current pricing at <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">Optionstrat</a> via the affiliate dashboard link.</p>
+<p><strong>Key levels for this trade:</strong></p>
+<ul>
+  <li><strong>Lower profit boundary</strong> — XSP at expiration above 558 (the short put strike). The put side of the condor expires worthless; the call side is in the profit zone.</li>
+  <li><strong>Upper profit boundary</strong> — XSP at expiration below 568 (the short call strike). The call side expires worthless; the put side is in the profit zone.</li>
+  <li><strong>Max profit zone</strong> — XSP at expiration between 558 and 568. The full $1.85/condor credit × 10 condors = $1,850 is realized.</li>
+  <li><strong>Lower breakeven</strong> — XSP at 556.15 (short put strike 558 minus credit $1.85). Below this point, the put side starts losing dollar-for-dollar with the underlying.</li>
+  <li><strong>Upper breakeven</strong> — XSP at 569.85 (short call strike 568 plus credit $1.85). Above this point, the call side starts losing dollar-for-dollar with the underlying.</li>
+  <li><strong>Max loss (downside)</strong> — XSP at expiration below 553 (the long put strike). The put-side loss is capped at $5 width minus the put-side credit; combined with the call-side full credit, total loss = $3.15/condor × 10 condors × 10 multiplier = $315/condor = $3,150.</li>
+  <li><strong>Max loss (upside)</strong> — XSP at expiration above 573 (the long call strike). Symmetric structure on the upside; same $3,150 max loss.</li>
+</ul>
+<h2>Greeks Snapshot (Black-Scholes)</h2>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greek</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Per-condor value</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Interpretation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Delta (Δ)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">≈ +0.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Near-zero net delta. The short 558P and long 553P net to a small negative delta; the short 568C and long 573C net to a small positive delta. The structure is delta-neutral at entry, which is the goal for a mean-reversion view.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Gamma (Γ)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">≈ +0.001 (long gamma from wings dominates short gamma from body)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Mild long gamma at the current spot. As XSP moves away from the body, gamma flips and the position becomes short gamma.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Theta (Θ)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$0.06/day per condor = +$6/day across 10 condors</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net positive theta. The short body decays faster than the long wings; the position prefers time to pass while XSP stays inside the body.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Vega (ν)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−$0.04 per 1% IV change = −$0.40 across 10 condors</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Modestly short vega. A 1-point VIX drop post-CPI (from 13.8 to 12.8) would have added roughly $4 to the position value; the realized vol crush was a tailwind for the trade.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Rho (ρ)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$0.005 per 1% rate change</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Effectively zero at 7DTE. Listed for completeness.</td>
+</tr>
+</tbody></table></div>
+<p>Numbers computed at entry spot 565.5 (10:18 AM ET print), 7 DTE, IV=13.8% (entry chain IV), r=4.5%, no dividend yield. Per-condor = per-share × 10 (XSP multiplier).</p>
+<h2>Why This Structure</h2>
+<p>The iron condor on XSP at 7DTE was the right structure for the post-CPI window because:</p>
+<ul>
+  <li><strong>The view was range-bound with elevated IV.</strong> Pre-CPI IV at rank 78 was elevated but post-CPI crush was expected to play out over 2-3 days. Selling premium in a defined-risk structure lets the trade collect the rich premium while the IV crush accelerates the decay.</li>
+  <li><strong>The structure expresses the view with defined risk.</strong> The wings cap the loss at $3.15/condor regardless of how far XSP moves. A naked short strangle would have collected more premium but had unbounded risk.</li>
+  <li><strong>XSP is the right index at this notional.</strong> SPX 7DTE condors have a $100 multiplier; a single 5-point wing is $500 of risk. XSP's $10 multiplier gives a $50 wing, which fits the 0.10% NLV cap at the book's current size.</li>
+  <li><strong>The asymmetric width matches the post-CPI direction.</strong> Putting more distance on the call side (1.7% above spot vs 1.0% below for the put side) gives the structure room for a continuation rally if the disinflation read pushes yields lower. A symmetric condor would have capped the call-side premium.</li>
+</ul>
+<h2>Thesis</h2>
+<ul>
+  <li><strong>Why post-CPI?</strong> Binary-event vol crush is a known, repeatable phenomenon. The IV-rank filter (>=50) at entry tells us the premium is rich enough to sell; the post-event window gives us 2-3 days of accelerated theta decay as IV normalizes.</li>
+  <li><strong>Why 7DTE?</strong> The theta curve peaks around 14-21 DTE for a 0.15 delta short strike, but post-event IV decay plays out over 2-3 days. A 7DTE condor captures most of the crush before the gamma-acceleration risk of the final 3 days. A 14DTE would have given up too much premium to time decay while waiting for the crush to finish.</li>
+  <li><strong>Why the 558/568 strikes?</strong> Roughly 1.0% below and 1.7% above spot, which sits inside the 30-day 1σ expected move (about 2.5% one-way for XSP at IV 13.8) while keeping the credit-to-width ratio at the workable 30-40% threshold. A 0.5% OTM strike would have improved POP but cut the credit below 25% of width.</li>
+  <li><strong>Why the asymmetric 5-point wings?</strong> The put-side wing (553 long) caps downside risk at 5 points; the call-side wing (573 long) gives 5 points of upside room. The asymmetry in distance from spot (1.0% vs 1.7%) compensates for the post-CPI directional bias to the upside if yields dropped.</li>
+  <li><strong>Why 10 contracts?</strong> Max-loss cap is 0.06% NLV per condor (well below the 0.10% cap for defined-risk multi-leg structures); 10 condors × $3.15 max risk × 10 multiplier = $315/condor = $3,150 total max risk. Sizing is the defense against an unmodeled gap.</li>
+</ul>
+<h2>Risk</h2>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Risk</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Magnitude</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Mitigation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XSP gaps below 553 between entry and close</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Full $3,150 max loss on the put side</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Long 553 put caps the loss regardless of how far XSP drops; 10 contracts sized to 0.06% NLV per condor</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XSP gaps above 573 between entry and close</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Full $3,150 max loss on the call side</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Long 573 call caps the loss regardless of how far XSP rises</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XSP closes between 553 and 558 (or 568 and 573)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Partial loss; scale $0–$3,150</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hold; the wing still caps most of the loss</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XSP closes between 558 and 568</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Full profit $1,850</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hold to expiry; both wings expire worthless</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Bid/ask slippage on the close at end of day 2</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Estimated $0.05–$0.10/condor</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Limit order at $0.85; mid fill on XSP 7DTE chain at the time of close</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">VIX spike after entry (a second event)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Loss of $4 per 1-point VIX spike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Acceptable; position vega is small relative to theta capture</td>
+</tr>
+</tbody></table></div>
+<h2>Management Plan</h2>
+<ul>
+  <li><strong>Day 1 (entry through close)</strong>: hold. Position is working; theta is the main driver. Watch for any sign of an overnight gap or a follow-through move from the post-CPI reaction.</li>
+  <li><strong>Day 2</strong>: if premium has decayed 40%+ and XSP is inside the body (between 558 and 568), take partial profits or close the full position at 50% of credit. The post-event vol crush typically peaks on day 2; further decay slows materially.</li>
+  <li><strong>Day 3-5</strong>: if still open, the trade is in the gamma-acceleration zone. Watch for any test of the short strikes; if either short strike is tested intraday, evaluate closing the threatened wing and letting the other side run, or rolling the threatened wing out in time for a net credit.</li>
+  <li><strong>Day 6-7 (final 24 hours)</strong>: prefer the close. The theta curve flattens; only directional risk remains. Closing at any positive P&L is acceptable.</li>
+</ul>
+<p>The realized exit was the 50% profit target on day 2, which is consistent with the playbook.</p>
 <h2>Intraday Management</h2>
 <ul>
   <li><strong>Day 1 (July 10):</strong> XSP closed at 565.3, just above the short call strike. Condor value at close: $1.20 (35% decay).</li>

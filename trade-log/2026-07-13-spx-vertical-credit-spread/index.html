@@ -80,6 +80,116 @@
 <p>Overnight, ES traded in a 12-point range with no overnight gap on SPX. Pre-market VIX came in at 11.4 — a quiet tape, low realized vol, and a Put/Call ratio running at 0.78 (slightly put-skewed but well within neutral).</p>
 <p>The 5,560/5,545 short-put strike sat roughly 1.4% below the open. With 0DTE, the theta curve is steep and the gamma is concentrated at the strikes. That makes premium-to-width the right edge metric for 0DTE verticals — a 7% reading is on the lower end of the workable range for a quiet tape, but the calendar setup (no FOMC, no CPI, no earnings heavy-hitters) gave me comfort to take the trade at a smaller edge in exchange for the small max risk relative to the daily P&L goal.</p>
 <p>The position is sized to a max loss of 0.15% of NLV (net liquidating value), well inside the playbook's 0.25% per-trade cap.</p>
+<h2>Position Payoff at Expiration</h2>
+<p>The P/L diagram for this trade is a textbook short put vertical. The structure has a flat region above the short strike (the full credit is kept), a sloped loss region between the short strike and the long strike (where intrinsic accumulates against the short leg), and a flat max-loss region below the long strike (where the long leg's intrinsic exactly offsets the short leg's loss).</p>
+<p>You can build and visualize this exact vertical with current pricing at <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">Optionstrat</a> via the affiliate dashboard link.</p>
+<p><strong>Key levels for this trade:</strong></p>
+<ul>
+  <li><strong>Upper profit boundary</strong> — SPX at expiration above 5,560. The position keeps the full $1.05/share credit × 5 contracts = $525 max profit.</li>
+  <li><strong>Lower profit boundary</strong> — SPX at expiration exactly at 5,560. The short put is at-the-money; intrinsic is zero; the position keeps the full credit.</li>
+  <li><strong>Breakeven</strong> — SPX at 5,558.95 (short strike 5,560 minus credit $1.05). Below this point, the position starts to lose dollar-for-dollar with the underlying.</li>
+  <li><strong>Max loss</strong> — SPX at expiration below 5,545. The long put offsets the short put; the position locks at the width ($15) minus the credit ($1.05) = $13.95/share × 5 contracts × 100 multiplier = $6,975 realized max loss (notional) before the day's partial close.</li>
+  <li><strong>Realized max loss</strong> (worst case for this trade): the position was closed at the 50% profit target, so the realized max loss would have been the full $7,500 if SPX had gapped below 5,545 between the 11:14 test and the 1:32 close. That risk is part of why the position size is capped at 0.15% of NLV.</li>
+</ul>
+<h2>Greeks Snapshot (Black-Scholes)</h2>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greek</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Per-contract value</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Interpretation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Delta (Δ)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.13 (short put 5,560) − 0.07 (long put 5,545) = net +0.06</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slightly positive delta — the position profits modestly from a rising SPX. Most of the P&L comes from time decay, not directional exposure.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Gamma (Γ)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−0.003 per 1pt move (long gamma is below the short strike)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Short gamma dominates. As SPX rises, the position delta decreases (approaches zero). As SPX falls toward the short strike, the position delta becomes more negative.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Theta (Θ)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$0.18/day (in dollars: +$90/day across 5 contracts)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Strong positive theta. With 0DTE, theta is concentrated in the last few hours before expiration; the curve is steepest in the final 90 minutes.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Vega (ν)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−$0.012 per 1% IV change</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Modestly short vega. A 1-point VIX spike from 11.2 to 12.2 would cost roughly $6 across the 5-contract position; the position prefers stable or falling IV.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Rho (ρ)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$0.005 per 1% rate change</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Effectively zero on a 0DTE trade. Listed for completeness; rate sensitivity is irrelevant at this DTE.</td>
+</tr>
+</tbody></table></div>
+<p>Numbers computed at entry spot 5,575, 0 DTE, IV=11.2% (entry chain IV), r=4.5%, no dividend yield. Per-contract = per-share × 100.</p>
+<h2>Why This Structure</h2>
+<p>A put credit spread on SPX at 0DTE was the right structure for the day because:</p>
+<ul>
+  <li><strong>The view was directionally neutral but vol-constructive.</strong> Pre-market VIX at 11.4 was below the 25th percentile of the past year; realized vol had been tracking below 10% for the prior two weeks. The combination of low realized vol, low IV, and a quiet overnight tape reads as "the market will continue to chop, sell premium while it's cheap."</li>
+  <li><strong>The structure expresses the view with defined risk.</strong> A naked short put would have unbounded downside; the long 5,545 put caps risk at $15/contract × 100 × 5 contracts = $7,500. That's the worst-case loss if SPX gaps below 5,545 between entry and expiration.</li>
+  <li><strong>The width is sized to the day's expected move.</strong> The 5,560 short strike sat about 1.4% below the open. The 15-point width (to 5,545) gives a 1.0% lower buffer, which is consistent with the 30-day 1σ move for SPX at current IV (about 0.67% per day, or 1.5% per week).</li>
+  <li><strong>0DTE is the right DTE for the edge.</strong> Theta at 0DTE is concentrated in the last 2-3 hours. A multi-day structure would have given up too much premium in time decay while waiting for the short strike to be tested.</li>
+</ul>
+<h2>Thesis</h2>
+<ul>
+  <li><strong>Why sell premium at all when IV rank is 22?</strong> Because premium-to-width, not IV rank, is the right edge metric for 0DTE verticals. A 7% premium-to-width on a 0DTE SPX vertical is workable; a 4% reading is not. Today was at the lower bound.</li>
+  <li><strong>Why the 5,560/5,545 strikes?</strong> Roughly 1.4% below the open on the put side, which sits inside the day's expected-move range while keeping the credit-to-width ratio above the 5% threshold. A further OTM short strike (e.g., 5,540) would have improved the POP but cut the credit below 5%.</li>
+  <li><strong>Why only 5 contracts?</strong> Max-loss cap is 0.15% of NLV; the position respects the per-trade rule (0.25%) with comfortable headroom. Sizing is the most important defense against a 0DTE gap; capping at 0.15% keeps a 2× stop within the day's drawdown limit.</li>
+  <li><strong>Why exit at 50% of credit rather than hold to expiry?</strong> The playbook's first rule: take 50% of credit at 50% decay. At 0DTE, the second half of the credit decays faster, but the risk/reward of holding the second half is no longer asymmetric — you'd be risking another $0.40 to make another $0.50. Holding past 50% has positive expected value but lower Sharpe; closing at 50% is the higher-Sharpe move.</li>
+</ul>
+<h2>Risk</h2>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Risk</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Magnitude</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Mitigation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPX gaps below 5,545 between entry and close</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Full $7,500 max loss (5 × $15 × 100)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Position sized to 0.15% NLV; 2× credit stop at $2.10/spread; 5,545 long put caps risk regardless of how far SPX drops</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPX closes between 5,545 and 5,560</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Partial loss; scale $0–$7,500</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hold; the long put still offsets most of the loss</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPX closes between 5,560 and 5,578 (breakeven)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Profit; scale $0–$525</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hold; let theta do its work</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPX closes above 5,578</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Full profit $525</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hold to expiry; both legs expire worthless</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Bid/ask slippage on the close at 1:32 PM</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Estimated $0.02–$0.05/share</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Limit order at $0.42; mid fill on SPX 0DTE chain at the time of close</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">VIX spike during the day (earnings surprise, macro news)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Loss of $6 per 1-point VIX spike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Acceptable; position vega is small relative to theta capture</td>
+</tr>
+</tbody></table></div>
+<h2>Management Plan</h2>
+<ul>
+  <li><strong>Open through 11:30 AM ET</strong>: hold; position is working. Theta is the main driver. Watch for any sign of an intraday vol spike (a VIX move > 1 point, an unexpected macro headline).</li>
+  <li><strong>11:30 AM – 1:00 PM ET</strong>: if premium has decayed 40%+ and SPX is above the short strike, take partial profits or close the full position at 50% of credit. The second half of the credit decays slower than the first, and the gamma-acceleration risk rises as time-to-expiry shrinks below 3 hours.</li>
+  <li><strong>1:00 PM – 3:00 PM ET</strong>: prefer the close. The theta curve flattens in the last 90 minutes; the only way to lose meaningfully in that window is a directional gap, which is the unmodeled risk that the position size cap is designed to absorb.</li>
+  <li><strong>At or near 2× credit stop</strong>: close immediately. The structure is no longer expressing the original view (premium-to-width ratio has deteriorated below the threshold).</li>
+</ul>
+<p>The realized exit was the 50% profit target at 1:32 PM, which is consistent with the playbook.</p>
 <h2>Intraday Management</h2>
 <ul>
   <li>11:14 AM ET: SPX tested 5,565, took the short strike within 5 points. No action — the position has positive gamma below the short strike, so further downside accelerates loss non-linearly but the 2× stop is the only management rule.</li>

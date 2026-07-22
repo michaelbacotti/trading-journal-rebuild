@@ -112,7 +112,68 @@
  tools and recommends them on their merits. See the <a href="/about/">about page</a> for the full
  disclosure.</p>
 
- <h2>11. Acceptance of Terms</h2>
+ <h2>11. Options-Specific Risks</h2>
+ <p>Options trading carries risks that warrant specific attention beyond the general &ldquo;substantial
+ risk of loss&rdquo; disclosure above. These are not exhaustive, but they are the risks that recur in
+ the strategies discussed on this site:</p>
+ <ul>
+  <li><strong>Total loss of premium.</strong> A long option held to expiration with no intrinsic value
+  expires worthless. The full premium paid is the maximum loss.</li>
+  <li><strong>Assignment risk.</strong> Short American-style options may be assigned at any time prior
+  to expiration. The journal primarily trades European-style index options (SPX, XSP) where this risk
+  is materially reduced, but single-name American-style options do carry it.</li>
+  <li><strong>Pin risk.</strong> At expiration, a short option that is approximately at-the-money may
+  or may not be assigned. The resulting position can be unpredictable for a brief window.</li>
+  <li><strong>Liquidity risk.</strong> Some of the option chains referenced here (single-name LEAPs,
+  low-priced stock options) have wide bid/ask spreads. Limit orders are required; mid-price fills are
+  not guaranteed.</li>
+  <li><strong>Gap risk.</strong> Overnight news, earnings releases, or macroeconomic events can move an
+  underlying through multiple strikes between market closes. The journal&rsquo;s defined-risk
+  structures cap this risk at the wing width, but the cap is real only at expiration.</li>
+  <li><strong>Tail risk.</strong> Black-swan-type events (market shutdowns, flash crashes, extreme
+  volatility spikes) can produce outcomes that no historical backtest has captured. The journal sizes
+  for the risk it can model; the unmodeled risk is real and uncompensated.</li>
+  <li><strong>Correlation risk.</strong> When multiple positions share a directional assumption (e.g.,
+  the entire book is short-vol on SPX), a single regime change can hit all positions simultaneously.
+  The journal caps aggregate book exposure per playbook rules but cannot eliminate correlation risk.</li>
+  <li><strong>Model risk.</strong> The probability-of-profit, expected-move, and Black-Scholes figures
+  shown on this site are model outputs. They are not guarantees. Realized outcomes deviate from model
+  outputs in ways that the model cannot predict.</li>
+ </ul>
+
+ <h2>12. Tax and Regulatory Considerations</h2>
+ <p>The tax treatment of options trading varies by jurisdiction and by individual circumstance. The
+ journal does not provide tax advice. Specific points worth noting:</p>
+ <ul>
+  <li>SPX and XSP index options are taxed under Section 1256 of the U.S. Internal Revenue Code
+  (60% long-term, 40% short-term capital gains) regardless of holding period, which is a structural
+  advantage for active traders.</li>
+  <li>Equity options are taxed under standard short-term / long-term capital gains rules based on
+  holding period.</li>
+  <li>Wash-sale rules, mark-to-market elections under Section 475, and state-level tax treatment can
+  materially change the after-tax outcome of any strategy described here.</li>
+  <li>Traders in jurisdictions outside the U.S. face additional considerations. The journal&rsquo;s
+  author is a U.S.-based trader; the content may not apply to readers in other regulatory regimes.</li>
+ </ul>
+ <p>Always consult a qualified tax professional before relying on any tax treatment implied by content
+ on this site.</p>
+
+ <h2>13. Sources and Data</h2>
+ <p>The market data, option chains, IV calculations, and payoff diagrams on this site are generated from
+ publicly available market data feeds and standard option-pricing models. Specific limitations of those
+ sources:</p>
+ <ul>
+  <li>Live option chains can be delayed by 15 minutes or more, depending on the data provider&rsquo;s
+  terms of service and the user&rsquo;s geographic location.</li>
+  <li>Implied volatility values are derived from market prices using the Black-Scholes model with
+  continuous compounding; real market IV may differ from the model output, especially in low-volume
+  strikes.</li>
+  <li>Probability-of-profit figures are based on log-normal terminal-price assumptions, which
+  underestimate tail risk relative to empirical return distributions.</li>
+  <li>Past performance is not a reliable indicator of future results. Market regimes change.</li>
+ </ul>
+
+ <h2>14. Acceptance of Terms</h2>
  <p>By using this site, you acknowledge that you have read, understood, and agreed to this disclaimer.
  If you do not agree, do not use this site.</p>
 
