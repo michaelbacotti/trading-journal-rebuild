@@ -17,3 +17,9 @@
 /forecasts /forecasts/ 301
 /markets /markets/ 301
 /tools /tools/ 301
+
+# Stale forecast slug — original commit b9e8450 used a wrong structure name
+# ("bull-call-vertical-spx"); the correct slug is bull-put-spread-spx. CF Pages
+# edge is still serving the stale asset from cache despite multiple purges.
+/forecasts/bull-call-vertical-spx/ /forecasts/bull-put-spread-spx/ 301
+/forecasts/bull-call-vertical-spx /forecasts/bull-put-spread-spx/ 301
