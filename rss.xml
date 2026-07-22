@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Wed, 22 Jul 2026 10:58:55 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 22 Jul 2026 17:50:27 GMT</lastBuildDate>
+  <item>
+    <title>NASA Bull Call Spread — Jan 21 '28 30/15: Long-Dated Space-ETF Upside</title>
+    <link>https://tredey.com/trade-log/2026-07-22-nasa-bull-call-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-07-22-nasa-bull-call-spread/</guid>
+    <pubDate>2026-07-22</pubDate>
+    <description>Opened a NASA ETF Jan 21 2028 30/15 bull call spread, an 18-month LEAPS upside structure on the Tema Space Innovators ETF. Net debit $6.10, max loss $610/contract × 1 = $610 total. Cushion to long strike 36%, breakeven $21.10.</description>
+  </item>
   <item>
     <title>SPX Bull Put Spread — Wednesday, July 22, 2026</title>
     <link>https://tredey.com/forecasts/bull-put-spread-spx/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-13-spx-vertical-credit-spread/</guid>
     <pubDate>2026-07-13</pubDate>
     <description>Opened a 0DTE SPX put credit spread 15-wide at the 5,560/5,545 strikes, collecting $1.05 against $15 of risk. Premium-to-width ratio of 7% met the day's edge threshold.</description>
-  </item>
-  <item>
-    <title>SPX Pre-CPI Outlook — July 13, 2026: Hold Flat Into the Print</title>
-    <link>https://tredey.com/forecasts/2026-07-13-spx-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-07-13-spx-outlook/</guid>
-    <pubDate>2026-07-13</pubDate>
-    <description>SPX closed Monday at $7,515.34, VIX 12.84. CPI release Wednesday. Holding flat into the print. Post-CPI structure: SPX bull put spread expiring Aug 21, 2026.</description>
   </item>
 </channel>
 </rss>
