@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 21 Jul 2026 19:18:44 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 22 Jul 2026 10:43:51 GMT</lastBuildDate>
+  <item>
+    <title>SPX Bull Call Vertical — July 22, 2026</title>
+    <link>https://tredey.com/forecasts/bull-call-vertical-spx/</link>
+    <guid>https://tredey.com/forecasts/bull-call-vertical-spx/</guid>
+    <pubDate>2026-07-22</pubDate>
+    <description></description>
+  </item>
   <item>
     <title>Tuesday Pre-Market Brief — SPX Long Strangle at $7,443 Spot: $7,095 Put / $7,890 Call, Aug 21 AM-Settled Expiry</title>
     <link>https://tredey.com/forecasts/2026-07-21-transition-vol-spx/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/forecasts/2026-07-13-spx-outlook/</guid>
     <pubDate>2026-07-13</pubDate>
     <description>SPX closed Monday at $7,515.34, VIX 12.84. CPI release Wednesday. Holding flat into the print. Post-CPI structure: SPX bull put spread expiring Aug 21, 2026.</description>
-  </item>
-  <item>
-    <title>XSP Iron Condor — July 10, 2026: Post-CPI Pin the Strike, Ride Theta Into Friday</title>
-    <link>https://tredey.com/trade-log/2026-07-10-xsp-iron-condor/</link>
-    <guid>https://tredey.com/trade-log/2026-07-10-xsp-iron-condor/</guid>
-    <pubDate>2026-07-10</pubDate>
-    <description>Opened a 7DTE XSP iron condor at the 558/553 puts and 568/573 calls. Pre-CPI vol was 13.8 with rank 65 — high enough to sell premium but not so high that protection was expensive. Closed at 50% of max profit on day 4.</description>
   </item>
 </channel>
 </rss>
