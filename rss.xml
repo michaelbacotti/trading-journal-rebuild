@@ -5,7 +5,7 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 23 Jul 2026 17:34:23 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 23 Jul 2026 23:28:14 GMT</lastBuildDate>
   <item>
     <title>Long Call Condor Strike Selection: How to Pick the Body Width</title>
     <link>https://tredey.com/education/2026-07-23-long-call-condor-strike-selection/</link>
@@ -26,6 +26,13 @@
     <guid>https://tredey.com/strategies/2026-07-23-long-call-condor/</guid>
     <pubDate>2026-07-23</pubDate>
     <description>Anatomy of the long call condor — four call legs that harvest theta and call-side vol skew when the underlying stays inside a defined range. The all-call counterpart to the iron condor: same payoff shape, different Greek profile, narrower body tolerance.</description>
+  </item>
+  <item>
+    <title>Tredey Market Gauge: A Weighted Composite of Overbought/Oversold Signals</title>
+    <link>https://tredey.com/tools/2026-07-23-market-gauge/</link>
+    <guid>https://tredey.com/tools/2026-07-23-market-gauge/</guid>
+    <pubDate>2026-07-23</pubDate>
+    <description>An interactive market gauge that combines RSI, MACD, ATR, Bollinger Band position, volume, and put/call ratio into a single 0-100 reading. Move the weight sliders to tune which indicators matter more. Pick a preset profile (Momentum, Volatility-aware, Options-sentiment, Mean-reversion) for a one-click starting point. Sample SPY data shown; live mode is a roadmap item.</description>
   </item>
   <item>
     <title>Common Options Math Errors I Make (and How I Catch Them)</title>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-20-xsp-bull-put-spread/</guid>
     <pubDate>2026-07-20</pubDate>
     <description>Opened an XSP Jul 31 742/740 bull put spread, an 11-DTE index-level short-premium structure with 6.93-point OTM cushion. $237.50 total credit, $762.50 defined max loss, ~67% short-leg POP.</description>
-  </item>
-  <item>
-    <title>Bear Call Spread: The Compliment to the Bull Put</title>
-    <link>https://tredey.com/strategies/2026-07-19-call-credit-spread-vertical/</link>
-    <guid>https://tredey.com/strategies/2026-07-19-call-credit-spread-vertical/</guid>
-    <pubDate>2026-07-19</pubDate>
-    <description>Anatomy of a bear call vertical credit spread: the symmetric counter to the bull put. Used as a standalone bearish/neutral expression or as the upper half of an iron condor.</description>
   </item>
 </channel>
 </rss>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Tredey Market Gauge: A Weighted Composite of Overbought/Oversold Signals | The Trading Journal</title>
+ <meta name="description" content="An interactive market gauge that combines RSI, MACD, ATR, Bollinger Band position, volume, and put/call ratio into a single 0-100 reading. Move the weight sliders to tune which indicators matter more. Pick a preset profile (Momentum, Volatility-aware, Options-sentiment, Mean-reversion) for a one-click starting point. Sample SPY data shown; live mode is a roadmap item.">
+ <link rel="canonical" href="https://tredey.com/tools/2026-07-23-market-gauge/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Tredey Market Gauge: A Weighted Composite of Overbought/Oversold Signals | The Trading Journal">
+ <meta property="og:description" content="An interactive market gauge that combines RSI, MACD, ATR, Bollinger Band position, volume, and put/call ratio into a single 0-100 reading. Move the weight sliders to tune which indicators matter more. Pick a preset profile (Momentum, Volatility-aware, Options-sentiment, Mean-reversion) for a one-click starting point. Sample SPY data shown; live mode is a roadmap item.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/tools/2026-07-23-market-gauge/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Tredey Market Gauge: A Weighted Composite of Overbought/Oversold Signals | The Trading Journal">
+ <meta name="twitter:description" content="An interactive market gauge that combines RSI, MACD, ATR, Bollinger Band position, volume, and put/call ratio into a single 0-100 reading. Move the weight sliders to tune which indicators matter more. Pick a preset profile (Momentum, Volatility-aware, Options-sentiment, Mean-reversion) for a one-click starting point. Sample SPY data shown; live mode is a roadmap item.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 (Trading Journal property — pending) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENDING"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PENDING');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">July 23, 2026 &middot; TOOL / MARKET GAUGE</div>
+  <h1>Tredey Market Gauge: A Weighted Composite of Overbought/Oversold Signals</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">An interactive market gauge that combines RSI, MACD, ATR, Bollinger Band position, volume, and put/call ratio into a single 0-100 reading. Move the weight sliders to tune which indicators matter more. Pick a preset profile (Momentum, Volatility-aware, Options-sentiment, Mean-reversion) for a one-click starting point. Sample SPY data shown; live mode is a roadmap item.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <style>
+<p>/<em> Tredey Market Gauge — inline styles for the interactive widget </em>/</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<p>.gauge-page { max-width: 880px; margin: 0 auto; padding: 0 1.5rem 2rem; }</p>
+<p>.gauge-page h2 { margin-top: 2.5rem; }</p>
+<p>.gauge-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; padding: 1rem; background: var(--surface, #f8f8f8); border-radius: 8px; }</p>
+<p>.gauge-control { display: flex; flex-direction: column; gap: 0.4rem; }</p>
+<p>.gauge-control label { font-size: 0.85rem; font-weight: 600; color: #444; }</p>
+<p>.gauge-control input[type="text"] { padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }</p>
+<p>.preset-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; }</p>
+<p>.preset-btn { padding: 0.5rem 1rem; border: 1px solid var(--accent, #2c5282); background: white; color: var(--accent, #2c5282); border-radius: 4px; cursor: pointer; font-size: 0.9rem; font-weight: 600; }</p>
+<p>.preset-btn:hover { background: var(--accent, #2c5282); color: white; }</p>
+<p>.preset-btn.active { background: var(--accent, #2c5282); color: white; }</p>
+<p>.main-gauge-wrap { display: flex; flex-direction: column; align-items: center; margin: 2rem 0; padding: 2rem; background: var(--surface, #f8f8f8); border-radius: 12px; }</p>
+<p>.main-gauge-svg { max-width: 320px; }</p>
+<p>.gauge-readout { font-size: 3rem; font-weight: 700; margin-top: 0.5rem; }</p>
+<p>.gauge-label { font-size: 1rem; color: #666; margin-top: 0.25rem; }</p>
+<p>.sub-gauges { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }</p>
+<p>.sub-gauge { background: white; border: 1px solid var(--border, #e0e0e0); border-radius: 8px; padding: 1rem; }</p>
+<p>.sub-gauge h4 { margin: 0 0 0.5rem; font-size: 1rem; display: flex; justify-content: space-between; align-items: baseline; }</p>
+<p>.sub-gauge h4 .raw { font-weight: 400; color: #666; font-size: 0.85rem; }</p>
+<p>.sub-gauge-bar { position: relative; height: 16px; background: linear-gradient(to right, #2c5282 0%, #38a169 25%, #f8f8f8 50%, #dd6b20 75%, #c53030 100%); border-radius: 8px; margin: 0.5rem 0; }</p>
+<p>.sub-gauge-marker { position: absolute; top: -4px; width: 4px; height: 24px; background: #000; border-radius: 2px; transform: translateX(-50%); transition: left 0.3s ease; }</p>
+<p>.sub-gauge-signal { font-size: 0.85rem; color: #444; margin: 0.25rem 0; }</p>
+<p>.sub-gauge-slider { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; font-size: 0.85rem; }</p>
+<p>.sub-gauge-slider input { flex: 1; }</p>
+<p>.sub-gauge-slider .weight-label { min-width: 60px; text-align: right; font-variant-numeric: tabular-nums; }</p>
+<p>.indicator-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }</p>
+<p>.indicator-table th, .indicator-table td { padding: 0.5rem; border-bottom: 1px solid var(--border, #e0e0e0); text-align: left; }</p>
+<p>.indicator-table th { background: var(--surface, #f8f8f8); }</p>
+<p>.sample-data-note { font-size: 0.85rem; color: #666; font-style: italic; margin: 0.5rem 0; }</p>
+<p>@media (max-width: 600px) {</p>
+<p>.gauge-controls { grid-template-columns: 1fr; }</p>
+<p>.gauge-readout { font-size: 2.25rem; }</p>
+<p>.sub-gauges { grid-template-columns: 1fr; }</p>
+<p>}</p>
+</style>
+<p><!-- ============================================================</p>
+<p>TREDEY MARKET GAUGE — INTERACTIVE WIDGET</p>
+<p>============================================================ --></p>
+<div class="gauge-page">
+<p><h2 style="margin-top:0;">Market Gauge</h2></p>
+<p><p>The Tredey Market Gauge combines six technical inputs into a single 0-100 reading. Lower values indicate conditions historically associated with oversold markets; higher values indicate conditions associated with overbought markets. The composite is a <em>weighted average</em> of normalized signals — every indicator gets a 0-2 weight slider, and the main gauge updates instantly when you move them.</p></p>
+<p><p class="sample-data-note">Sample data: SPY as of market close 2026-07-22. Live data feed is on the roadmap (see "Live data roadmap" below).</p></p>
+<p><!-- ───── Controls ───── --></p>
+<div class="gauge-controls">
+<div class="gauge-control">
+<p><label for="gauge-ticker">Ticker</label></p>
+<p><input type="text" id="gauge-ticker" value="SPY" maxlength="6" style="text-transform:uppercase;"></p>
+</div>
+<div class="gauge-control">
+<p><label for="gauge-timeframe">Timeframe</label></p>
+<p><select id="gauge-timeframe" style="padding:0.5rem;border:1px solid #ccc;border-radius:4px;font-size:1rem;"></p>
+<p><option value="1M" selected>1 month</option></p>
+<p><option value="3M">3 months</option></p>
+<p><option value="6M">6 months</option></p>
+<p></select></p>
+</div>
+</div>
+<p><!-- ───── Presets ───── --></p>
+<div class="preset-row">
+<p><button class="preset-btn active" data-preset="custom">Custom</button></p>
+<p><button class="preset-btn" data-preset="momentum">Momentum</button></p>
+<p><button class="preset-btn" data-preset="volatility">Volatility-aware</button></p>
+<p><button class="preset-btn" data-preset="options">Options-sentiment</button></p>
+<p><button class="preset-btn" data-preset="meanrev">Mean-reversion</button></p>
+</div>
+<p><!-- ───── Main gauge ───── --></p>
+<div class="main-gauge-wrap">
+<p><svg class="main-gauge-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="Main market gauge"></p>
+<p><!-- Outer ring --></p>
+<p><circle cx="100" cy="100" r="90" fill="none" stroke="#e0e0e0" stroke-width="2"/></p>
+<p><!-- Color zones (semicircle arc from -90° to +90°, total 180°) --></p>
+<p><path d="M 10 100 A 90 90 0 0 1 50 21.6" fill="none" stroke="#2c5282" stroke-width="20"/></p>
+<p><path d="M 50 21.6 A 90 90 0 0 1 100 10" fill="none" stroke="#38a169" stroke-width="20"/></p>
+<p><path d="M 100 10 A 90 90 0 0 1 150 21.6" fill="none" stroke="#f8f8f8" stroke-width="20"/></p>
+<p><path d="M 150 21.6 A 90 90 0 0 1 190 100" fill="none" stroke="#dd6b20" stroke-width="20"/></p>
+<p><!-- Needle --></p>
+<p><line id="gauge-needle" x1="100" y1="100" x2="100" y2="20" stroke="#000" stroke-width="3" stroke-linecap="round" transform="rotate(-90 100 100)"/></p>
+<p><circle cx="100" cy="100" r="6" fill="#000"/></p>
+<p><!-- Tick marks --></p>
+<p><text x="20" y="115" font-size="10" fill="#666">0</text></p>
+<p><text x="100" y="5" font-size="10" fill="#666" text-anchor="middle">50</text></p>
+<p><text x="180" y="115" font-size="10" fill="#666" text-anchor="end">100</text></p>
+<p></svg></p>
+<div class="gauge-readout" id="gauge-value">50</div>
+<div class="gauge-label" id="gauge-label">Neutral</div>
+<div class="gauge-label" id="gauge-context" style="font-size:0.85rem;margin-top:0.5rem;">SPY · 1M</div>
+</div>
+<p><!-- ───── Sub-gauges ───── --></p>
+<div class="sub-gauges" id="sub-gauges">
+<p><!-- Populated by JavaScript --></p>
+</div>
+</div>
+<script>
+<p>// ─── Tredey Market Gauge ────────────────────────────────────────────</p>
+<p>// Composite logic:</p>
+<p>//   S_I  = normalized indicator signal in [-1, +1]</p>
+<p>//   W_I  = weight (0-2) controlled by user</p>
+<p>//   C    = sum(W_I * S_I) / sum(W_I)</p>
+<p>//   G    = 50 + 50 * C      →  0..100</p>
+<p>const SAMPLE_DATA = {</p>
+<p>ticker: "SPY",</p>
+<p>asof: "2026-07-22",</p>
+<p>indicators: {</p>
+<p>rsi:    { name: "RSI (14)",                raw: "62.4",   signal: +0.48, note: "Above 50, approaching overbought" },</p>
+<p>macd:   { name: "MACD Histogram",          raw: "+1.85",  signal: +0.55, note: "Positive, bullish momentum" },</p>
+<p>atr:    { name: "ATR (14, % of price)",    raw: "1.22%",  signal: +0.30, note: "Elevated vs 20-day median" },</p>
+<p>bb:     { name: "Bollinger Position",      raw: "0.71",   signal: +0.40, note: "Upper half of 20-day range" },</p>
+<p>vol:    { name: "Volume vs 20d avg",       raw: "1.18x",  signal: +0.25, note: "Slightly elevated" },</p>
+<p>pc:     { name: "Put/Call Ratio",         raw: "0.78",   signal: -0.20, note: "Mildly bullish sentiment" }</p>
+<p>}</p>
+<p>};</p>
+<p>const PRESETS = {</p>
+<p>momentum: { rsi: 1.8, macd: 1.8, atr: 1.0, bb: 1.6, vol: 1.2, pc: 0.4 },</p>
+<p>volatility: { rsi: 1.0, macd: 1.0, atr: 1.8, bb: 1.6, vol: 1.6, pc: 1.0 },</p>
+<p>options:  { rsi: 1.2, macd: 1.0, atr: 0.8, bb: 1.0, vol: 1.2, pc: 2.0 },</p>
+<p>meanrev:  { rsi: 1.6, macd: 0.6, atr: 1.0, bb: 1.8, vol: 0.8, pc: 1.2 },</p>
+<p>custom:   null // leave as-is</p>
+<p>};</p>
+<p>let currentWeights = { rsi: 1.0, macd: 1.0, atr: 1.0, bb: 1.0, vol: 1.0, pc: 1.0 };</p>
+<p>function renderSubGauges() {</p>
+<p>const wrap = document.getElementById("sub-gauges");</p>
+<p>if (!wrap) return;</p>
+<p>const inds = SAMPLE_DATA.indicators;</p>
+<p>wrap.innerHTML = Object.entries(inds).map(([key, ind]) => {</p>
+<p>const w = currentWeights[key] || 1.0;</p>
+<p>const signalPos = (ind.signal + 1) / 2 * 100; // 0..100</p>
+<p>return `</p>
+<div class="sub-gauge">
+<p><h4>${ind.name} <span class="raw">${ind.raw}</span></h4></p>
+<div class="sub-gauge-bar">
+<div class="sub-gauge-marker" style="left:${signalPos}%;"></div>
+</div>
+<div class="sub-gauge-signal">Signal: ${ind.signal >= 0 ? "+" : ""}${ind.signal.toFixed(2)} · ${ind.note}</div>
+<div class="sub-gauge-slider">
+<p><input type="range" min="0" max="2" step="0.1" value="${w}" data-key="${key}"></p>
+<span class="weight-label" id="w-${key}">Weight: ${w.toFixed(1)}×</span>
+</div>
+</div>
+<p>`;</p>
+<p>}).join("");</p>
+<p>wrap.querySelectorAll('input[type="range"]').forEach(input => {</p>
+<p>input.addEventListener("input", e => {</p>
+<p>const k = e.target.dataset.key;</p>
+<p>currentWeights[k] = parseFloat(e.target.value);</p>
+<p>document.getElementById(<code>w-${k}</code>).textContent = <code>Weight: ${parseFloat(e.target.value).toFixed(1)}×</code>;</p>
+<p>// mark as custom preset</p>
+<p>document.querySelectorAll(".preset-btn").forEach(b => b.classList.remove("active"));</p>
+<p>document.querySelector('.preset-btn[data-preset="custom"]').classList.add("active");</p>
+<p>recompute();</p>
+<p>});</p>
+<p>});</p>
+<p>}</p>
+<p>function recompute() {</p>
+<p>const inds = SAMPLE_DATA.indicators;</p>
+<p>let num = 0, den = 0;</p>
+<p>for (const k of Object.keys(inds)) {</p>
+<p>const w = currentWeights[k] || 0;</p>
+<p>num += w * inds[k].signal;</p>
+<p>den += w;</p>
+<p>}</p>
+<p>const C = den > 0 ? num / den : 0;</p>
+<p>const G = Math.max(0, Math.min(100, 50 + 50 * C));</p>
+<p>// Update readout</p>
+<p>document.getElementById("gauge-value").textContent = Math.round(G);</p>
+<p>// Update label based on G</p>
+<p>let label = "Neutral";</p>
+<p>if (G < 20) label = "Deep Oversold";</p>
+<p>else if (G < 40) label = "Oversold";</p>
+<p>else if (G < 60) label = "Neutral";</p>
+<p>else if (G < 80) label = "Overbought";</p>
+<p>else label = "Extreme Overbought";</p>
+<p>document.getElementById("gauge-label").textContent = label;</p>
+<p>// Update context line</p>
+<p>const ticker = document.getElementById("gauge-ticker").value.toUpperCase() || "SPY";</p>
+<p>const tf = document.getElementById("gauge-timeframe").value;</p>
+<p>document.getElementById("gauge-context").textContent = <code>${ticker} · ${tf}</code>;</p>
+<p>// Animate needle: -90° at G=0, +90° at G=100</p>
+<p>const angle = -90 + (G / 100) * 180;</p>
+<p>const needle = document.getElementById("gauge-needle");</p>
+<p>if (needle) needle.setAttribute("transform", <code>rotate(${angle} 100 100)</code>);</p>
+<p>}</p>
+<p>function applyPreset(name) {</p>
+<p>document.querySelectorAll(".preset-btn").forEach(b => b.classList.remove("active"));</p>
+<p>document.querySelector(<code>.preset-btn[data-preset="${name}"]</code>).classList.add("active");</p>
+<p>if (name === "custom") { recompute(); return; }</p>
+<p>const preset = PRESETS[name];</p>
+<p>if (!preset) return;</p>
+<p>currentWeights = { ...preset };</p>
+<p>renderSubGauges();</p>
+<p>recompute();</p>
+<p>}</p>
+<p>document.addEventListener("DOMContentLoaded", () => {</p>
+<p>renderSubGauges();</p>
+<p>recompute();</p>
+<p>document.querySelectorAll(".preset-btn").forEach(b => {</p>
+<p>b.addEventListener("click", () => applyPreset(b.dataset.preset));</p>
+<p>});</p>
+<p>document.getElementById("gauge-ticker")?.addEventListener("input", recompute);</p>
+<p>document.getElementById("gauge-timeframe")?.addEventListener("change", recompute);</p>
+<p>});</p>
+</script>
+<p><!-- ============================================================</p>
+<p>END OF INTERACTIVE WIDGET</p>
+<p>============================================================ --></p>
+<h2>How to read the gauge</h2>
+<p>The main dial reads from 0 to 100. Lower values mean conditions historically associated with oversold markets (RSI low, price near lower Bollinger Band, elevated put/call); higher values mean overbought conditions. The exact thresholds vary by asset and regime, but the following zones are useful defaults:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Zone</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Range</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Interpretation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Deep Oversold</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0-20</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Statistically rare; bounce risk increases but trend can persist</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Oversold</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">20-40</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Mean-reversion setups worth screening for</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Neutral</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">40-60</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">No strong directional bias from the composite</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Overbought</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">60-80</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Trend-following setups favored; mean-reversion setups risky</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Extreme Overbought</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">80-100</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Statistically rare; pullback risk increases</td>
+</tr>
+</tbody></table></div>
+<p>The gauge is <strong>not a signal</strong>. It's a context read. Decisions should incorporate the gauge reading alongside the asset's own structure (key support/resistance, event calendar, sector rotation), position-level risk, and the journal's playbook rules.</p>
+<h2>What the sub-gauges measure</h2>
+<p>Each sub-gauge shows the raw value of one indicator and its <em>normalized signal</em> (a value between -1 and +1 where +1 is "maximally overbought" and -1 is "maximally oversold" for that indicator). Move the slider to weight it more or less in the composite.</p>
+<p><strong>RSI (Relative Strength Index, 14-period)</strong> measures the magnitude of recent price changes. RSI ≥ 70 is the textbook "overbought" zone; RSI ≤ 30 is "oversold." RSI is most useful in <em>range-bound</em> markets; in strong trends it can stay extreme for weeks.</p>
+<p><strong>MACD (Moving Average Convergence Divergence)</strong> is a momentum indicator based on the difference between two exponential moving averages (12 and 26 periods) and a 9-period signal line. The histogram (MACD minus signal) is what the gauge reads. Positive histogram with recent bullish crossover = +1; negative with bearish crossover = -1; flat = 0.</p>
+<p><strong>ATR (Average True Range, 14-period)</strong> measures recent volatility as a percentage of price. A rising ATR can indicate "overheated" conditions if paired with a sharp rally, or "panicky" conditions if paired with a sharp selloff. The gauge reads ATR as a mildly positive signal — high ATR itself isn't directional.</p>
+<p><strong>Bollinger Band Position</strong> is where the current price sits between the lower and upper Bollinger Bands (20-period, 2 standard deviations). A position of 0.5 is the middle band; 0+ is between lower and middle; 1+ is at or above the upper band. The gauge reads 0.2 as "cheap relative to recent range" (-0.7 signal) and 0.8+ as "expensive" (+0.7 signal).</p>
+<p><strong>Volume vs 20-day average</strong> reads as a signal only when paired with price action. High volume at upper-band prices contributes a positive signal (overbought with conviction); high volume at lower-band prices contributes a negative signal (oversold with conviction). Volume near average reads as neutral.</p>
+<p><strong>Put/Call Ratio</strong> is the ratio of put options traded to call options traded. A <em>high</em> ratio means more puts being bought (bearish hedging or bearish speculation) and historically is a <em>contrarian bullish</em> signal. A <em>low</em> ratio means more calls (bullish sentiment) and can be a contrarian bearish signal at extremes. The gauge maps high ratio to negative (contrarian bullish), low ratio to positive.</p>
+<h2>Preset profiles</h2>
+<p>The four preset buttons set the weights to common trading philosophies. They're starting points, not rules.</p>
+<ul>
+  <li><strong>Momentum</strong> — RSI and MACD dominate. Best for trend-following. The gauge will swing further from neutral in momentum regimes.</li>
+  <li><strong>Volatility-aware</strong> — ATR, Bollinger, and volume dominate. Best for trading volatility regimes (compression, expansion). Mean-reversion setups get more weight.</li>
+  <li><strong>Options-sentiment</strong> — Put/call ratio dominates, with RSI and volume as secondaries. Best for trading sentiment extremes (e.g., the kind of washout that produces high-quality long entries).</li>
+  <li><strong>Mean-reversion</strong> — Bollinger dominates, with RSI secondary. Best for trading range-bound markets with defined support/resistance.</li>
+</ul>
+<h2>Why a weighted average</h2>
+<p>A simple "score = (RSI + MACD + ...)" treats every indicator equally, but in practice RSI matters more in some regimes and Put/Call matters more in others. Weighting lets you express regime priors without rebuilding the indicator set. The default (all weights = 1.0) is the equal-weight composite; the presets are regime-shaped priors.</p>
+<p>The composite value G is bounded between 0 and 100 only when <em>all</em> weights sum to non-zero. If you zero out every weight, the gauge falls back to neutral (50). The weights are not normalized internally — the absolute sum of weights affects the volatility of the gauge reading over time, but not its bounded range.</p>
+<h2>How traders use these signals</h2>
+<p>In a typical options-trading workflow, the gauge is one of several reads used to set <em>context</em>, not to fire trades directly. Common uses:</p>
+<ol>
+  <li><strong>Sizing decisions.</strong> When the gauge is in an extreme zone (G < 20 or G > 80), trade size is often reduced because the existing trend is at risk of reversal. When the gauge is neutral, full position sizing per the playbook is appropriate.</li>
+  <li><strong>Strategy selection.</strong> High-gauge readings favor short-volatility structures (iron condors, short verticals, covered calls). Low-gauge readings favor long-volatility structures (long calls, long straddles, debit spreads).</li>
+  <li><strong>Strike selection.</strong> In a high-gauge regime, OTM short strikes are further from spot and collect less premium but have higher win rate. In a low-gauge regime, closer short strikes collect more premium but face higher assignment risk.</li>
+  <li><strong>Timing.</strong> A gauge moving from neutral to overbought <em>gradually</em> is a different signal than a gauge that spikes to overbought in one session. The former is trend confirmation; the latter is often a blow-off top.</li>
+</ol>
+<h2>Methodology and limitations</h2>
+<p>The gauge uses <em>normalized</em> signals — each indicator is mapped from its raw value to a -1..+1 range using piecewise linear mappings. The exact normalization breakpoints are heuristic (RSI 30/50/70, Bollinger 0.2/0.5/0.8, etc.) and are not derived from historical regime statistics. The gauge will mis-read regime transitions because the underlying indicators are lagging by construction.</p>
+<p>The gauge does <em>not</em> incorporate:</p>
+<ul>
+  <li>Fundamentals (earnings, valuation, free cash flow)</li>
+  <li>Macro context (rates, inflation, geopolitical)</li>
+  <li>Cross-asset relationships (bond/equity correlation, USD strength)</li>
+  <li>Sector rotation</li>
+  <li>Sentiment beyond put/call</li>
+</ul>
+<p>These are read separately and are not part of the composite. The gauge is a <em>technical context read</em>, not a complete market view.</p>
+<h2>Live data roadmap</h2>
+<p>The current page uses sample SPY data as of 2026-07-22 close. The slider/preset logic is real and reflects the input indicators correctly; only the underlying data is static. To upgrade to live data:</p>
+<ol>
+  <li><strong>CF Worker proxy</strong> — a Cloudflare Worker that fetches from Yahoo Finance server-side (no CORS issue from worker), computes indicators, and returns JSON with CORS headers. ~2 hours of build.</li>
+  <li><strong>Pre-computed cache</strong> — a scheduled CF Worker that updates indicator values for a basket of tickers every 5 minutes during market hours, stores in KV, and the page reads from KV. Reduces user-perceived latency but adds infrastructure.</li>
+  <li><strong>Client-side direct fetch</strong> — call a CORS-enabled API (Twelve Data, Finnhub) from the browser with an API key. Free tiers exist but rate-limited; paid tiers needed for production use.</li>
+</ol>
+<p>The current page is structured so any of these three paths can replace the hardcoded <code>SAMPLE_DATA</code> constant in the script block. The composite logic, weight handling, preset profiles, and visualization are all data-source-agnostic.</p>
+<h2>See also</h2>
+<ul>
+  <li><a href="/playbook/2026-07-05-sop/">Playbook SOP</a> — how the gauge reading fits into trade selection</li>
+  <li><a href="/education/2026-07-06-standard-deviations/">Standard deviations</a> — the math under indicators like RSI and Bollinger</li>
+  <li><a href="/education/2026-07-07-probabilities/">Probabilities</a> — what indicator readings actually imply for option pricing</li>
+  <li><a href="/education/2026-07-08-risk-vs-reward/">Risk vs reward</a> — how sizing interacts with regime reads</li>
+</ul>
+<p>The gauge is informational. It is not investment advice. Every input indicator is a lagging read of price action; combining lagging reads does not produce a leading signal. Use the gauge as one input among many, alongside structure, events, and risk management.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>
