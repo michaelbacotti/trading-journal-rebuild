@@ -5,13 +5,20 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 23 Jul 2026 12:31:10 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 23 Jul 2026 15:48:20 GMT</lastBuildDate>
+  <item>
+    <title>QQQ Long Call Condor — Dec 18 '26 700/715/845/860: Wide-Body Range-Bound, Narrow-Wing Limited</title>
+    <link>https://tredey.com/trade-log/2026-07-23-qqq-long-call-condor/</link>
+    <guid>https://tredey.com/trade-log/2026-07-23-qqq-long-call-condor/</guid>
+    <pubDate>2026-07-23</pubDate>
+    <description>Opened a QQQ long call condor (Dec 18 '26, 700/715/845/860), pairing a near-ATM bull call credit spread (700/715) with a deep-OTM bear call credit spread (845/860) to express range-bounded sideways drift. $689.50 defined risk; max profit $810.50 in $715–$845 zone.</description>
+  </item>
   <item>
     <title>XSP Long Call Condor — Dec 18 '26 690/700/810/820: 5-Month Range-Bound Lower-Vol Structure</title>
     <link>https://tredey.com/trade-log/2026-07-23-xsp-long-call-condor/</link>
     <guid>https://tredey.com/trade-log/2026-07-23-xsp-long-call-condor/</guid>
     <pubDate>2026-07-23</pubDate>
-    <description>Opened a 110-wide XSP long call condor (Dec 18 '26, 690/700/810/820), short the body's IV skew while harvesting theta into year-end. $609 defined risk; max profit $10,391 between $700–$810.</description>
+    <description>Opened an XSP long call condor (Dec 18 '26, 690/700/810/820), short the body's IV skew while harvesting theta into year-end. $609 defined risk; max profit $391 between $700–$810 (limited by 10-pt wings, not 110-pt body).</description>
   </item>
   <item>
     <title>SPX Bull Put Spread — Thursday, July 23, 2026</title>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-17-usar-bull-call-spread/</guid>
     <pubDate>2026-07-17</pubDate>
     <description>Opened a USAR Jan 21 '28 20/25 bull call spread, a long-dated (553 DTE) LEAPS expressing the US critical-minerals / rare-earth processing thesis. $80 defined risk, $420 max profit (5.25:1 R/R), 29.6% cushion to lower breakeven.</description>
-  </item>
-  <item>
-    <title>SKHY Bull Call Spread — Sep 18 '26 195/200: A Memory-Cycle HBM Position</title>
-    <link>https://tredey.com/trade-log/2026-07-16-skhy-bull-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-07-16-skhy-bull-call-spread/</guid>
-    <pubDate>2026-07-16</pubDate>
-    <description>Opened an SKHY Sep 18 195/200 bull call spread, OTM speculative structure expressing a memory-cycle rally thesis. $80 defined risk, $420 max profit (5.25:1 R/R), 64 DTE.</description>
   </item>
 </channel>
 </rss>
