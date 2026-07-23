@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 23 Jul 2026 10:44:05 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 23 Jul 2026 12:31:10 GMT</lastBuildDate>
+  <item>
+    <title>XSP Long Call Condor — Dec 18 '26 690/700/810/820: 5-Month Range-Bound Lower-Vol Structure</title>
+    <link>https://tredey.com/trade-log/2026-07-23-xsp-long-call-condor/</link>
+    <guid>https://tredey.com/trade-log/2026-07-23-xsp-long-call-condor/</guid>
+    <pubDate>2026-07-23</pubDate>
+    <description>Opened a 110-wide XSP long call condor (Dec 18 '26, 690/700/810/820), short the body's IV skew while harvesting theta into year-end. $609 defined risk; max profit $10,391 between $700–$810.</description>
+  </item>
   <item>
     <title>SPX Bull Put Spread — Thursday, July 23, 2026</title>
     <link>https://tredey.com/forecasts/2026-07-23-bull-put-spread-spx/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-16-skhy-bull-call-spread/</guid>
     <pubDate>2026-07-16</pubDate>
     <description>Opened an SKHY Sep 18 195/200 bull call spread, OTM speculative structure expressing a memory-cycle rally thesis. $80 defined risk, $420 max profit (5.25:1 R/R), 64 DTE.</description>
-  </item>
-  <item>
-    <title>DRAM Diagonal Call Spread — Dec 18 / Jan 15 '27 70/50: A Pullback Theta-Forward Lean</title>
-    <link>https://tredey.com/trade-log/2026-07-15-dram-diagonal-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-07-15-dram-diagonal-call-spread/</guid>
-    <pubDate>2026-07-15</pubDate>
-    <description>Opened a DRAM diagonal call spread, long 50C Jan '27 / short 70C Dec '26, on a -6.6% pullback day. Theta-forward structure with $837.50 defined risk and 1.47:1 reward/risk.</description>
   </item>
 </channel>
 </rss>
