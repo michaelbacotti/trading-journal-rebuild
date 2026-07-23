@@ -5,7 +5,42 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 23 Jul 2026 16:07:09 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 23 Jul 2026 17:34:23 GMT</lastBuildDate>
+  <item>
+    <title>Long Call Condor Strike Selection: How to Pick the Body Width</title>
+    <link>https://tredey.com/education/2026-07-23-long-call-condor-strike-selection/</link>
+    <guid>https://tredey.com/education/2026-07-23-long-call-condor-strike-selection/</guid>
+    <pubDate>2026-07-23</pubDate>
+    <description>The decision tree for choosing a long call condor's body width: 85 points vs 110 vs 130 vs 200. Why three different bodies were used on the same underlying in one trading session. A rule-based selection framework that maps regime and thesis to strike geometry.</description>
+  </item>
+  <item>
+    <title>Long Call Condor vs Iron Condor: When to Use Each</title>
+    <link>https://tredey.com/strategies/2026-07-23-long-call-condor-vs-iron-condor/</link>
+    <guid>https://tredey.com/strategies/2026-07-23-long-call-condor-vs-iron-condor/</guid>
+    <pubDate>2026-07-23</pubDate>
+    <description>The two range-bound structures in the playbook — iron condor and long call condor — side by side. Capital efficiency vs theta collection. When to pick the all-call structure, when to pick the put-inclusive structure, and why three long call condors entered July 23 with no iron condors.</description>
+  </item>
+  <item>
+    <title>Long Call Condor: The All-Call Range-Bound, Theta-Positive Vol-Skew Trade</title>
+    <link>https://tredey.com/strategies/2026-07-23-long-call-condor/</link>
+    <guid>https://tredey.com/strategies/2026-07-23-long-call-condor/</guid>
+    <pubDate>2026-07-23</pubDate>
+    <description>Anatomy of the long call condor — four call legs that harvest theta and call-side vol skew when the underlying stays inside a defined range. The all-call counterpart to the iron condor: same payoff shape, different Greek profile, narrower body tolerance.</description>
+  </item>
+  <item>
+    <title>Common Options Math Errors I Make (and How I Catch Them)</title>
+    <link>https://tredey.com/education/2026-07-23-options-math-errors/</link>
+    <guid>https://tredey.com/education/2026-07-23-options-math-errors/</guid>
+    <pubDate>2026-07-23</pubDate>
+    <description>Two recurring math errors in options-spread writing: the long call condor max-profit formula and the OptionStrat basis vs live yfinance discrepancy. Both shipped live before being caught. The derivations, the live examples, and the verification routines that catch them next time.</description>
+  </item>
+  <item>
+    <title>QQQ Call Skew: How to Read It and Trade It</title>
+    <link>https://tredey.com/education/2026-07-23-qqq-call-skew/</link>
+    <guid>https://tredey.com/education/2026-07-23-qqq-call-skew/</guid>
+    <pubDate>2026-07-23</pubDate>
+    <description>Why QQQ has more call skew than SPX, how to measure call skew from a live option chain, when skew widens (and when it compresses), and how the long call condor trades it. Includes the live IV surface from three July 23 trades as case studies.</description>
+  </item>
   <item>
     <title>QQQ Long Call Condor — Nov 20 '26 715/725/810/820: Narrow-Body Range-Bound, 120 DTE</title>
     <link>https://tredey.com/trade-log/2026-07-23-qqq-long-call-condor-narrow/</link>
@@ -110,41 +145,6 @@
     <guid>https://tredey.com/strategies/2026-07-19-call-credit-spread-vertical/</guid>
     <pubDate>2026-07-19</pubDate>
     <description>Anatomy of a bear call vertical credit spread: the symmetric counter to the bull put. Used as a standalone bearish/neutral expression or as the upper half of an iron condor.</description>
-  </item>
-  <item>
-    <title>Covered Call: The Income Overlay on Equity You Already Own</title>
-    <link>https://tredey.com/strategies/2026-07-19-covered-call/</link>
-    <guid>https://tredey.com/strategies/2026-07-19-covered-call/</guid>
-    <pubDate>2026-07-19</pubDate>
-    <description>Anatomy of the covered call: sell a call against 100 shares you own. The simplest income strategy in options, with one structural risk that defines the whole position.</description>
-  </item>
-  <item>
-    <title>Iron Condor: The Range-Bound, IV-Rich Theta Engine</title>
-    <link>https://tredey.com/strategies/2026-07-19-iron-condor/</link>
-    <guid>https://tredey.com/strategies/2026-07-19-iron-condor/</guid>
-    <pubDate>2026-07-19</pubDate>
-    <description>Anatomy of the iron condor: a four-leg structure that collects premium in both wings when the underlying stays inside a defined range. The highest-theta structure in the playbook, paired with the tightest management rule.</description>
-  </item>
-  <item>
-    <title>Playbook Lessons — Five Months of Trades, Six Rules Worth Testing for v1.1</title>
-    <link>https://tredey.com/playbook/2026-07-19-lessons-from-five-months-of-trades/</link>
-    <guid>https://tredey.com/playbook/2026-07-19-lessons-from-five-months-of-trades/</guid>
-    <pubDate>2026-07-19</pubDate>
-    <description>Six 'For the playbook:' items captured from the trade-log since v1.0 shipped. Each maps to a candidate rule change for v1.1 — deep-OTM directional structures, LEAPS verticals, inverse diagonals, rolling diagonals, 5% pullback scale-ins, and long-dated diagonals. v1.0 remains canonical until v1.1 ships.</description>
-  </item>
-  <item>
-    <title>Long Call: The Single-Leg Directional Building Block</title>
-    <link>https://tredey.com/strategies/2026-07-19-long-call/</link>
-    <guid>https://tredey.com/strategies/2026-07-19-long-call/</guid>
-    <pubDate>2026-07-19</pubDate>
-    <description>Anatomy of a long call: max loss capped at premium paid, infinite upside, vega-positive and theta-negative. When single-leg directional exposure fits the playbook better than a vertical.</description>
-  </item>
-  <item>
-    <title>Long Straddle: The Volatility Expression</title>
-    <link>https://tredey.com/strategies/2026-07-19-straddle/</link>
-    <guid>https://tredey.com/strategies/2026-07-19-straddle/</guid>
-    <pubDate>2026-07-19</pubDate>
-    <description>Anatomy of the long straddle: ATM call + ATM put, same strike, same expiry. The cleanest expression of 'I do not know the direction, but I expect volatility.' Used around earnings, FOMC, and known catalysts.</description>
   </item>
 </channel>
 </rss>

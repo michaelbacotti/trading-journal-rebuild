@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Long Call Condor: The All-Call Range-Bound, Theta-Positive Vol-Skew Trade | The Trading Journal</title>
+ <meta name="description" content="Anatomy of the long call condor — four call legs that harvest theta and call-side vol skew when the underlying stays inside a defined range. The all-call counterpart to the iron condor: same payoff shape, different Greek profile, narrower body tolerance.">
+ <link rel="canonical" href="https://tredey.com/strategies/2026-07-23-long-call-condor/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Long Call Condor: The All-Call Range-Bound, Theta-Positive Vol-Skew Trade | The Trading Journal">
+ <meta property="og:description" content="Anatomy of the long call condor — four call legs that harvest theta and call-side vol skew when the underlying stays inside a defined range. The all-call counterpart to the iron condor: same payoff shape, different Greek profile, narrower body tolerance.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/strategies/2026-07-23-long-call-condor/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Long Call Condor: The All-Call Range-Bound, Theta-Positive Vol-Skew Trade | The Trading Journal">
+ <meta name="twitter:description" content="Anatomy of the long call condor — four call legs that harvest theta and call-side vol skew when the underlying stays inside a defined range. The all-call counterpart to the iron condor: same payoff shape, different Greek profile, narrower body tolerance.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 (Trading Journal property — pending) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENDING"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PENDING');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">July 23, 2026 &middot; STRATEGY / RANGE-BOUND</div>
+  <h1>Long Call Condor: The All-Call Range-Bound, Theta-Positive Vol-Skew Trade</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">Anatomy of the long call condor — four call legs that harvest theta and call-side vol skew when the underlying stays inside a defined range. The all-call counterpart to the iron condor: same payoff shape, different Greek profile, narrower body tolerance.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>The long call condor is the structure that expresses a defined range view using calls only — no puts involved. Where the iron condor pairs a short put spread with a short call spread to capture both sides of theta decay, the long call condor pairs a near-the-money bull call vertical with a deep out-of-the-money bear call vertical, separated by an OTM gap. The result is a single four-leg position that profits when the underlying closes anywhere in the body zone at expiry, with theta-positive, short-vega, mildly bullish-delta characteristics.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<p>Eight long call condor trades are in the trade-log as of mid-July 2026 — DRAM, RSP, XSP, and QQQ variations — making it the most-played structure in the book after iron condors. This page walks through how the structure works, where it fits in the playbook, and when to prefer it over alternatives.</p>
+<h2>The Structure</h2>
+<p>A long call condor has four call legs that share a single expiration. From lowest strike to highest:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Leg</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Action</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Role</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Long call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">BUY</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">K1 (lowest)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Lower protective wing</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Short call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">SELL</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">K2</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Lower body floor</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Short call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">SELL</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">K3</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Upper body ceiling</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Long call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">BUY</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">K4 (highest)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Upper protective wing</td>
+</tr>
+</tbody></table></div>
+<p>The structure is two verticals stitched together:</p>
+<ol>
+  <li><strong>Lower vertical (K1/K2):</strong> Buy K1 / sell K2 — a bull call debit spread at the bottom of the body.</li>
+  <li><strong>Upper vertical (K3/K4):</strong> Sell K3 / buy K4 — a bear call debit spread at the top of the body.</li>
+</ol>
+<p>For a concrete example, the <a href="/trade-log/2026-07-23-qqq-long-call-condor/">QQQ July 23 700/715/845/860 long call condor</a> entered 11:40 AM ET 2026-07-23:</p>
+<ul>
+  <li><strong>Long 700C</strong> at $45.93 — the lower wing, just OTM at QQQ spot $690</li>
+  <li><strong>Short 715C</strong> at $38.01 — the lower body floor</li>
+  <li><strong>Short 845C</strong> at $4.005 — the upper body ceiling, deep OTM</li>
+  <li><strong>Long 860C</strong> at $2.98 — the upper wing, deeper OTM</li>
+</ul>
+<p>Net debit = $45.93 − $38.01 + $4.005 − $2.98 = <strong>$6.895/share = $689.50/contract</strong></p>
+<p>The structure costs $6.895 to enter. At expiry, the position pays the difference between K2 and K1 (the lower wing width) anywhere between K2 and K3 (the body zone), so the max profit at expiry is the lower wing width minus the net debit. For this QQQ example: $15 − $6.895 = <strong>$8.105/share = $810.50/contract</strong>.</p>
+<h2>Why "Long Call Condor" Instead of Iron Condor</h2>
+<p>Both structures profit when the underlying stays in a defined range. Both have four legs and the same max-loss / max-profit shape. The differences:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;"></th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Iron Condor</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Long Call Condor</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Legs</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">2 puts + 2 calls</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">4 calls</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Entry</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net credit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net debit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Body width</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Wide (typically 50-150+ pt)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Narrow to wide (15-150+ pt)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Theta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Strong positive (both sides decay)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Modest positive (only one side decays meaningfully)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Strong negative (long both wings' vega)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Modest negative (long only upper-wing vega offsets short-body vega)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~Flat (short put delta cancels short call delta)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slight bullish bias (long lower wing delta)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Earnings tail risk</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High on both sides</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High on upside only (no put protection)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Best regime</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Range-bound with elevated put IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Range-bound with elevated call-side skew</td>
+</tr>
+</tbody></table></div>
+<p>The structural difference matters. An iron condor with body width 100 collects roughly $40-50/share in premium at 30-60 DTE; a long call condor with the same body costs roughly $5-10/share in debit. The iron condor earns ~5× more theta per day, but the long call condor costs ~10× less capital.</p>
+<p>For a book with $300K NLV and a 0.25% per-trade max loss cap:</p>
+<ul>
+  <li><strong>Iron condor</strong>: $750 max risk, ~$40-50 credit collected → ~5-7% return on max risk if held to expiry</li>
+  <li><strong>Long call condor</strong>: $750 max risk, ~$5-10 debit paid → <strong>breakeven-or-better if held to expiry</strong>, with up to 5× the max-profit payoff</li>
+</ul>
+<p>The capital efficiency trade-off is the key. Long call condors tie up less capital per unit of max profit potential, so the playbook can run more positions in parallel and rotate them faster. The trade-off is weaker theta, so the position relies more heavily on volatility mean-reversion (skew compression in particular) to make money.</p>
+<h2>The Call Skew Thesis</h2>
+<p>All eight long call condor trades in the journal are expressions of one underlying alpha source: <strong>call-side implied volatility skew compression</strong>.</p>
+<p>When the market is pricing tail risk on the upside (e.g., approaching FOMC, earnings season, regulatory event), the implied volatility on OTM calls rises relative to ATM calls. The skew — measured as IV at the upper body strike minus IV at the lower body strike — can run 200-500 basis points wide for QQQ and SPX in those regimes.</p>
+<p>The long call condor profits from this skew narrowing for two reasons:</p>
+<ol>
+  <li><strong>Direct vega exposure:</strong> The position is short vega across all four strikes, but more heavily short vega at the lower body strike (where IV is higher). When skew normalizes, the lower body strike loses more IV than the upper body strike, but the <em>position-level</em> impact depends on the relative magnitudes.</li>
+  <li><strong>Theta asymmetry:</strong> The short lower body strike (K2) earns theta at a rate proportional to its IV — higher IV means faster theta decay. The short upper body strike (K3) earns theta more slowly because its IV is lower. As time passes, the lower body strike's time premium erodes faster than the upper body strike's, even when both are OTM.</li>
+</ol>
+<p>The asymmetry is the alpha. A long call condor on QQQ with 350 bp skew across the body is harvesting a vol-spread that's compressing, not a single vol point that's mean-reverting.</p>
+<p>The <a href="/trade-log/2026-07-23-qqq-long-call-condor/">QQQ 700/715/845/860 trade</a> had IV-by-strike of 28.3% (700C) / 27.3% (715C) / 22.6% (845C) / 22.4% (860C) at entry — a 470 bp skew across the body. The <a href="/trade-log/2026-07-23-xsp-long-call-condor/">XSP 690/700/810/820 trade</a> had 23.6% / 22.7% / 14.2% / 13.9% — a 850 bp skew. These are the alpha sources that justify entering the trade.</p>
+<h2>The Max Profit Formula (and Common Mistake)</h2>
+<p><strong>The correct formula:</strong></p>
+<blockquote><strong>Max profit at expiry = (K2 − K1) − Net Debit</strong></blockquote>
+<p>Where (K2 − K1) is the lower wing width. For the QQQ 700/715/845/860 trade, that's $15 − $6.895 = $8.105/share = $810.50/contract.</p>
+<p><strong>The wrong formula</strong> (which I shipped on three trades this month before catching the error):</p>
+<blockquote>~~Max profit = (K3 − K2) − Net Debit~~ (body width minus debit)</blockquote>
+<p>That formula would give $130 − $6.895 = $123.105/share = $12,310/contract for the QQQ trade — an absurd number. The reason it doesn't work: at expiry between K2 and K3 (the body zone), only the lower long wing K1 contributes intrinsic value. The short K2 strike is offset by K1's intrinsic capture, the short K3 strike is OTM, and the long K4 wing is OTM. The position's value at any spot S in (K2, K3) is:</p>
+<blockquote>(S − K1) − (S − K2) = K2 − K1 = lower wing width</blockquote>
+<p>Above K3 (the upper body strike), the upper short K3 starts taking intrinsic bite and the long K4 starts contributing. But because the wing widths are symmetric (10 each in the XSP and QQQ-Nov trades, 15 each in the QQQ-Dec trade), the upper short's bite exactly equals the upper long's capture — net is $0 between K3 and K4. Above K4, also $0 (the two credit spreads both go against us in equal amounts).</p>
+<p>So the only zone with positive max payoff is the K2-K3 plateau, and that plateau is bounded by the <strong>wing width</strong>, not the body width. Max = K2 − K1 = lower wing width.</p>
+<p>The full derivation, with concrete <code>payoff(S)</code> arithmetic at five spot prices (K1, K2, mid-body, K3, K4), is in <a href="/education/2026-07-23-options-math-errors/">the math errors education page</a> and reproduced in each individual trade-log entry.</p>
+<h2>When to Use It</h2>
+<p>The playbook opens a long call condor when:</p>
+<ol>
+  <li><strong>The underlying is rangebound or expected to drift slightly higher.</strong> The structure is slightly bullish-delta (long lower wing delta outweighs the shorts), so it benefits from a small upward drift, not from a flat-to-down tape.</li>
+  <li><strong>Call-side vol skew is wide.</strong> The trade's alpha source is skew compression, so the trade is more attractive when the IV gradient across the body is steep.</li>
+  <li><strong>Earnings season is approaching but the position is OTM enough to survive a single-session gap.</strong> The wings protect against a 10-15 point move, which is enough for a typical 4-5% gap on a mega-cap name (which translates to 1.5% on QQQ or SPX).</li>
+  <li><strong>The structure is being used as a defined-vol-regime expression, not a directional bet.</strong> The wings keep the max loss at the net debit, so the trade can be entered without a hard directional conviction.</li>
+</ol>
+<p>The playbook does <em>not</em> open a long call condor when:</p>
+<ol>
+  <li><strong>The underlying is in a strong trend.</strong> A trend-following regime breaks the range thesis.</li>
+  <li><strong>VIX is above 25.</strong> Elevated vol regime makes the skew thesis less reliable — vol is moving as a single point, not via skew compression.</li>
+  <li><strong>FOMC, CPI, or a binary regulatory event is within 5 days.</strong> Tail risk on a single session exceeds the wing width.</li>
+  <li><strong>The body width is wider than the underlying's 30-day realized volatility range × 2.</strong> A body that's too wide has the trade sitting at max loss for too long, eating theta on the wings without capturing meaningful skew compression.</li>
+</ol>
+<h2>Position Greeks Profile</h2>
+<p>Long call condors have a distinctive Greek profile. From the QQQ July 23 trades (typical QQQ 130-pt body, 15-pt wings, 148 DTE):</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Greek</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Long Call Condor</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Iron Condor (same body, same DTE)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta (Δ)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+2.6 per contract</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~0 per contract</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Gamma (Γ)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−0.04 per contract</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−0.08 per contract</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Theta (Θ)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$0.40 per day</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$1.40 per day</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega (ν) per 1% IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−$14.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−$28.00</td>
+</tr>
+</tbody></table></div>
+<p>The long call condor has roughly <strong>half the gamma and half the vega exposure</strong> of an iron condor with comparable body width. Theta is also half. This is the capital-efficiency trade-off: half the Greeks means half the daily P/L movement, but the same max profit / max loss structure. Position sizing matters: a long call condor at $689.50 max risk on a $300K book is 0.23% NLV; the same body iron condor would be ~0.25% NLV.</p>
+<p><strong>Delta bias.</strong> Long call condors are slightly bullish-delta because the long lower wing (K1) is closer to spot than the long upper wing (K4) is. The long lower wing contributes +0.50-ish delta at entry; the long upper wing contributes +0.10-ish. The short body strikes contribute about −0.55 combined. Net delta is slightly positive (+2.6 for the QQQ trade, +1.6 for the narrower QQQ-Nov trade). This means a 1% rally in the underlying helps the position by roughly $26/contract (QQQ trade) before any skew or theta effects — a meaningful tailwind.</p>
+<h2>Trade Management</h2>
+<p>The standard operating procedure for long call condor management:</p>
+<ol>
+  <li><strong>Entry:</strong> Limit order at mid-fill. Slippage tolerance: $0.10/share on the body strikes, $0.05/share on the wings. Sizing: 0.25% NLV max risk per trade, 0.50% per day across all structures, 1.0% per week.</li>
+  <li><strong>First 60 DTE:</strong> Do nothing. Let theta work and let the IV-skew surface decay. The position is net long theta and net long delta — meaning a small upward drift in the underlying helps even before the body region is reached.</li>
+  <li><strong>60-30 DTE:</strong> Begin watching delta. If the underlying is at or below K1 (lower wing), the position is at risk of max loss and should be evaluated for early close. If the underlying is in the body (K2-K3), the position is approaching max profit territory — <strong>take 50% off when total P/L reaches 50% of max profit.</strong></li>
+  <li><strong>Below 30 DTE:</strong> If the position is still open and not in profit zone, close it. Wings accelerate theta decay from here, gamma risk rises sharply, and the playbook requires exit before the trade becomes a vega trap on a single-session move.</li>
+  <li><strong>Stop loss:</strong> 2× the net debit. If the position reaches this level, close immediately. This corresponds to a 1-2 standard deviation move in the underlying.</li>
+  <li><strong>VIX spike rule:</strong> If VIX moves from current level to +50% (e.g., 14 → 22), evaluate closing even before 30 DTE. The vol trade is to wait for vol to normalize and roll into a smaller structure, not to fight a vol regime change.</li>
+</ol>
+<p>The detailed management workflow is in <a href="/playbook/2026-07-05-sop/">the playbook SOP</a> and the individual trade-log entries include trade-specific management plans with concrete price triggers.</p>
+<h2>Worked Example: QQQ July 23</h2>
+<p>A full worked example is in the <a href="/trade-log/2026-07-23-qqq-long-call-condor/">QQQ 700/715/845/860 trade-log entry</a>. Key numbers:</p>
+<ul>
+  <li>Net debit: $6.895/share ($689.50/contract)</li>
+  <li>Max profit: $810.50 at expiry if QQQ closes $715-$845</li>
+  <li>Max loss: $689.50 if QQQ closes below $700 or above $860</li>
+  <li>Lower breakeven: $706.90</li>
+  <li>Upper breakeven: $853.10</li>
+  <li>Position sizing: 0.23% NLV on a $300K book</li>
+  <li>Management: 50%-of-max-profit target ($405), close at 30 DTE, 2× debit stop ($1,379)</li>
+</ul>
+<p>The companion trades on the same day — <a href="/trade-log/2026-07-23-xsp-long-call-condor/">XSP 690/700/810/820</a> (110-pt body, 10-pt wings, 148 DTE, max profit $391) and <a href="/trade-log/2026-07-23-qqq-long-call-condor-narrow/">QQQ 715/725/810/820 narrow</a> (85-pt body, 10-pt wings, 120 DTE, max profit $645) — are variants of the same structure with different body widths and durations, illustrating the body's range selection.</p>
+<h2>Common Variants</h2>
+<p><strong>Wide body, narrow wings (typical, e.g., 130/15).</strong> Higher max profit at the cost of weaker theta and longer holding period. Best for: 120-180 DTE structures, range-bound with bullish drift thesis.</p>
+<p><strong>Narrow body, narrow wings (e.g., 85/10).</strong> Lower max profit but tighter directional view. Best for: 90-120 DTE structures, sharper range thesis (e.g., earnings season, post-FOMC drift).</p>
+<p><strong>Narrow body, wide wings (e.g., 50/20).</strong> Higher max profit per unit body width but more capital at risk. Best for: low-vol regime where wings can be sized wider without breaking the vol-skew thesis. Not used in the current playbook because the wider wings tie up too much capital.</p>
+<p><strong>Broken-wing body (asymmetric wing widths).</strong> K2-K1 ≠ K4-K3. Allows skewing the body breakevens toward spot. Increases one wing's cost. Best for: directional conviction trades where the body needs to be biased.</p>
+<p>The decision tree for picking body width is in <a href="/education/2026-07-23-long-call-condor-strike-selection/">the strike selection education page</a>.</p>
+<h2>See Also</h2>
+<ul>
+  <li><a href="/strategies/2026-07-19-iron-condor/">Iron Condor strategy page</a> — the put-inclusive counterpart</li>
+  <li><a href="/strategies/2026-07-19-long-call/">Long Call strategy page</a> — the single-leg directional call</li>
+  <li><a href="/strategies/2026-07-19-call-credit-spread-vertical/">Call Credit Spread Vertical strategy page</a> — the single-vertical building block</li>
+  <li><a href="/playbook/2026-07-05-sop/">Playbook SOP</a> — sizing, stop losses, position management rules</li>
+  <li><a href="/trade-log/">Trade-log entries</a> — all live and closed positions</li>
+  <li><a href="/education/">Education index</a> — risk vs reward, probabilities, math errors</li>
+</ul>
+<p>The trade-log entries to read alongside this page: <a href="/trade-log/2026-07-23-xsp-long-call-condor/">XSP 690/700/810/820</a>, <a href="/trade-log/2026-07-23-qqq-long-call-condor/">QQQ 700/715/845/860</a>, <a href="/trade-log/2026-07-23-qqq-long-call-condor-narrow/">QQQ 715/725/810/820 narrow</a>, <a href="/trade-log/2026-07-13-dram-long-call-condor/">DRAM long call condor</a>, <a href="/trade-log/2026-07-22-rsp-long-call-condor/">RSP long call condor</a>, <a href="/trade-log/2026-07-22-rsp-short-upper-condor/">RSP short upper condor</a>.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

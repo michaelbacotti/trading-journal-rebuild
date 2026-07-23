@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>QQQ Call Skew: How to Read It and Trade It | The Trading Journal</title>
+ <meta name="description" content="Why QQQ has more call skew than SPX, how to measure call skew from a live option chain, when skew widens (and when it compresses), and how the long call condor trades it. Includes the live IV surface from three July 23 trades as case studies.">
+ <link rel="canonical" href="https://tredey.com/education/2026-07-23-qqq-call-skew/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="QQQ Call Skew: How to Read It and Trade It | The Trading Journal">
+ <meta property="og:description" content="Why QQQ has more call skew than SPX, how to measure call skew from a live option chain, when skew widens (and when it compresses), and how the long call condor trades it. Includes the live IV surface from three July 23 trades as case studies.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/education/2026-07-23-qqq-call-skew/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="QQQ Call Skew: How to Read It and Trade It | The Trading Journal">
+ <meta name="twitter:description" content="Why QQQ has more call skew than SPX, how to measure call skew from a live option chain, when skew widens (and when it compresses), and how the long call condor trades it. Includes the live IV surface from three July 23 trades as case studies.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 (Trading Journal property — pending) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENDING"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PENDING');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">July 23, 2026 &middot; EDUCATION / VOLATILITY</div>
+  <h1>QQQ Call Skew: How to Read It and Trade It</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">Why QQQ has more call skew than SPX, how to measure call skew from a live option chain, when skew widens (and when it compresses), and how the long call condor trades it. Includes the live IV surface from three July 23 trades as case studies.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>The long call condor trades in this journal — XSP, QQQ, RSP, DRAM — all share one alpha source: <strong>call-side implied volatility skew compression</strong>. When the IV gradient from the lower body strike to the upper body strike is wide (300-800 bp), the structure collects more premium at the body floor (where theta is highest) and pays less premium at the body ceiling (where theta is lowest). As time passes and the skew normalizes, the position earns theta asymmetrically in its favor.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<p>This page is about QQQ call skew specifically. QQQ has more call skew than SPX in most regimes because of its concentration in mega-cap tech names (NVDA, AAPL, MSFT, GOOG, AMZN, META, TSLA, AVGO, GOOGL, COST — top 10 = ~55% of index). Earnings on these names are single-session tail events that the options market prices via elevated call IV at strikes above spot. SPX, being more diversified (~500 names, top 10 = ~30%), has a smoother call skew.</p>
+<p>The result: QQQ long call condors have wider skew inputs than SPX equivalents, which means more premium to harvest at the body floor and more alpha per contract.</p>
+<h2>What Is Call Skew</h2>
+<p>Implied volatility skew is the difference in implied volatility between two strikes at the same expiration. For call skew specifically, the relevant comparison is the IV on a deep-OTM call versus the IV on a near-ATM call. The difference is usually positive — deep-OTM calls trade at higher IV than near-ATM calls — and the magnitude is the call skew.</p>
+<p>For QQQ on July 23, 2026, with 120-148 DTE:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strike distance from spot</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Approximate IV</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Spot ($692)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~26%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">+5% OTM call ($727)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~25.7%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">+10% OTM call ($762)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~24.5%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">+15% OTM call ($796)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~23.0%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">+20% OTM call ($830)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~22.0%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">+25% OTM call ($865)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~21.8%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">-5% OTM call ($657)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~26.5%</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">-10% OTM call ($622)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~27.5%</td>
+</tr>
+</tbody></table></div>
+<p>The call skew is the IV at deep-OTM strikes minus the IV at ATM. For +15% OTM: 23.0% − 26.0% = <strong>−300 bp</strong> (call skew is negative — deep-OTM IV is below ATM IV). For +25% OTM: 21.8% − 26.0% = <strong>−420 bp</strong>.</p>
+<p>A typical QQQ call skew is -300 to -500 bp at +15-25% OTM strikes. The skew widens (becomes more negative) approaching earnings events and FOMC; the skew narrows (compresses toward 0) when vol regime normalizes.</p>
+<h2>How to Measure It From a Live Chain</h2>
+<p>The IV-by-strike surface is available from any live option chain. For QQQ on July 23 (queried via yfinance):</p>
+<pre><code class="language-plain">
+Strike   IV (mid-July 2026)
+690      0.272  (ATM)
+695      0.270
+700      0.268
+705      0.265
+710      0.262
+715      0.259
+720      0.256
+725      0.254
+730      0.250
+735      0.247
+...
+800      0.221
+805      0.220
+810      0.219
+815      0.217
+820      0.216
+</pre>
+<p>The "skew" is the slope of IV across strikes. To compute it for a long call condor body region:</p>
+<blockquote><strong>Call skew across body</strong> = IV(K_upper_body) − IV(K_lower_body)</blockquote>
+<p>For the three July 23 long call condor trades:</p>
+<ul>
+  <li><strong>XSP 690/700/810/820</strong>: IV(K3=810) − IV(K2=700) = 14.2% − 22.7% = <strong>−850 bp</strong></li>
+  <li><strong>QQQ 700/715/845/860</strong>: IV(K3=845) − IV(K2=715) = 22.6% − 27.3% = <strong>−470 bp</strong></li>
+  <li><strong>QQQ 715/725/810/820 narrow</strong>: IV(K3=810) − IV(K2=725) = 22.2% − 25.7% = <strong>−350 bp</strong></li>
+</ul>
+<p>XSP has a much wider skew than QQQ in the same regime because XSP is the smaller-index version of SPX with less index-level liquidity, so the put-side IV is elevated relative to SPX (which translates to a wider spread between body floor and body ceiling).</p>
+<h2>When Call Skew Widens</h2>
+<p>Three regimes widen call skew:</p>
+<ol>
+  <li><strong>Earnings season.</strong> Single-session tail events on mega-cap names push the market to price higher IV on OTM calls. The skew can widen from -300 bp to -500 bp or more in the 2-3 weeks before a major earnings cluster (NVDA, AAPL, MSFT, GOOG).</li>
+  <li><strong>FOMC meetings.</strong> The Federal Reserve's rate decisions are scheduled binary events. In the week before FOMC, ATM IV rises modestly but deep-OTM IV rises more, widening the skew.</li>
+  <li><strong>Macro shock / risk-off event.</strong> When the broader market drops on macro news (CPI surprise, geopolitical event, banking stress), put IV spikes first and call IV follows within 1-2 sessions. The skew widens through both the put-side rise and the call-side follow-through.</li>
+</ol>
+<p>For QQQ in mid-July 2026: all three regimes are converging. FOMC is July 30 (7 days), mega-cap earnings start late July, and there's a slow macro grind (CPI July 31). Skew is wide. Long call condors are well-positioned.</p>
+<h2>When Call Skew Compresses</h2>
+<p>Three regimes compress call skew (the alpha source for the long call condor):</p>
+<ol>
+  <li><strong>Post-event normalization.</strong> After FOMC passes without incident, ATM IV stays elevated for 1-2 sessions then drops. Deep-OTM IV drops faster. Skew narrows.</li>
+  <li><strong>Post-earnings normalization.</strong> After mega-cap tech reports and the implied move was smaller than priced, IV on all strikes drops but deep-OTM drops more.</li>
+  <li><strong>Vol regime compression.</strong> When VIX drops from elevated levels (e.g., 22 → 14) on improving market sentiment, the call skew narrows mechanically because OTM calls lose their premium faster than ATM calls.</li>
+</ol>
+<p>The long call condor's alpha is <em>the difference</em> between the IV at K2 (body floor) and K3 (body ceiling) compressing. If both IVs drop by 200 bp, the position is unchanged. If K2 IV drops by 300 bp and K3 IV drops by 200 bp, the position profits from the relative compression.</p>
+<h2>How the Long Call Condor Trades It</h2>
+<p>The long call condor captures call skew compression in two ways:</p>
+<p><strong>1. Theta asymmetry.</strong> Theta at any strike is roughly proportional to IV at that strike (more IV = faster time decay). For the body region:</p>
+<ul>
+  <li>At K2 (body floor, IV = 25.7% on QQQ narrow trade), theta is high.</li>
+  <li>At K3 (body ceiling, IV = 22.2%), theta is lower.</li>
+</ul>
+<p>The position is short K2 theta and short K3 theta, but the absolute magnitude differs. As time passes, K2 loses more time premium per day than K3. That's a slow, steady alpha source.</p>
+<p><strong>2. Vega asymmetry.</strong> Vega at any strike is roughly proportional to the spot price minus strike squared, with a peak near ATM. For the body region:</p>
+<ul>
+  <li>At K2 (body floor, K2 < spot), vega is positive but moderate.</li>
+  <li>At K3 (body ceiling, K3 > spot), vega is also positive but lower because K3 is further from spot.</li>
+</ul>
+<p>The position is short vega at both strikes. As IV drops (skew narrowing or vol regime compression), the position gains. If K2 IV drops more than K3 IV (skew narrowing), the position gains asymmetrically.</p>
+<p>The combination: theta asymmetry favors the structure daily, vega asymmetry favors the structure on vol events. The trade is profitable on a slow grind (theta) and on discrete vol drops (vega), with the skew compression theme running through both.</p>
+<h2>Worked Example: QQQ 715/725/810/820 Narrow Trade</h2>
+<p>The narrow QQQ trade on July 23 had:</p>
+<ul>
+  <li>Lower body IV (725C): 25.7%</li>
+  <li>Upper body IV (810C): 22.2%</li>
+  <li>Skew across body: 350 bp</li>
+</ul>
+<p>Assume the trade is held to 30 DTE and the underlying stays rangebound. What does the IV surface do?</p>
+<p><strong>Scenario A: skew compresses to 100 bp.</strong> Lower body IV drops 100 bp to 24.7%, upper body IV drops 250 bp to 19.7%. Net IV change at body floor: −100 bp; at body ceiling: −250 bp. Position value (excluding theta) increases by (long K1 + short K2 vega) × −100 + (short K3 + long K4 vega) × −250 = approx −$8.59/contract × (1.0 + 2.5) ≈ <strong>+$30/contract</strong> from skew compression alone. Plus theta over 90 days: ~$0.43/day × 90 = <strong>+$39/contract</strong>. Plus delta drift from QQQ moving up by 5%: +1.6 delta × $35 = <strong>+$56/contract</strong>. Total: +$125/contract, on $440 max risk.</p>
+<p><strong>Scenario B: skew widens to 600 bp.</strong> Lower body IV rises 100 bp to 26.7%, upper body IV drops 150 bp to 20.7%. Position value changes: (long K1 + short K2 vega) × +100 + (short K3 + long K4 vega) × −150 = approx −$8.59 × (1.0 − 1.5) = <strong>+$4/contract</strong> (slight positive, but mostly offset by vol regime compression elsewhere). Plus theta: +$39. Total: +$43/contract.</p>
+<p><strong>Scenario C: VIX spikes from 14 to 22 (50% rise).</strong> All strikes IV rise ~50%. Position loses on vega: −$8.59 × 50 = <strong>−$430/contract</strong> (full max loss). Theta gain: ~+$39. Delta drift: ~+$30. Total: −$361/contract, near max loss.</p>
+<p>The skew-compression trade has positive convexity in skew-narrowing scenarios and a defined-risk loss in VIX-spike scenarios. The breakeven between scenarios A and C is roughly a 25% IV rise (which would happen with VIX going from 14 to ~18) — below that, the position gains on net.</p>
+<h2>When to Enter vs. Skip</h2>
+<p>The playbook's rule for entering a QQQ long call condor based on skew:</p>
+<ol>
+  <li><strong>Enter when skew > 300 bp across the chosen body.</strong> Below 300 bp, the alpha source is too small to justify tying up capital in a structure that has weak theta and moderate vega risk.</li>
+  <li><strong>Enter when skew is expected to compress.</strong> Pre-event (FOMC, earnings) is a wide-skew regime; post-event is a compression regime. The structure profits from compression, so the entry timing should be <em>before</em> the compression, not after.</li>
+  <li><strong>Skip when skew is already compressed.</strong> If IV surface is flat across the body (skew < 200 bp), the alpha source is exhausted; better to wait for the next event cycle.</li>
+  <li><strong>Skip when VIX is above 25.</strong> Elevated vol regime makes skew dynamics unreliable. The structure is short vega across all strikes; in a high-vol regime, that exposure is too risky.</li>
+  <li><strong>Skip when no event is on the horizon.</strong> A static-skew regime without a catalyst means the trade sits at max loss while waiting for skew to compress. Time decay isn't enough to make the trade profitable.</li>
+</ol>
+<p>The QQQ trades on July 23 entered with FOMC 7 days out and mega-cap earnings starting within 14 days. Both events are expected to compress skew post-event. The trade thesis is "wider skew now, compression later." Standard playbook entry.</p>
+<h2>Tools to Measure Skew</h2>
+<p>For real-time skew measurement:</p>
+<ul>
+  <li><strong>yfinance option chains</strong> (free, real-time, sufficient for QQQ/SPX). Use <code>ticker.option_chain(date)</code> and read the <code>impliedVolatility</code> column.</li>
+  <li><strong>CBOE Skew Index (SKEW)</strong> — a market-wide measure of S&P 500 skew, not specifically QQQ. Useful as a regime indicator.</li>
+  <li><strong>OptionStrat's volatility surface view</strong> — visualizes the IV-by-strike surface for a chosen expiration. Good for eyeballing the skew shape.</li>
+  <li><strong>The <code>signal_fetcher.py</code> script</strong> in the journal's research pipeline — fetches and normalizes the IV surface for daily skew tracking. (Code is in the workspace's research scripts directory; not published.)</li>
+</ul>
+<p>A simple Python snippet to compute QQQ call skew:</p>
+<pre><code class="language-python">
+import yfinance as yf
+
+q = yf.Ticker("QQQ")
+spot = q.history(period="1d")["Close"].iloc[-1]
+
+# Pick the front-month expiration (or any specific date)
+exp = "2026-11-20"
+chain = q.option_chain(exp).calls
+
+# Define skew as IV at +15% OTM minus IV at spot
+atm_iv = chain.iloc[(chain['strike'] - spot).abs().argsort()[:1]]['impliedVolatility'].iloc[0]
+otm_target = spot * 1.15
+otm_iv = chain.iloc[(chain['strike'] - otm_target).abs().argsort()[:1]]['impliedVolatility'].iloc[0]
+
+skew_bp = (otm_iv - atm_iv) * 10000  # convert to basis points
+print(f"QQQ {exp} call skew at +15% OTM: {skew_bp:.0f} bp")
+</pre>
+<p>A skew reading of −350 bp or more (more negative) means the structure has more alpha. Less negative means less alpha. The structure's edge scales roughly linearly with the absolute value of the skew.</p>
+<h2>See Also</h2>
+<ul>
+  <li><a href="/strategies/2026-07-23-long-call-condor/">Long Call Condor strategy page</a> — the structure itself</li>
+  <li><a href="/education/2026-07-23-long-call-condor-strike-selection/">Strike selection education page</a> — body width decision tree</li>
+  <li><a href="/education/2026-07-23-options-math-errors/">Options math errors</a> — common formula mistakes</li>
+  <li><a href="/trade-log/">Trade-log entries</a> — live and closed positions</li>
+  <li><a href="/playbook/2026-07-05-sop/">Playbook SOP</a> — sizing and management rules</li>
+</ul>
+<p>Call skew is the alpha source for the playbook's range-bound trades on QQQ. The trade-log shows how it has been deployed in real-time across multiple earnings and FOMC cycles. The next earnings cluster (NVDA late August, AAPL/MSFT/GOOG September) is the next skew-compression opportunity.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

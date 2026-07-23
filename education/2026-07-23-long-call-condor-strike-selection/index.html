@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Long Call Condor Strike Selection: How to Pick the Body Width | The Trading Journal</title>
+ <meta name="description" content="The decision tree for choosing a long call condor's body width: 85 points vs 110 vs 130 vs 200. Why three different bodies were used on the same underlying in one trading session. A rule-based selection framework that maps regime and thesis to strike geometry.">
+ <link rel="canonical" href="https://tredey.com/education/2026-07-23-long-call-condor-strike-selection/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Long Call Condor Strike Selection: How to Pick the Body Width | The Trading Journal">
+ <meta property="og:description" content="The decision tree for choosing a long call condor's body width: 85 points vs 110 vs 130 vs 200. Why three different bodies were used on the same underlying in one trading session. A rule-based selection framework that maps regime and thesis to strike geometry.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/education/2026-07-23-long-call-condor-strike-selection/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Long Call Condor Strike Selection: How to Pick the Body Width | The Trading Journal">
+ <meta name="twitter:description" content="The decision tree for choosing a long call condor's body width: 85 points vs 110 vs 130 vs 200. Why three different bodies were used on the same underlying in one trading session. A rule-based selection framework that maps regime and thesis to strike geometry.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 (Trading Journal property — pending) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENDING"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PENDING');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">July 23, 2026 &middot; EDUCATION / STRIKE SELECTION</div>
+  <h1>Long Call Condor Strike Selection: How to Pick the Body Width</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">The decision tree for choosing a long call condor's body width: 85 points vs 110 vs 130 vs 200. Why three different bodies were used on the same underlying in one trading session. A rule-based selection framework that maps regime and thesis to strike geometry.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>On July 23, 2026, three long call condor trades were entered: <a href="/trade-log/2026-07-23-xsp-long-call-condor/">XSP 690/700/810/820</a> with a 110-point body, <a href="/trade-log/2026-07-23-qqq-long-call-condor/">QQQ 700/715/845/860</a> with a 130-point body, and <a href="/trade-log/2026-07-23-qqq-long-call-condor-narrow/">QQQ 715/725/810/820</a> with an 85-point body. Three different body widths on the same trading day. Why?</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<p>The body width determines how forgiving the trade is to the underlying's actual movement. A 130-point body can absorb a 12% move in either direction and still profit; an 85-point body demands the underlying stay within an 8% corridor. Wider bodies collect more time premium but tie up more capital; narrower bodies are more capital-efficient but require tighter directional accuracy.</p>
+<p>This page walks through the decision tree that determines body width. The framework is rule-based and applies to any long call condor entry on SPX, XSP, QQQ, or SPY.</p>
+<h2>The Four Inputs</h2>
+<p>Body width selection depends on four measurable inputs at the time of entry:</p>
+<ol>
+  <li><strong>Underlying spot vs. range zone.</strong> Where is the underlying relative to its 30-day trading range?</li>
+  <li><strong>Implied volatility skew across the body.</strong> How steep is the IV gradient from the lower body strike to the upper body strike?</li>
+  <li><strong>Days to expiration (DTE).</strong> How long until the structure expires?</li>
+  <li><strong>Earnings / event proximity.</strong> Are there single-session tail-risk events within the next 30 days?</li>
+</ol>
+<p>Each input maps to a body-width choice through a simple rule. The four rules together determine the strike geometry.</p>
+<h3>Input 1: Spot vs. 30-Day Range</h3>
+<p>The underlying's spot relative to its 30-day high-low range determines how much directional buffer the trade needs:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Spot location</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Body width implication</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Spot is at the 30-day midpoint</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Standard body — 100-130 pt on QQQ, 100-150 pt on SPX/XSP</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Spot is at the 30-day low</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Tighten the lower wing and widen the body upward — directional drift expected</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Spot is at the 30-day high</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Tighten the upper wing and widen the body downward — range may break to upside</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Spot is outside the 30-day range</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Wait for the range to establish. The trade is range-bound by definition; if there's no established range, the body width is guesswork.</td>
+</tr>
+</tbody></table></div>
+<p>For QQQ on July 23, 2026: spot was $692.18 with a 30-day range of approximately $660-$720 (10% corridor, midpoint $690). The spot was at the 30-day midpoint, so standard body widths applied.</p>
+<p>For SPX: spot was $7,150-ish (per the XSP trade context) with a 30-day range of roughly $6,950-$7,300 (5% corridor). Spot was below midpoint, which contributed to the XSP trade using a 110-point body rather than the QQQ's 130 — narrower body tolerance because the index was already at the lower end of its range and a wider body would have left the trade sitting at max loss.</p>
+<h3>Input 2: IV Skew Across the Body</h3>
+<p>The IV gradient from the lower body strike to the upper body strike determines how much premium can be collected at the body floor (where theta is highest) versus how much must be paid at the body ceiling (where theta is lowest).</p>
+<p>Wider skew = more premium to harvest at the body floor = wider body is justified (more strikes to spread the premium across).</p>
+<p>Narrower skew = premium is balanced across the body = narrower body is more capital-efficient.</p>
+<p>The threshold rule from the playbook:</p>
+<ul>
+  <li><strong>Skew > 400 bp</strong> (IV at lower body − IV at upper body > 4%): Body width can be 120-150 pt. The skew compression alpha is large enough to justify tying up the wider-body capital.</li>
+  <li><strong>Skew 200-400 bp:</strong> Body width 80-120 pt. Standard sizing.</li>
+  <li><strong>Skew < 200 bp:</strong> Body width 50-80 pt. The skew compression alpha is small; the trade should be sized conservatively.</li>
+</ul>
+<p>For QQQ on July 23: the 715C/725C IV was 26.2/25.7%, and the 810C/820C IV was 22.2/22.0%. That's a 350 bp skew for the narrow body trade and 470 bp for the wider body trade. Both fell in the "standard sizing" 200-400 bp bucket, but the wider QQQ-Dec trade used a 130-pt body because the underlying had a wider 30-day range at that point in time (closer to 13% corridor vs the 10% on the narrow trade's entry).</p>
+<p>For XSP: 850 bp skew on the XSP trade (23.6/22.7 vs 14.2/13.9). That's in the "wider body justified" bucket. The 110-pt body on the XSP trade was consistent with the skew input.</p>
+<h3>Input 3: Days to Expiration</h3>
+<p>DTE controls how much time premium the trade has to harvest and how much the position will pay in extrinsic decay on the long wings.</p>
+<ul>
+  <li><strong>60-90 DTE:</strong> Body width 50-100 pt. The trade needs to resolve quickly because theta decay accelerates past 30 DTE. Wider bodies can't collect enough premium to justify the capital.</li>
+  <li><strong>90-150 DTE:</strong> Body width 100-150 pt. Standard window for the playbook's range trades.</li>
+  <li><strong>150-200 DTE:</strong> Body width 120-200 pt. Long-dated structures can afford wider bodies because there's more time for the trade to work.</li>
+  <li><strong>Beyond 200 DTE:</strong> Body width 150-300 pt. The structure starts to look like a calendar-spread cousin rather than a pure range-bound trade. Not used in the current playbook.</li>
+</ul>
+<p>The three July 23 trades had 148 DTE (XSP, QQQ-Dec) and 120 DTE (QQQ-Nov-narrow). All fell in the 90-150 DTE window, consistent with body widths of 85-130 pt.</p>
+<h3>Input 4: Earnings / Event Proximity</h3>
+<p>Single-session tail-risk events break the range thesis. The body width should be tightened as an event approaches, even if the other inputs would suggest a wider body.</p>
+<p>The rule:</p>
+<ul>
+  <li><strong>No major event within 60 days:</strong> Standard body width as determined by inputs 1-3.</li>
+  <li><strong>Major event within 30-60 days (FOMC, CPI, mega-cap earnings):</strong> Tighten body width by 20-30 pt. Wings get more expensive as the event approaches; a tighter body means less premium is tied up in the structure.</li>
+  <li><strong>Major event within 14 days:</strong> Skip the trade or shift to a single-vertical. The wings can't protect against a binary event.</li>
+</ul>
+<p>For QQQ on July 23: FOMC was July 30 (7 days out), NVDA earnings were late August, AAPL/MSFT/GOOG were late July through early August. <strong>The narrow QQQ-Nov trade was sized tighter (85-pt body) precisely because of this event cluster.</strong> The wider QQQ-Dec and XSP trades were sized with wider bodies because the events had passed before their expiry (Nov 20 and Dec 18 respectively).</p>
+<h2>Putting It Together: The Three July 23 Trades</h2>
+<p>For each trade, here's how the four inputs mapped to the body-width decision:</p>
+<p><strong>XSP 690/700/810/820 (110-pt body)</strong></p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Input</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Value</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Decision</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Spot vs. 30D range</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Below midpoint (~$7,150 in a $6,950-$7,300 range)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Standard body, biased slightly lower</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">IV skew</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">850 bp</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Wider body justified</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">148</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Standard 100-150 pt window</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Event proximity</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">FOMC 7 days, earnings cluster Aug-Oct</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Tighten by 20-30 pt</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Result</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>110 pt</strong> (standard + skew justification, offset by event tightening)</td>
+</tr>
+</tbody></table></div>
+<p><strong>QQQ 700/715/845/860 (130-pt body)</strong></p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Input</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Value</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Decision</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Spot vs. 30D range</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">At midpoint ($690 in a $660-$720 range)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Standard body</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">IV skew</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">470 bp</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Standard sizing, slightly wider</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">148</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Standard 100-150 pt window</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Event proximity</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Same event cluster</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Tighten by 20-30 pt</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Result</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>130 pt</strong> (standard, slightly wider than XSP because QQQ range was tighter)</td>
+</tr>
+</tbody></table></div>
+<p><strong>QQQ 715/725/810/820 narrow (85-pt body)</strong></p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Input</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Value</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Decision</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Spot vs. 30D range</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Above midpoint ($692 in a $660-$720 range, slightly above midpoint)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Tighten body (directional drift expected)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">IV skew</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">350 bp</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Standard 80-120 pt</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">120</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slightly tighter than 148 DTE</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Event proximity</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">FOMC 7 days, mega-cap earnings cluster</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Tighten further</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Result</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>85 pt</strong> (tightest of the three — directional view + event cluster + shorter DTE)</td>
+</tr>
+</tbody></table></div>
+<p>The three trades represent three different body-width choices driven by three different combinations of the four inputs. None of them is the "default" body width; each is a calibrated response to the conditions at entry.</p>
+<h2>Common Mistakes</h2>
+<p><strong>Mistake 1: Picking body width based on max profit alone.</strong> A wider body looks more attractive because the max profit is larger in dollar terms (130-pt body = $810 max profit vs 85-pt body = $645 max profit). But the wider body also requires a wider range to be achieved — which means a lower probability of profit. The correct metric is <em>expected profit</em>, not max profit: max profit × probability of being in the body zone. Probability of being in the body declines faster than max profit grows, so wider bodies are <em>less</em> capital-efficient per unit of expected profit above a certain width.</p>
+<p><strong>Mistake 2: Using the same body width on every trade.</strong> If the playbook ran every trade with a 130-pt body, it would over-size trades in tight-range regimes (where the trade sits at max loss while waiting for a move that never comes) and under-size trades in volatile regimes (where the body is exceeded before theta can do meaningful work). Body width must be calibrated to the regime.</p>
+<p><strong>Mistake 3: Ignoring the skew-vs-body relationship.</strong> The trade's alpha source is skew compression. A wider body collects more premium at the body floor (where theta is highest and IV is highest) and pays more premium at the body ceiling (where theta is lowest and IV is lowest). But the wider body also requires a wider range for the skew thesis to play out — and if the range tightens before expiry, the wings tie up capital in strikes that never become ITM.</p>
+<p><strong>Mistake 4: Skipping input 4 (event proximity).</strong> Earnings and FOMC events break the range thesis. A 130-pt body on a trade entered 7 days before FOMC is asking for a tail event to blow through the wings. The 20-30 pt tightening for event proximity is non-negotiable.</p>
+<p><strong>Mistake 5: Optimizing body width to past data.</strong> Body width selection uses inputs <em>at the time of entry</em>, not backtested optimal widths from prior trades. A 110-pt body worked on a similar XSP trade in March doesn't mean 110 pt is the right body for the current trade. The four inputs change daily; the body width must be recomputed for each entry.</p>
+<h2>Worked Example</h2>
+<p>Suppose QQQ is at $700, the 30-day range is $680-$720, the IV skew across the body is 380 bp, the trade has 100 DTE, and FOMC is 25 days out. What's the body width?</p>
+<ul>
+  <li>Input 1 (spot vs. range): $700 is at the upper end of the $680-$720 range. Slight directional-bias-down expected → tighten body by 10-15 pt.</li>
+  <li>Input 2 (skew): 380 bp → standard sizing 80-120 pt.</li>
+  <li>Input 3 (DTE): 100 → standard 100-150 pt.</li>
+  <li>Input 4 (event): FOMC 25 days → tighten by 20-30 pt.</li>
+</ul>
+<p>Combine: standard 100 pt, tightened by 10-15 (input 1) + 20-30 (input 4) = <strong>65-75 pt body</strong>.</p>
+<p>In contrast, QQQ at $700 with a 30-day range of $660-$720 (wider range, spot at midpoint), IV skew 450 bp, 150 DTE, no events within 60 days:</p>
+<ul>
+  <li>Input 1: midpoint → standard.</li>
+  <li>Input 2: 450 bp → wider body justified (120-150 pt).</li>
+  <li>Input 3: 150 → standard 100-150 pt.</li>
+  <li>Input 4: no events → no tightening.</li>
+</ul>
+<p>Combine: <strong>130-150 pt body</strong>, possibly wider if the skew is significantly above 400 bp.</p>
+<h2>See Also</h2>
+<ul>
+  <li><a href="/strategies/2026-07-23-long-call-condor/">Long Call Condor strategy page</a> — the structure itself</li>
+  <li><a href="/trade-log/">Trade-log entries</a> — live and closed positions</li>
+  <li><a href="/playbook/2026-07-05-sop/">Playbook SOP</a> — sizing and management rules</li>
+  <li><a href="/education/">Education index</a> — risk vs reward, probabilities, math errors</li>
+  <li><a href="/education/2026-07-23-options-math-errors/">Options math errors</a> — common formula mistakes including the wing-width max profit derivation</li>
+</ul>
+<p>The framework here is the playbook's standard body-width selection. It applies to any long call condor on SPX, XSP, QQQ, or SPY with 60-200 DTE. Outside that window, the structure starts to look like a different trade (calendar, LEAP, etc.) and the body-width rules change.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

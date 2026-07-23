@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Long Call Condor vs Iron Condor: When to Use Each | The Trading Journal</title>
+ <meta name="description" content="The two range-bound structures in the playbook — iron condor and long call condor — side by side. Capital efficiency vs theta collection. When to pick the all-call structure, when to pick the put-inclusive structure, and why three long call condors entered July 23 with no iron condors.">
+ <link rel="canonical" href="https://tredey.com/strategies/2026-07-23-long-call-condor-vs-iron-condor/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Long Call Condor vs Iron Condor: When to Use Each | The Trading Journal">
+ <meta property="og:description" content="The two range-bound structures in the playbook — iron condor and long call condor — side by side. Capital efficiency vs theta collection. When to pick the all-call structure, when to pick the put-inclusive structure, and why three long call condors entered July 23 with no iron condors.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/strategies/2026-07-23-long-call-condor-vs-iron-condor/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Long Call Condor vs Iron Condor: When to Use Each | The Trading Journal">
+ <meta name="twitter:description" content="The two range-bound structures in the playbook — iron condor and long call condor — side by side. Capital efficiency vs theta collection. When to pick the all-call structure, when to pick the put-inclusive structure, and why three long call condors entered July 23 with no iron condors.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 (Trading Journal property — pending) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENDING"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PENDING');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">July 23, 2026 &middot; STRATEGY / COMPARISON</div>
+  <h1>Long Call Condor vs Iron Condor: When to Use Each</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">The two range-bound structures in the playbook — iron condor and long call condor — side by side. Capital efficiency vs theta collection. When to pick the all-call structure, when to pick the put-inclusive structure, and why three long call condors entered July 23 with no iron condors.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>The journal runs two range-bound structures: the iron condor (paired put + call credit spreads) and the long call condor (paired call debit spreads, no puts). They have similar payoff shapes — defined risk, defined reward, max profit in a body zone — but materially different capital efficiency, theta profile, and earnings-risk exposure.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<p>This page walks through both structures side-by-side, with concrete trade comparisons from the journal's history. The framework: pick the structure based on (1) how much capital you want to tie up, (2) what your earnings tail-risk tolerance is, and (3) whether you have a directional view (slight bullish bias favors long call condor; range-bound neutral favors iron condor).</p>
+<h2>The Structures, Side by Side</h2>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;"></th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Iron Condor</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Long Call Condor</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Legs</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Short put + long put (lower) + short call + long call (upper)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Long call K1 + short call K2 + short call K3 + long call K4</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Net entry</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net credit</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net debit</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Body</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Wide (typically 50-150 pt on SPX)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Narrow to wide (15-150+ pt)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Theta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Strong positive (+$1.40/day on a typical XSP 100-pt body, 60 DTE)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Modest positive (+$0.40/day on a typical QQQ 130-pt body, 148 DTE)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vega</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Strong negative (~−$28/contract per 1% IV on the same XSP body)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Modest negative (~−$14/contract per 1% IV on the same QQQ body)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Gamma</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Strong negative (~−0.08 per contract)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Modest negative (~−0.04 per contract)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Delta</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~Flat (short put delta cancels short call delta)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slight bullish bias (+1.6 to +2.6 per contract)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Max profit per contract</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$40-50 (depends on body width)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$400-800 (depends on wing width)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Max loss per contract</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$40-50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$400-700</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Capital efficiency</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low (lots of capital tied up per unit max profit)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High (10× more max profit per dollar of capital)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Earnings tail risk</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High on both sides (put side blows up on downside gap, call side on upside gap)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">High on upside only (no put protection)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Best regime</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Range-bound with elevated put-side IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Range-bound with elevated call-side skew</td>
+</tr>
+</tbody></table></div>
+<h2>Capital Efficiency in Practice</h2>
+<p>The capital efficiency difference is the most consequential.</p>
+<p>Consider a $300,000 book. With a 0.25% per-trade max loss cap, each trade can risk up to $750.</p>
+<p><strong>Iron condor example</strong> (XSP 580/581.5/598/599.5 with 12 DTE, similar to the <a href="/trade-log/2026-07-10-xsp-iron-condor/">2026-07-10 XSP trade</a>):</p>
+<ul>
+  <li>Max loss: ~$45/contract</li>
+  <li>Contracts at 0.25% NLV: $750 / $45 = ~16 contracts</li>
+  <li>Total capital tied up: ~$720 (16 × $45)</li>
+  <li>Max profit if held to expiry: ~$40/contract × 16 = ~$640</li>
+</ul>
+<p><strong>Long call condor example</strong> (QQQ 700/715/845/860 with 148 DTE, similar to the <a href="/trade-log/2026-07-23-qqq-long-call-condor/">2026-07-23 QQQ trade</a>):</p>
+<ul>
+  <li>Max loss: ~$690/contract</li>
+  <li>Contracts at 0.25% NLV: $750 / $690 = 1 contract</li>
+  <li>Total capital tied up: ~$690 (1 × $690)</li>
+  <li>Max profit if held to expiry: ~$810/contract × 1 = ~$810</li>
+</ul>
+<p>So the iron condor can run 16 contracts at the same NLV risk cap, collecting ~$640 in premium. The long call condor runs 1 contract, collecting up to ~$810 if held to max profit. The dollar amounts are similar, but:</p>
+<ul>
+  <li>The iron condor earns its $640 over 12 days of holding (high theta per day).</li>
+  <li>The long call condor earns its $810 over 148 days of holding (low theta per day, but the underlying skew compression alpha does most of the work).</li>
+</ul>
+<p>The capital efficiency per day is dramatically different:</p>
+<ul>
+  <li>Iron condor: $640 / 12 days = $53/day of max-profit-per-day</li>
+  <li>Long call condor: $810 / 148 days = $5.5/day of max-profit-per-day</li>
+</ul>
+<p>So at max profit, the iron condor earns ~10× more per day. But the iron condor is much more sensitive to gamma and vega shocks — a single-session 3% gap on the underlying will hit the iron condor's max loss much faster than the long call condor's. And the iron condor requires the underlying to stay in a tighter corridor.</p>
+<p>The trade-off:</p>
+<ul>
+  <li>Iron condor: high daily P/L, high gamma/vega exposure, narrow corridor.</li>
+  <li>Long call condor: low daily P/L, low gamma/vega exposure, wide corridor.</li>
+</ul>
+<p>A diversified book runs both. The iron condor captures short-vol theta in normal regimes. The long call condor captures skew compression alpha around event cycles.</p>
+<h2>Theta Profile</h2>
+<p>Iron condors earn theta on both sides of the body. The short put strike (lower body) and short call strike (upper body) both decay at rates proportional to their IV. For a balanced iron condor with similar put and call IV, theta is roughly symmetric.</p>
+<p>Long call condors earn theta primarily on the lower body strike. The upper body strike (deep OTM call) has lower IV and earns theta more slowly. Asymmetry is the design feature, not a bug.</p>
+<p>For the <a href="/trade-log/2026-07-23-xsp-long-call-condor/">XSP 690/700/810/820 long call condor</a>, theta is +$0.014/day per contract — almost negligible. The trade's P/L comes from skew compression and delta drift, not theta. By contrast, the <a href="/trade-log/2026-07-10-xsp-iron-condor/">XSP 580/581.5/598/599.5 iron condor</a> had theta of ~$1.40/day per contract — the trade <em>earns</em> its keep through theta.</p>
+<p>The implication: a long call condor that sits at the wrong side of the body for 60 days will have lost $24/contract to theta decay on the wings. An iron condor in the same situation will have gained $84/contract. Capital efficiency and theta efficiency trade off directly.</p>
+<h2>Vega Profile</h2>
+<p>Iron condors are short vega across both put and call wings — net negative vega is roughly the sum of the absolute vega of all four legs. For a typical 60 DTE iron condor on XSP, vega is around −$28/contract per 1% IV.</p>
+<p>Long call condors are short vega across the call strikes, but the long lower wing (which is close to ATM) carries significant vega, partially offsetting the short vega at the body floor. For the same body width, a long call condor's net vega is roughly half the iron condor's. For the QQQ 700/715/845/860 trade, vega is −$14/contract per 1% IV.</p>
+<p>A 5-point VIX spike (representing roughly 30-35% IV rise across strikes) costs:</p>
+<ul>
+  <li>Iron condor: $28 × 30 = $840 per contract. Multiple-contract positions blow through max loss quickly.</li>
+  <li>Long call condor: $14 × 30 = $420 per contract. Single-contract positions approach max loss but don't blow through.</li>
+</ul>
+<p>The long call condor is half as sensitive to vol shocks as the iron condor. That's the capital-efficiency trade-off: less capital per contract, less P/L per vol shock.</p>
+<h2>Earnings Risk</h2>
+<p>Iron condors carry put-side tail risk. A single-session gap down on the underlying blows through the put wing, capping the loss at max loss but delivering a 100% loss on the trade. A long call condor has no put wing, so it's protected on the downside — the long lower call (K1) can become ITM and contribute intrinsic value, partially offsetting the loss.</p>
+<p>For an underlying that has earnings risk on BOTH sides (e.g., a binary event that could go either way), the iron condor is a worse risk-adjusted trade than the long call condor. The earnings event might gap up (hitting the call wing) or gap down (hitting the put wing) — both wings are exposed.</p>
+<p>The long call condor is exposed only on the upside. The downside (long lower call) is partially protected.</p>
+<p>This is why long call condors are the structure of choice in earnings seasons. The <a href="/trade-log/">three QQQ/XSP long call condor trades on July 23</a> entered with FOMC 7 days out and mega-cap earnings 2-4 weeks out. The structure protects against downside gaps while still capturing the call-side skew compression alpha.</p>
+<h2>Directional View</h2>
+<p>Iron condors are delta-neutral by design. The short put delta and short call delta cancel out, leaving the position flat to small underlying moves. The trade profits from time decay and vol compression, not from directional movement.</p>
+<p>Long call condors have a slight bullish delta bias. The long lower call (K1) is close to ATM and contributes positive delta; the short body strikes contribute negative delta but smaller in magnitude; the long upper call (K4) is far OTM and contributes minimal delta. Net: +1.6 to +2.6 delta per contract on the QQQ trades.</p>
+<p>The bullish bias means the long call condor benefits from a small upward drift in the underlying. The QQQ trade's P/L increased by roughly $26/contract for every 1% rally in QQQ (delta-adjusted). The iron condor would have moved $0/contract for the same 1% rally.</p>
+<p>If the thesis is "the underlying will drift slightly higher, not just stay rangebound," the long call condor captures more of that drift. If the thesis is "the underlying will stay exactly here," the iron condor's delta-neutrality is a better match.</p>
+<h2>Why Three Long Call Condors on July 23, No Iron Condors</h2>
+<p>The journal entered three long call condor trades on July 23, 2026 — <a href="/trade-log/2026-07-23-xsp-long-call-condor/">XSP</a>, <a href="/trade-log/2026-07-23-qqq-long-call-condor/">QQQ-Dec</a>, <a href="/trade-log/2026-07-23-qqq-long-call-condor-narrow/">QQQ-Nov narrow</a> — with no iron condors. The reasoning, by input:</p>
+<ol>
+  <li><strong>Earnings tail risk on both sides.</strong> FOMC July 30, mega-cap earnings late July through August, CPI July 31. The iron condor's put-side exposure is unattractive in this regime.</li>
+  <li><strong>Call-side skew is the alpha source.</strong> QQQ and XSP both have wide call skew (350-850 bp across body regions). The long call condor harvests this; the iron condor splits its alpha between put and call IV (which dilutes the call skew alpha).</li>
+  <li><strong>Capital efficiency matters at $300K book size.</strong> At the book size, the iron condor's max profit per dollar of capital is low; the long call condor's higher max profit per contract is more attractive.</li>
+  <li><strong>Bullish drift thesis.</strong> QQQ has spent 11 sessions in the $680-$720 corridor with a slight upward bias. The long call condor's +2.6 delta captures this drift better than the iron condor's flat delta.</li>
+</ol>
+<p>If the regime shifted (e.g., VIX spike to 25+, or earnings passed without a clear directional move), the playbook would switch back to iron condors for the next trade cycle. The choice is regime-dependent.</p>
+<h2>Decision Tree</h2>
+<p>Use this rule to pick the structure:</p>
+<ol>
+  <li><strong>Are single-session tail events within 30 days?</strong></li>
+<ul>
+  <li>YES on both sides (FOMC + earnings cluster) → Long call condor (no put exposure)</li>
+  <li>YES on one side (earnings on a single name) → Either structure; pick based on inputs 2-4</li>
+  <li>NO → Iron condor (theta collection is the alpha source)</li>
+</ul>
+</ol>
+<ol>
+  <li><strong>What is the call-side skew across the chosen body?</strong></li>
+<ul>
+  <li>Wide (> 400 bp) → Long call condor (skew compression is alpha)</li>
+  <li>Moderate (200-400 bp) → Either structure; tie-break on inputs 3-4</li>
+  <li>Narrow (< 200 bp) → Iron condor (skew is not the alpha source; theta is)</li>
+</ul>
+</ol>
+<ol>
+  <li><strong>What is the size of the book?</strong></li>
+<ul>
+  <li>Small (< $100K) → Iron condor (more contracts, more diversification)</li>
+  <li>Medium ($100K-$500K) → Either structure; tie-break on inputs 1, 2, 4</li>
+  <li>Large (> $500K) → Long call condor (capital efficiency scales with book size)</li>
+</ul>
+</ol>
+<ol>
+  <li><strong>Is there a directional view?</strong></li>
+<ul>
+  <li>Bullish drift → Long call condor (delta bias helps)</li>
+  <li>Range-bound neutral → Iron condor (delta-neutrality is the design)</li>
+  <li>Bearish → Skip range-bound structures; use a bear call spread or short call</li>
+</ul>
+</ol>
+<p>The three July 23 trades hit input 1 (YES on both), input 2 (skew 350-850 bp), input 3 ($300K book — medium), input 4 (bullish drift). All four inputs favored the long call condor. Hence the choice.</p>
+<h2>When to Switch Structures Mid-Book</h2>
+<p>A book that started with iron condors can switch to long call condors (or vice versa) within a single quarter. The journal's history shows this:</p>
+<ul>
+  <li><strong>2026 Q2 (April-June):</strong> Iron condor dominant. Lower VIX, no major event clusters, theta collection was the alpha.</li>
+  <li><strong>2026 Q3 (July-August, current):</strong> Long call condor dominant. FOMC + earnings cluster, wider call skew, earnings tail risk on both sides.</li>
+</ul>
+<p>The structure-of-the-quarter is set by regime. Don't fight the regime with a structure that doesn't fit.</p>
+<h2>See Also</h2>
+<ul>
+  <li><a href="/strategies/2026-07-23-long-call-condor/">Long Call Condor strategy page</a> — the all-call range-bound structure</li>
+  <li><a href="/strategies/2026-07-19-iron-condor/">Iron Condor strategy page</a> — the put-inclusive counterpart</li>
+  <li><a href="/education/2026-07-23-qqq-call-skew/">QQQ Call Skew education page</a> — the alpha source</li>
+  <li><a href="/education/2026-07-23-long-call-condor-strike-selection/">Strike Selection education page</a> — body width</li>
+  <li><a href="/education/2026-07-23-options-math-errors/">Options Math Errors</a> — formula mistakes to avoid</li>
+  <li><a href="/trade-log/">Trade-log entries</a> — live and closed positions</li>
+</ul>
+<p>The iron condor and long call condor are complementary structures, not substitutes. The journal runs whichever fits the regime. The choice between them is one of the most consequential decisions in the playbook, and getting it wrong by even a few days of regime change can mean the difference between max profit and max loss.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

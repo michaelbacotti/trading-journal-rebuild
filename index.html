@@ -102,19 +102,19 @@
   </div>
   <div class="card-grid">
 <div class="article-card">
-  <div class="date-text">July 08, 2026</div>
-  <h3><a href="/education/2026-07-08-risk-vs-reward/">Risk vs Reward: The Asymmetry That Drives Every Trade</a></h3>
-  <p>The expected-value math behind every trade, why a 2:1 reward-to-risk ratio is the floor not the goal, and how to think about positive expectancy when the win rate is below 50%.</p>
+  <div class="date-text">July 23, 2026</div>
+  <h3><a href="/education/2026-07-23-long-call-condor-strike-selection/">Long Call Condor Strike Selection: How to Pick the Body Width</a></h3>
+  <p>The decision tree for choosing a long call condor's body width: 85 points vs 110 vs 130 vs 200. Why three different bodies were used on the same underlying in one trading session. A rule-based selection framework that maps regime and thesis to strike geometry.</p>
 </div>
 <div class="article-card">
-  <div class="date-text">July 07, 2026</div>
-  <h3><a href="/education/2026-07-07-probabilities/">Market Probabilities: How to Think About Strike Odds</a></h3>
-  <p>Why option-implied probabilities and historical probabilities are different, the difference between risk-neutral and real-world probabilities, and how to use probability of profit (POP) without over-relying on it.</p>
+  <div class="date-text">July 23, 2026</div>
+  <h3><a href="/education/2026-07-23-options-math-errors/">Common Options Math Errors I Make (and How I Catch Them)</a></h3>
+  <p>Two recurring math errors in options-spread writing: the long call condor max-profit formula and the OptionStrat basis vs live yfinance discrepancy. Both shipped live before being caught. The derivations, the live examples, and the verification routines that catch them next time.</p>
 </div>
 <div class="article-card">
-  <div class="date-text">July 06, 2026</div>
-  <h3><a href="/education/2026-07-06-standard-deviations/">Standard Deviations in Options Trading: The Math of 'One-Sigma Moves'</a></h3>
-  <p>What one, two, and three-sigma moves actually mean for SPX positioning, how implied vol maps to expected moves, and why the strike selection in a spread book should be sigma-anchored not delta-anchored.</p>
+  <div class="date-text">July 23, 2026</div>
+  <h3><a href="/education/2026-07-23-qqq-call-skew/">QQQ Call Skew: How to Read It and Trade It</a></h3>
+  <p>Why QQQ has more call skew than SPX, how to measure call skew from a live option chain, when skew widens (and when it compresses), and how the long call condor trades it. Includes the live IV surface from three July 23 trades as case studies.</p>
 </div>
   </div>
 </section><section>
@@ -141,19 +141,19 @@
   </div>
   <div class="card-grid">
 <div class="article-card">
+  <div class="date-text">July 23, 2026</div>
+  <h3><a href="/strategies/2026-07-23-long-call-condor-vs-iron-condor/">Long Call Condor vs Iron Condor: When to Use Each</a></h3>
+  <p>The two range-bound structures in the playbook — iron condor and long call condor — side by side. Capital efficiency vs theta collection. When to pick the all-call structure, when to pick the put-inclusive structure, and why three long call condors entered July 23 with no iron condors.</p>
+</div>
+<div class="article-card">
+  <div class="date-text">July 23, 2026</div>
+  <h3><a href="/strategies/2026-07-23-long-call-condor/">Long Call Condor: The All-Call Range-Bound, Theta-Positive Vol-Skew Trade</a></h3>
+  <p>Anatomy of the long call condor — four call legs that harvest theta and call-side vol skew when the underlying stays inside a defined range. The all-call counterpart to the iron condor: same payoff shape, different Greek profile, narrower body tolerance.</p>
+</div>
+<div class="article-card">
   <div class="date-text">July 19, 2026</div>
   <h3><a href="/strategies/2026-07-19-call-credit-spread-vertical/">Bear Call Spread: The Compliment to the Bull Put</a></h3>
   <p>Anatomy of a bear call vertical credit spread: the symmetric counter to the bull put. Used as a standalone bearish/neutral expression or as the upper half of an iron condor.</p>
-</div>
-<div class="article-card">
-  <div class="date-text">July 19, 2026</div>
-  <h3><a href="/strategies/2026-07-19-covered-call/">Covered Call: The Income Overlay on Equity You Already Own</a></h3>
-  <p>Anatomy of the covered call: sell a call against 100 shares you own. The simplest income strategy in options, with one structural risk that defines the whole position.</p>
-</div>
-<div class="article-card">
-  <div class="date-text">July 19, 2026</div>
-  <h3><a href="/strategies/2026-07-19-iron-condor/">Iron Condor: The Range-Bound, IV-Rich Theta Engine</a></h3>
-  <p>Anatomy of the iron condor: a four-leg structure that collects premium in both wings when the underlying stays inside a defined range. The highest-theta structure in the playbook, paired with the tightest management rule.</p>
 </div>
   </div>
 </section>
