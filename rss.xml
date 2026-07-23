@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Wed, 22 Jul 2026 20:58:12 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 23 Jul 2026 10:44:05 GMT</lastBuildDate>
+  <item>
+    <title>SPX Bull Put Spread — Thursday, July 23, 2026</title>
+    <link>https://tredey.com/forecasts/2026-07-23-bull-put-spread-spx/</link>
+    <guid>https://tredey.com/forecasts/2026-07-23-bull-put-spread-spx/</guid>
+    <pubDate>2026-07-23</pubDate>
+    <description>SPX closed Wed at $7,498.96. Bull regime intact. SPX Aug 21 AM-settled 7200/7180 20-wide bull put, $360 credit, $1,640 max loss, ~80% POP, FOMC 5 days out.</description>
+  </item>
   <item>
     <title>NASA Bull Call Spread — Jan 21 '28 30/15: Long-Dated Space-ETF Upside</title>
     <link>https://tredey.com/trade-log/2026-07-22-nasa-bull-call-spread/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-15-dram-diagonal-call-spread/</guid>
     <pubDate>2026-07-15</pubDate>
     <description>Opened a DRAM diagonal call spread, long 50C Jan '27 / short 70C Dec '26, on a -6.6% pullback day. Theta-forward structure with $837.50 defined risk and 1.47:1 reward/risk.</description>
-  </item>
-  <item>
-    <title>QQQ Inverse Diagonal Call Spread — Dec 18 / Dec 31 '26 700/740: Calendar With Negative Skew</title>
-    <link>https://tredey.com/trade-log/2026-07-15-qqq-inverse-diagonal-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-07-15-qqq-inverse-diagonal-call-spread/</guid>
-    <pubDate>2026-07-15</pubDate>
-    <description>Opened a QQQ inverse diagonal call spread, long 740C Dec 31 / short 700C Dec 18, expressing a QQQ-rally thesis into year-end. $2,519.50 defined risk; max profit $1,786 if QQQ closes at $740.</description>
   </item>
 </channel>
 </rss>
