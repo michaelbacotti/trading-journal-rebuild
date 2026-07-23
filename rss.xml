@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 23 Jul 2026 15:48:20 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 23 Jul 2026 16:07:09 GMT</lastBuildDate>
+  <item>
+    <title>QQQ Long Call Condor — Nov 20 '26 715/725/810/820: Narrow-Body Range-Bound, 120 DTE</title>
+    <link>https://tredey.com/trade-log/2026-07-23-qqq-long-call-condor-narrow/</link>
+    <guid>https://tredey.com/trade-log/2026-07-23-qqq-long-call-condor-narrow/</guid>
+    <pubDate>2026-07-23</pubDate>
+    <description>Opened a QQQ long call condor (Nov 20 '26, 715/725/810/820), pairing a near-ATM bull call credit spread (715/725) with a deep-OTM bear call credit spread (810/820) to express rangebound sideways drift over Q3 earnings season. $355 defined risk; max profit $645 in $725–$810 zone.</description>
+  </item>
   <item>
     <title>QQQ Long Call Condor — Dec 18 '26 700/715/845/860: Wide-Body Range-Bound, Narrow-Wing Limited</title>
     <link>https://tredey.com/trade-log/2026-07-23-qqq-long-call-condor/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/strategies/2026-07-19-straddle/</guid>
     <pubDate>2026-07-19</pubDate>
     <description>Anatomy of the long straddle: ATM call + ATM put, same strike, same expiry. The cleanest expression of 'I do not know the direction, but I expect volatility.' Used around earnings, FOMC, and known catalysts.</description>
-  </item>
-  <item>
-    <title>USAR Bull Call Spread — Jan 21 '28 20/25: A Long-Dated US Critical-Minerals Position</title>
-    <link>https://tredey.com/trade-log/2026-07-17-usar-bull-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-07-17-usar-bull-call-spread/</guid>
-    <pubDate>2026-07-17</pubDate>
-    <description>Opened a USAR Jan 21 '28 20/25 bull call spread, a long-dated (553 DTE) LEAPS expressing the US critical-minerals / rare-earth processing thesis. $80 defined risk, $420 max profit (5.25:1 R/R), 29.6% cushion to lower breakeven.</description>
   </item>
 </channel>
 </rss>
