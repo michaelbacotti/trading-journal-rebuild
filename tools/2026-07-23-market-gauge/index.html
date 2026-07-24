@@ -50,8 +50,9 @@
   <p style="font-size:1.05rem;color:#666;line-height:1.6;">An interactive market gauge that combines RSI, MACD, ATR, Bollinger Band position, volume, and put/call ratio into a single 0-100 reading. Move the weight sliders to tune which indicators matter more. Pick a preset profile (Momentum, Volatility-aware, Options-sentiment, Mean-reversion) for a one-click starting point. Sample SPY data shown; live mode is a roadmap item.</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
-  <style>
-<p>/<em> Tredey Market Gauge — inline styles for the interactive widget </em>/</p>
+  <iframe src="/tools/market-gauge-widget.html" width="100%" height="980" frameborder="0" style="border:0;display:block;margin:2rem 0;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.08);" title="Tredey Market Gauge interactive widget"></iframe>
+<h2>How to read the gauge</h2>
+<p>The main dial reads from 0 to 100. Lower values mean conditions historically associated with oversold markets (RSI low, price near lower Bollinger Band, elevated put/call); higher values mean overbought conditions. The exact thresholds vary by asset and regime, but the following zones are useful defaults:</p>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
@@ -59,211 +60,6 @@
 </div>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-<p>.gauge-page { max-width: 880px; margin: 0 auto; padding: 0 1.5rem 2rem; }</p>
-<p>.gauge-page h2 { margin-top: 2.5rem; }</p>
-<p>.gauge-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; padding: 1rem; background: var(--surface, #f8f8f8); border-radius: 8px; }</p>
-<p>.gauge-control { display: flex; flex-direction: column; gap: 0.4rem; }</p>
-<p>.gauge-control label { font-size: 0.85rem; font-weight: 600; color: #444; }</p>
-<p>.gauge-control input[type="text"] { padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }</p>
-<p>.preset-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; }</p>
-<p>.preset-btn { padding: 0.5rem 1rem; border: 1px solid var(--accent, #2c5282); background: white; color: var(--accent, #2c5282); border-radius: 4px; cursor: pointer; font-size: 0.9rem; font-weight: 600; }</p>
-<p>.preset-btn:hover { background: var(--accent, #2c5282); color: white; }</p>
-<p>.preset-btn.active { background: var(--accent, #2c5282); color: white; }</p>
-<p>.main-gauge-wrap { display: flex; flex-direction: column; align-items: center; margin: 2rem 0; padding: 2rem; background: var(--surface, #f8f8f8); border-radius: 12px; }</p>
-<p>.main-gauge-svg { max-width: 320px; }</p>
-<p>.gauge-readout { font-size: 3rem; font-weight: 700; margin-top: 0.5rem; }</p>
-<p>.gauge-label { font-size: 1rem; color: #666; margin-top: 0.25rem; }</p>
-<p>.sub-gauges { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }</p>
-<p>.sub-gauge { background: white; border: 1px solid var(--border, #e0e0e0); border-radius: 8px; padding: 1rem; }</p>
-<p>.sub-gauge h4 { margin: 0 0 0.5rem; font-size: 1rem; display: flex; justify-content: space-between; align-items: baseline; }</p>
-<p>.sub-gauge h4 .raw { font-weight: 400; color: #666; font-size: 0.85rem; }</p>
-<p>.sub-gauge-bar { position: relative; height: 16px; background: linear-gradient(to right, #2c5282 0%, #38a169 25%, #f8f8f8 50%, #dd6b20 75%, #c53030 100%); border-radius: 8px; margin: 0.5rem 0; }</p>
-<p>.sub-gauge-marker { position: absolute; top: -4px; width: 4px; height: 24px; background: #000; border-radius: 2px; transform: translateX(-50%); transition: left 0.3s ease; }</p>
-<p>.sub-gauge-signal { font-size: 0.85rem; color: #444; margin: 0.25rem 0; }</p>
-<p>.sub-gauge-slider { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; font-size: 0.85rem; }</p>
-<p>.sub-gauge-slider input { flex: 1; }</p>
-<p>.sub-gauge-slider .weight-label { min-width: 60px; text-align: right; font-variant-numeric: tabular-nums; }</p>
-<p>.indicator-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }</p>
-<p>.indicator-table th, .indicator-table td { padding: 0.5rem; border-bottom: 1px solid var(--border, #e0e0e0); text-align: left; }</p>
-<p>.indicator-table th { background: var(--surface, #f8f8f8); }</p>
-<p>.sample-data-note { font-size: 0.85rem; color: #666; font-style: italic; margin: 0.5rem 0; }</p>
-<p>@media (max-width: 600px) {</p>
-<p>.gauge-controls { grid-template-columns: 1fr; }</p>
-<p>.gauge-readout { font-size: 2.25rem; }</p>
-<p>.sub-gauges { grid-template-columns: 1fr; }</p>
-<p>}</p>
-</style>
-<p><!-- ============================================================</p>
-<p>TREDEY MARKET GAUGE — INTERACTIVE WIDGET</p>
-<p>============================================================ --></p>
-<div class="gauge-page">
-<p><h2 style="margin-top:0;">Market Gauge</h2></p>
-<p><p>The Tredey Market Gauge combines six technical inputs into a single 0-100 reading. Lower values indicate conditions historically associated with oversold markets; higher values indicate conditions associated with overbought markets. The composite is a <em>weighted average</em> of normalized signals — every indicator gets a 0-2 weight slider, and the main gauge updates instantly when you move them.</p></p>
-<p><p class="sample-data-note">Sample data: SPY as of market close 2026-07-22. Live data feed is on the roadmap (see "Live data roadmap" below).</p></p>
-<p><!-- ───── Controls ───── --></p>
-<div class="gauge-controls">
-<div class="gauge-control">
-<p><label for="gauge-ticker">Ticker</label></p>
-<p><input type="text" id="gauge-ticker" value="SPY" maxlength="6" style="text-transform:uppercase;"></p>
-</div>
-<div class="gauge-control">
-<p><label for="gauge-timeframe">Timeframe</label></p>
-<p><select id="gauge-timeframe" style="padding:0.5rem;border:1px solid #ccc;border-radius:4px;font-size:1rem;"></p>
-<p><option value="1M" selected>1 month</option></p>
-<p><option value="3M">3 months</option></p>
-<p><option value="6M">6 months</option></p>
-<p></select></p>
-</div>
-</div>
-<p><!-- ───── Presets ───── --></p>
-<div class="preset-row">
-<p><button class="preset-btn active" data-preset="custom">Custom</button></p>
-<p><button class="preset-btn" data-preset="momentum">Momentum</button></p>
-<p><button class="preset-btn" data-preset="volatility">Volatility-aware</button></p>
-<p><button class="preset-btn" data-preset="options">Options-sentiment</button></p>
-<p><button class="preset-btn" data-preset="meanrev">Mean-reversion</button></p>
-</div>
-<p><!-- ───── Main gauge ───── --></p>
-<div class="main-gauge-wrap">
-<p><svg class="main-gauge-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="Main market gauge"></p>
-<p><!-- Outer ring --></p>
-<p><circle cx="100" cy="100" r="90" fill="none" stroke="#e0e0e0" stroke-width="2"/></p>
-<p><!-- Color zones (semicircle arc from -90° to +90°, total 180°) --></p>
-<p><path d="M 10 100 A 90 90 0 0 1 50 21.6" fill="none" stroke="#2c5282" stroke-width="20"/></p>
-<p><path d="M 50 21.6 A 90 90 0 0 1 100 10" fill="none" stroke="#38a169" stroke-width="20"/></p>
-<p><path d="M 100 10 A 90 90 0 0 1 150 21.6" fill="none" stroke="#f8f8f8" stroke-width="20"/></p>
-<p><path d="M 150 21.6 A 90 90 0 0 1 190 100" fill="none" stroke="#dd6b20" stroke-width="20"/></p>
-<p><!-- Needle --></p>
-<p><line id="gauge-needle" x1="100" y1="100" x2="100" y2="20" stroke="#000" stroke-width="3" stroke-linecap="round" transform="rotate(-90 100 100)"/></p>
-<p><circle cx="100" cy="100" r="6" fill="#000"/></p>
-<p><!-- Tick marks --></p>
-<p><text x="20" y="115" font-size="10" fill="#666">0</text></p>
-<p><text x="100" y="5" font-size="10" fill="#666" text-anchor="middle">50</text></p>
-<p><text x="180" y="115" font-size="10" fill="#666" text-anchor="end">100</text></p>
-<p></svg></p>
-<div class="gauge-readout" id="gauge-value">50</div>
-<div class="gauge-label" id="gauge-label">Neutral</div>
-<div class="gauge-label" id="gauge-context" style="font-size:0.85rem;margin-top:0.5rem;">SPY · 1M</div>
-</div>
-<p><!-- ───── Sub-gauges ───── --></p>
-<div class="sub-gauges" id="sub-gauges">
-<p><!-- Populated by JavaScript --></p>
-</div>
-</div>
-<script>
-<p>// ─── Tredey Market Gauge ────────────────────────────────────────────</p>
-<p>// Composite logic:</p>
-<p>//   S_I  = normalized indicator signal in [-1, +1]</p>
-<p>//   W_I  = weight (0-2) controlled by user</p>
-<p>//   C    = sum(W_I * S_I) / sum(W_I)</p>
-<p>//   G    = 50 + 50 * C      →  0..100</p>
-<p>const SAMPLE_DATA = {</p>
-<p>ticker: "SPY",</p>
-<p>asof: "2026-07-22",</p>
-<p>indicators: {</p>
-<p>rsi:    { name: "RSI (14)",                raw: "62.4",   signal: +0.48, note: "Above 50, approaching overbought" },</p>
-<p>macd:   { name: "MACD Histogram",          raw: "+1.85",  signal: +0.55, note: "Positive, bullish momentum" },</p>
-<p>atr:    { name: "ATR (14, % of price)",    raw: "1.22%",  signal: +0.30, note: "Elevated vs 20-day median" },</p>
-<p>bb:     { name: "Bollinger Position",      raw: "0.71",   signal: +0.40, note: "Upper half of 20-day range" },</p>
-<p>vol:    { name: "Volume vs 20d avg",       raw: "1.18x",  signal: +0.25, note: "Slightly elevated" },</p>
-<p>pc:     { name: "Put/Call Ratio",         raw: "0.78",   signal: -0.20, note: "Mildly bullish sentiment" }</p>
-<p>}</p>
-<p>};</p>
-<p>const PRESETS = {</p>
-<p>momentum: { rsi: 1.8, macd: 1.8, atr: 1.0, bb: 1.6, vol: 1.2, pc: 0.4 },</p>
-<p>volatility: { rsi: 1.0, macd: 1.0, atr: 1.8, bb: 1.6, vol: 1.6, pc: 1.0 },</p>
-<p>options:  { rsi: 1.2, macd: 1.0, atr: 0.8, bb: 1.0, vol: 1.2, pc: 2.0 },</p>
-<p>meanrev:  { rsi: 1.6, macd: 0.6, atr: 1.0, bb: 1.8, vol: 0.8, pc: 1.2 },</p>
-<p>custom:   null // leave as-is</p>
-<p>};</p>
-<p>let currentWeights = { rsi: 1.0, macd: 1.0, atr: 1.0, bb: 1.0, vol: 1.0, pc: 1.0 };</p>
-<p>function renderSubGauges() {</p>
-<p>const wrap = document.getElementById("sub-gauges");</p>
-<p>if (!wrap) return;</p>
-<p>const inds = SAMPLE_DATA.indicators;</p>
-<p>wrap.innerHTML = Object.entries(inds).map(([key, ind]) => {</p>
-<p>const w = currentWeights[key] || 1.0;</p>
-<p>const signalPos = (ind.signal + 1) / 2 * 100; // 0..100</p>
-<p>return `</p>
-<div class="sub-gauge">
-<p><h4>${ind.name} <span class="raw">${ind.raw}</span></h4></p>
-<div class="sub-gauge-bar">
-<div class="sub-gauge-marker" style="left:${signalPos}%;"></div>
-</div>
-<div class="sub-gauge-signal">Signal: ${ind.signal >= 0 ? "+" : ""}${ind.signal.toFixed(2)} · ${ind.note}</div>
-<div class="sub-gauge-slider">
-<p><input type="range" min="0" max="2" step="0.1" value="${w}" data-key="${key}"></p>
-<span class="weight-label" id="w-${key}">Weight: ${w.toFixed(1)}×</span>
-</div>
-</div>
-<p>`;</p>
-<p>}).join("");</p>
-<p>wrap.querySelectorAll('input[type="range"]').forEach(input => {</p>
-<p>input.addEventListener("input", e => {</p>
-<p>const k = e.target.dataset.key;</p>
-<p>currentWeights[k] = parseFloat(e.target.value);</p>
-<p>document.getElementById(<code>w-${k}</code>).textContent = <code>Weight: ${parseFloat(e.target.value).toFixed(1)}×</code>;</p>
-<p>// mark as custom preset</p>
-<p>document.querySelectorAll(".preset-btn").forEach(b => b.classList.remove("active"));</p>
-<p>document.querySelector('.preset-btn[data-preset="custom"]').classList.add("active");</p>
-<p>recompute();</p>
-<p>});</p>
-<p>});</p>
-<p>}</p>
-<p>function recompute() {</p>
-<p>const inds = SAMPLE_DATA.indicators;</p>
-<p>let num = 0, den = 0;</p>
-<p>for (const k of Object.keys(inds)) {</p>
-<p>const w = currentWeights[k] || 0;</p>
-<p>num += w * inds[k].signal;</p>
-<p>den += w;</p>
-<p>}</p>
-<p>const C = den > 0 ? num / den : 0;</p>
-<p>const G = Math.max(0, Math.min(100, 50 + 50 * C));</p>
-<p>// Update readout</p>
-<p>document.getElementById("gauge-value").textContent = Math.round(G);</p>
-<p>// Update label based on G</p>
-<p>let label = "Neutral";</p>
-<p>if (G < 20) label = "Deep Oversold";</p>
-<p>else if (G < 40) label = "Oversold";</p>
-<p>else if (G < 60) label = "Neutral";</p>
-<p>else if (G < 80) label = "Overbought";</p>
-<p>else label = "Extreme Overbought";</p>
-<p>document.getElementById("gauge-label").textContent = label;</p>
-<p>// Update context line</p>
-<p>const ticker = document.getElementById("gauge-ticker").value.toUpperCase() || "SPY";</p>
-<p>const tf = document.getElementById("gauge-timeframe").value;</p>
-<p>document.getElementById("gauge-context").textContent = <code>${ticker} · ${tf}</code>;</p>
-<p>// Animate needle: -90° at G=0, +90° at G=100</p>
-<p>const angle = -90 + (G / 100) * 180;</p>
-<p>const needle = document.getElementById("gauge-needle");</p>
-<p>if (needle) needle.setAttribute("transform", <code>rotate(${angle} 100 100)</code>);</p>
-<p>}</p>
-<p>function applyPreset(name) {</p>
-<p>document.querySelectorAll(".preset-btn").forEach(b => b.classList.remove("active"));</p>
-<p>document.querySelector(<code>.preset-btn[data-preset="${name}"]</code>).classList.add("active");</p>
-<p>if (name === "custom") { recompute(); return; }</p>
-<p>const preset = PRESETS[name];</p>
-<p>if (!preset) return;</p>
-<p>currentWeights = { ...preset };</p>
-<p>renderSubGauges();</p>
-<p>recompute();</p>
-<p>}</p>
-<p>document.addEventListener("DOMContentLoaded", () => {</p>
-<p>renderSubGauges();</p>
-<p>recompute();</p>
-<p>document.querySelectorAll(".preset-btn").forEach(b => {</p>
-<p>b.addEventListener("click", () => applyPreset(b.dataset.preset));</p>
-<p>});</p>
-<p>document.getElementById("gauge-ticker")?.addEventListener("input", recompute);</p>
-<p>document.getElementById("gauge-timeframe")?.addEventListener("change", recompute);</p>
-<p>});</p>
-</script>
-<p><!-- ============================================================</p>
-<p>END OF INTERACTIVE WIDGET</p>
-<p>============================================================ --></p>
-<h2>How to read the gauge</h2>
-<p>The main dial reads from 0 to 100. Lower values mean conditions historically associated with oversold markets (RSI low, price near lower Bollinger Band, elevated put/call); higher values mean overbought conditions. The exact thresholds vary by asset and regime, but the following zones are useful defaults:</p>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr>
@@ -344,7 +140,7 @@
   <li><strong>Pre-computed cache</strong> — a scheduled CF Worker that updates indicator values for a basket of tickers every 5 minutes during market hours, stores in KV, and the page reads from KV. Reduces user-perceived latency but adds infrastructure.</li>
   <li><strong>Client-side direct fetch</strong> — call a CORS-enabled API (Twelve Data, Finnhub) from the browser with an API key. Free tiers exist but rate-limited; paid tiers needed for production use.</li>
 </ol>
-<p>The current page is structured so any of these three paths can replace the hardcoded <code>SAMPLE_DATA</code> constant in the script block. The composite logic, weight handling, preset profiles, and visualization are all data-source-agnostic.</p>
+<p>The current page is structured so any of these three paths can replace the hardcoded <code>SAMPLE_DATA</code> constant in the widget script. The composite logic, weight handling, preset profiles, and visualization are all data-source-agnostic.</p>
 <h2>See also</h2>
 <ul>
   <li><a href="/playbook/2026-07-05-sop/">Playbook SOP</a> — how the gauge reading fits into trade selection</li>
