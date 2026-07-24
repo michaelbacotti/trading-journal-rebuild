@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Fri, 24 Jul 2026 02:30:48 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 24 Jul 2026 11:39:02 GMT</lastBuildDate>
+  <item>
+    <title>Vol Expansion Setup: Long Strangle on SPX Ahead of FOMC</title>
+    <link>https://tredey.com/forecasts/vol-expansion-strangle-spx-fomc/</link>
+    <guid>https://tredey.com/forecasts/vol-expansion-strangle-spx-fomc/</guid>
+    <pubDate>2026-07-24</pubDate>
+    <description>SPX in a transition regime between its 50-day and 200-day averages ahead of FOMC. Long strangle Sep 4, strikes $6,900/$7,950, debit ~$4,950/contract.</description>
+  </item>
   <item>
     <title>Long Call Condor Strike Selection: How to Pick the Body Width</title>
     <link>https://tredey.com/education/2026-07-23-long-call-condor-strike-selection/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-20-xsp-bear-call-insurance/</guid>
     <pubDate>2026-07-20</pubDate>
     <description>Added a 1-contract XSP Aug 28 749/750 bear call spread as defined-risk premium-collection insurance. $61.50 net credit, $38.50 defined max loss, ~50% short-leg POP.</description>
-  </item>
-  <item>
-    <title>XSP Bull Put Spread — Jul 31 '26 742/740: A Short-Dated Index Pin</title>
-    <link>https://tredey.com/trade-log/2026-07-20-xsp-bull-put-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-07-20-xsp-bull-put-spread/</guid>
-    <pubDate>2026-07-20</pubDate>
-    <description>Opened an XSP Jul 31 742/740 bull put spread, an 11-DTE index-level short-premium structure with 6.93-point OTM cushion. $237.50 total credit, $762.50 defined max loss, ~67% short-leg POP.</description>
   </item>
 </channel>
 </rss>
