@@ -8,16 +8,16 @@
  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
  <title>Tredey Market Gauge: Three-Index Composite Snapshot | The Trading Journal</title>
- <meta name="description" content="A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — six daily indicators equal-weighted into a single number.">
+ <meta name="description" content="A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — nine daily indicators equal-weighted into a single number.">
  <link rel="canonical" href="https://tredey.com/tools/2026-07-23-market-gauge/">
  <meta property="og:type" content="website">
  <meta property="og:title" content="Tredey Market Gauge: Three-Index Composite Snapshot | The Trading Journal">
- <meta property="og:description" content="A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — six daily indicators equal-weighted into a single number.">
+ <meta property="og:description" content="A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — nine daily indicators equal-weighted into a single number.">
  <meta property="og:image" content="https://tredey.com/og-image.svg">
  <meta property="og:url" content="https://tredey.com/tools/2026-07-23-market-gauge/">
  <meta name="twitter:card" content="summary_large_image">
  <meta name="twitter:title" content="Tredey Market Gauge: Three-Index Composite Snapshot | The Trading Journal">
- <meta name="twitter:description" content="A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — six daily indicators equal-weighted into a single number.">
+ <meta name="twitter:description" content="A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — nine daily indicators equal-weighted into a single number.">
  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
  <link rel="manifest" href="/site.webmanifest">
  <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
@@ -47,10 +47,10 @@
  <div class="page-hero" style="padding:3rem 0 1.5rem;">
   <div class="date-text">July 23, 2026 &middot; TOOL / MARKET GAUGE</div>
   <h1>Tredey Market Gauge: Three-Index Composite Snapshot</h1>
-  <p style="font-size:1.05rem;color:#666;line-height:1.6;">A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — six daily indicators equal-weighted into a single number.</p>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — nine daily indicators equal-weighted into a single number.</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
-  <iframe src="/tools/market-gauge-widget.html" width="100%" height="780" frameborder="0" style="border:0;display:block;margin:2rem 0;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.08);" title="Tredey Market Gauge — three-index composite snapshot"></iframe>
+  <iframe src="/tools/market-gauge-widget.html" width="100%" height="940" frameborder="0" style="border:0;display:block;margin:2rem 0;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.08);" title="Tredey Market Gauge — three-index composite snapshot"></iframe>
 <p>The Tredey Market Gauge is a <strong>daily, end-of-day snapshot</strong> of where the three core US equity indices sit on an overbought-to-oversold scale. It answers a single question: <em>given today's price action, where is each index stretched?</em> The composite is computed the same way for all three — no regime-specific weighting — so the three readings are directly comparable.</p>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
@@ -100,7 +100,7 @@
 <h2>Why these three indices</h2>
 <p>The S&P 500 is the large-cap benchmark. The NASDAQ-100 captures the technology and growth tilt that has driven most of the last decade's index-level returns. The Russell 2000 captures small-cap behavior — which historically leads at cycle turns and lags in late-stage bull markets. Reading the three side by side is the cleanest way to see whether a move is broad-based or concentrated: when all three sit in the same zone, the regime is dominant; when they diverge, the move is sector- or factor-specific.</p>
 <h2>The Tredey Composite Gauge formula</h2>
-<p>Each index is scored by the same six-component composite. The components are computed on the <strong>daily timeframe</strong> from end-of-day prices and volume.</p>
+<p>Each index is scored by the same nine-component composite. The components are computed on the <strong>daily timeframe</strong> from end-of-day prices, volume, and live options-chain data.</p>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr>
@@ -139,10 +139,27 @@
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Ratio</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Clipped at 2× (high) / 0× (low)</td>
 </tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Put/Call ratio</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Equity options OI/vol on near-month chain</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.5 = bullish (+1), 1.0 = neutral (0), 1.5 = bearish (−1)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">σ-distance (50d)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">(close − SMA50) / rolling 50-day stddev</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Z-score, clamped at ±2.5σ</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">ATM 30d IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Live options chain IV at strike nearest spot</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">10% IV calm (+1), 30% neutral (0), 50% stressed (−1)</td>
+</tr>
 </tbody></table></div>
 <p>The six normalized signals are <strong>equal-weighted</strong> and averaged to produce a single composite in [−1, +1]. That value is then mapped to a 0–100 reading via <code>G = 50 + 50 × composite</code>. The mapping keeps neutral at 50 and lets extreme readings approach 0 or 100 symmetrically.</p>
 <p><strong>Why equal weights?</strong> A weighted scheme implies a regime prior — that one indicator matters more than another in some circumstances. For a daily cross-index snapshot, that prior is hard to justify: the regime that makes Bollinger matter more (range-bound) is not the regime that makes RSI matter more (trending). Equal weights keep the composite regime-neutral and let the user layer their own view on top.</p>
-<p><strong>Why no put/call ratio?</strong> The original interactive widget included put/call as a sentiment input. End-of-day put/call data is noisy and not uniformly available across the three ETF proxies; removing it makes the three readings genuinely comparable on a daily basis.</p>
+<p><strong>Why include put/call ratio?</strong> The v2 widget added put/call as the seventh component, computed as the ratio of total put volume (or open interest) to total call volume on the nearest-options-month chain for each ETF. High put/call (>1.0) reflects defensive positioning and maps to a bearish signal; low put/call (<1.0) reflects bullish positioning. The mapping uses 0.5 → +1 (very bullish), 1.0 → 0 (neutral), 1.5 → −1 (very bearish), linear in between. Equity-options chains are uniformly available across SPY/QQQ/IWM, so this is the only sentiment-style indicator that gives directly comparable readings across the three proxies.</p>
+<p><strong>Why include σ-distance?</strong> Pure price-based indicators (RSI, MACD, Bollinger) are scale-dependent and don't generalize across instruments with different price levels. σ-distance normalizes the gap from the 50-day SMA in units of the 50-day rolling standard deviation, so a +2σ reading on SPY (~$742) and a +2σ reading on IWM (~$293) mean the same thing: the index is 2 daily-standard-deviations above its trend. The mapping is clamped at ±2.5σ (anything beyond is treated as extreme).</p>
+<p><strong>Why include ATM IV?</strong> Implied volatility reflects the options market's expectation of future realized volatility, and is forward-looking in a way that price-based indicators aren't. Low IV (<20%) typically corresponds to complacent markets; high IV (>40%) to stressed markets. The mapping uses 10% IV → +1 (calm), 30% IV → 0 (neutral), 50% IV → −1 (stressed). Reading is taken from the live options chain at the strike nearest the spot, in the expiration closest to 30 DTE.</p>
 <h2>What the indicator table shows</h2>
 <p>The signal table beneath the three dials lists each component's raw reading so you can see which sub-signals are doing the work. A reading of 47 on the S&P 500 with an RSI of 44.7 and a Bollinger position of 0.21 is a different state from a 47 reading driven by an RSI of 51 and a position of 0.50. The composite is the headline; the table is the audit trail.</p>
 <p>For a worked example, take today's NASDAQ-100 reading of <strong>30 (Oversold)</strong>. The composite averages six signals of roughly −0.45, −0.26, −0.94, −0.21, −0.73, +0.14 — about −0.41 — which maps to <code>50 + 50 × (−0.41) = 29.7</code>, rounded to 30. The biggest single contributor is the <strong>Bollinger position of 0.03</strong>, meaning QQQ is sitting almost exactly on its lower 20-day band. That single sub-signal contributes about −0.94 to the composite, accounting for roughly two-thirds of the index's oversold reading. The RSI at 41.1 and % above 50-day SMA at −3.67% reinforce; the volume ratio at 1.14× modestly offsets by showing participation rather than capitulation.</p>
