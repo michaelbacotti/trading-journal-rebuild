@@ -5,7 +5,7 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Fri, 24 Jul 2026 15:51:51 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 24 Jul 2026 16:13:00 GMT</lastBuildDate>
   <item>
     <title>Calendar Call Spread: Same Strike, Different Expiries, Theta in the Middle</title>
     <link>https://tredey.com/strategies/2026-07-24-calendar-call-spread/</link>
@@ -19,6 +19,20 @@
     <guid>https://tredey.com/trade-log/2026-07-24-dram-calendar-call-spread/</guid>
     <pubDate>2026-07-24</pubDate>
     <description>Opened a DRAM calendar call spread at $70 strike, short Dec 18 / long Jan 15 '27, on continued DRAM weakness. Net debit $107.50/contract, defined-risk theta-harvest structure with $628 estimated max profit if DRAM reclaims $70 by Dec 18 expiry.</description>
+  </item>
+  <item>
+    <title>QQQ $800 Calendar Call Spread — Dec 17 '27 / Jan 21 '28: A Long-Duration Theta Position on a Recovery to Eight Hundred</title>
+    <link>https://tredey.com/trade-log/2026-07-24-qqq-800-calendar-call-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-07-24-qqq-800-calendar-call-spread/</guid>
+    <pubDate>2026-07-24</pubDate>
+    <description>Opened a QQQ $800 calendar call spread at 18-month duration, front Dec 17 '27 / back Jan 21 '28, on continued NASDAQ weakness. Net debit $3.80/share ($380/contract), defined-risk theta-harvest structure with ~$2,556 estimated max profit if QQQ reclaims $800 by Dec 17 '27 expiry. Pairs with the $850 calendar (see companion trade).</description>
+  </item>
+  <item>
+    <title>QQQ $850 Calendar Call Spread — Dec 17 '27 / Jan 21 '28: A Long-Duration Theta Position on a Recovery Past Eight-Fifty</title>
+    <link>https://tredey.com/trade-log/2026-07-24-qqq-850-calendar-call-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-07-24-qqq-850-calendar-call-spread/</guid>
+    <pubDate>2026-07-24</pubDate>
+    <description>Opened a QQQ $850 calendar call spread at 18-month duration, front Dec 17 '27 / back Jan 21 '28, paired with the $800 calendar. Net debit $3.21/share ($321/contract), defined-risk theta-harvest structure with ~$2,799 estimated max profit if QQQ reclaims $850 by Dec 17 '27 expiry. The higher-strike half of a paired calendar position.</description>
   </item>
   <item>
     <title>Vol Expansion Setup: Long Strangle on SPX Ahead of FOMC</title>
@@ -131,20 +145,6 @@
     <guid>https://tredey.com/forecasts/2026-07-21-transition-vol-spx/</guid>
     <pubDate>2026-07-21T06:30:00-04:00</pubDate>
     <description>SPX closed Monday at $7,443.28. TRANSITION regime — price between MA50 and MA200, no clear trend. SPX Aug 21 AM-settled long strangle 7095/7890, $4,285 debit, ~32% POP, vol expansion play.</description>
-  </item>
-  <item>
-    <title>NASA Bull Put Spread — Jan 15 '27 25/20: Long-Dated Space-ETF Premium</title>
-    <link>https://tredey.com/trade-log/2026-07-21-nasa-bull-put-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-07-21-nasa-bull-put-spread/</guid>
-    <pubDate>2026-07-21</pubDate>
-    <description>Opened a NASA ETF Jan 15 2027 25/20 bull put spread, a 178-DTE long-dated short-premium structure on the Tema Space Innovators ETF. Live mid credit $2.525, max loss $247.50/contract × 4 = $990 total. ~60% short-leg POP, ~1¢/day theta.</description>
-  </item>
-  <item>
-    <title>Monday Pre-Market Brief — SPX Bull Put Spread at $7,457 Spot: $7,170 / $7,155, Aug 21 AM-Settled Expiry</title>
-    <link>https://tredey.com/forecasts/2026-07-20-bull-put-continuation-spx/</link>
-    <guid>https://tredey.com/forecasts/2026-07-20-bull-put-continuation-spx/</guid>
-    <pubDate>2026-07-20T06:00:00-04:00</pubDate>
-    <description>SPX closed Friday at $7,457.69. BULL regime with 20d trend still positive but a mild 1.5% 5d pullback. SPX Aug 21 AM-settled 7170/7155 bull put spread, ~$300 credit, ~$1,200 max loss, ~80% POP.</description>
   </item>
 </channel>
 </rss>
