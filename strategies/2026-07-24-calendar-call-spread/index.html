@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Calendar Call Spread: Same Strike, Different Expiries, Theta in the Middle | The Trading Journal</title>
+ <meta name="description" content="Anatomy of the calendar call spread: a two-leg same-strike time spread that profits when the underlying parks near the strike at the front-month's expiry. The pure theta-harvest structure in the playbook, defined-risk by construction.">
+ <link rel="canonical" href="https://tredey.com/strategies/2026-07-24-calendar-call-spread/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Calendar Call Spread: Same Strike, Different Expiries, Theta in the Middle | The Trading Journal">
+ <meta property="og:description" content="Anatomy of the calendar call spread: a two-leg same-strike time spread that profits when the underlying parks near the strike at the front-month's expiry. The pure theta-harvest structure in the playbook, defined-risk by construction.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/strategies/2026-07-24-calendar-call-spread/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Calendar Call Spread: Same Strike, Different Expiries, Theta in the Middle | The Trading Journal">
+ <meta name="twitter:description" content="Anatomy of the calendar call spread: a two-leg same-strike time spread that profits when the underlying parks near the strike at the front-month's expiry. The pure theta-harvest structure in the playbook, defined-risk by construction.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 (Trading Journal property — pending) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENDING"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PENDING');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">July 24, 2026 &middot; STRATEGY / TIME SPREAD</div>
+  <h1>Calendar Call Spread: Same Strike, Different Expiries, Theta in the Middle</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">Anatomy of the calendar call spread: a two-leg same-strike time spread that profits when the underlying parks near the strike at the front-month's expiry. The pure theta-harvest structure in the playbook, defined-risk by construction.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>The calendar call spread is the cleanest theta-harvest structure in the playbook. Same strike, different expiries, both calls. Sell the front month, buy the back month. The structure profits when the underlying parks near the strike at front-month expiry — the short leg expires worthless, and the long leg retains a meaningful chunk of time value. The 2026-07-24 DRAM calendar at $70 is the working example.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<h2>The Structure</h2>
+<p>A calendar call spread is two call options on the same underlying, same strike, different expiries. The standard form is <strong>short front month, long back month</strong> (a "long calendar"). The trade is established for a net debit because the back-month always costs more than the front-month at the same strike — the back-month carries more time value.</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Leg</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Action</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Strike</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Expiry</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Role</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Short call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">SELL</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$K</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Front month (e.g., Dec 18)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Theta donor; decays faster</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Long call</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">BUY</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$K</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Back month (e.g., Jan 15 '27)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Time-value holder; carries residual TV past front expiry</td>
+</tr>
+</tbody></table></div>
+<p>For a DRAM $70 calendar (Dec 18 short / Jan 15 '27 long):</p>
+<ul>
+  <li><strong>Net debit</strong>: $1.075/share × 100 = <strong>$107.50 per calendar</strong> (front $7.80, back $8.875)</li>
+  <li><strong>Max loss</strong>: $107.50 (= net debit, defined risk — both legs can go to zero)</li>
+  <li><strong>Max profit</strong>: ~$628 at $70 on Dec 18 (back-month residual time value at strike, less debit). BSM-derived; live OptionStrat may show a slightly different number based on the IV surface shape.</li>
+  <li><strong>Calendar duration</strong>: 28 days (gap between front and back expiries — this is where the theta differential lives)</li>
+  <li><strong>Theta</strong>: net positive in the structure's favor (front decays faster than back); ~$0.04/day at this DTE bucket</li>
+  <li><strong>Vega</strong>: net short (calendar wants IV to <em>fall</em> after entry; a rising IV environment punishes the position)</li>
+  <li><strong>Delta</strong>: near-flat (~+0.05) at the strike; the calendar is a <em>theta</em> trade, not a directional trade</li>
+</ul>
+<h2>Why this structure over the alternatives</h2>
+<p>The calendar is one of three structures that share a "defined strike, defined risk" shape. Each has a different P&L:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Structure</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Payoff shape</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Edge</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Cost</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Vertical (debit call spread)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Trapezoid, profit between strikes</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Directional — needs underlying to <em>reach</em> the strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Higher debit (full width × IV)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Calendar (same strike, different expiry)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Tent, peak at strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Theta — needs underlying to <em>stay near</em> the strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Small debit (term-structure differential only)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Diagonal (different strike, different expiry)</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Trapezoid + residual TV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Directional + theta hybrid</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Mid-range debit</td>
+</tr>
+</tbody></table></div>
+<p>A vertical spread is a directional trade: the underlying has to <em>rally past</em> the strike by expiry for max profit. A calendar is a theta trade: the underlying has to <em>sit near</em> the strike for max profit. The calendar's profit zone is much wider (a tent spanning ±$2 around the strike vs a vertical that only pays inside the strikes) but the absolute max profit is smaller (because you're not collecting a full spread width).</p>
+<p>Compared to a <strong>single-leg long call</strong>, the calendar is dramatically cheaper ($107.50 vs $887.50 for the back-month alone) and adds a defined-risk ceiling. The trade-off is a smaller max profit and a stricter profit zone — the underlying has to land near the strike, not just rally in any direction.</p>
+<p>Compared to a <strong>straddle or strangle</strong>, the calendar has a much narrower profit zone but defined risk. A straddle pays out on either side of the strike; a calendar only pays near the strike. The calendar is the <em>premium-seller's</em> analog of the long straddle — defined risk, theta-positive, narrow profit window.</p>
+<h2>P&L shape at front-month expiry</h2>
+<p>The defining characteristic of a calendar is the <strong>tent-shaped P&L at front-month expiry</strong>. The peak sits exactly at the strike; the curve falls off in both directions. The tent height is the back-month's residual time value at the strike on the front-expiry date.</p>
+<p>For a calendar with $X net debit and the back-month having $TV_at_strike residual time value on front-expiry date:</p>
+<ul>
+  <li><strong>Peak P&L per contract</strong> = (TV_at_strike − X) × 100</li>
+  <li><strong>Floor P&L per contract</strong> = −X × 100 (both legs worthless)</li>
+</ul>
+<p>The tent's slope depends on the back-month's gamma at expiry. With 28 DTE of residual life, the back-month gamma is meaningful — the tent has a clear peak. With 60+ DTE, the back-month gamma is smaller — the tent flattens out. With <14 DTE, the back-month gamma is large — the tent is sharp and peaked, and the trade is at its most sensitive to spot.</p>
+<h2>When to use this structure</h2>
+<p>The calendar fits three specific market views:</p>
+<ol>
+  <li><strong>The underlying is range-bound near a strike you have a view on.</strong> DRAM at $54.25 with the $70 strike 15 points above; the thesis says DRAM will reclaim $70 over the next 5 months, but you don't want to commit to the exact timing — the calendar lets you collect the time-value differential between two months while waiting.</li>
+</ol>
+<ol>
+  <li><strong>You expect front-month IV to crush on an event.</strong> Earnings, FOMC, CPI — these all crush IV after they pass. A short front-month / long back-month calendar is a clean way to express "the front-month is too rich; the back-month is fairly priced." The crush hits the front leg faster than the back leg.</li>
+</ol>
+<ol>
+  <li><strong>You want defined-risk exposure to a strike you don't expect to be breached.</strong> The max loss is the debit, full stop. No margin calls, no assignment risk (American-style options aside — SPX/XSP avoid this).</li>
+</ol>
+<h2>When NOT to use this structure</h2>
+<p>Three scenarios where the calendar fails:</p>
+<ol>
+  <li><strong>Low IV environment.</strong> If both legs are at <30% IV, the term-structure differential is too small to justify the trade. Calendar edge comes from the IV term structure being <em>non-flat</em>. In a low-IV environment, sell a put credit spread instead.</li>
+</ol>
+<ol>
+  <li><strong>Underlying trending strongly through the strike.</strong> If the underlying blows through the strike and stays on the other side, the calendar loses. DRAM at $80 at Dec 18 with a $70 calendar = max loss ≈ $300+/contract. The trade is <em>near-the-strike</em>, not directional.</li>
+</ol>
+<ol>
+  <li><strong>Front-month IV is <em>lower</em> than back-month IV (steep inverted term structure).</strong> The calendar pays when front > back at the same strike. If front < back, the structure is inverted — sell the back, buy the front (a "reverse calendar"). Most of the time the calendar edge is the standard direction.</li>
+</ol>
+<h2>Strike selection (playbook-aligned)</h2>
+<p>The strike is the most important variable in a calendar. Three rules:</p>
+<ol>
+  <li><strong>Place the strike where you expect the underlying to be at front-month expiry.</strong> This is the <em>peak of the tent</em>. Off by 10% on the strike = dramatic P&L difference.</li>
+</ol>
+<ol>
+  <li><strong>Use sigma-distance if you don't have a specific price view.</strong> The Playbook §4 calibrates 30-DTE calendars at 0.3–0.5σ (30-day) — about 25–40% OTM for a 30-day calendar. For longer-duration calendars (90–150 DTE on the short leg), the σ-distance math changes — at 94% IV over 147 days, σ is much wider, so a 0.3σ strike is further OTM in absolute terms.</li>
+</ol>
+<ol>
+  <li><strong>Same-strike only.</strong> The whole structure's edge comes from both legs being at the same strike — that's where the gamma asymmetry and the tent peak live. Don't deviate into a diagonal unless you specifically want the diagonal's directional-plus-theta hybrid (see <a href="/trade-log/2026-07-15-dram-diagonal-call-spread/">the DRAM diagonal call spread</a> for an example).</li>
+</ol>
+<h2>Calendar duration (front-to-back gap)</h2>
+<p>The gap between front and back expiries is a key knob:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Calendar duration</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Tradeoff</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>7–14 days</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Front-month decay is fastest; structure is most aggressive. Best when front IV is rich and you want fast theta. Risk: gamma spike at the end.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>21–35 days</strong> (most common)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Front-month decay still meaningful; back-month has enough residual life to retain value at front expiry. Default for most retail calendar traders.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>45–60 days</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Back-month TV at front expiry is large (the "peak" is high), but the structure is slower to develop. Best when you have a long view and don't mind waiting.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>60+ days</strong></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Mostly used for "term-structure trade" setups (front IV > back IV by a wide margin). The DRAM 2026-07-24 calendar is 28 days — middle of the common range.</td>
+</tr>
+</tbody></table></div>
+<h2>IV considerations</h2>
+<p>The calendar's edge comes from the <strong>front-month IV being higher than the back-month IV at the same strike</strong>. When that relationship inverts (front < back), the structure loses its edge.</p>
+<p>Term structure shape signals:</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Term structure</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Implication for calendar</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Contango</strong> (front < back, normal)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Calendar edge is small; need a specific event that crushes front IV (earnings, FOMC)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Flat</strong> (front ≈ back)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">No edge; skip</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Inverted</strong> (front > back, common before events)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Calendar edge is large; standard setup</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Steeply inverted</strong> (front >> back, e.g., 95% vs 60%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Calendar edge is exceptional — but rare. The DRAM 2026-07-24 calendar sits here (95% / 94% — mildly inverted; the wider setup is for the August DRAM earnings event)</td>
+</tr>
+</tbody></table></div>
+<h2>Entry criteria (playbook-aligned)</h2>
+<p>Before entering a calendar:</p>
+<ul>
+  <li>[ ] <strong>IV rank by structure matches playbook §3</strong> — calendars are appropriate in low-IV regimes (0–20 rank, "long premium") or when specific event crush is expected. In normal or high-IV regimes, prefer credit structures.</li>
+  <li>[ ] <strong>Front-month IV > back-month IV at the strike</strong> — confirm term structure inversion before entry.</li>
+  <li>[ ] <strong>σ-distance of strike within 0.3–0.5σ (30-day)</strong> for short-duration calendars, or 0.3–0.7σ (longer-duration, see §4 of the Playbook).</li>
+  <li>[ ] <strong>Calendar duration 21–60 days</strong> for retail traders; longer only with explicit theta-management plan.</li>
+  <li>[ ] <strong>Underlying not trending through the strike</strong> — if the underlying has moved 10%+ away from the strike in 30 days, reconsider.</li>
+  <li>[ ] <strong>Position size respects §1</strong> — max loss = debit; 0.25% NLV cap.</li>
+  <li>[ ] <strong>No major event between entry and front expiry</strong> (or, if there is one, that the trade is specifically designed for the event — post-CPI vol crush calendar, etc.)</li>
+</ul>
+<h2>Management rules</h2>
+<p>Per the Playbook §5 and §6:</p>
+<ul>
+  <li><strong>Target</strong>: 50% of max profit</li>
+  <li><strong>Stop</strong>: 2× debit (close if the calendar premium drops to debit + 2× debit = 3× debit cost to close)</li>
+  <li><strong>At 50% loss</strong>: close the position. No adjustments.</li>
+  <li><strong>Close 7 days before front-month expiry</strong> regardless of P&L — gamma risk in the final week is material, and the structure's theta edge is exhausted.</li>
+</ul>
+<p>These rules are mechanical. Set them as GTC orders at entry; the trade runs itself.</p>
+<h2>Live chain verification</h2>
+<p>For every calendar, before pushing the trade:</p>
+<ol>
+  <li><strong>Pull OptionStrat basis values</strong> for both legs (source of truth for strikes, expiry, debit).</li>
+  <li><strong>Cross-check against live yfinance chain</strong> at the same expiry:</li>
+<pre><code class="language-python">
+t = yf.Ticker("DRAM")
+chain = t.option_chain("2026-12-18")
+puts = chain.puts.set_index("strike")
+short_mid = (puts.loc[70, "bid"] + puts.loc[70, "ask"]) / 2
+</pre>
+  <li><strong>If OptionStrat basis differs from live mid by >3× (300%), reject OptionStrat and use live mid.</strong> This catches the case where OptionStrat's cached IV surface is stale or wrong.</li>
+  <li><strong>Document in the trade-log entry</strong> the gap between OptionStrat and live mid. For the 2026-07-24 DRAM calendar: front $7.80 vs live $8.175 (5% gap, within tolerance); back $8.875 vs live $9.10 (2.5% gap, within tolerance). Net debit live: $0.925 vs OptionStrat $1.075 (saved $15/contract on live execution).</li>
+</ol>
+<h2>Risks specific to calendars</h2>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Risk</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Magnitude</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Mitigation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Underlying blows through strike</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Full debit loss + extra loss on short leg ITM</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stop at 2× debit; close if underlying trends past strike by 10%+</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">IV rises sharply (back-month vega hit)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Up to several dollars per share loss</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Calendar wants IV to fall; size down if vega exposure is large</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Event-driven front-month IV crush <em>and</em> sharp move</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Worst-case: IV crushes and trade blows through</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Adjust trade if earnings/FOMC/CPI is within 7 days of front expiry</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Low liquidity (TIER 3 ETFs)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Wide bid/ask spreads eat into edge</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Use limit orders; spreads already in debit</td>
+</tr>
+</tbody></table></div>
+<h2>Variants</h2>
+<ul>
+  <li><strong>Put calendar</strong> — same structure with puts. Mirror of the call calendar; used when the strike is below spot.</li>
+  <li><strong>Reverse calendar</strong> — long front, short back. Used when front IV < back IV (rare). Inverted payoff shape.</li>
+  <li><strong>Double calendar</strong> — two calendars at different strikes, forming a tent-with-tent. Higher complexity, more flexibility.</li>
+  <li><strong>Diagonal calendar</strong> — different strikes; covered separately in <a href="/trade-log/2026-07-15-dram-diagonal-call-spread/">the DRAM diagonal call spread</a>.</li>
+</ul>
+<h2>See also</h2>
+<ul>
+  <li><a href="/trade-log/2026-07-24-dram-calendar-call-spread/">Calendar call spread — DRAM Dec 18 / Jan 15 '27 70</a> — the working example with full P/L curve, Greeks, and management plan</li>
+  <li><a href="/trade-log/2026-07-15-dram-diagonal-call-spread/">Diagonal call spread — DRAM Dec 18 / Jan 15 '27 70/50</a> — a directional-plus-theta hybrid on the same underlying</li>
+  <li><a href="/playbook/2026-07-05-sop/">The Playbook</a> — §3 (IV rank), §4 (sigma-distance strike selection), §5 (management rules), §6 (adjustment rules)</li>
+  <li><a href="/strategies/2026-07-19-long-call/">Long call</a> — the single-leg alternative for defined-risk-less upside</li>
+  <li><a href="/education/2026-07-06-standard-deviations/">Standard deviations</a> — the math under sigma-distance strike selection</li>
+</ul>
+<p>The calendar is informational. It is not investment advice. Every options trade is a probabilistic structure; backtested edges don't guarantee future results. Size to the playbook; manage mechanically; the calendar is a working structure when the IV term structure is inverted and the strike sits where you expect the underlying to land.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

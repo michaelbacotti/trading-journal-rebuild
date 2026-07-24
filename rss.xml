@@ -5,7 +5,21 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Fri, 24 Jul 2026 12:30:21 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 24 Jul 2026 15:21:31 GMT</lastBuildDate>
+  <item>
+    <title>Calendar Call Spread: Same Strike, Different Expiries, Theta in the Middle</title>
+    <link>https://tredey.com/strategies/2026-07-24-calendar-call-spread/</link>
+    <guid>https://tredey.com/strategies/2026-07-24-calendar-call-spread/</guid>
+    <pubDate>2026-07-24</pubDate>
+    <description>Anatomy of the calendar call spread: a two-leg same-strike time spread that profits when the underlying parks near the strike at the front-month's expiry. The pure theta-harvest structure in the playbook, defined-risk by construction.</description>
+  </item>
+  <item>
+    <title>DRAM Calendar Call Spread — Dec 18 / Jan 15 '27 70: Theta Harvest on a Selloff Recovery</title>
+    <link>https://tredey.com/trade-log/2026-07-24-dram-calendar-call-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-07-24-dram-calendar-call-spread/</guid>
+    <pubDate>2026-07-24</pubDate>
+    <description>Opened a DRAM calendar call spread at $70 strike, short Dec 18 / long Jan 15 '27, on continued DRAM weakness. Net debit $107.50/contract, defined-risk theta-harvest structure with $628 estimated max profit if DRAM reclaims $70 by Dec 18 expiry.</description>
+  </item>
   <item>
     <title>Vol Expansion Setup: Long Strangle on SPX Ahead of FOMC</title>
     <link>https://tredey.com/forecasts/vol-expansion-strangle-spx-fomc/</link>
@@ -131,20 +145,6 @@
     <guid>https://tredey.com/forecasts/2026-07-20-bull-put-continuation-spx/</guid>
     <pubDate>2026-07-20T06:00:00-04:00</pubDate>
     <description>SPX closed Friday at $7,457.69. BULL regime with 20d trend still positive but a mild 1.5% 5d pullback. SPX Aug 21 AM-settled 7170/7155 bull put spread, ~$300 credit, ~$1,200 max loss, ~80% POP.</description>
-  </item>
-  <item>
-    <title>Monday Pre-Market Brief: SPX Bull Put Spread at $7,457 Spot, Expiring Aug 21, 2026</title>
-    <link>https://tredey.com/forecasts/2026-07-20-monday-brief/</link>
-    <guid>https://tredey.com/forecasts/2026-07-20-monday-brief/</guid>
-    <pubDate>2026-07-20T06:00:00-04:00</pubDate>
-    <description>SPX closed Friday at $7,457.69 with VIX 18.77, FOMC 9 days out. SPX Aug 21 (AM-settled) 7125/7135 bull put spread, ~$130 credit, ~$870 max loss, ~80% POP.</description>
-  </item>
-  <item>
-    <title>XSP Bear Call Spread — Aug 28 '26 749/750: A 1-Contract Insurance Tail</title>
-    <link>https://tredey.com/trade-log/2026-07-20-xsp-bear-call-insurance/</link>
-    <guid>https://tredey.com/trade-log/2026-07-20-xsp-bear-call-insurance/</guid>
-    <pubDate>2026-07-20</pubDate>
-    <description>Added a 1-contract XSP Aug 28 749/750 bear call spread as defined-risk premium-collection insurance. $61.50 net credit, $38.50 defined max loss, ~50% short-leg POP.</description>
   </item>
 </channel>
 </rss>
