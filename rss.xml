@@ -5,7 +5,7 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Fri, 24 Jul 2026 11:39:02 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 24 Jul 2026 12:30:21 GMT</lastBuildDate>
   <item>
     <title>Vol Expansion Setup: Long Strangle on SPX Ahead of FOMC</title>
     <link>https://tredey.com/forecasts/vol-expansion-strangle-spx-fomc/</link>
@@ -35,11 +35,11 @@
     <description>Anatomy of the long call condor — four call legs that harvest theta and call-side vol skew when the underlying stays inside a defined range. The all-call counterpart to the iron condor: same payoff shape, different Greek profile, narrower body tolerance.</description>
   </item>
   <item>
-    <title>Tredey Market Gauge: A Weighted Composite of Overbought/Oversold Signals</title>
+    <title>Tredey Market Gauge: Three-Index Composite Snapshot</title>
     <link>https://tredey.com/tools/2026-07-23-market-gauge/</link>
     <guid>https://tredey.com/tools/2026-07-23-market-gauge/</guid>
     <pubDate>2026-07-23</pubDate>
-    <description>An interactive market gauge that combines RSI, MACD, ATR, Bollinger Band position, volume, and put/call ratio into a single 0-100 reading. Move the weight sliders to tune which indicators matter more. Pick a preset profile (Momentum, Volatility-aware, Options-sentiment, Mean-reversion) for a one-click starting point. Sample SPY data shown; live mode is a roadmap item.</description>
+    <description>A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — six daily indicators equal-weighted into a single number.</description>
   </item>
   <item>
     <title>Common Options Math Errors I Make (and How I Catch Them)</title>
