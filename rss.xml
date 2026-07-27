@@ -5,7 +5,7 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 27 Jul 2026 16:41:33 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 27 Jul 2026 19:32:05 GMT</lastBuildDate>
   <item>
     <title>XSP Bull Call Spread — Jul 31 '26 744/746: Dip-Buy on a Flat Tape</title>
     <link>https://tredey.com/trade-log/2026-07-27-xsp-bull-call-spread/</link>
@@ -88,7 +88,7 @@
     <link>https://tredey.com/tools/2026-07-23-market-gauge/</link>
     <guid>https://tredey.com/tools/2026-07-23-market-gauge/</guid>
     <pubDate>2026-07-23</pubDate>
-    <description>A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — nine daily indicators equal-weighted into a single number.</description>
+    <description>A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — ten daily indicators equal-weighted into a single number. Now including AAII bullish sentiment on a contrarian basis.</description>
   </item>
   <item>
     <title>Common Options Math Errors I Make (and How I Catch Them)</title>

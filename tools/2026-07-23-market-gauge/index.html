@@ -8,16 +8,16 @@
  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
  <title>Tredey Market Gauge: Three-Index Composite Snapshot | The Trading Journal</title>
- <meta name="description" content="A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — nine daily indicators equal-weighted into a single number.">
+ <meta name="description" content="A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — ten daily indicators equal-weighted into a single number. Now including AAII bullish sentiment on a contrarian basis.">
  <link rel="canonical" href="https://tredey.com/tools/2026-07-23-market-gauge/">
  <meta property="og:type" content="website">
  <meta property="og:title" content="Tredey Market Gauge: Three-Index Composite Snapshot | The Trading Journal">
- <meta property="og:description" content="A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — nine daily indicators equal-weighted into a single number.">
+ <meta property="og:description" content="A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — ten daily indicators equal-weighted into a single number. Now including AAII bullish sentiment on a contrarian basis.">
  <meta property="og:image" content="https://tredey.com/og-image.svg">
  <meta property="og:url" content="https://tredey.com/tools/2026-07-23-market-gauge/">
  <meta name="twitter:card" content="summary_large_image">
  <meta name="twitter:title" content="Tredey Market Gauge: Three-Index Composite Snapshot | The Trading Journal">
- <meta name="twitter:description" content="A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — nine daily indicators equal-weighted into a single number.">
+ <meta name="twitter:description" content="A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — ten daily indicators equal-weighted into a single number. Now including AAII bullish sentiment on a contrarian basis.">
  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
  <link rel="manifest" href="/site.webmanifest">
  <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
@@ -47,7 +47,7 @@
  <div class="page-hero" style="padding:3rem 0 1.5rem;">
   <div class="date-text">July 23, 2026 &middot; TOOL / MARKET GAUGE</div>
   <h1>Tredey Market Gauge: Three-Index Composite Snapshot</h1>
-  <p style="font-size:1.05rem;color:#666;line-height:1.6;">A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — nine daily indicators equal-weighted into a single number.</p>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — ten daily indicators equal-weighted into a single number. Now including AAII bullish sentiment on a contrarian basis.</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
   <iframe src="/tools/market-gauge-widget.html" width="100%" height="940" frameborder="0" style="border:0;display:block;margin:2rem 0;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.08);" title="Tredey Market Gauge — three-index composite snapshot"></iframe>
@@ -59,6 +59,7 @@
 </div>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
+<p>The widget is <strong>refreshed automatically at the close</strong> of every US trading day via a cron job that runs <code>build_market_gauge.py</code>. The values shown on this page are always end-of-day for the most recent trading session; the next refresh appears the next session's close.</p>
 <p>The three indices tracked are the <strong>S&P 500 (via SPY)</strong>, <strong>NASDAQ-100 (via QQQ)</strong>, and <strong>Russell 2000 (via IWM)</strong>. These are the instruments retail traders most often use to express a directional view on US equities. Each is shown on its own gauge dial, with the underlying indicator readings tabulated below.</p>
 <h2>How to read the gauge</h2>
 <p>Each dial reads from <strong>0 to 100</strong>. Lower values mean conditions historically associated with oversold markets (RSI low, price near the lower Bollinger Band, distance below the 50-day moving average); higher values mean conditions associated with overbought markets (RSI high, price near the upper Bollinger Band, extended above the 50-day moving average). The exact thresholds vary by asset and regime, but the following zones are useful defaults:</p>
@@ -100,68 +101,88 @@
 <h2>Why these three indices</h2>
 <p>The S&P 500 is the large-cap benchmark. The NASDAQ-100 captures the technology and growth tilt that has driven most of the last decade's index-level returns. The Russell 2000 captures small-cap behavior — which historically leads at cycle turns and lags in late-stage bull markets. Reading the three side by side is the cleanest way to see whether a move is broad-based or concentrated: when all three sit in the same zone, the regime is dominant; when they diverge, the move is sector- or factor-specific.</p>
 <h2>The Tredey Composite Gauge formula</h2>
-<p>Each index is scored by the same nine-component composite. The components are computed on the <strong>daily timeframe</strong> from end-of-day prices, volume, and live options-chain data.</p>
+<p>Each index is scored by the same <strong>ten-component</strong> composite. Nine are computed per-index; the tenth (AAII bullish %) is a market-wide sentiment reading applied to all three indices identically. The components are computed on the <strong>daily timeframe</strong> from end-of-day prices, volume, and live options-chain data.</p>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">#</th>
 <th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Component</th>
 <th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Raw input</th>
 <th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Normalization to [−1, +1]</th>
 </tr></thead>
 <tbody>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">RSI (14)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">1</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">RSI (14)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0–100</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Linear: RSI ≤ 30 → −1, RSI ≥ 70 → +1</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">MACD histogram</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">MACD histogram</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Price-scaled points</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Clipped at ±1.5% of underlying price</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Bollinger position</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">3</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Bollinger position</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0–1 (lower to upper band)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Re-centered: (position − 0.5) × 2</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">% from 20-day high</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">4</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">% from 20-day high</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Percent</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">At high → +1, −5% → 0, −10% → −1</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">% above 50-day SMA</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">5</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">% above 50-day SMA</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Percent</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Clipped at ±5%</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Volume vs 20-day average</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">6</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Volume vs 20-day average</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Ratio</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Clipped at 2× (high) / 0× (low)</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Put/Call ratio</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">7</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Put/Call ratio</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Equity options OI/vol on near-month chain</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">0.5 = bullish (+1), 1.0 = neutral (0), 1.5 = bearish (−1)</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">σ-distance (50d)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">8</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">σ-distance (50d)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">(close − SMA50) / rolling 50-day stddev</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Z-score, clamped at ±2.5σ</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">ATM 30d IV</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Live options chain IV at strike nearest spot</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">9</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">ATM 30d IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Live options chain IV at strike nearest spot, ~30 DTE expiry</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">10% IV calm (+1), 30% neutral (0), 50% stressed (−1)</td>
 </tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">10</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>AAII bullish %</strong> (contrarian)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Weekly AAII sentiment survey, latest reading</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">≤20% bullish → +1 (extreme fear = bullish contrarian), 30% → 0, ≥50% → −1 (extreme greed = bearish contrarian)</td>
+</tr>
 </tbody></table></div>
-<p>The six normalized signals are <strong>equal-weighted</strong> and averaged to produce a single composite in [−1, +1]. That value is then mapped to a 0–100 reading via <code>G = 50 + 50 × composite</code>. The mapping keeps neutral at 50 and lets extreme readings approach 0 or 100 symmetrically.</p>
+<p>The ten normalized signals are <strong>equal-weighted</strong> and averaged to produce a single composite in [−1, +1]. That value is then mapped to a 0–100 reading via <code>G = 50 + 50 × composite</code>. The mapping keeps neutral at 50 and lets extreme readings approach 0 or 100 symmetrically.</p>
+<p>Component 10 is <strong>the only market-wide reading</strong> and applies identically across SPY, QQQ, and IWM. The other nine components vary by index — that's what produces the cross-index divergence that the gauge is meant to surface.</p>
 <p><strong>Why equal weights?</strong> A weighted scheme implies a regime prior — that one indicator matters more than another in some circumstances. For a daily cross-index snapshot, that prior is hard to justify: the regime that makes Bollinger matter more (range-bound) is not the regime that makes RSI matter more (trending). Equal weights keep the composite regime-neutral and let the user layer their own view on top.</p>
 <p><strong>Why include put/call ratio?</strong> The v2 widget added put/call as the seventh component, computed as the ratio of total put volume (or open interest) to total call volume on the nearest-options-month chain for each ETF. High put/call (>1.0) reflects defensive positioning and maps to a bearish signal; low put/call (<1.0) reflects bullish positioning. The mapping uses 0.5 → +1 (very bullish), 1.0 → 0 (neutral), 1.5 → −1 (very bearish), linear in between. Equity-options chains are uniformly available across SPY/QQQ/IWM, so this is the only sentiment-style indicator that gives directly comparable readings across the three proxies.</p>
 <p><strong>Why include σ-distance?</strong> Pure price-based indicators (RSI, MACD, Bollinger) are scale-dependent and don't generalize across instruments with different price levels. σ-distance normalizes the gap from the 50-day SMA in units of the 50-day rolling standard deviation, so a +2σ reading on SPY (~$742) and a +2σ reading on IWM (~$293) mean the same thing: the index is 2 daily-standard-deviations above its trend. The mapping is clamped at ±2.5σ (anything beyond is treated as extreme).</p>
 <p><strong>Why include ATM IV?</strong> Implied volatility reflects the options market's expectation of future realized volatility, and is forward-looking in a way that price-based indicators aren't. Low IV (<20%) typically corresponds to complacent markets; high IV (>40%) to stressed markets. The mapping uses 10% IV → +1 (calm), 30% IV → 0 (neutral), 50% IV → −1 (stressed). Reading is taken from the live options chain at the strike nearest the spot, in the expiration closest to 30 DTE.</p>
+<p><strong>Why include AAII bullish %?</strong> The American Association of Individual Investors releases a weekly sentiment survey every Thursday morning, polling their members on a six-month directional outlook. The "bullish %" component is the share of respondents expecting the market to rise. AAII bullish is read <strong>contrarian</strong>: when individual investors are extremely bearish (bullish % < 20%), that's historically associated with short-term market bottoms; when they're extremely bullish (bullish % > 50%), it's associated with short-term tops. The mapping uses ≤20% bullish → +1 (extreme fear is bullish), 30% → 0 (normal), ≥50% → −1 (extreme greed is bearish). AAII publishes the survey data on their public site (aaii.com/sentimentsurvey); programmatic fetching from aaii.com is blocked by Incapsula, so the gauge reads AAII's latest value from a manual weekly input file (<code>trading-journal-build/market-data/aaii-bullish.json</code>). The file is refreshed each Thursday morning after AAII publishes the new reading, and the gauge holds that value stable for the rest of the week.</p>
+<p><strong>Why a contrarian read on AAII and not on RSI?</strong> RSI is a <em>position</em> indicator — it tells you where price has been stretched. AAII bullish is a <em>sentiment</em> indicator — it tells you where retail positioning has been stretched. The two interact: a deeply oversold RSI reading combined with a deeply bearish AAII reading is a stronger signal than either alone. Equal-weighting the two lets the composite reflect both views; if you trust sentiment more than price, you can mentally upweight the AAII component; if you trust price more than sentiment, you can upweight the position indicators. The gauge keeps equal weights by default to avoid baking in a regime prior.</p>
 <h2>What the indicator table shows</h2>
 <p>The signal table beneath the three dials lists each component's raw reading so you can see which sub-signals are doing the work. A reading of 47 on the S&P 500 with an RSI of 44.7 and a Bollinger position of 0.21 is a different state from a 47 reading driven by an RSI of 51 and a position of 0.50. The composite is the headline; the table is the audit trail.</p>
+<p>The AAII row in the table shows the same value across all three indices because AAII bullish is a market-wide reading. The signal class on each cell reflects the contrarian normalization: a bearish signal class (blue text) means AAII is above 30% bullish (the market is too optimistic → contrarian bearish); a bullish signal class (red text) means AAII is below 30% bullish (the market is too pessimistic → contrarian bullish). At extreme readings (≥50% bullish or ≤20% bullish) the signal saturates at ±1 and the row becomes a strong determinant of the composite.</p>
 <p>For a worked example, take today's NASDAQ-100 reading of <strong>30 (Oversold)</strong>. The composite averages six signals of roughly −0.45, −0.26, −0.94, −0.21, −0.73, +0.14 — about −0.41 — which maps to <code>50 + 50 × (−0.41) = 29.7</code>, rounded to 30. The biggest single contributor is the <strong>Bollinger position of 0.03</strong>, meaning QQQ is sitting almost exactly on its lower 20-day band. That single sub-signal contributes about −0.94 to the composite, accounting for roughly two-thirds of the index's oversold reading. The RSI at 41.1 and % above 50-day SMA at −3.67% reinforce; the volume ratio at 1.14× modestly offsets by showing participation rather than capitulation.</p>
 <p>By contrast, the <strong>S&P 500 at 47 (Neutral)</strong> is being held up by a relatively shallow pullback (−2.22% from 20-day high) and a still-positive distance from the 50-day SMA (−0.79%, barely below). The Russell 2000 at <strong>44 (Neutral)</strong> sits between the two: weaker on momentum than SPY but stronger on trend, with the small-cap bid visible in the +0.48% distance from the 50-day SMA.</p>
 <h2>How traders use these readings</h2>
@@ -173,19 +194,28 @@
   <li><strong>Timing.</strong> A gauge moving from neutral to overbought <em>gradually</em> is a different signal than a gauge that spikes to overbought in one session. The former is trend confirmation; the latter is often a blow-off top.</li>
 </ol>
 <h2>Methodology and limitations</h2>
-<p>The gauge uses <em>normalized</em> signals — each component is mapped to a [−1, +1] range using piecewise linear mappings. The exact normalization breakpoints (RSI 30/70, Bollinger 0/1, ±5% from 50-day SMA, ±1.5% for MACD) are heuristic and are not derived from historical regime statistics. The gauge will mis-read regime transitions because every underlying component is lagging by construction.</p>
+<p>The gauge uses <em>normalized</em> signals — each component is mapped to a [−1, +1] range using piecewise linear mappings. The exact normalization breakpoints (RSI 30/70, Bollinger 0/1, ±5% from 50-day SMA, ±1.5% for MACD, AAII 20/30/50) are heuristic and are not derived from historical regime statistics. The gauge will mis-read regime transitions because every underlying component is lagging by construction.</p>
 <p>The gauge does <em>not</em> incorporate:</p>
 <ul>
   <li>Fundamentals (earnings, valuation, free cash flow)</li>
   <li>Macro context (rates, inflation, geopolitical)</li>
   <li>Cross-asset relationships (bond/equity correlation, USD strength)</li>
   <li>Sector rotation</li>
-  <li>Sentiment beyond price/volume</li>
   <li>Intraday signals — the composite is end-of-day only</li>
 </ul>
-<p>These are read separately and are not part of the composite. The gauge is a <em>technical context read</em>, not a complete market view.</p>
+<p>These are read separately and are not part of the composite. The gauge is a <em>technical context read</em>, not a complete market view. The added sentiment component (AAII) brings in some psychological context but still excludes positioning, fund flows, and credit-market signals.</p>
 <h2>Update cadence</h2>
 <p>The current page reflects end-of-day data for the most recent trading session. The composite is recomputed at the close; the next refresh shows the next session's reading. Live intraday updates are not currently published. Each component's raw input (RSI, MACD, Bollinger, % from high, % from SMA, volume ratio) is recomputed from the prior 60+ trading days of daily data using standard formulas.</p>
+<p>The refresh job runs at <strong>4:30 PM ET Mon–Fri</strong> as an OpenClaw cron, immediately after the equity market closes at 4:00 PM and after AAII (if Thursday) has had its chance to publish at 7:30 AM ET. The cron calls <code>trading-journal-build/build_market_gauge.py</code>, which:</p>
+<ol>
+  <li>Reads the latest AAII reading from <code>trading-journal-build/market-data/aaii-bullish.json</code> (manually-pasted each Thursday after the AAII release).</li>
+  <li>Pulls 100 days of OHLCV from yfinance for SPY, QQQ, IWM.</li>
+  <li>Pulls the nearest-options-month chain for each to compute put/call ratio and ATM IV.</li>
+  <li>Computes all ten components per index, normalizes to [−1, +1], averages, maps to 0–100.</li>
+  <li>Writes <code>trading-journal-build/market-gauge-widget.html</code> (and the website copy).</li>
+  <li>After the gauge refresh, the parent <code>build.py</code> runs to publish the rest of the site. The next-deploy git commit/push is the standard inline-build pattern that builds all Tredey pages at once.</li>
+</ol>
+<p>If yfinance fails to return data on a given day (rate limit, transient outage), the cron keeps the prior widget in place so the page never goes blank.</p>
 <h2>See also</h2>
 <ul>
   <li><a href="/playbook/2026-07-05-sop/">Playbook SOP</a> — how the gauge reading fits into trade selection</li>

@@ -26,8 +26,6 @@
     color: #555;
     font-variant-numeric: tabular-nums;
   }
-  /* Horizontal-first: keep side-by-side even at the constrained iframe width (~712px).
-     Three cards * (180px gauge + 16px padding) + 2 * 8px gap = ~580px, fits comfortably. */
   .gauges-row {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -150,140 +148,123 @@
 <body>
 <div class="gauge-page">
   <h2>Market Gauge</h2>
-  <p class="subtitle">Three side-by-side readings — S&amp;P 500, NASDAQ-100, Russell 2000 — on a 0–100 overbought/oversold scale. Each is a Tredey composite of <strong>nine</strong> daily indicators, equal-weighted.</p>
-  <div class="asof">Data as of: <strong>2026-07-24</strong> close &nbsp;·&nbsp; next refresh: next trading day</div>
-
-  <div class="gauges-row">
-    <div class="gauge-card">
-      <div class="gauge-card-header">
-        <div class="name">S&P 500</div>
-        <div class="symbol">SPY · tracks SPX</div>
-        <div class="price">$742.48</div>
-      </div>
-      <svg class="gauge-svg" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" aria-label="Gauge reading 56">
-        <path d="M 20.00 110.00 A 90 90 0 0 1 200.00 110.00" fill="none" stroke="#e8e8e8" stroke-width="22" stroke-linecap="butt"/>
-        <path d="M 20.00 110.00 A 90 90 0 0 1 37.19 57.10" fill="none" stroke="#1e88e5" stroke-width="22" stroke-linecap="butt"/>
-        <path d="M 37.19 57.10 A 90 90 0 0 1 82.19 24.40" fill="none" stroke="#42a5f5" stroke-width="22" stroke-linecap="butt"/>
-        <path d="M 82.19 24.40 A 90 90 0 0 1 137.81 24.40" fill="none" stroke="#cfd8e3" stroke-width="22" stroke-linecap="butt"/>
-        <path d="M 137.81 24.40 A 90 90 0 0 1 182.81 57.10" fill="none" stroke="#ffb74d" stroke-width="22" stroke-linecap="butt"/>
-        <path d="M 182.81 57.10 A 90 90 0 0 1 200.00 110.00" fill="none" stroke="#e57373" stroke-width="22" stroke-linecap="butt"/>
-        
-        <line x1="26.0" y1="110.0" x2="14.0" y2="110.0" stroke="#888" stroke-width="1.5"/>
-        <text x="4.0" y="110.0" font-size="10" fill="#888" font-weight="600" text-anchor="start" dominant-baseline="middle">0</text>
-        <line x1="50.6" y1="50.6" x2="42.1" y2="42.1" stroke="#888" stroke-width="1.5"/>
-        <text x="35.0" y="35.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">25</text>
-        <line x1="110.0" y1="26.0" x2="110.0" y2="14.0" stroke="#888" stroke-width="1.5"/>
-        <text x="110.0" y="4.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">50</text>
-        <line x1="169.4" y1="50.6" x2="177.9" y2="42.1" stroke="#888" stroke-width="1.5"/>
-        <text x="185.0" y="35.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">75</text>
-        <line x1="194.0" y1="110.0" x2="206.0" y2="110.0" stroke="#888" stroke-width="1.5"/>
-        <text x="216.0" y="110.0" font-size="10" fill="#888" font-weight="600" text-anchor="end" dominant-baseline="middle">100</text>
-        <line x1="110" y1="110" x2="110" y2="35" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round" transform="rotate(10.53 110 110)"/>
-        <circle cx="110" cy="110" r="8" fill="#1a1a1a"/>
-        <circle cx="110" cy="110" r="3.5" fill="#fff"/>
-      </svg>
-      <div class="gauge-readout" style="color:#666;">56</div>
-      <div class="gauge-label" style="color:#666;">Neutral</div>
-      <div class="gauge-context">Put/Call ratio bullish · ATM 30d IV bullish</div>
-    </div>
+  <p class="subtitle">Three side-by-side readings — S&amp;P 500, NASDAQ-100, Russell 2000 — on a 0–100 overbought/oversold scale. Each is a Tredey composite of <strong>ten</strong> daily indicators, equal-weighted.</p>
+  <div class="asof">Data as of: <strong>2026-07-27</strong> close &nbsp;·&nbsp; next refresh: next trading day &nbsp;·&nbsp; AAII bullish: 33.1% (week of 2026-07-23)</div>
 <div class="gauge-card">
-      <div class="gauge-card-header">
-        <div class="name">NASDAQ-100</div>
-        <div class="symbol">QQQ · tracks NDX</div>
-        <div class="price">$689.83</div>
-      </div>
-      <svg class="gauge-svg" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" aria-label="Gauge reading 33">
-        <path d="M 20.00 110.00 A 90 90 0 0 1 200.00 110.00" fill="none" stroke="#e8e8e8" stroke-width="22" stroke-linecap="butt"/>
-        <path d="M 20.00 110.00 A 90 90 0 0 1 37.19 57.10" fill="none" stroke="#1e88e5" stroke-width="22" stroke-linecap="butt"/>
-        <path d="M 37.19 57.10 A 90 90 0 0 1 82.19 24.40" fill="none" stroke="#42a5f5" stroke-width="22" stroke-linecap="butt"/>
-        <path d="M 82.19 24.40 A 90 90 0 0 1 137.81 24.40" fill="none" stroke="#cfd8e3" stroke-width="22" stroke-linecap="butt"/>
-        <path d="M 137.81 24.40 A 90 90 0 0 1 182.81 57.10" fill="none" stroke="#ffb74d" stroke-width="22" stroke-linecap="butt"/>
-        <path d="M 182.81 57.10 A 90 90 0 0 1 200.00 110.00" fill="none" stroke="#e57373" stroke-width="22" stroke-linecap="butt"/>
-        
-        <line x1="26.0" y1="110.0" x2="14.0" y2="110.0" stroke="#888" stroke-width="1.5"/>
-        <text x="4.0" y="110.0" font-size="10" fill="#888" font-weight="600" text-anchor="start" dominant-baseline="middle">0</text>
-        <line x1="50.6" y1="50.6" x2="42.1" y2="42.1" stroke="#888" stroke-width="1.5"/>
-        <text x="35.0" y="35.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">25</text>
-        <line x1="110.0" y1="26.0" x2="110.0" y2="14.0" stroke="#888" stroke-width="1.5"/>
-        <text x="110.0" y="4.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">50</text>
-        <line x1="169.4" y1="50.6" x2="177.9" y2="42.1" stroke="#888" stroke-width="1.5"/>
-        <text x="185.0" y="35.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">75</text>
-        <line x1="194.0" y1="110.0" x2="206.0" y2="110.0" stroke="#888" stroke-width="1.5"/>
-        <text x="216.0" y="110.0" font-size="10" fill="#888" font-weight="600" text-anchor="end" dominant-baseline="middle">100</text>
-        <line x1="110" y1="110" x2="110" y2="35" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round" transform="rotate(-30.97 110 110)"/>
-        <circle cx="110" cy="110" r="8" fill="#1a1a1a"/>
-        <circle cx="110" cy="110" r="3.5" fill="#fff"/>
-      </svg>
-      <div class="gauge-readout" style="color:#1e88e5;">33</div>
-      <div class="gauge-label" style="color:#1e88e5;">Oversold</div>
-      <div class="gauge-context">Bollinger position bearish · % above 50-day SMA bearish</div>
-    </div>
-<div class="gauge-card">
-      <div class="gauge-card-header">
-        <div class="name">Russell 2000</div>
-        <div class="symbol">IWM · tracks RUT</div>
-        <div class="price">$293.40</div>
-      </div>
-      <svg class="gauge-svg" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" aria-label="Gauge reading 44">
-        <path d="M 20.00 110.00 A 90 90 0 0 1 200.00 110.00" fill="none" stroke="#e8e8e8" stroke-width="22" stroke-linecap="butt"/>
-        <path d="M 20.00 110.00 A 90 90 0 0 1 37.19 57.10" fill="none" stroke="#1e88e5" stroke-width="22" stroke-linecap="butt"/>
-        <path d="M 37.19 57.10 A 90 90 0 0 1 82.19 24.40" fill="none" stroke="#42a5f5" stroke-width="22" stroke-linecap="butt"/>
-        <path d="M 82.19 24.40 A 90 90 0 0 1 137.81 24.40" fill="none" stroke="#cfd8e3" stroke-width="22" stroke-linecap="butt"/>
-        <path d="M 137.81 24.40 A 90 90 0 0 1 182.81 57.10" fill="none" stroke="#ffb74d" stroke-width="22" stroke-linecap="butt"/>
-        <path d="M 182.81 57.10 A 90 90 0 0 1 200.00 110.00" fill="none" stroke="#e57373" stroke-width="22" stroke-linecap="butt"/>
-        
-        <line x1="26.0" y1="110.0" x2="14.0" y2="110.0" stroke="#888" stroke-width="1.5"/>
-        <text x="4.0" y="110.0" font-size="10" fill="#888" font-weight="600" text-anchor="start" dominant-baseline="middle">0</text>
-        <line x1="50.6" y1="50.6" x2="42.1" y2="42.1" stroke="#888" stroke-width="1.5"/>
-        <text x="35.0" y="35.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">25</text>
-        <line x1="110.0" y1="26.0" x2="110.0" y2="14.0" stroke="#888" stroke-width="1.5"/>
-        <text x="110.0" y="4.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">50</text>
-        <line x1="169.4" y1="50.6" x2="177.9" y2="42.1" stroke="#888" stroke-width="1.5"/>
-        <text x="185.0" y="35.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">75</text>
-        <line x1="194.0" y1="110.0" x2="206.0" y2="110.0" stroke="#888" stroke-width="1.5"/>
-        <text x="216.0" y="110.0" font-size="10" fill="#888" font-weight="600" text-anchor="end" dominant-baseline="middle">100</text>
-        <line x1="110" y1="110" x2="110" y2="35" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round" transform="rotate(-10.24 110 110)"/>
-        <circle cx="110" cy="110" r="8" fill="#1a1a1a"/>
-        <circle cx="110" cy="110" r="3.5" fill="#fff"/>
-      </svg>
-      <div class="gauge-readout" style="color:#666;">44</div>
-      <div class="gauge-label" style="color:#666;">Neutral</div>
-      <div class="gauge-context">Put/Call ratio bearish · Volume vs 20d avg bearish</div>
-    </div>
+  <div class="gauge-card-header">
+    <div class="name">S&P 500</div>
+    <div class="symbol">SPY · tracks SPX</div>
+    <div class="price">$739.68</div>
   </div>
-
-  <table class="signal-table" aria-label="Per-indicator signals by index">
-    <thead>
-      <tr>
-        <th>Indicator</th>
-        <th>S&amp;P 500</th>
-        <th>NASDAQ-100</th>
-        <th>Russell 2000</th>
-        <th>Signal range</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>RSI (14)</td><td class="signal-pos">48.4</td><td class="signal-pos">41.1</td><td class="signal-pos">49.4</td><td class="signal-zero">0–100</td></tr>
-<tr><td>MACD histogram</td><td class="signal-neg">-1.30</td><td class="signal-neg">-2.98</td><td class="signal-neg">-0.81</td><td class="signal-zero">vs price</td></tr>
-<tr><td>Bollinger position</td><td class="signal-pos">0.34</td><td class="signal-pos">0.06</td><td class="signal-pos">0.25</td><td class="signal-zero">0–1</td></tr>
-<tr><td>% from 20-day high</td><td class="signal-neg">-1.65%</td><td class="signal-neg">-6.32%</td><td class="signal-neg">-2.34%</td><td class="signal-zero">closer to high = +</td></tr>
-<tr><td>% above 50-day SMA</td><td class="signal-neg">-0.23%</td><td class="signal-neg">-3.92%</td><td class="signal-pos">+0.85%</td><td class="signal-zero">vs SMA</td></tr>
-<tr><td>Volume vs 20d avg</td><td class="signal-pos">0.33×</td><td class="signal-pos">0.49×</td><td class="signal-pos">0.42×</td><td class="signal-zero">1.0× = neutral</td></tr>
-<tr><td>Put/Call ratio</td><td class="signal-pos">0.26</td><td class="signal-pos">0.67</td><td class="signal-pos">4.15</td><td class="signal-zero">0.5 bullish / 1.5 bearish</td></tr>
-<tr><td>σ-distance (50d)</td><td class="signal-neg">-0.22σ</td><td class="signal-neg">-1.94σ</td><td class="signal-pos">+0.36σ</td><td class="signal-zero">±2.5σ clamped</td></tr>
-<tr><td>ATM 30d IV</td><td class="signal-pos">16.0%</td><td class="signal-pos">26.1%</td><td class="signal-pos">21.5%</td><td class="signal-zero">10% calm / 50% stressed</td></tr>
-    </tbody>
-  </table>
-
+  <svg class="gauge-svg" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" aria-label="Gauge reading 49">
+<path d="M 20.00 110.00 A 90 90 0 0 1 37.19 57.10" fill="none" stroke="#1e88e5" stroke-width="22" stroke-linecap="butt"/>
+<path d="M 37.19 57.10 A 90 90 0 0 1 82.19 24.40" fill="none" stroke="#42a5f5" stroke-width="22" stroke-linecap="butt"/>
+<path d="M 82.19 24.40 A 90 90 0 0 1 137.81 24.40" fill="none" stroke="#cfd8e3" stroke-width="22" stroke-linecap="butt"/>
+<path d="M 137.81 24.40 A 90 90 0 0 1 182.81 57.10" fill="none" stroke="#ffb74d" stroke-width="22" stroke-linecap="butt"/>
+<path d="M 182.81 57.10 A 90 90 0 0 1 200.00 110.00" fill="none" stroke="#e57373" stroke-width="22" stroke-linecap="butt"/>
+<line x1="14.0" y1="110.0" x2="4.0" y2="110.0" stroke="#888" stroke-width="1.5"/>
+<text x="-6.0" y="110.0" font-size="10" fill="#888" font-weight="600" text-anchor="start" dominant-baseline="middle">0</text>
+<line x1="42.1" y1="42.1" x2="35.0" y2="35.0" stroke="#888" stroke-width="1.5"/>
+<text x="28.0" y="28.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">25</text>
+<line x1="110.0" y1="14.0" x2="110.0" y2="4.0" stroke="#888" stroke-width="1.5"/>
+<text x="110.0" y="-6.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">50</text>
+<line x1="177.9" y1="42.1" x2="185.0" y2="35.0" stroke="#888" stroke-width="1.5"/>
+<text x="192.0" y="28.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">75</text>
+<line x1="206.0" y1="110.0" x2="216.0" y2="110.0" stroke="#888" stroke-width="1.5"/>
+<text x="226.0" y="110.0" font-size="10" fill="#888" font-weight="600" text-anchor="end" dominant-baseline="middle">100</text>
+<line x1="110" y1="110" x2="110" y2="35" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round" transform="rotate(-1.80 110 110)"/><circle cx="110" cy="110" r="8" fill="#1a1a1a"/><circle cx="110" cy="110" r="3.5" fill="#fff"/>
+</svg>
+  <div class="gauge-readout" style="color:#666;">49</div>
+  <div class="gauge-label" style="color:#666;">Neutral</div>
+  <div class="gauge-context">ATM 30d IV bullish · Put/Call ratio bullish · Bollinger position bearish · Volume vs 20d avg bearish</div>
+</div>
+<div class="gauge-card">
+  <div class="gauge-card-header">
+    <div class="name">NASDAQ-100</div>
+    <div class="symbol">QQQ · tracks NDX</div>
+    <div class="price">$683.31</div>
+  </div>
+  <svg class="gauge-svg" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" aria-label="Gauge reading 39">
+<path d="M 20.00 110.00 A 90 90 0 0 1 37.19 57.10" fill="none" stroke="#1e88e5" stroke-width="22" stroke-linecap="butt"/>
+<path d="M 37.19 57.10 A 90 90 0 0 1 82.19 24.40" fill="none" stroke="#42a5f5" stroke-width="22" stroke-linecap="butt"/>
+<path d="M 82.19 24.40 A 90 90 0 0 1 137.81 24.40" fill="none" stroke="#cfd8e3" stroke-width="22" stroke-linecap="butt"/>
+<path d="M 137.81 24.40 A 90 90 0 0 1 182.81 57.10" fill="none" stroke="#ffb74d" stroke-width="22" stroke-linecap="butt"/>
+<path d="M 182.81 57.10 A 90 90 0 0 1 200.00 110.00" fill="none" stroke="#e57373" stroke-width="22" stroke-linecap="butt"/>
+<line x1="14.0" y1="110.0" x2="4.0" y2="110.0" stroke="#888" stroke-width="1.5"/>
+<text x="-6.0" y="110.0" font-size="10" fill="#888" font-weight="600" text-anchor="start" dominant-baseline="middle">0</text>
+<line x1="42.1" y1="42.1" x2="35.0" y2="35.0" stroke="#888" stroke-width="1.5"/>
+<text x="28.0" y="28.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">25</text>
+<line x1="110.0" y1="14.0" x2="110.0" y2="4.0" stroke="#888" stroke-width="1.5"/>
+<text x="110.0" y="-6.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">50</text>
+<line x1="177.9" y1="42.1" x2="185.0" y2="35.0" stroke="#888" stroke-width="1.5"/>
+<text x="192.0" y="28.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">75</text>
+<line x1="206.0" y1="110.0" x2="216.0" y2="110.0" stroke="#888" stroke-width="1.5"/>
+<text x="226.0" y="110.0" font-size="10" fill="#888" font-weight="600" text-anchor="end" dominant-baseline="middle">100</text>
+<line x1="110" y1="110" x2="110" y2="35" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round" transform="rotate(-19.80 110 110)"/><circle cx="110" cy="110" r="8" fill="#1a1a1a"/><circle cx="110" cy="110" r="3.5" fill="#fff"/>
+</svg>
+  <div class="gauge-readout" style="color:#1e88e5;">39</div>
+  <div class="gauge-label" style="color:#1e88e5;">Oversold</div>
+  <div class="gauge-context">% from 20-day high bullish · ATM 30d IV bullish · % above 50-day SMA bearish · Bollinger position bearish</div>
+</div>
+<div class="gauge-card">
+  <div class="gauge-card-header">
+    <div class="name">Russell 2000</div>
+    <div class="symbol">IWM · tracks RUT</div>
+    <div class="price">$293.30</div>
+  </div>
+  <svg class="gauge-svg" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" aria-label="Gauge reading 49">
+<path d="M 20.00 110.00 A 90 90 0 0 1 37.19 57.10" fill="none" stroke="#1e88e5" stroke-width="22" stroke-linecap="butt"/>
+<path d="M 37.19 57.10 A 90 90 0 0 1 82.19 24.40" fill="none" stroke="#42a5f5" stroke-width="22" stroke-linecap="butt"/>
+<path d="M 82.19 24.40 A 90 90 0 0 1 137.81 24.40" fill="none" stroke="#cfd8e3" stroke-width="22" stroke-linecap="butt"/>
+<path d="M 137.81 24.40 A 90 90 0 0 1 182.81 57.10" fill="none" stroke="#ffb74d" stroke-width="22" stroke-linecap="butt"/>
+<path d="M 182.81 57.10 A 90 90 0 0 1 200.00 110.00" fill="none" stroke="#e57373" stroke-width="22" stroke-linecap="butt"/>
+<line x1="14.0" y1="110.0" x2="4.0" y2="110.0" stroke="#888" stroke-width="1.5"/>
+<text x="-6.0" y="110.0" font-size="10" fill="#888" font-weight="600" text-anchor="start" dominant-baseline="middle">0</text>
+<line x1="42.1" y1="42.1" x2="35.0" y2="35.0" stroke="#888" stroke-width="1.5"/>
+<text x="28.0" y="28.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">25</text>
+<line x1="110.0" y1="14.0" x2="110.0" y2="4.0" stroke="#888" stroke-width="1.5"/>
+<text x="110.0" y="-6.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">50</text>
+<line x1="177.9" y1="42.1" x2="185.0" y2="35.0" stroke="#888" stroke-width="1.5"/>
+<text x="192.0" y="28.0" font-size="10" fill="#888" font-weight="600" text-anchor="middle" dominant-baseline="middle">75</text>
+<line x1="206.0" y1="110.0" x2="216.0" y2="110.0" stroke="#888" stroke-width="1.5"/>
+<text x="226.0" y="110.0" font-size="10" fill="#888" font-weight="600" text-anchor="end" dominant-baseline="middle">100</text>
+<line x1="110" y1="110" x2="110" y2="35" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round" transform="rotate(-1.80 110 110)"/><circle cx="110" cy="110" r="8" fill="#1a1a1a"/><circle cx="110" cy="110" r="3.5" fill="#fff"/>
+</svg>
+  <div class="gauge-readout" style="color:#666;">49</div>
+  <div class="gauge-label" style="color:#666;">Neutral</div>
+  <div class="gauge-context">% from 20-day high bullish · ATM 30d IV bullish · Bollinger position bearish · Volume vs 20d avg bearish</div>
+</div><table class="signal-table" aria-label="Per-indicator signals by index">
+  <thead>
+    <tr>
+      <th>Indicator</th>
+      <th>S&amp;P 500</th>
+      <th>NASDAQ-100</th>
+      <th>Russell 2000</th>
+      <th>Signal range</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td>RSI (14)</td><td class="signal-neg">46.2</td><td class="signal-neg">39.0</td><td class="signal-zero">49.5</td><td class="signal-zero">0–100</td></tr>
+<tr><td>MACD histogram</td><td class="signal-neg">-1.59</td><td class="signal-neg">-3.61</td><td class="signal-neg">-0.83</td><td class="signal-zero">vs price</td></tr>
+<tr><td>Bollinger position</td><td class="signal-neg">0.15</td><td class="signal-neg">0.03</td><td class="signal-neg">0.29</td><td class="signal-zero">0–1</td></tr>
+<tr><td>% from 20-day high</td><td class="signal-pos">-2.02%</td><td class="signal-pos">-7.21%</td><td class="signal-pos">-2.38%</td><td class="signal-zero">closer to high = +</td></tr>
+<tr><td>% above 50-day SMA</td><td class="signal-neg">-0.59%</td><td class="signal-neg">-4.73%</td><td class="signal-pos">0.75%</td><td class="signal-zero">vs SMA</td></tr>
+<tr><td>Volume vs 20d avg</td><td class="signal-neg">0.61×</td><td class="signal-neg">0.94×</td><td class="signal-neg">0.72×</td><td class="signal-zero">1.0× = neutral</td></tr>
+<tr><td>Put/Call ratio</td><td class="signal-pos">0.70</td><td class="signal-zero">0.98</td><td class="signal-neg">1.13</td><td class="signal-zero">0.5 bullish / 1.5 bearish</td></tr>
+<tr><td>σ-distance (50d)</td><td class="signal-neg">-0.56σ</td><td class="signal-neg">-2.18σ</td><td class="signal-pos">0.32σ</td><td class="signal-zero">±2.5σ clamped</td></tr>
+<tr><td>ATM 30d IV</td><td class="signal-pos">16.6%</td><td class="signal-pos">26.6%</td><td class="signal-pos">21.4%</td><td class="signal-zero">10% calm / 50% stressed</td></tr>
+<tr><td>AAII bullish % (weekly)</td><td class="signal-neg">33.1%</td><td class="signal-neg">33.1%</td><td class="signal-neg">33.1%</td><td class="signal-zero">≤20% greedy-fear / ≥50% greedy</td></tr>
+  </tbody>
+</table>
   <div class="formula-box">
     <strong>Tredey Composite Gauge (daily, end-of-day).</strong>
-    Nine indicators are each normalized to a signal on a [−1, +1] scale and then equal-weighted.
-    <strong>Original six:</strong> RSI(14) linear over 30→70, MACD histogram clipped at ±1.5% of price, Bollinger position re-centered to ±1 around the midline, % from 20-day high linear over 0%→−10%, % above 50-day SMA clipped at ±5%, volume ratio vs 20-day average clipped at 2×/0×.
-    <strong>Three new:</strong> Put/Call ratio (equity options on near-month chain, 0.5 bullish→+1, 1.0 neutral→0, 1.5 bearish→−1), σ-distance from 50-day SMA (z-score over rolling 50-day stdev, clamped at ±2.5σ), and ATM 30-day implied volatility from the live options chain (10% IV calm→+1, 30% neutral→0, 50% stressed→−1).
-    The nine signals are averaged, then mapped from [−1, +1] to a 0–100 reading via G = 50 + 50 × composite.
+    Ten indicators are each normalized to a signal on a [−1, +1] scale and then equal-weighted.
+    <strong>Six price/volume:</strong> RSI(14) linear over 30→70, MACD histogram clipped at ±1.5% of price, Bollinger position re-centered to ±1 around the midline, % from 20-day high linear over 0%→−10%, % above 50-day SMA clipped at ±5%, volume ratio vs 20-day average clipped at 2×/0×.
+    <strong>Three cross-asset:</strong> Put/Call ratio (equity options on near-month chain, 0.5 bullish→+1, 1.0 neutral→0, 1.5 bearish→−1), σ-distance from 50-day SMA (z-score over rolling 50-day stdev, clamped at ±2.5σ), ATM 30-day implied volatility (10% calm→+1, 30% neutral→0, 50% stressed→−1).
+    <strong>One sentiment:</strong> AAII bullish % (weekly survey released Thursday AM; <em>contrarian</em>: ≤20% bullish → +1, 30% → 0, ≥50% → −1 — extreme fear reads as bullish, extreme greed as bearish).
+    The ten signals are averaged, then mapped from [−1, +1] to a 0–100 reading via G = 50 + 50 × composite.
     Zones: <strong>&lt;20 deep oversold, 20–40 oversold, 40–60 neutral, 60–80 overbought, 80+ extreme overbought</strong>.
     Timeframe is daily; intraday signals are not captured. Past readings do not guarantee future moves.
   </div>
 </div>
 </body>
-</html>
