@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 27 Jul 2026 12:20:24 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 27 Jul 2026 16:19:00 GMT</lastBuildDate>
+  <item>
+    <title>XSP Bull Call Spread — Jul 31 '26 744/746: Dip-Buy on a Flat Tape</title>
+    <link>https://tredey.com/trade-log/2026-07-27-xsp-bull-call-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-07-27-xsp-bull-call-spread/</guid>
+    <pubDate>2026-07-27</pubDate>
+    <description>Opened an XSP Jul 31 2026 744/746 bull call spread on today's intraday dip — 4-DTE index-level defined-risk debit structure with $90 max loss, $110 max profit, breakeven at $744.90. Spot $741.20 at entry, IV ~17.5%, PM-settled Friday close.</description>
+  </item>
   <item>
     <title>LEAPS Bull Put Spread on SPX — Collect Through the FOMC Hangover</title>
     <link>https://tredey.com/forecasts/2026-07-27-fomc-day-1-skip/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-22-rsp-short-upper-condor/</guid>
     <pubDate>2026-07-22</pubDate>
     <description>Opened a second RSP ETF Jan 21 2028 220/230/280/285 long call condor with a $5-wide upper body (vs $10-wide on RSP #1). Same $3.175/share net debit but a permanent $182.50/contract upside plateau above $287 instead of a $317.50 max loss above $290. Direct comparison to RSP #1 (mBisziPFxRvo) shipped earlier today.</description>
-  </item>
-  <item>
-    <title>SPX Bull Put Spread — Wednesday, July 22, 2026</title>
-    <link>https://tredey.com/forecasts/bull-put-spread-spx/</link>
-    <guid>https://tredey.com/forecasts/bull-put-spread-spx/</guid>
-    <pubDate>2026-07-22</pubDate>
-    <description>SPX closed Tuesday at $7,509.20. Bull regime intact (20d +0.5%, breadth 75%, IV-rank 42.5). SPX Aug 21 AM-settled 7235/7225 bull put spread, $240 credit, $760 max loss, ~80% POP, FOMC one week out.</description>
   </item>
 </channel>
 </rss>
