@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 27 Jul 2026 19:32:05 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 28 Jul 2026 11:50:06 GMT</lastBuildDate>
+  <item>
+    <title>SPX Pre-FOMC Note — July 28, 2026: Hold Flat Into Day 2</title>
+    <link>https://tredey.com/forecasts/2026-07-28-framework-skip/</link>
+    <guid>https://tredey.com/forecasts/2026-07-28-framework-skip/</guid>
+    <pubDate>2026-07-28</pubDate>
+    <description>SPX closed Monday at $7,390.90, VIX 18.96 in backwardation with FOMC Day 2 + Powell presser Wednesday 2:00 PM ET. Holding flat into the decision.</description>
+  </item>
   <item>
     <title>XSP Bull Call Spread — Jul 31 '26 744/746: Dip-Buy on a Flat Tape</title>
     <link>https://tredey.com/trade-log/2026-07-27-xsp-bull-call-spread/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-22-nasa-bull-call-spread/</guid>
     <pubDate>2026-07-22</pubDate>
     <description>Opened a NASA ETF Jan 21 2028 30/15 bull call spread, an 18-month LEAPS upside structure on the Tema Space Innovators ETF. Net debit $6.10, max loss $610/contract × 1 = $610 total. Cushion to long strike 36%, breakeven $21.10.</description>
-  </item>
-  <item>
-    <title>RSP Long Call Condor — Jan 21 '28 230/220/290/280: Equal-Weight SPY Trade on a Flat Tape</title>
-    <link>https://tredey.com/trade-log/2026-07-22-rsp-long-call-condor/</link>
-    <guid>https://tredey.com/trade-log/2026-07-22-rsp-long-call-condor/</guid>
-    <pubDate>2026-07-22</pubDate>
-    <description>Opened an RSP ETF Jan 21 2028 230/220/290/280 long call condor, an 18-month structure expressing the view that the equal-weight S&P 500 will consolidate in a $63-wide profit zone without a major breakout. Net debit $3.175/share, $317.50/contract × 1 = $317.50 total, 1:2.15 risk:reward.</description>
   </item>
 </channel>
 </rss>
