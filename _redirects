@@ -18,4 +18,5 @@
 /markets /markets/ 301
 /tools /tools/ 301
 
-/forecasts/2026-07-28-framework-skip /forecasts/2026-07-28-spx-long-call-condor/ 301
+/forecasts/2026-07-28-framework-skip /forecasts/2026-07-28-market-outlook/ 301
+/forecasts/2026-07-28-spx-long-call-condor /forecasts/2026-07-28-market-outlook/ 301
