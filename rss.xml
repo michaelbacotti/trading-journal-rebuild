@@ -5,13 +5,20 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Wed, 29 Jul 2026 17:45:43 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 29 Jul 2026 19:41:25 GMT</lastBuildDate>
   <item>
     <title>DRAM Bull Call Spread — Jan 21 '28 60/70: A LEAPS Recovery Position with 4.2:1 Reward/Risk</title>
     <link>https://tredey.com/trade-log/2026-07-29-dram-bull-call-spread/</link>
     <guid>https://tredey.com/trade-log/2026-07-29-dram-bull-call-spread/</guid>
     <pubDate>2026-07-29</pubDate>
     <description>Opened a DRAM bull call spread on continued weakness — long 60C Jan 21 '28 / short 70C Jan 21 '28, same-expiry debit spread. Net debit $192.50, max profit $807.50 above $70, max loss $192.50. 541 DTE LEAPS, 4.2:1 reward/risk, $0.32/$1 to risk $0.32 to make.</description>
+  </item>
+  <item>
+    <title>QQQ Calendar Put Spread — Oct 16 / Oct 30 650: Theta Harvest on a NASDAQ Pullback</title>
+    <link>https://tredey.com/trade-log/2026-07-29-qqq-650-calendar-put-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-07-29-qqq-650-calendar-put-spread/</guid>
+    <pubDate>2026-07-29</pubDate>
+    <description>Opened a QQQ calendar put spread at $650 strike, short Oct 16 / long Oct 30, on a continued NASDAQ pullback. Net debit $2.19/share ($218.50/contract), defined-risk put-side theta-harvest structure with ~$1,058 estimated max profit if QQQ trades near $650 at Oct 16 expiry.</description>
   </item>
   <item>
     <title>Market Outlook — Wednesday, July 29, 2026: FOMC Decision Day, Tech Selloff Extends, Mega-Cap Earnings Queue</title>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-23-qqq-long-call-condor/</guid>
     <pubDate>2026-07-23</pubDate>
     <description>Opened a QQQ long call condor (Dec 18 '26, 700/715/845/860), pairing a near-ATM bull call credit spread (700/715) with a deep-OTM bear call credit spread (845/860) to express range-bounded sideways drift. $689.50 defined risk; max profit $810.50 in $715–$845 zone.</description>
-  </item>
-  <item>
-    <title>XSP Long Call Condor — Dec 18 '26 690/700/810/820: 5-Month Range-Bound Lower-Vol Structure</title>
-    <link>https://tredey.com/trade-log/2026-07-23-xsp-long-call-condor/</link>
-    <guid>https://tredey.com/trade-log/2026-07-23-xsp-long-call-condor/</guid>
-    <pubDate>2026-07-23</pubDate>
-    <description>Opened an XSP long call condor (Dec 18 '26, 690/700/810/820), short the body's IV skew while harvesting theta into year-end. $609 defined risk; max profit $391 between $700–$810 (limited by 10-pt wings, not 110-pt body).</description>
   </item>
 </channel>
 </rss>
