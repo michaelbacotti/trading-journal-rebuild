@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Wed, 29 Jul 2026 12:25:01 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 29 Jul 2026 17:45:43 GMT</lastBuildDate>
+  <item>
+    <title>DRAM Bull Call Spread — Jan 21 '28 60/70: A LEAPS Recovery Position with 4.2:1 Reward/Risk</title>
+    <link>https://tredey.com/trade-log/2026-07-29-dram-bull-call-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-07-29-dram-bull-call-spread/</guid>
+    <pubDate>2026-07-29</pubDate>
+    <description>Opened a DRAM bull call spread on continued weakness — long 60C Jan 21 '28 / short 70C Jan 21 '28, same-expiry debit spread. Net debit $192.50, max profit $807.50 above $70, max loss $192.50. 541 DTE LEAPS, 4.2:1 reward/risk, $0.32/$1 to risk $0.32 to make.</description>
+  </item>
   <item>
     <title>Market Outlook — Wednesday, July 29, 2026: FOMC Decision Day, Tech Selloff Extends, Mega-Cap Earnings Queue</title>
     <link>https://tredey.com/forecasts/2026-07-29-market-outlook/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-23-xsp-long-call-condor/</guid>
     <pubDate>2026-07-23</pubDate>
     <description>Opened an XSP long call condor (Dec 18 '26, 690/700/810/820), short the body's IV skew while harvesting theta into year-end. $609 defined risk; max profit $391 between $700–$810 (limited by 10-pt wings, not 110-pt body).</description>
-  </item>
-  <item>
-    <title>SPX Bull Put Spread — Thursday, July 23, 2026</title>
-    <link>https://tredey.com/forecasts/2026-07-23-bull-put-spread-spx/</link>
-    <guid>https://tredey.com/forecasts/2026-07-23-bull-put-spread-spx/</guid>
-    <pubDate>2026-07-23</pubDate>
-    <description>SPX closed Wed at $7,498.96. Bull regime intact. SPX Aug 21 AM-settled 7200/7180 20-wide bull put, $360 credit, $1,640 max loss, ~80% POP, FOMC 5 days out.</description>
   </item>
 </channel>
 </rss>
