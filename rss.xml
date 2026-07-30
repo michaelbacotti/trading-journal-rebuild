@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Wed, 29 Jul 2026 19:41:25 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 30 Jul 2026 11:35:28 GMT</lastBuildDate>
+  <item>
+    <title>Market Outlook — Thursday, July 30, 2026: Post-FOMC Selloff, Breadth Collapses to 25%, NFP Friday Setup, Mega-Cap Earnings Queue</title>
+    <link>https://tredey.com/forecasts/2026-07-30-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-07-30-market-outlook/</guid>
+    <pubDate>2026-07-30</pubDate>
+    <description>SPY $729.46, QQQ $661.73 post-FOMC; VIX 19.51 term ratio 0.950. Breadth collapsed 50% to 25%. XLK -12.57% 20d. NFP Friday setup. Mega-cap earnings queue.</description>
+  </item>
   <item>
     <title>DRAM Bull Call Spread — Jan 21 '28 60/70: A LEAPS Recovery Position with 4.2:1 Reward/Risk</title>
     <link>https://tredey.com/trade-log/2026-07-29-dram-bull-call-spread/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-23-qqq-long-call-condor-narrow/</guid>
     <pubDate>2026-07-23</pubDate>
     <description>Opened a QQQ long call condor (Nov 20 '26, 715/725/810/820), pairing a near-ATM bull call credit spread (715/725) with a deep-OTM bear call credit spread (810/820) to express rangebound sideways drift over Q3 earnings season. $355 defined risk; max profit $645 in $725–$810 zone.</description>
-  </item>
-  <item>
-    <title>QQQ Long Call Condor — Dec 18 '26 700/715/845/860: Wide-Body Range-Bound, Narrow-Wing Limited</title>
-    <link>https://tredey.com/trade-log/2026-07-23-qqq-long-call-condor/</link>
-    <guid>https://tredey.com/trade-log/2026-07-23-qqq-long-call-condor/</guid>
-    <pubDate>2026-07-23</pubDate>
-    <description>Opened a QQQ long call condor (Dec 18 '26, 700/715/845/860), pairing a near-ATM bull call credit spread (700/715) with a deep-OTM bear call credit spread (845/860) to express range-bounded sideways drift. $689.50 defined risk; max profit $810.50 in $715–$845 zone.</description>
   </item>
 </channel>
 </rss>
