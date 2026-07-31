@@ -5,7 +5,21 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 30 Jul 2026 11:35:28 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 31 Jul 2026 17:02:26 GMT</lastBuildDate>
+  <item>
+    <title>XSP Long Call Condor — Nov 20 '26 740/760/800/810: 112-DTE Range Trade Into the Fall</title>
+    <link>https://tredey.com/trade-log/2026-07-31-xsp-long-call-condor/</link>
+    <guid>https://tredey.com/trade-log/2026-07-31-xsp-long-call-condor/</guid>
+    <pubDate>2026-07-31</pubDate>
+    <description>Opened an XSP long call condor (Nov 20 '26, 740/760/800/810), betting XSP stays in a 40-pt body through mid-November while harvesting theta. $1,069 defined risk; max profit $930 between $760-$800 (limited by 20-pt lower wing, not 40-pt body).</description>
+  </item>
+  <item>
+    <title>No-Trade Note — July 31, 2026: NFP Jobs Report Inside the Window</title>
+    <link>https://tredey.com/forecasts/2026-07-31-framework-skip/</link>
+    <guid>https://tredey.com/forecasts/2026-07-31-framework-skip/</guid>
+    <pubDate>2026-07-31</pubDate>
+    <description>No-trade note for July 31, 2026: Non-Farm Payrolls lands Saturday and a high-impact macro print inside the holding window keeps new short-premium exposure on the sideline.</description>
+  </item>
   <item>
     <title>Market Outlook — Thursday, July 30, 2026: Post-FOMC Selloff, Breadth Collapses to 25%, NFP Friday Setup, Mega-Cap Earnings Queue</title>
     <link>https://tredey.com/forecasts/2026-07-30-market-outlook/</link>
@@ -131,20 +145,6 @@
     <guid>https://tredey.com/education/2026-07-23-options-math-errors/</guid>
     <pubDate>2026-07-23</pubDate>
     <description>Two recurring math errors in options-spread writing: the long call condor max-profit formula and the OptionStrat basis vs live yfinance discrepancy. Both shipped live before being caught. The derivations, the live examples, and the verification routines that catch them next time.</description>
-  </item>
-  <item>
-    <title>QQQ Call Skew: How to Read It and Trade It</title>
-    <link>https://tredey.com/education/2026-07-23-qqq-call-skew/</link>
-    <guid>https://tredey.com/education/2026-07-23-qqq-call-skew/</guid>
-    <pubDate>2026-07-23</pubDate>
-    <description>Why QQQ has more call skew than SPX, how to measure call skew from a live option chain, when skew widens (and when it compresses), and how the long call condor trades it. Includes the live IV surface from three July 23 trades as case studies.</description>
-  </item>
-  <item>
-    <title>QQQ Long Call Condor — Nov 20 '26 715/725/810/820: Narrow-Body Range-Bound, 120 DTE</title>
-    <link>https://tredey.com/trade-log/2026-07-23-qqq-long-call-condor-narrow/</link>
-    <guid>https://tredey.com/trade-log/2026-07-23-qqq-long-call-condor-narrow/</guid>
-    <pubDate>2026-07-23</pubDate>
-    <description>Opened a QQQ long call condor (Nov 20 '26, 715/725/810/820), pairing a near-ATM bull call credit spread (715/725) with a deep-OTM bear call credit spread (810/820) to express rangebound sideways drift over Q3 earnings season. $355 defined risk; max profit $645 in $725–$810 zone.</description>
   </item>
 </channel>
 </rss>
