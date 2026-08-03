@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Sun, 02 Aug 2026 15:57:14 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 03 Aug 2026 12:09:08 GMT</lastBuildDate>
+  <item>
+    <title>Market Outlook — Monday, August 3, 2026: SPX Digestion, Bull Trend Holds, QQQ Correction Under Pressure, Sector Rotation in Focus</title>
+    <link>https://tredey.com/forecasts/2026-08-03-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-08-03-market-outlook/</guid>
+    <pubDate>2026-08-03</pubDate>
+    <description>SPX 7489, SPY $747. VIX 15.99 term ratio 0.841. SPY flat 20d, QQQ correction -4.82%. Breadth 50%. XLE leads, XLK lags. Mega-cap earnings beat. Market digesting.</description>
+  </item>
   <item>
     <title>XSP Long Call Condor — Nov 20 '26 740/760/800/810: 112-DTE Range Trade Into the Fall</title>
     <link>https://tredey.com/trade-log/2026-07-31-xsp-long-call-condor/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/tools/2026-07-23-market-gauge/</guid>
     <pubDate>2026-07-23</pubDate>
     <description>A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — ten daily indicators equal-weighted into a single number. Now including AAII bullish sentiment on a contrarian basis.</description>
-  </item>
-  <item>
-    <title>Common Options Math Errors I Make (and How I Catch Them)</title>
-    <link>https://tredey.com/education/2026-07-23-options-math-errors/</link>
-    <guid>https://tredey.com/education/2026-07-23-options-math-errors/</guid>
-    <pubDate>2026-07-23</pubDate>
-    <description>Two recurring math errors in options-spread writing: the long call condor max-profit formula and the OptionStrat basis vs live yfinance discrepancy. Both shipped live before being caught. The derivations, the live examples, and the verification routines that catch them next time.</description>
   </item>
 </channel>
 </rss>
