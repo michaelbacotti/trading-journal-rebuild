@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 03 Aug 2026 12:09:08 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 03 Aug 2026 20:04:58 GMT</lastBuildDate>
+  <item>
+    <title>Portfolio Review — August 3, 2026: Profit-Take, Raise Cash, Stay Bullish Into a 16 VIX Compression</title>
+    <link>https://tredey.com/trade-log/2026-08-03-portfolio-review-profit-taking-cash-positioning/</link>
+    <guid>https://tredey.com/trade-log/2026-08-03-portfolio-review-profit-taking-cash-positioning/</guid>
+    <pubDate>2026-08-03</pubDate>
+    <description>Closed several SPX/XSP short-call positions and rebuilt cash and short-duration Treasury exposure today. The market is digesting, breadth is at 50%, and VIX at 15.99 makes add-on hedges cheap. We want to be ready for a Q3 dip.</description>
+  </item>
   <item>
     <title>Market Outlook — Monday, August 3, 2026: SPX Digestion, Bull Trend Holds, QQQ Correction Under Pressure, Sector Rotation in Focus</title>
     <link>https://tredey.com/forecasts/2026-08-03-market-outlook/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/strategies/2026-07-23-long-call-condor/</guid>
     <pubDate>2026-07-23</pubDate>
     <description>Anatomy of the long call condor — four call legs that harvest theta and call-side vol skew when the underlying stays inside a defined range. The all-call counterpart to the iron condor: same payoff shape, different Greek profile, narrower body tolerance.</description>
-  </item>
-  <item>
-    <title>Tredey Market Gauge: Three-Index Composite Snapshot</title>
-    <link>https://tredey.com/tools/2026-07-23-market-gauge/</link>
-    <guid>https://tredey.com/tools/2026-07-23-market-gauge/</guid>
-    <pubDate>2026-07-23</pubDate>
-    <description>A daily overbought/oversold snapshot for the S&P 500, NASDAQ-100, and Russell 2000. Each index gets a 0-100 reading from the Tredey Composite Gauge — ten daily indicators equal-weighted into a single number. Now including AAII bullish sentiment on a contrarian basis.</description>
   </item>
 </channel>
 </rss>
