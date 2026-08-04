@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 04 Aug 2026 10:40:32 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 04 Aug 2026 16:56:20 GMT</lastBuildDate>
+  <item>
+    <title>Portfolio Review — August 4, 2026: Take Some More, Add TLT/BIL, Stay Long Into Q3</title>
+    <link>https://tredey.com/trade-log/2026-08-04-portfolio-review-profit-take-treasury-add-staying-bullish/</link>
+    <guid>https://tredey.com/trade-log/2026-08-04-portfolio-review-profit-take-treasury-add-staying-bullish/</guid>
+    <pubDate>2026-08-04</pubDate>
+    <description>Closed some more of the SOXL, DRAM, and QQQ bull positions opened on the June-July dip — all up 30%+ since open. Working a GTC limit at $23 to close the SPX 7700 Dec 31/18 AM '26 call calendar. Added a small amount to TLT and BIL; off margin. Still bullish, more ready to add on any dip.</description>
+  </item>
   <item>
     <title>Market Outlook — Tuesday, August 4, 2026: VIX Slides to 15.70, Mega-Cap Earnings In Rearview, QQQ Correction Holds, Defensive Rotation Intact, New Week Calendar Opens Clean</title>
     <link>https://tredey.com/forecasts/2026-08-04-market-outlook/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/education/2026-07-23-long-call-condor-strike-selection/</guid>
     <pubDate>2026-07-23</pubDate>
     <description>The decision tree for choosing a long call condor's body width: 85 points vs 110 vs 130 vs 200. Why three different bodies were used on the same underlying in one trading session. A rule-based selection framework that maps regime and thesis to strike geometry.</description>
-  </item>
-  <item>
-    <title>Long Call Condor vs Iron Condor: When to Use Each</title>
-    <link>https://tredey.com/strategies/2026-07-23-long-call-condor-vs-iron-condor/</link>
-    <guid>https://tredey.com/strategies/2026-07-23-long-call-condor-vs-iron-condor/</guid>
-    <pubDate>2026-07-23</pubDate>
-    <description>The two range-bound structures in the playbook — iron condor and long call condor — side by side. Capital efficiency vs theta collection. When to pick the all-call structure, when to pick the put-inclusive structure, and why three long call condors entered July 23 with no iron condors.</description>
   </item>
 </channel>
 </rss>
