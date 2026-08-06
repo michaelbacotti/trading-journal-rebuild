@@ -5,13 +5,20 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 06 Aug 2026 19:53:49 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 06 Aug 2026 20:01:00 GMT</lastBuildDate>
   <item>
     <title>AAPL Bull Put Spread — Oct 16 '26 300/295: An Equity-Pin With Vol Tailwind</title>
     <link>https://tredey.com/trade-log/2026-08-06-aapl-bull-put-spread/</link>
     <guid>https://tredey.com/trade-log/2026-08-06-aapl-bull-put-spread/</guid>
     <pubDate>2026-08-06</pubDate>
     <description>Opened an AAPL Oct 16 300/295 bull put spread, a 71-DTE equity-level short-premium structure with $12.46 OTM cushion. $155 total credit, $345 defined max loss, </description>
+  </item>
+  <item>
+    <title>NVDA Bull Put Spread — Oct 16 '26 180/175: Resting Limit at $0.75, Working Order</title>
+    <link>https://tredey.com/trade-log/2026-08-06-nvda-bull-put-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-08-06-nvda-bull-put-spread/</guid>
+    <pubDate>2026-08-06</pubDate>
+    <description>Working limit order on NVDA Oct 16 180/175 bull put spread at $0.75/share ($75/contract). Above current mid ($0.62); won't fill unless NVDA dips ~1.5% or IV exp</description>
   </item>
   <item>
     <title>XSP Iron Condor — Dec 18, 2026 870/850/640/660: Deep-OTM Symmetric Wings, 134 DTE, Wider Cushion</title>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-27-xsp-bull-call-spread/</guid>
     <pubDate>2026-07-27</pubDate>
     <description>Opened an XSP Jul 31 2026 744/746 bull call spread on today's intraday dip — 4-DTE index-level defined-risk debit structure with $90 max loss, $110 max profit, </description>
-  </item>
-  <item>
-    <title>XSP Bull Put Spread — Jul 30 '26 735/730: FOMC-Day-1 Premium Sale</title>
-    <link>https://tredey.com/trade-log/2026-07-27-xsp-bull-put-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-07-27-xsp-bull-put-spread/</guid>
-    <pubDate>2026-07-27</pubDate>
-    <description>Opened an XSP Jul 30 2026 735/730 bull put spread into FOMC Day 1 — 3-DTE index-level short-premium structure with $128.50 credit, $371.50 defined max loss, bre</description>
   </item>
 </channel>
 </rss>
