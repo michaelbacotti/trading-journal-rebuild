@@ -5,7 +5,7 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 06 Aug 2026 10:36:27 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 06 Aug 2026 11:45:37 GMT</lastBuildDate>
   <item>
     <title>Market Outlook — Thursday, August 6, 2026: SPX Holds Near New Highs, VIX Slides to 15.93, Breadth Still 100%, Tech Leadership Extends, Cyclicals Broadening into Financials and Materials</title>
     <link>https://tredey.com/forecasts/2026-08-06-market-outlook/</link>
@@ -146,5 +146,12 @@
     <pubDate>2026-07-24</pubDate>
     <description>Opened a QQQ $800 calendar call spread at 18-month duration, front Dec 17 '27 / back Jan 21 '28, on continued NASDAQ weakness. Net debit $3.80/share ($380/contr</description>
   </item>
-</channel>
+  <item>
+    <title>XSP Iron Condor — Nov 20, 2026 860/850/685/700: Short Vol in a Calm Tape at 71% POP</title>
+    <link>https://tredey.com/trade-log/2026-08-06-xsp-iron-condor/</link>
+    <guid>https://tredey.com/trade-log/2026-08-06-xsp-iron-condor/</guid>
+    <pubDate>2026-08-06</pubDate>
+    <description>Short iron condor on XSP Nov 20, 2026 (106 DTE, AM-settled standard monthly). Sell 700P/Buy 685P, Sell 850C/Buy 860C. Net credit $224/contract ($2.24/share live mid), max profit $224, max loss $776 (under $5k cap), POP ~71% delta-based. Strikes 9–10% OTM each side; VIX 15.95; XSP spot $772.36; OptionStrat link + live yfinance chain cross-checked.</description>
+  </item>
+ </channel>
 </rss>
