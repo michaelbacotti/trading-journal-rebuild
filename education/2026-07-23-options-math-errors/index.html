@@ -8,16 +8,16 @@
  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
  <title>Common Options Math Errors I Make (and How I Catch Them) | The Trading Journal</title>
- <meta name="description" content="Two recurring math errors in options-spread writing: the long call condor max-profit formula and the OptionStrat basis vs live yfinance discrepancy. Both shipped live before being caught. The derivations, the live examples, and the verification routines that catch them next time.">
+ <meta name="description" content="Two recurring math errors in options-spread writing: the long call condor max-profit formula and the OptionStrat basis vs live yfinance discrepancy. Both shippe">
  <link rel="canonical" href="https://tredey.com/education/2026-07-23-options-math-errors/">
  <meta property="og:type" content="website">
  <meta property="og:title" content="Common Options Math Errors I Make (and How I Catch Them) | The Trading Journal">
- <meta property="og:description" content="Two recurring math errors in options-spread writing: the long call condor max-profit formula and the OptionStrat basis vs live yfinance discrepancy. Both shipped live before being caught. The derivations, the live examples, and the verification routines that catch them next time.">
+ <meta property="og:description" content="Two recurring math errors in options-spread writing: the long call condor max-profit formula and the OptionStrat basis vs live yfinance discrepancy. Both shippe">
  <meta property="og:image" content="https://tredey.com/og-image.svg">
  <meta property="og:url" content="https://tredey.com/education/2026-07-23-options-math-errors/">
  <meta name="twitter:card" content="summary_large_image">
  <meta name="twitter:title" content="Common Options Math Errors I Make (and How I Catch Them) | The Trading Journal">
- <meta name="twitter:description" content="Two recurring math errors in options-spread writing: the long call condor max-profit formula and the OptionStrat basis vs live yfinance discrepancy. Both shipped live before being caught. The derivations, the live examples, and the verification routines that catch them next time.">
+ <meta name="twitter:description" content="Two recurring math errors in options-spread writing: the long call condor max-profit formula and the OptionStrat basis vs live yfinance discrepancy. Both shippe">
  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
  <link rel="manifest" href="/site.webmanifest">
  <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
@@ -47,7 +47,7 @@
  <div class="page-hero" style="padding:3rem 0 1.5rem;">
   <div class="date-text">July 23, 2026 &middot; EDUCATION / MATH</div>
   <h1>Common Options Math Errors I Make (and How I Catch Them)</h1>
-  <p style="font-size:1.05rem;color:#666;line-height:1.6;">Two recurring math errors in options-spread writing: the long call condor max-profit formula and the OptionStrat basis vs live yfinance discrepancy. Both shipped live before being caught. The derivations, the live examples, and the verification routines that catch them next time.</p>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">Two recurring math errors in options-spread writing: the long call condor max-profit formula and the OptionStrat basis vs live yfinance discrepancy. Both shippe</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
   <p>On July 23, 2026, three long call condor trades were published to the trade-log. Each had a math error in the max-profit figure. Each error came from the same wrong formula — <code>body width − debit</code> — and produced numbers that no human trading this size would actually believe ($10,391, $12,310, $8,145 per contract). One of the trades also had an OptionStrat basis that was 9-17% below the live yfinance mid, which would have changed the actual fill price by ~24%. Both errors shipped live. Both were caught and corrected. This page is the post-mortem — the wrong formulas, the right ones, the verification routines, and the lessons.</p>

@@ -5,7 +5,28 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 06 Aug 2026 11:45:37 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 06 Aug 2026 16:35:11 GMT</lastBuildDate>
+  <item>
+    <title>XSP Iron Condor — Dec 18, 2026 870/850/640/660: Deep-OTM Symmetric Wings, 134 DTE, Wider Cushion</title>
+    <link>https://tredey.com/trade-log/2026-08-06-xsp-dec-iron-condor/</link>
+    <guid>https://tredey.com/trade-log/2026-08-06-xsp-dec-iron-condor/</guid>
+    <pubDate>2026-08-06</pubDate>
+    <description>Short iron condor on XSP Dec 18, 2026 (134 DTE, AM-settled standard monthly, symmetric $20 wings). Sell 660P/Buy 640P, Sell 850C/Buy 870C. Net credit $333/contr</description>
+  </item>
+  <item>
+    <title>XSP Iron Condor — Nov 20, 2026 860/850/685/700: Short Vol in a Calm Tape at 71% POP</title>
+    <link>https://tredey.com/trade-log/2026-08-06-xsp-iron-condor/</link>
+    <guid>https://tredey.com/trade-log/2026-08-06-xsp-iron-condor/</guid>
+    <pubDate>2026-08-06</pubDate>
+    <description>Short iron condor on XSP Nov 20, 2026 (106 DTE, AM-settled standard monthly, asymmetric $15/$10 wings). Sell 700P/Buy 685P, Sell 850C/Buy 860C. Net credit $224/</description>
+  </item>
+  <item>
+    <title>Market Outlook — Thursday, August 6, 2026: New Highs Hold, Breadth at Maximum, Earnings Cycle Behind — Pre-ECI Drift, Jackson Hole Looms Mid-Month</title>
+    <link>https://tredey.com/forecasts/2026-08-06-market-outlook-shadow/</link>
+    <guid>https://tredey.com/forecasts/2026-08-06-market-outlook-shadow/</guid>
+    <pubDate>2026-08-06</pubDate>
+    <description>SPY $769.79, SPX ~7,720, VIX 15.93 term ratio 0.776. Breadth 100% into a fourth session. XLK +11.61% 5d; XLF +5.51% 20d. ECI Friday 8:30 ET; Jackson Hole ahead.</description>
+  </item>
   <item>
     <title>Market Outlook — Thursday, August 6, 2026: SPX Holds Near New Highs, VIX Slides to 15.93, Breadth Still 100%, Tech Leadership Extends, Cyclicals Broadening into Financials and Materials</title>
     <link>https://tredey.com/forecasts/2026-08-06-market-outlook/</link>
@@ -125,33 +146,5 @@
     <pubDate>2026-07-27</pubDate>
     <description>SPX closed Friday at $7,411.98, VIX 17.63 in mild backwardation with FOMC Day 1 starting Tuesday. The trade book opens a SPX Jan 15, 2027 LEAPS bull put spread </description>
   </item>
-  <item>
-    <title>Calendar Call Spread: Same Strike, Different Expiries, Theta in the Middle</title>
-    <link>https://tredey.com/strategies/2026-07-24-calendar-call-spread/</link>
-    <guid>https://tredey.com/strategies/2026-07-24-calendar-call-spread/</guid>
-    <pubDate>2026-07-24</pubDate>
-    <description>Anatomy of the calendar call spread: a two-leg same-strike time spread that profits when the underlying parks near the strike at the front-month's expiry. The p</description>
-  </item>
-  <item>
-    <title>DRAM Calendar Call Spread — Dec 18 / Jan 15 '27 70: Theta Harvest on a Selloff Recovery</title>
-    <link>https://tredey.com/trade-log/2026-07-24-dram-calendar-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-07-24-dram-calendar-call-spread/</guid>
-    <pubDate>2026-07-24</pubDate>
-    <description>Opened a DRAM calendar call spread at $70 strike, short Dec 18 / long Jan 15 '27, on continued DRAM weakness. Net debit $107.50/contract, defined-risk theta-har</description>
-  </item>
-  <item>
-    <title>QQQ $800 Calendar Call Spread — Dec 17 '27 / Jan 21 '28: A Long-Duration Theta Position on a Recovery to Eight Hundred</title>
-    <link>https://tredey.com/trade-log/2026-07-24-qqq-800-calendar-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-07-24-qqq-800-calendar-call-spread/</guid>
-    <pubDate>2026-07-24</pubDate>
-    <description>Opened a QQQ $800 calendar call spread at 18-month duration, front Dec 17 '27 / back Jan 21 '28, on continued NASDAQ weakness. Net debit $3.80/share ($380/contr</description>
-  </item>
-  <item>
-    <title>XSP Iron Condor — Nov 20, 2026 860/850/685/700: Short Vol in a Calm Tape at 71% POP</title>
-    <link>https://tredey.com/trade-log/2026-08-06-xsp-iron-condor/</link>
-    <guid>https://tredey.com/trade-log/2026-08-06-xsp-iron-condor/</guid>
-    <pubDate>2026-08-06</pubDate>
-    <description>Short iron condor on XSP Nov 20, 2026 (106 DTE, AM-settled standard monthly). Sell 700P/Buy 685P, Sell 850C/Buy 860C. Net credit $224/contract ($2.24/share live mid), max profit $224, max loss $776 (under $5k cap), POP ~71% delta-based. Strikes 9–10% OTM each side; VIX 15.95; XSP spot $772.36; OptionStrat link + live yfinance chain cross-checked.</description>
-  </item>
- </channel>
+</channel>
 </rss>
