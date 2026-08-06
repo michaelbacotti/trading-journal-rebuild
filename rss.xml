@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 06 Aug 2026 16:35:11 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 06 Aug 2026 19:53:49 GMT</lastBuildDate>
+  <item>
+    <title>AAPL Bull Put Spread — Oct 16 '26 300/295: An Equity-Pin With Vol Tailwind</title>
+    <link>https://tredey.com/trade-log/2026-08-06-aapl-bull-put-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-08-06-aapl-bull-put-spread/</guid>
+    <pubDate>2026-08-06</pubDate>
+    <description>Opened an AAPL Oct 16 300/295 bull put spread, a 71-DTE equity-level short-premium structure with $12.46 OTM cushion. $155 total credit, $345 defined max loss, </description>
+  </item>
   <item>
     <title>XSP Iron Condor — Dec 18, 2026 870/850/640/660: Deep-OTM Symmetric Wings, 134 DTE, Wider Cushion</title>
     <link>https://tredey.com/trade-log/2026-08-06-xsp-dec-iron-condor/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-27-xsp-bull-put-spread/</guid>
     <pubDate>2026-07-27</pubDate>
     <description>Opened an XSP Jul 30 2026 735/730 bull put spread into FOMC Day 1 — 3-DTE index-level short-premium structure with $128.50 credit, $371.50 defined max loss, bre</description>
-  </item>
-  <item>
-    <title>LEAPS Bull Put Spread on SPX — Collect Through the FOMC Hangover</title>
-    <link>https://tredey.com/forecasts/2026-07-27-fomc-day-1-skip/</link>
-    <guid>https://tredey.com/forecasts/2026-07-27-fomc-day-1-skip/</guid>
-    <pubDate>2026-07-27</pubDate>
-    <description>SPX closed Friday at $7,411.98, VIX 17.63 in mild backwardation with FOMC Day 1 starting Tuesday. The trade book opens a SPX Jan 15, 2027 LEAPS bull put spread </description>
   </item>
 </channel>
 </rss>
