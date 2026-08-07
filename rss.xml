@@ -5,7 +5,7 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 06 Aug 2026 20:01:00 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 07 Aug 2026 01:14:29 GMT</lastBuildDate>
   <item>
     <title>AAPL Bull Put Spread — Oct 16 '26 300/295: An Equity-Pin With Vol Tailwind</title>
     <link>https://tredey.com/trade-log/2026-08-06-aapl-bull-put-spread/</link>
@@ -19,6 +19,13 @@
     <guid>https://tredey.com/trade-log/2026-08-06-nvda-bull-put-spread/</guid>
     <pubDate>2026-08-06</pubDate>
     <description>Working limit order on NVDA Oct 16 180/175 bull put spread at $0.75/share ($75/contract). Above current mid ($0.62); won't fill unless NVDA dips ~1.5% or IV exp</description>
+  </item>
+  <item>
+    <title>NVDA Call Calendar — Nov 20 / Dec 18 '26 240: Long Back, Short Front ($230 Debit)</title>
+    <link>https://tredey.com/trade-log/2026-08-06-nvda-call-calendar/</link>
+    <guid>https://tredey.com/trade-log/2026-08-06-nvda-call-calendar/</guid>
+    <pubDate>2026-08-06</pubDate>
+    <description>Opened NVDA 240 call calendar: long Dec 18 '26 240C, short Nov 20 '26 240C. $2.30 debit/share ($230/contract), 106 DTE front / 134 DTE back. Max loss $230 (debi</description>
   </item>
   <item>
     <title>XSP Iron Condor — Dec 18, 2026 870/850/640/660: Deep-OTM Symmetric Wings, 134 DTE, Wider Cushion</title>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/forecasts/2026-07-28-market-outlook/</guid>
     <pubDate>2026-07-28</pubDate>
     <description>SPY $739.09, QQQ $682.12, IWM $292.91 with VIX 18.96 (term ratio 0.923, backwardated). Nasdaq -1.16% midday as semis slide before FOMC Day 2 and mega-cap tech e</description>
-  </item>
-  <item>
-    <title>XSP Bull Call Spread — Jul 31 '26 744/746: Dip-Buy on a Flat Tape</title>
-    <link>https://tredey.com/trade-log/2026-07-27-xsp-bull-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-07-27-xsp-bull-call-spread/</guid>
-    <pubDate>2026-07-27</pubDate>
-    <description>Opened an XSP Jul 31 2026 744/746 bull call spread on today's intraday dip — 4-DTE index-level defined-risk debit structure with $90 max loss, $110 max profit, </description>
   </item>
 </channel>
 </rss>
