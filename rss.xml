@@ -5,7 +5,28 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Fri, 07 Aug 2026 01:14:29 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 07 Aug 2026 15:52:06 GMT</lastBuildDate>
+  <item>
+    <title>SPY Diagonal Call Spread — Dec 18 / Dec 31 800/795: Cheaper Synthetic Long $795 Call at 39% Lognormal POP</title>
+    <link>https://tredey.com/trade-log/2026-08-07-spy-diagonal-call-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-08-07-spy-diagonal-call-spread/</guid>
+    <pubDate>2026-08-07</pubDate>
+    <description>Bullish call diagonal debit spread on SPY. Long $795C Dec 31, 2026 (146 DTE) / Short $800C Dec 18, 2026 (133 DTE). Net debit $3.70/share ($370/contract, live mi</description>
+  </item>
+  <item>
+    <title>Market Outlook — Friday, August 7, 2026: Trend Holds, VIX Compresses, ECI Looms</title>
+    <link>https://tredey.com/forecasts/2026-08-07-market-outlook-shadow/</link>
+    <guid>https://tredey.com/forecasts/2026-08-07-market-outlook-shadow/</guid>
+    <pubDate>2026-08-07</pubDate>
+    <description>SPY $768.56, SPX ~7,710, VIX 15.29 term ratio 0.744 backwardated. QQQ HV 25.75% vs SPY HV 14.28% gap. 100% breadth. ECI 8:30 ET today; CPI Aug 11.</description>
+  </item>
+  <item>
+    <title>Market Outlook — Friday, August 7, 2026: Broad Strength, Mild Pullback, Bull Trend Intact</title>
+    <link>https://tredey.com/forecasts/2026-08-07-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-08-07-market-outlook/</guid>
+    <pubDate>2026-08-07</pubDate>
+    <description>SPY $768.56, QQQ $714.65, SPX ~7700. VIX 15.29, term ratio 0.744 backwardated. 100% breadth above 50d MA. XLK +5.46% 5d leads; XLU -2.87% 5d lags. No major even</description>
+  </item>
   <item>
     <title>AAPL Bull Put Spread — Oct 16 '26 300/295: An Equity-Pin With Vol Tailwind</title>
     <link>https://tredey.com/trade-log/2026-08-06-aapl-bull-put-spread/</link>
@@ -124,27 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-29-dram-bull-call-spread/</guid>
     <pubDate>2026-07-29</pubDate>
     <description>Opened a DRAM bull call spread on continued weakness — long 60C Jan 21 '28 / short 70C Jan 21 '28, same-expiry debit spread. Net debit $192.50, max profit $807.</description>
-  </item>
-  <item>
-    <title>QQQ Calendar Put Spread — Oct 16 / Oct 30 650: Theta Harvest on a NASDAQ Pullback</title>
-    <link>https://tredey.com/trade-log/2026-07-29-qqq-650-calendar-put-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-07-29-qqq-650-calendar-put-spread/</guid>
-    <pubDate>2026-07-29</pubDate>
-    <description>Opened a QQQ calendar put spread at $650 strike, short Oct 16 / long Oct 30, on a continued NASDAQ pullback. Net debit $2.19/share ($218.50/contract), defined-r</description>
-  </item>
-  <item>
-    <title>Market Outlook — Wednesday, July 29, 2026: FOMC Decision Day, Tech Selloff Extends, Mega-Cap Earnings Queue</title>
-    <link>https://tredey.com/forecasts/2026-07-29-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-07-29-market-outlook/</guid>
-    <pubDate>2026-07-29</pubDate>
-    <description>SPY $740.86, QQQ $675.49 ahead of 2 PM ET FOMC decision. VIX 18.23, term ratio 0.888 backwardated. XLK -5.36% 5d as mega-cap earnings queue approaches.</description>
-  </item>
-  <item>
-    <title>Market Outlook — Tuesday, July 28, 2026: Pre-FOMC Crosscurrents, Mega-Cap Earnings Queue</title>
-    <link>https://tredey.com/forecasts/2026-07-28-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-07-28-market-outlook/</guid>
-    <pubDate>2026-07-28</pubDate>
-    <description>SPY $739.09, QQQ $682.12, IWM $292.91 with VIX 18.96 (term ratio 0.923, backwardated). Nasdaq -1.16% midday as semis slide before FOMC Day 2 and mega-cap tech e</description>
   </item>
 </channel>
 </rss>
