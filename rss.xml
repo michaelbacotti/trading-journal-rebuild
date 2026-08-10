@@ -5,13 +5,20 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 10 Aug 2026 16:08:29 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 10 Aug 2026 18:12:36 GMT</lastBuildDate>
   <item>
     <title>INTC Diagonal Call Spread — Nov 20 / Dec 18 '26 110/105: Long Back $105C, Short Front $110C ($343 Debit)</title>
     <link>https://tredey.com/trade-log/2026-08-10-intc-diagonal-call-spread/</link>
     <guid>https://tredey.com/trade-log/2026-08-10-intc-diagonal-call-spread/</guid>
     <pubDate>2026-08-10</pubDate>
     <description>Bullish diagonal debit spread on INTC. Short $110C Nov 20, 2026 (102 DTE) / Long $105C Dec 18, 2026 (130 DTE). Net debit $3.425/share ($342.50/contract, live mi</description>
+  </item>
+  <item>
+    <title>META Bull Call Spread — Oct 16 '26 605/610: AI-Adjacent Long for $210 Debit (1.38:1 Reward-to-Risk)</title>
+    <link>https://tredey.com/trade-log/2026-08-10-meta-bull-call-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-08-10-meta-bull-call-spread/</guid>
+    <pubDate>2026-08-10</pubDate>
+    <description>Bullish vertical debit spread on META (Meta Platforms). Long $605C Oct 16, 2026 (67 DTE) / Short $610C Oct 16, 2026 (67 DTE). Net debit $2.10/share ($210/contra</description>
   </item>
   <item>
     <title>SLV Bull Call Spread — Nov 20 '26 60/62: Defined-Risk Silver Long for $72 Debit (1.76:1 Reward-to-Risk)</title>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-08-03-portfolio-review-profit-taking-cash-positioning/</guid>
     <pubDate>2026-08-03</pubDate>
     <description>Closed several XSP, SPX, and RUT bull call spreads and diagonals in August, September, and October expiries that had crossed 50% of max profit. Rebuilt cash and</description>
-  </item>
-  <item>
-    <title>Market Outlook — Monday, August 3, 2026: SPX Digestion, Bull Trend Holds, QQQ Correction Under Pressure, Sector Rotation in Focus</title>
-    <link>https://tredey.com/forecasts/2026-08-03-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-08-03-market-outlook/</guid>
-    <pubDate>2026-08-03</pubDate>
-    <description>SPX 7489, SPY $747. VIX 15.99 term ratio 0.841. SPY flat 20d, QQQ correction -4.82%. Breadth 50%. XLE leads, XLK lags. Mega-cap earnings beat. Market digesting.</description>
   </item>
 </channel>
 </rss>
