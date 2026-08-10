@@ -5,7 +5,7 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 10 Aug 2026 18:12:36 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 10 Aug 2026 18:22:51 GMT</lastBuildDate>
   <item>
     <title>INTC Diagonal Call Spread — Nov 20 / Dec 18 '26 110/105: Long Back $105C, Short Front $110C ($343 Debit)</title>
     <link>https://tredey.com/trade-log/2026-08-10-intc-diagonal-call-spread/</link>
@@ -19,6 +19,13 @@
     <guid>https://tredey.com/trade-log/2026-08-10-meta-bull-call-spread/</guid>
     <pubDate>2026-08-10</pubDate>
     <description>Bullish vertical debit spread on META (Meta Platforms). Long $605C Oct 16, 2026 (67 DTE) / Short $610C Oct 16, 2026 (67 DTE). Net debit $2.10/share ($210/contra</description>
+  </item>
+  <item>
+    <title>META Long Call Condor — Dec 18 '26 640/650/760/750: $100-Wide Profit Zone for $222 Debit (3.49:1 Reward-to-Risk)</title>
+    <link>https://tredey.com/trade-log/2026-08-10-meta-long-call-condor/</link>
+    <guid>https://tredey.com/trade-log/2026-08-10-meta-long-call-condor/</guid>
+    <pubDate>2026-08-10</pubDate>
+    <description>4-leg long call condor on META (Meta Platforms). Long $640C Dec 18 / Short $650C Dec 18 (lower body) + Short $750C Dec 18 / Long $760C Dec 18 (upper body). Net </description>
   </item>
   <item>
     <title>SLV Bull Call Spread — Nov 20 '26 60/62: Defined-Risk Silver Long for $72 Debit (1.76:1 Reward-to-Risk)</title>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/forecasts/2026-08-04-market-outlook/</guid>
     <pubDate>2026-08-04</pubDate>
     <description>SPX 7489, SPY $747. VIX 15.70 term ratio 0.764. SPY flat 20d, QQQ correction -3.45%. Breadth 50%. XLE leads, XLK lags. Mega-cap earnings absorbed. New week, cle</description>
-  </item>
-  <item>
-    <title>Portfolio Review — August 3, 2026: Profit-Take, Raise Cash, Stay Bullish Into a 16 VIX Compression</title>
-    <link>https://tredey.com/trade-log/2026-08-03-portfolio-review-profit-taking-cash-positioning/</link>
-    <guid>https://tredey.com/trade-log/2026-08-03-portfolio-review-profit-taking-cash-positioning/</guid>
-    <pubDate>2026-08-03</pubDate>
-    <description>Closed several XSP, SPX, and RUT bull call spreads and diagonals in August, September, and October expiries that had crossed 50% of max profit. Rebuilt cash and</description>
   </item>
 </channel>
 </rss>
