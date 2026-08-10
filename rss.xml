@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Fri, 07 Aug 2026 15:52:06 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 10 Aug 2026 10:40:56 GMT</lastBuildDate>
+  <item>
+    <title>Market Outlook — Monday, August 10, 2026: Bull Trend Intact, CPI Tops the Week, Mega-Cap Tech Leads</title>
+    <link>https://tredey.com/forecasts/2026-08-10-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-08-10-market-outlook/</guid>
+    <pubDate>2026-08-10</pubDate>
+    <description>SPY $773.26, QQQ $723.03, SPX ~7,758. VIX 15.47, term ratio 0.753 backwardated. 100% breadth above 50d MA. XLK +7.20% 5d leads; XLE -3.44% 5d lags. CPI Aug 11 i</description>
+  </item>
   <item>
     <title>SPY Diagonal Call Spread — Dec 18 / Dec 31 800/795: Cheaper Synthetic Long $795 Call at 39% Lognormal POP</title>
     <link>https://tredey.com/trade-log/2026-08-07-spy-diagonal-call-spread/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/forecasts/2026-07-30-market-outlook/</guid>
     <pubDate>2026-07-30</pubDate>
     <description>SPY $729.46, QQQ $661.73 post-FOMC; VIX 19.51 term ratio 0.950. Breadth collapsed 50% to 25%. XLK -12.57% 20d. NFP Friday setup. Mega-cap earnings queue.</description>
-  </item>
-  <item>
-    <title>DRAM Bull Call Spread — Jan 21 '28 60/70: A LEAPS Recovery Position with 4.2:1 Reward/Risk</title>
-    <link>https://tredey.com/trade-log/2026-07-29-dram-bull-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-07-29-dram-bull-call-spread/</guid>
-    <pubDate>2026-07-29</pubDate>
-    <description>Opened a DRAM bull call spread on continued weakness — long 60C Jan 21 '28 / short 70C Jan 21 '28, same-expiry debit spread. Net debit $192.50, max profit $807.</description>
   </item>
 </channel>
 </rss>
