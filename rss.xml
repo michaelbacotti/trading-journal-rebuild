@@ -5,7 +5,21 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 10 Aug 2026 10:40:56 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 10 Aug 2026 15:29:35 GMT</lastBuildDate>
+  <item>
+    <title>INTC Diagonal Call Spread — Nov 20 / Dec 18 '26 110/105: Long Back $105C, Short Front $110C ($343 Debit)</title>
+    <link>https://tredey.com/trade-log/2026-08-10-intc-diagonal-call-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-08-10-intc-diagonal-call-spread/</guid>
+    <pubDate>2026-08-10</pubDate>
+    <description>Bullish diagonal debit spread on INTC. Short $110C Nov 20, 2026 (102 DTE) / Long $105C Dec 18, 2026 (130 DTE). Net debit $3.425/share ($342.50/contract, live mi</description>
+  </item>
+  <item>
+    <title>Market Outlook — Monday, August 10, 2026: Bull Trend Holds, VIX Backwardation, QQQ Trying to Confirm</title>
+    <link>https://tredey.com/forecasts/2026-08-10-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-08-10-market-outlook/</guid>
+    <pubDate>2026-08-10</pubDate>
+    <description>SPY $773.26, SPX ~7758. VIX 15.47, term ratio 0.753 backwardated. 100% breadth above 50d. XLK +7.20% 5d leads; XLU -1.67% lags. July CPI Tue is the week's pivot</description>
+  </item>
   <item>
     <title>Market Outlook — Monday, August 10, 2026: Bull Trend Intact, CPI Tops the Week, Mega-Cap Tech Leads</title>
     <link>https://tredey.com/forecasts/2026-08-10-market-outlook/</link>
@@ -131,20 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-07-31-xsp-long-call-condor/</guid>
     <pubDate>2026-07-31</pubDate>
     <description>Opened an XSP long call condor (Nov 20 '26, 740/760/800/810), betting XSP stays in a 40-pt body through mid-November while harvesting theta. $1,069 defined risk</description>
-  </item>
-  <item>
-    <title>Market Outlook — Friday, July 31, 2026: Mega-Cap Earnings Queue, NFP Friday Setup, Defensive Rotation Holds, Breadth At 50%, Backwardation Persists</title>
-    <link>https://tredey.com/forecasts/2026-07-31-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-07-31-market-outlook/</guid>
-    <pubDate>2026-07-31</pubDate>
-    <description>SPY $741.69, VIX 16.79 term ratio 0.820 (backwardated). QQQ -5.74% 20d. Breadth 50%. XLE +11.65% 20d leading, XLK -5.33% lagging. NFP Friday 8:30 AM ET.</description>
-  </item>
-  <item>
-    <title>Market Outlook — Thursday, July 30, 2026: Post-FOMC Selloff, Breadth Collapses to 25%, NFP Friday Setup, Mega-Cap Earnings Queue</title>
-    <link>https://tredey.com/forecasts/2026-07-30-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-07-30-market-outlook/</guid>
-    <pubDate>2026-07-30</pubDate>
-    <description>SPY $729.46, QQQ $661.73 post-FOMC; VIX 19.51 term ratio 0.950. Breadth collapsed 50% to 25%. XLK -12.57% 20d. NFP Friday setup. Mega-cap earnings queue.</description>
   </item>
 </channel>
 </rss>
