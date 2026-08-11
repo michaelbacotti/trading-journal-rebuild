@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 10 Aug 2026 18:22:51 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 11 Aug 2026 10:40:30 GMT</lastBuildDate>
+  <item>
+    <title>Market Outlook — Tuesday, August 11, 2026: CPI Day Sets the Tone, Breadth Holds at 100%, XLK Extends Leadership, Backwardation Persists</title>
+    <link>https://tredey.com/forecasts/2026-08-11-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-08-11-market-outlook/</guid>
+    <pubDate>2026-08-11</pubDate>
+    <description>SPY $773.03, QQQ $720.87, IWM $299.98. VIX 15.52 term ratio 0.756 backwardated. Breadth 100% above 50d MA. XLK +4.65% 5d leads; XLU -2.77% 5d lags. CPI today.</description>
+  </item>
   <item>
     <title>INTC Diagonal Call Spread — Nov 20 / Dec 18 '26 110/105: Long Back $105C, Short Front $110C ($343 Debit)</title>
     <link>https://tredey.com/trade-log/2026-08-10-intc-diagonal-call-spread/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-08-04-portfolio-review-profit-take-treasury-add-staying-bullish/</guid>
     <pubDate>2026-08-04</pubDate>
     <description>Closed some more of the SOXL, DRAM, and QQQ bull positions opened on the June-July dip — all up 30%+ since open. Working a GTC limit at $23 to close the SPX 770</description>
-  </item>
-  <item>
-    <title>Market Outlook — Tuesday, August 4, 2026: VIX Slides to 15.70, Mega-Cap Earnings In Rearview, QQQ Correction Holds, Defensive Rotation Intact, New Week Calendar Opens Clean</title>
-    <link>https://tredey.com/forecasts/2026-08-04-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-08-04-market-outlook/</guid>
-    <pubDate>2026-08-04</pubDate>
-    <description>SPX 7489, SPY $747. VIX 15.70 term ratio 0.764. SPY flat 20d, QQQ correction -3.45%. Breadth 50%. XLE leads, XLK lags. Mega-cap earnings absorbed. New week, cle</description>
   </item>
 </channel>
 </rss>
