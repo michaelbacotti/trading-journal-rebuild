@@ -5,7 +5,21 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 11 Aug 2026 10:40:30 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 11 Aug 2026 15:47:28 GMT</lastBuildDate>
+  <item>
+    <title>SPY Calendar Put Spread — Oct 16 / Oct 30 760: Cheaper $760 Synthetic Put on Index Chop</title>
+    <link>https://tredey.com/trade-log/2026-08-11-spy-760-calendar-put-spread/</link>
+    <guid>https://tredey.com/trade-log/2026-08-11-spy-760-calendar-put-spread/</guid>
+    <pubDate>2026-08-11</pubDate>
+    <description>Opened a same-strike SPY calendar put spread at $760, short Oct 16 / long Oct 30, on continued index chop near the 52-week high. Net debit $1.995/share ($199.50</description>
+  </item>
+  <item>
+    <title>Market Outlook — Tuesday, August 11, 2026: CPI Window, Breadth at 100%, Backwardation Holds, XLK 5-Day Lead Continues</title>
+    <link>https://tredey.com/forecasts/2026-08-11-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-08-11-market-outlook/</guid>
+    <pubDate>2026-08-11</pubDate>
+    <description>SPY $773.03, QQQ $720.87, IWM $299.98. VIX 15.52 term ratio 0.756. Breadth 100% above 50d. XLK +4.65% 5d leads; XLU -2.77% lags. July CPI at 8:30 ET is the day'</description>
+  </item>
   <item>
     <title>Market Outlook — Tuesday, August 11, 2026: CPI Day Sets the Tone, Breadth Holds at 100%, XLK Extends Leadership, Backwardation Persists</title>
     <link>https://tredey.com/forecasts/2026-08-11-market-outlook/</link>
@@ -131,20 +145,6 @@
     <guid>https://tredey.com/forecasts/2026-08-05-market-outlook-shadow/</guid>
     <pubDate>2026-08-05</pubDate>
     <description>SPX 7736.52 at new high, SPY $771.33, QQQ $723.85, IWM $301.71. VIX 16.35 term ratio 0.796. Breadth 100% above 50d. Mega-cap earnings beat. Aug 21 FOMC minutes,</description>
-  </item>
-  <item>
-    <title>Market Outlook — Wednesday, August 5, 2026: Broad Rally Pushes SPX to New Highs, Tech Leads, Breadth at Maximum — Consolidation Risk Rising</title>
-    <link>https://tredey.com/forecasts/2026-08-05-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-08-05-market-outlook/</guid>
-    <pubDate>2026-08-05</pubDate>
-    <description>SPX 7736.52, SPY $771. VIX 16.35 term ratio 0.796. SPY +4.11% 5d, QQQ +7.16% 5d. XLK leads at +9.24% 5d. Breadth 100%. Max breadth regime — upside may be capped</description>
-  </item>
-  <item>
-    <title>Portfolio Review — August 4, 2026: Take Some More, Add TLT/BIL, Stay Long Into Q3</title>
-    <link>https://tredey.com/trade-log/2026-08-04-portfolio-review-profit-take-treasury-add-staying-bullish/</link>
-    <guid>https://tredey.com/trade-log/2026-08-04-portfolio-review-profit-take-treasury-add-staying-bullish/</guid>
-    <pubDate>2026-08-04</pubDate>
-    <description>Closed some more of the SOXL, DRAM, and QQQ bull positions opened on the June-July dip — all up 30%+ since open. Working a GTC limit at $23 to close the SPX 770</description>
   </item>
 </channel>
 </rss>
