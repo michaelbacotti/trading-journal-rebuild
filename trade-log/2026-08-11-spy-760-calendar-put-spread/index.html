@@ -50,8 +50,7 @@
   <p style="font-size:1.05rem;color:#666;line-height:1.6;">Opened a same-strike SPY calendar put spread at $760, short Oct 16 / long Oct 30, on continued index chop near the 52-week high. Net debit $1.995/share ($199.50</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
-  <div class="trade-hero-chart"><p class="hero-label">P/L Curve — Three Time Horizons</p><figure><img src="images/pl-curve.png" alt="SPY Calendar Put Spread P/L curve at three horizons. Short 760P Oct 16 / Long 760P Oct 30. Net debit $1.995/share ($199.50/contract), peak max profit ~$686 at $760 on Oct 16, max loss $199.50 (= debit). Spot $771.91 — strike sits $11.91 below spot (1.54% OTM put). VIX 15.27. Net delta ~0, net theta +$1.36/day, net vega +$12.57 per 1% IV." loading="lazy"><figcaption class="chart-affiliate">Build and track this trade at <a href="https://optionstrat.com/k7vc9fqcMMMV?ref=ventureprise" target="_blank" rel="noopener">Optionstrat ↗</a></figcaption></figure></div>
-<div class="trade-hero-stats"><div class="trade-hero-stat hot"><p class="label">Max Profit (peak)</p><p class="value">~$686</p><p class="sub">at $760 on Oct 16 (BSM est.)</p></div><div class="trade-hero-stat cool"><p class="label">Max Loss</p><p class="value">$199.50</p><p class="sub">defined risk = net debit</p></div><div class="trade-hero-stat neutral"><p class="label">Net Debit</p><p class="value">$1.995</p><p class="sub">1 calendar put spread · $199.50 total</p></div><div class="trade-hero-stat"><p class="label">Spot / IV</p><p class="value">$771.91 / ~16%</p><p class="sub">SPY @ entry · VIX 15.27</p></div></div>
+  <p>August 11, 2026 · TRADE LOGSPY Calendar Put Spread — Oct 16 / Oct 30 760: Cheaper $760 Synthetic Put on Index Chop</p>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
@@ -59,93 +58,126 @@
 </div>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-
-
-
+<p>Opened a same-strike SPY calendar put spread at $760, short Oct 16 / long Oct 30, on continued index chop near the 52-week high. Net debit $1.995/share ($199.50</p>
 <h2>Why This Structure</h2>
-<p>A <strong>same-strike put calendar at a near-ATM strike below spot</strong> — the structure expresses the view that SPY will spend the next 66 days near $760, or at minimum stay close enough to it for the long back-month put to retain meaningful time value at short-leg expiry. The trade collects front-month put premium while funding the longer-dated put, with a defined-risk profile bounded by the net debit.</p>
+<p>A<strong>same-strike put calendar at a near-ATM strike below spot</strong>— the structure expresses the view that SPY will spend the next 66 days near $760, or at minimum stay close enough to it for the long back-month put to retain meaningful time value at short-leg expiry. The trade collects front-month put premium while funding the longer-dated put, with a defined-risk profile bounded by the net debit.</p>
 <p>Why a calendar over a diagonal? The diagonal (different strikes + different expiries) would add intrinsic value to the long leg and tilt the trade more directional. The same-strike calendar is the more pure theta vehicle — it doesn't care which direction SPY moves, only that it ends up near a strike at short-expiry. With both legs at $760 and SPY at $771.91, the trade is set up to harvest theta regardless of moderate market direction, as long as SPY doesn't run more than ~5% above the strike.</p>
-<p>Why a put calendar over a call calendar? SPY is at a 52-week high (range $629–$777) with VIX 15.27 (low-vol regime). A call calendar would require SPY to <em>rally</em> to a higher strike for the long leg to capture meaningful residual TV — and we're already at the high end of the 52-week range. A put calendar at $760 (just below spot) accepts the current chop and profits if SPY either stays near $760, drifts toward it, or chops sideways. The position is delta-neutral at entry, so it's not betting on direction; it's betting on the absence of a strong directional move over the next 66 days.</p>
-<p>Why not a put vertical? A 760/700 or 760/720 vertical would express a bearish view (SPY falls below $760) at lower debit. But verticals need SPY to actually <em>reach</em> the lower strike for for max profit. The calendar's tent-shaped peak is centered at $760 with positive P&L on either side of it — a much wider profit zone (~58-day span with the calendar duration of 14 days gives roughly $30 of strike distance in the profit zone).</p>
+<p>Why a put calendar over a call calendar? SPY is at a 52-week high (range $629–$777) with VIX 15.27 (low-vol regime). A call calendar would require SPY to<em>rally</em>to a higher strike for the long leg to capture meaningful residual TV — and we're already at the high end of the 52-week range. A put calendar at $760 (just below spot) accepts the current chop and profits if SPY either stays near $760, drifts toward it, or chops sideways. The position is delta-neutral at entry, so it's not betting on direction; it's betting on the absence of a strong directional move over the next 66 days.</p>
+<p>Why not a put vertical? A 760/700 or 760/720 vertical would express a bearish view (SPY falls below $760) at lower debit. But verticals need SPY to actually<em>reach</em>the lower strike for for max profit. The calendar's tent-shaped peak is centered at $760 with positive P&L on either side of it — a much wider profit zone (~58-day span with the calendar duration of 14 days gives roughly $30 of strike distance in the profit zone).</p>
 <p>Why $760 specifically? $760 sits $11.91 below current spot. At 16% IV over 14 days remaining at Oct 16, the σ-distance is $760 × 0.16 × sqrt(14/365) = $7.30 — so the strike is at ~1.6σ below current spot. That's the standard "near-ATM with directional cushion" placement for put-side calendars. Closer to spot (e.g., $770) would have richer short-leg premium but smaller back-month residual TV; further OTM (e.g., $750) would have cheaper debit but the long leg has too little residual TV at short expiry. $760 balances: short collects $12.775 (rich enough to fund the trade), long has 14 DTE of residual value at the strike if SPY is there at Oct 16.</p>
-<p>Why SPY over SPX for this structure? SPY options have <strong>American-style early assignment risk</strong> on the short leg if it goes deep ITM before ex-dividend. SPY pays ~1.5% annual dividends (~$0.65/share quarterly, with Sep ex-div dates likely falling inside the holding period). If SPY drops ~$15 (to ~$757) before the Sep ex-div, the short put could be assigned to capture the dividend. The mitigation is to <strong>close the short leg before Sep ex-div</strong> if SPY approaches the dividend risk zone. SPX would eliminate this risk (European-style cash-settled) but SPY has tighter bid/ask spreads at retail volume and the strike matches standard round-number targets better ($760 vs $7,600).</p>
+<p>Why SPY over SPX for this structure? SPY options have<strong>American-style early assignment risk</strong>on the short leg if it goes deep ITM before ex-dividend. SPY pays ~1.5% annual dividends (~$0.65/share quarterly, with Sep ex-div dates likely falling inside the holding period). If SPY drops ~$15 (to ~$757) before the Sep ex-div, the short put could be assigned to capture the dividend. The mitigation is to<strong>close the short leg before Sep ex-div</strong>if SPY approaches the dividend risk zone. SPX would eliminate this risk (European-style cash-settled) but SPY has tighter bid/ask spreads at retail volume and the strike matches standard round-number targets better ($760 vs $7,600).</p>
 <h2>Thesis</h2>
+<p><strong>Why SPY, why now:</strong>SPY closed Aug 11 at $771.91, near the 52-week high ($776.85). The market has been range-bound between $760 and $785 over the last few weeks, with VIX at 15.27 (calm low-vol regime). Implied volatility (16% BSM solve) is moderate — not panic, but not cheap either. The thesis is<strong>continued index chop near the highs</strong>over the next 66 days, with no major catalyst forcing a directional move. The Fed's next FOMC is Sep 16–17 (expected 25 bp cut per Fed funds futures) and Q3 earnings season kicks off in early October — both of these could break the chop, but the calendar's defined-risk profile tolerates moderate moves in either direction.</p>
 <ul>
-  <li><strong>Why SPY, why now:</strong> SPY closed Aug 11 at $771.91, near the 52-week high ($776.85). The market has been range-bound between $760 and $785 over the last few weeks, with VIX at 15.27 (calm low-vol regime). Implied volatility (16% BSM solve) is moderate — not panic, but not cheap either. The thesis is <strong>continued index chop near the highs</strong> over the next 66 days, with no major catalyst forcing a directional move. The Fed's next FOMC is Sep 16–17 (expected 25 bp cut per Fed funds futures) and Q3 earnings season kicks off in early October — both of these could break the chop, but the calendar's defined-risk profile tolerates moderate moves in either direction.</li>
+  <li><strong>Why a put calendar over alternatives:</strong>A long 760P Oct 16 alone costs $1,277.50 (more than 6× the calendar's debit) and would be the pure directional put. A long 760P Oct 30 alone costs $1,477.00 with the same directional exposure but more theta bleed. A 760/700 put vertical costs ~$2.50 debit with max profit $47.50/share but requires SPY to<em>fall below $700</em>by Oct 16, not just reach $760. The calendar wins on three axes: defined risk, theta harvest, and a wider profit zone (any SPY close between roughly $758 and $787 at Oct 16 produces positive P&L, with peak at $760).</li>
+  <li><strong>Why not a put diagonal or short put:</strong>A short 760P naked would collect $12.775 premium but have undefined risk (SPY can fall to zero, exposing the position to $760 × 100 = $76,000 loss). A put diagonal (long 760P Oct 30 / short 740P Oct 16) would tilt directional but require SPY to move below $740 to start paying off — that's a $32 move from current spot, not the chop-then-base thesis. The same-strike calendar is the cleanest expression of "SPY stays near $760 for 66 days" without taking directional risk.</li>
+  <li><strong>Why 14-day calendar duration:</strong>14 days is the sweet spot for short-duration calendars on SPY — long enough for the back-month to retain meaningful residual TV at short expiry (ATM 760P with 14 DTE = $8.85/share, which is 60% of the original premium), short enough for the front-month to decay meaningfully in the holding period. A 30-day calendar (short Oct 30 / long Nov 20) would have less front-month decay per day; a 7-day calendar would have the back-month TV too thin to justify the debit.</li>
+  <li><strong>Why this trade now (Aug 11):</strong>The Aug 11 entry captures the back-month premium at its widest term-structure spread — front-month is 66 DTE and back-month is 80 DTE, just 14 days apart. As we approach short expiry, the front-month decays at an accelerating rate (theta peaks in the last 30 DTE), while the back-month decays more slowly. The daily theta harvest is maximized in this window.</li>
 </ul>
-<ul>
-  <li><strong>Why a put calendar over alternatives:</strong> A long 760P Oct 16 alone costs $1,277.50 (more than 6× the calendar's debit) and would be the pure directional put. A long 760P Oct 30 alone costs $1,477.00 with the same directional exposure but more theta bleed. A 760/700 put vertical costs ~$2.50 debit with max profit $47.50/share but requires SPY to <em>fall below $700</em> by Oct 16, not just reach $760. The calendar wins on three axes: defined risk, theta harvest, and a wider profit zone (any SPY close between roughly $758 and $787 at Oct 16 produces positive P&L, with peak at $760).</li>
-</ul>
-<ul>
-  <li><strong>Why not a put diagonal or short put:</strong> A short 760P naked would collect $12.775 premium but have undefined risk (SPY can fall to zero, exposing the position to $760 × 100 = $76,000 loss). A put diagonal (long 760P Oct 30 / short 740P Oct 16) would tilt directional but require SPY to move below $740 to start paying off — that's a $32 move from current spot, not the chop-then-base thesis. The same-strike calendar is the cleanest expression of "SPY stays near $760 for 66 days" without taking directional risk.</li>
-</ul>
-<ul>
-  <li><strong>Why 14-day calendar duration:</strong> 14 days is the sweet spot for short-duration calendars on SPY — long enough for the back-month to retain meaningful residual TV at short expiry (ATM 760P with 14 DTE = $8.85/share, which is 60% of the original premium), short enough for the front-month to decay meaningfully in the holding period. A 30-day calendar (short Oct 30 / long Nov 20) would have less front-month decay per day; a 7-day calendar would have the back-month TV too thin to justify the debit.</li>
-</ul>
-<ul>
-  <li><strong>Why this trade now (Aug 11):</strong> The Aug 11 entry captures the back-month premium at its widest term-structure spread — front-month is 66 DTE and back-month is 80 DTE, just 14 days apart. As we approach short expiry, the front-month decays at an accelerating rate (theta peaks in the last 30 DTE), while the back-month decays more slowly. The daily theta harvest is maximized in this window.</li>
-</ul>
+<p>-</p>
 <h2>Risk</h2>
-<table>
-<thead>
-<tr><th>Risk</th><th>Magnitude</th><th>Mitigation</th></tr>
-</thead>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Risk</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Magnitude</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Mitigation</th>
+</tr></thead>
 <tbody>
-<tr><td>SPY rallies through $787 at Oct 16</td><td>Up to ~$170 loss above $800 (long leg residual TV erodes to near zero)</td><td>Stop before $790; the calendar is asymmetric above the strike — short expires worthless but long loses TV faster than expected above $787</td></tr>
-<tr><td>SPY stays well below $758 at Oct 16</td><td>Up to ~$199 loss (= debit, since short intrinsic exceeds long intrinsic plus debit)</td><td>Acceptable; the trade is the max-loss scenario. Both legs deep ITM at expiry.</td></tr>
-<tr><td>SPY stays at $771.91 (no move, no chop)</td><td>~$0 P/L at short expiry; theta harvest builds $1.36/day in our favor over the holding period</td><td>This is the *thesis* playing out — SPY stays near $760-$772. Patience. Realistic expected outcome: positive P&L around $200-$400/contract at Oct 16 if SPY is between $755 and $780.</td></tr>
-<tr><td>IV crush (sustained low-vol regime collapse)</td><td>~$12.57/contract per 1% IV drop</td><td>Position is net long vega; rising IV helps, falling IV hurts. SPY IV at 16% is already low; sustained collapse to <12% (1-year low) would hurt the position materially, but the structural long-vega profile means even a 2-3% IV rise (e.g., into FOMC) adds $25-38/contract.</td></tr>
-<tr><td>Early assignment risk on short ITM put</td><td>Moderate — SPY pays quarterly dividends (~Sep, Dec, etc.)</td><td>SPY dividends ~$0.65/share quarterly. If short put is ITM by ≥ dividend amount before ex-div, assignment risk materializes. Monitor SPY approaching $758-760 before Sep ex-div (likely mid-Sep); close short leg if needed.</td></tr>
-<tr><td>Liquidity (SPY is highly liquid, low risk)</td><td>Front-month bid/ask ~$0.10-0.15, back-month ~$0.15-0.20</td><td>SPY is the most liquid equity index option in the world; spreads are tight. No concerns.</td></tr>
-<tr><td>Time decay risk (calendar duration erosion)</td><td>If SPY doesn't reach $760 by Oct 16, the long leg loses its ATM residual TV value</td><td>This is the structural risk of all calendars — the bet on "time to be near the strike" is the entire thesis. The 14-day calendar duration limits how much residual TV can erode; beyond Oct 16, the position needs active management (roll forward or close).</td></tr>
-</tbody>
-</table>
-
-<div class="position-payoff-layout"><div class="position-payoff-content">
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPY rallies through $787 at Oct 16</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Up to ~$170 loss above $800 (long leg residual TV erodes to near zero)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stop before $790; the calendar is asymmetric above the strike — short expires worthless but long loses TV faster than expected above $787</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPY stays well below $758 at Oct 16</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Up to ~$199 loss (= debit, since short intrinsic exceeds long intrinsic plus debit)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Acceptable; the trade is the max-loss scenario. Both legs deep ITM at expiry.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPY stays at $771.91 (no move, no chop)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~$0 P/L at short expiry; theta harvest builds $1.36/day in our favor over the holding period</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">This is the <em>thesis</em> playing out — SPY stays near $760-$772. Patience. Realistic expected outcome: positive P&L around $200-$400/contract at Oct 16 if SPY is between $755 and $780.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">IV crush (sustained low-vol regime collapse)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~$12.57/contract per 1% IV drop</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Position is net long vega; rising IV helps, falling IV hurts. SPY IV at 16% is already low; sustained collapse to</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">12% (1-year low) would hurt the position materially, but the structural long-vega profile means even a 2-3% IV rise (e.g., into FOMC) adds $25-38/contract.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Early assignment risk on short ITM put</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Moderate — SPY pays quarterly dividends (~Sep, Dec, etc.)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">SPY dividends ~$0.65/share quarterly. If short put is ITM by ≥ dividend amount before ex-div, assignment risk materializes. Monitor SPY approaching $758-760 before Sep ex-div (likely mid-Sep); close short leg if needed.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Liquidity (SPY is highly liquid, low risk)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Front-month bid/ask ~$0.10-0.15, back-month ~$0.15-0.20</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">SPY is the most liquid equity index option in the world; spreads are tight. No concerns.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Time decay risk (calendar duration erosion)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">If SPY doesn't reach $760 by Oct 16, the long leg loses its ATM residual TV value</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">This is the structural risk of all calendars — the bet on "time to be near the strike" is the entire thesis. The 14-day calendar duration limits how much residual TV can erode; beyond Oct 16, the position needs active management (roll forward or close).</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+</tbody></table></div>
 <h2>Position Payoff at Three Time Horizons</h2>
 <p>The chart above shows the position's P/L as a function of SPY's price at three evaluation windows: now (entry, 66 DTE short), mid-life (~30 DTE before short expiry = Sep 30, 2026), and at short-leg expiry (Oct 16, 2026). The three curves diverge in a classic short-duration calendar pattern — the now-curve (blue solid) is shallowly tent-shaped with the strike centered, the mid-curve (orange dashed) is steeper as the front-month theta accelerates, and the short-expiry curve (green dotted) is the tallest tent peaking exactly at the $760 strike.</p>
-<p><strong>Read the chart:</strong></p>
+<p><strong>Read the chart:</strong><strong>Spot $771.91</strong>sits $11.91 above the strike. At the current spot, the calendar is near-flat (~$0 P/L on the now-curve, building toward positive via theta as the front-month decays). At Oct 16 expiry at the current spot, the strategy shows ~$260 P/L per contract — short expires worthless ($0), long has ~$4.60/sh OTM residual TV, minus $1.995 debit = $2.605/sh × 100 = $260.50/contract.</p>
 <ul>
-  <li><strong>Spot $771.91</strong> sits $11.91 above the strike. At the current spot, the calendar is near-flat (~$0 P/L on the now-curve, building toward positive via theta as the front-month decays). At Oct 16 expiry at the current spot, the strategy shows ~$260 P/L per contract — short expires worthless ($0), long has ~$4.60/sh OTM residual TV, minus $1.995 debit = $2.605/sh × 100 = $260.50/contract.</li>
-  <li><strong>The peak (~$686)</strong> sits exactly at $760 at short-leg expiry. That's where the short leg expires worthless and the back-month retains 14 DTE of time value at the strike ($8.85/share = $885/contract, minus $199.50 debit = $685.50/contract).</li>
-  <li><strong>The downside tail</strong> (SPY crashes through $758) bottoms at ~−$200/contract (= debit) once SPY is below the lower breakeven. Below $758, both legs are deep ITM; short pays out more intrinsic than long captures (because the long's value converges to the same intrinsic), and the debit is the loss. There's no asymmetry downside — the structure is symmetric in the loss tail (max loss = debit, period).</li>
-  <li><strong>The upside tail</strong> (SPY rallies past $787) crosses zero around $787 and bottoms at ~−$170/contract at $800. Above the upper breakeven, the long leg loses TV faster than the debit recovers.</li>
+  <li><strong>The peak (~$686)</strong>sits exactly at $760 at short-leg expiry. That's where the short leg expires worthless and the back-month retains 14 DTE of time value at the strike ($8.85/share = $885/contract, minus $199.50 debit = $685.50/contract).</li>
+  <li><strong>The downside tail</strong>(SPY crashes through $758) bottoms at ~−$200/contract (= debit) once SPY is below the lower breakeven. Below $758, both legs are deep ITM; short pays out more intrinsic than long captures (because the long's value converges to the same intrinsic), and the debit is the loss. There's no asymmetry downside — the structure is symmetric in the loss tail (max loss = debit, period).</li>
+  <li><strong>The upside tail</strong>(SPY rallies past $787) crosses zero around $787 and bottoms at ~−$170/contract at $800. Above the upper breakeven, the long leg loses TV faster than the debit recovers.</li>
 </ul>
-<p><strong>Tent shape symmetry:</strong> Unlike the QQQ 650 calendar (where the put skew made the downside steeper than upside), SPY's ATM region has lower put skew and the tent shape is more symmetric. The breakeven window (~$758 to $787) is roughly equal on both sides of the strike (±$12-27). The structure tolerates a moderate rally or selloff equally well.</p>
-<figure style="margin:2rem 0;text-align:center;"><img src="images/pl-curve.png" alt="SPY 760 Calendar Put Spread — P/L curve at three time horizons" loading="lazy" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 2px 12px rgba(0,0,0,0.08);"></figure>
-</div><aside class="trade-hero-fields"><p class="hero-label">Trade: SPY Oct 16 / Oct 30 760 Calendar Put Spread (66 DTE short / 80 DTE long)</p><dl><dt>Instrument</dt><dd>SPY equity index options (Oct 16 short + Oct 30 long, both puts at $760)</dd>
-<dt>Underlying</dt><dd>SPY (S&P 500 ETF; American-style, equity-settled, 1× SPY = 100 shares per contract)</dd>
-<dt>Structure</dt><dd>Calendar Put Spread — 2 legs, same strike, different expiries</dd>
-<dt>Strikes</dt><dd>$760 (both legs — same strike)</dd>
-<dt>Leg 1</dt><dd>STO −1× SPY 760P Oct 16, 2026 at $12.775 (OptionStrat basis)</dd>
-<dt>Leg 2</dt><dd>BTO +1× SPY 760P Oct 30, 2026 at $14.77 (OptionStrat basis)</dd>
-<dt>Calendar duration</dt><dd>14 days (long Oct 30 vs short Oct 16)</dd>
-<dt>Expiration (short)</dt><dd>2026-10-16 (66 DTE at entry, AM-settled monthly, last trade Thursday 10/15)</dd>
-<dt>Expiration (long)</dt><dd>2026-10-30 (80 DTE at entry)</dd>
-<dt>Settlement</dt><dd>AM-settled (standard monthly equity options; American-style — assignment risk on short put if deep ITM before ex-dividend)</dd>
-<dt>Net debit at fill</dt><dd>$1.995/share = $199.50/contract (OptionStrat basis)</dd>
-<dt>BSM cross-check (short)</dt><dd>$12.910 at σ=16%, T=66/365, S=$771.91 — gap −1.0% vs basis $12.775</dd>
-<dt>BSM cross-check (long)</dt><dd>$14.385 at σ=16%, T=80/365, S=$771.91 — gap +2.7% vs basis $14.77</dd>
-<dt>Contracts</dt><dd>1 calendar put spread</dd>
-<dt>Total debit</dt><dd>$199.50 (1 × $199.50)</dd>
-<dt>Max profit zone</dt><dd>SPY ≈ $760 at Oct 16, 2026 short-leg expiry (peak of the tent)</dd>
-<dt>Max profit (peak at strike)</dt><dd>~$685.63/contract (BSM at σ=16%: ATM 760P with 14 DTE remaining = $8.85/share; max profit = ($8.85 − $1.995) × 100)</dd>
-<dt>Max profit (at current spot)</dt><dd>~$260.50/contract if SPY stays at $771.91 at Oct 16 (long residual $4.60/share OTM)</dd>
-<dt>Reward-to-risk (peak)</dt><dd>3.44:1 ($686 max profit / $199.50 max loss)</dd>
-<dt>Reward-to-risk (at spot)</dt><dd>1.31:1 ($260 max profit / $199.50 max loss)</dd>
-<dt>Max loss</dt><dd>$199.50 (= net debit, defined risk)</dd>
-<dt>Lower breakeven (Oct 16 curve)</dt><dd>~$758.00 ($760 strike − $1.995 debit/share; below this, short intrinsic exceeds debit)</dd>
-<dt>Upper breakeven (Oct 16 curve)</dt><dd>~$785–$790 (where long residual TV falls below debit — BSM: bs_put(S, 760, 14/365, 16%) = $1.995 → S ≈ $787)</dd>
-<dt>Cushion to strike</dt><dd>SPY at $771.91 is $11.91 above $760 strike (1.54% OTM for the put — strike sits below current spot by ~half a 1σ expected move at 14 DTE)</dd>
-<dt>IV at entry</dt><dd>~16% (BSM solve; VIX 15.27, short/long both ~16% — flat term structure reflecting low-vol regime)</dd>
-<dt>Net delta (structure)</dt><dd>~−0.002/contract × 100 ≈ −$0.20/contract (essentially delta-neutral — both legs same strike, similar DTE)</dd>
-<dt>Theta (structure)</dt><dd>+$1.36/day net positive per contract (front-month decays faster than back-month at this DTE bucket)</dd>
-<dt>Vega (structure)</dt><dd>+$12.57 per 1% IV (net long vega — structure wants IV to *rise* to add value)</dd>
-<dt>Entry time</dt><dd>Aug 11, 2026 (OptionStrat save timestamp; mid-morning save)</dd>
-<dt>Management rule</dt><dd>50% of peak max profit (~$343/contract) OR close 5 days before short expiry if SPY far from strike</dd>
-<dt>Stop loss</dt><dd>2× debit ($399/contract cost to close) OR SPY closes above $800 (back-month residual TV erodes to near zero above strike +5%)</dd></dl></aside></div>
-
+<p>-</p>
+<p><strong>Tent shape symmetry:</strong>Unlike the QQQ 650 calendar (where the put skew made the downside steeper than upside), SPY's ATM region has lower put skew and the tent shape is more symmetric. The breakeven window (~$758 to $787) is roughly equal on both sides of the strike (±$12-27). The structure tolerates a moderate rally or selloff equally well.<em>(SPY 760 Calendar Put Spread — P/L curve at three time horizons)</em></p>
+<p>Trade: SPY Oct 16 / Oct 30 760 Calendar Put Spread (66 DTE short / 80 DTE long)</p>
+<p><strong>Instrument</strong> SPY equity index options (Oct 16 short + Oct 30 long, both puts at $760)</p>
+<p><strong>Underlying</strong> SPY (S&P 500 ETF; American-style, equity-settled, 1× SPY = 100 shares per contract)</p>
+<p><strong>Structure</strong> Calendar Put Spread — 2 legs, same strike, different expiries</p>
+<p><strong>Strikes</strong> $760 (both legs — same strike)</p>
+<p><strong>Leg 1</strong> STO −1× SPY 760P Oct 16, 2026 at $12.775 (OptionStrat basis)</p>
+<p><strong>Leg 2</strong> BTO +1× SPY 760P Oct 30, 2026 at $14.77 (OptionStrat basis)</p>
+<p><strong>Calendar duration</strong> 14 days (long Oct 30 vs short Oct 16)</p>
+<p><strong>Expiration (short)</strong> 2026-10-16 (66 DTE at entry, AM-settled monthly, last trade Thursday 10/15)</p>
+<p><strong>Expiration (long)</strong> 2026-10-30 (80 DTE at entry)</p>
+<p><strong>Settlement</strong> AM-settled (standard monthly equity options; American-style — assignment risk on short put if deep ITM before ex-dividend)</p>
+<p><strong>Net debit at fill</strong> $1.995/share = $199.50/contract (OptionStrat basis)</p>
+<p><strong>BSM cross-check (short)</strong> $12.910 at σ=16%, T=66/365, S=$771.91 — gap −1.0% vs basis $12.775</p>
+<p><strong>BSM cross-check (long)</strong> $14.385 at σ=16%, T=80/365, S=$771.91 — gap +2.7% vs basis $14.77</p>
+<p><strong>Contracts</strong> 1 calendar put spread</p>
+<p><strong>Total debit</strong> $199.50 (1 × $199.50)</p>
+<p><strong>Max profit zone</strong> SPY ≈ $760 at Oct 16, 2026 short-leg expiry (peak of the tent)</p>
+<p><strong>Max profit (peak at strike)</strong> ~$685.63/contract (BSM at σ=16%: ATM 760P with 14 DTE remaining = $8.85/share; max profit = ($8.85 − $1.995) × 100)</p>
+<p><strong>Max profit (at current spot)</strong> ~$260.50/contract if SPY stays at $771.91 at Oct 16 (long residual $4.60/share OTM)</p>
+<p><strong>Reward-to-risk (peak)</strong> 3.44:1 ($686 max profit / $199.50 max loss)</p>
+<p><strong>Reward-to-risk (at spot)</strong> 1.31:1 ($260 max profit / $199.50 max loss)</p>
+<p><strong>Max loss</strong> $199.50 (= net debit, defined risk)</p>
+<p><strong>Lower breakeven (Oct 16 curve)</strong> ~$758.00 ($760 strike − $1.995 debit/share; below this, short intrinsic exceeds debit)</p>
+<p><strong>Upper breakeven (Oct 16 curve)</strong> ~$785–$790 (where long residual TV falls below debit — BSM: bs_put(S, 760, 14/365, 16%) = $1.995 → S ≈ $787)</p>
+<p><strong>Cushion to strike</strong> SPY at $771.91 is $11.91 above $760 strike (1.54% OTM for the put — strike sits below current spot by ~half a 1σ expected move at 14 DTE)</p>
+<p><strong>IV at entry</strong> ~16% (BSM solve; VIX 15.27, short/long both ~16% — flat term structure reflecting low-vol regime)</p>
+<p><strong>Net delta (structure)</strong> ~−0.002/contract × 100 ≈ −$0.20/contract (essentially delta-neutral — both legs same strike, similar DTE)</p>
+<p><strong>Theta (structure)</strong> +$1.36/day net positive per contract (front-month decays faster than back-month at this DTE bucket)</p>
+<p><strong>Vega (structure)</strong> +$12.57 per 1% IV (net long vega — structure wants IV to <em>rise</em> to add value)</p>
+<p><strong>Entry time</strong> Aug 11, 2026 (OptionStrat save timestamp; mid-morning save)</p>
+<p><strong>Management rule</strong> 50% of peak max profit (~$343/contract) OR close 5 days before short expiry if SPY far from strike</p>
+<p><strong>Stop loss</strong> 2× debit ($399/contract cost to close) OR SPY closes above $800 (back-month residual TV erodes to near zero above strike +5%)</p>
 <h2>Greeks Snapshot (Black-Scholes at entry)</h2>
+<p><strong>Delta (Δ)</strong><strong>Gamma (Γ)</strong><strong>Theta (Θ)</strong><strong>+$1.36/day</strong><strong>Vega (ν)</strong><em>rise<strong></em>Rho (ρ)</strong></p>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr>
@@ -155,47 +187,47 @@
 </tr></thead>
 <tbody>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Delta (Δ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−$0.20</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">−$0.20</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Effectively delta-neutral. SPY needs to fall ~$5 from here for the structure to gain $1 of delta-neutral P&L.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Gamma (Γ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−0.0013</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">−0.0013</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slight net short gamma. Position loses value if SPY moves sharply in either direction intraday (negligible at this scale).</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Theta (Θ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>+$1.36/day</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net positive theta — this is the trade's edge. Front-month decays faster than back-month at this DTE bucket.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Net positive theta — this is the trade's edge. Front-month decays faster than back-month at this DTE bucket.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Vega (ν)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$12.57 per 1% IV</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net long vega. Structure wants IV to <em>rise</em> to add value; a sustained IV crush hurts.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">+$12.57 per 1% IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net long vega. Structure wants IV to</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">to add value; a sustained IV crush hurts.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Rho (ρ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−$2.50 per 1% rate</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">−$2.50 per 1% rate</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Mild short rate sensitivity. Fed policy moves during the holding period could affect the trade.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 </tbody></table></div>
 <p><strong>Per-leg breakdown (BSM at entry):</strong></p>
 <pre><code class="language-plain">
-Strike  Sign    Price     Delta   Gamma   Theta   Vega   Rho
-760P    -1     $12.775   -0.351   +0.0044  -0.1125 +1.2173 -0.250
-760P    +1     $14.77    -0.353   +0.0041  -0.0989 +1.3429 -0.275
+`Strike Sign Price Delta Gamma Theta Vega Rho
+760P -1 $12.775 -0.351 +0.0044 -0.1125 +1.2173 -0.250
+760P +1 $14.77 -0.353 +0.0041 -0.0989 +1.3429 -0.275
 ─────
-Net:                    -0.0020  -0.0003  +0.0136 +0.1257 -0.025
+Net: -0.0020 -0.0003 +0.0136 +0.1257 -0.025
 </pre>
 <p>Sum the rows by sign to get the per-share totals, then multiply by 100 for per-contract values shown above.</p>
 <h2>Intraday Setup (entry)</h2>
-<p><strong>Pre-market context:</strong> SPY traded in a tight range overnight, with Aug 11 closing at $771.91 (up 0.4% week-over-week). VIX settled at 15.27 — the calmest regime in weeks, reflecting low event risk through mid-August. The 66-day front-month put IV (16.0%) was at the back-month IV (16.0%) — flat term structure. This is a textbook environment for a same-strike put calendar: a low-vol regime with no directional catalyst and balanced term structure.</p>
-<p><strong>Entry signal:</strong> At ~10:30 AM ET on Aug 11, I checked the OptionStrat chain at the $760 put strike for both Oct 16 and Oct 30. The basis prices were $12.775 (short) and $14.77 (long), netting $1.995 debit. The implied vol surface gave me ~16% on both legs — within the BSM solve tolerance (gap of −1.0% on short and +2.7% on long, both well within the 5% acceptable range).</p>
-<p><strong>Execution:</strong> Both legs entered simultaneously via the OptionStrat strategy builder at the basis prices. Slippage should be minimal — SPY options are the most liquid equity index options in the world.</p>
-<p><strong>Size check:</strong> Total debit $199.50 = 0.07% of $300k NLV — well under the 0.25% per-trade guideline and under the $5,000 absolute cap.</p>
+<p><strong>Pre-market context:</strong>SPY traded in a tight range overnight, with Aug 11 closing at $771.91 (up 0.4% week-over-week). VIX settled at 15.27 — the calmest regime in weeks, reflecting low event risk through mid-August. The 66-day front-month put IV (16.0%) was at the back-month IV (16.0%) — flat term structure. This is a textbook environment for a same-strike put calendar: a low-vol regime with no directional catalyst and balanced term structure.</p>
+<p><strong>Entry signal:</strong>At ~10:30 AM ET on Aug 11, I checked the OptionStrat chain at the $760 put strike for both Oct 16 and Oct 30. The basis prices were $12.775 (short) and $14.77 (long), netting $1.995 debit. The implied vol surface gave me ~16% on both legs — within the BSM solve tolerance (gap of −1.0% on short and +2.7% on long, both well within the 5% acceptable range).</p>
+<p><strong>Execution:</strong>Both legs entered simultaneously via the OptionStrat strategy builder at the basis prices. Slippage should be minimal — SPY options are the most liquid equity index options in the world.</p>
+<p><strong>Size check:</strong>Total debit $199.50 = 0.07% of $300k NLV — well under the 0.25% per-trade guideline and under the $5,000 absolute cap.</p>
 <h2>Management Plan</h2>
-<p>The standard calendar management rule applies, with adjustments for the 14-day calendar duration and low-vol environment:</p>
+<p>The standard calendar management rule applies, with adjustments for the 14-day calendar duration and low-vol environment:<strong>50% of peak max profit</strong><strong>SPY within ±$5 of $760</strong><strong>SPY outside ±$27 of $760</strong><strong>5 days before short expiry</strong><strong>2× debit stop</strong><strong>SPY above $800 at any time</strong><strong>SPY below $755 sustained</strong><strong>IV crush to<13% sustained for 5+ days</strong><strong>Pre-FOMC</strong><strong>SPY approaches $758 before Sep ex-div</strong></p>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr>
@@ -204,63 +236,73 @@ Net:                    -0.0020  -0.0003  +0.0136 +0.1257 -0.025
 </tr></thead>
 <tbody>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>50% of peak max profit</strong> (~$343/contract)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(~$343/contract)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close the trade. Lock in half the potential upside; the back-month residual TV is hard to predict beyond this point.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>SPY within ±$5 of $760</strong> at Oct 16</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">at Oct 16</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hold if 50% not hit; the tent peak is the most profitable spot to ride to expiry.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>SPY outside ±$27 of $760</strong> at Oct 16</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">at Oct 16</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close at market, even if a small loss. The structure has lost its tent-shape edge.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>5 days before short expiry</strong> (Oct 11)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(Oct 11)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Force-close if not at the 50% target. Avoid gamma/assignment risk into the last week.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>2× debit stop</strong> ($399/contract cost to close)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">($399/contract cost to close)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hard stop. The trade is no longer a calendar at this point — it's directional risk.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>SPY above $800 at any time</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close the position. The back-month residual TV erodes to near zero above $800; the structure has no edge.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Close the position. The back-month residual TV erodes to near zero above $800; the structure has no edge.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>SPY below $755 sustained</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close at market. The structure has gone deep ITM and the loss is approaching the debit.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Close at market. The structure has gone deep ITM and the loss is approaching the debit.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>IV crush to <13% sustained for 5+ days</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Reduce position size or close. Long vega exposure is no longer favorable.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Reduce position size or close. Long vega exposure is no longer favorable.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Pre-FOMC</strong> (Sep 16-17)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(Sep 16-17)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hold through event unless IV is below 14% entering the event. Calendar structures benefit from event IV expansion.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>SPY approaches $758 before Sep ex-div</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close short leg to avoid early-assignment risk.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Close short leg to avoid early-assignment risk.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 </tbody></table></div>
-<p><strong>Adjustment idea (advanced):</strong> If SPY stays in the $758-$772 range for the first 2 weeks (theta harvest accumulating), the calendar can be <strong>rolled forward</strong> at Sep 15 to a new Nov 15 / Nov 29 expiration pair. This converts a chop trade into a longer-duration theta position with a new profit zone.</p>
+<p><strong>Adjustment idea (advanced):</strong>If SPY stays in the $758-$772 range for the first 2 weeks (theta harvest accumulating), the calendar can be<strong>rolled forward</strong>at Sep 15 to a new Nov 15 / Nov 29 expiration pair. This converts a chop trade into a longer-duration theta position with a new profit zone.</p>
 <h2>Status</h2>
-<table>
-<thead>
-<tr><th>Date</th><th>SPY Close</th><th>Position Value</th><th>Unrealized P/L</th><th>Notes</th></tr>
-</thead>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Date</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">SPY Close</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Position Value</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Unrealized P/L</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
 <tbody>
-<tr><td>2026-08-11 (entry)</td><td>$771.91</td><td>−$199.50</td><td>—</td><td>Opened at OptionStrat basis. Spot $11.91 above strike. VIX 15.27. Both legs at ~16% IV.</td></tr>
-</tbody>
-</table>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2026-08-11 (entry)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$771.91</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−$199.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">—</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Opened at OptionStrat basis. Spot $11.91 above strike. VIX 15.27. Both legs at ~16% IV.</td>
+</tr>
+</tbody></table></div>
 <h2>Outcome</h2>
 <p>_To be filled when the trade closes (full close, 50% profit target, or stop)._</p>
 <h2>Lessons</h2>
 <p>_To be added after the trade closes. Pending observations: how the calendar behaves in the first 2 weeks, whether SPY's chop-zone thesis plays out, and what the actual max-profit realization looks like vs the $686 BSM estimate at the strike and $260 expected value at current spot._</p>
-<p><strong>Source data:</strong> <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">OptionStrat strategy link</a> (use the <code>?ref=ventureprise</code> link from your affiliate dashboard). Spot price and option chain basis from OptionStrat's live data feed at entry. BSM cross-check at σ=16% (BSM solve from basis prices), r=4.5% (1-month Treasury per OptionStrat's curve).</p>
-<p><strong>Build:</strong> <code>articles/2026-08-11-spy-760-calendar-put-spread/images/build_pl_curve.py</code> (one-off chart generator).</p>
-<p><strong>Disclaimer:</strong> Not investment advice. Options trading involves substantial risk. Past performance does not guarantee future results. Always do your own research and consider your risk tolerance before entering any trade.</p>
+<p><strong>Source data:</strong>[OptionStrat strategy link(use the<code>?ref=ventureprise</code>link from your affiliate dashboard). Spot price and option chain basis from OptionStrat's live data feed at entry. BSM cross-check at σ=16% (BSM solve from basis prices), r=4.5% (1-month Treasury per OptionStrat's curve).</p>
+<p><strong>Build:</strong><code>articles/2026-08-11-spy-760-calendar-put-spread/images/build_pl_curve.py</code>(one-off chart generator).</p>
+<p><strong>Disclaimer:</strong>Not investment advice. Options trading involves substantial risk. Past performance does not guarantee future results. Always do your own research and consider your risk tolerance before entering any trade.</p>
   
 <div class="share-bar">
  <span class="share-label">Share</span>

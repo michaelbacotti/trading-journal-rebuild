@@ -50,8 +50,7 @@
   <p style="font-size:1.05rem;color:#666;line-height:1.6;">Bullish call diagonal debit spread on SPY. Long $795C Dec 31, 2026 (146 DTE) / Short $800C Dec 18, 2026 (133 DTE). Net debit $3.70/share ($370/contract, live mi</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
-  <div class="trade-hero-chart"><p class="hero-label">P/L Curve — Three Time Horizons</p><figure><img src="images/pl-curve.png" alt="SPY Dec 18 / Dec 31 800/795 Diagonal Call Spread P/L curve at three time horizons. Long $795C Dec 31, 2026 (146 DTE) at $23.07 live mid / Short $800C Dec 18, 2026 (133 DTE) at $19.37 live mid. Net debit $3.70/share ($370/contract). At expiry of long leg (Dec 31): $5-wide profit zone between $795–$800, max profit $130, max loss $370 (debit, if SPY < $795). At short-leg expiry (Dec 18): peak around $800 reflecting 13 days of remaining long-leg value. SPY spot $773.24 — 3.46% below short strike." loading="lazy"><figcaption class="chart-affiliate">Build and track this trade at <a href="https://optionstrat.com/I39rC2KcWKCI?ref=ventureprise" target="_blank" rel="noopener">Optionstrat ↗</a></figcaption></figure></div>
-<div class="trade-hero-stats"><div class="trade-hero-stat hot"><p class="label">Max Profit</p><p class="value">$130.00</p><p class="sub">between $795–$800 at Dec 18/Dec 31 expiry</p></div><div class="trade-hero-stat cool"><p class="label">Max Loss</p><p class="value">$370.00</p><p class="sub">defined risk = net debit</p></div><div class="trade-hero-stat neutral"><p class="label">Net Debit</p><p class="value">$3.70</p><p class="sub">1 diagonal × $370.00 total</p></div><div class="trade-hero-stat"><p class="label">POP / DTE</p><p class="value">~39%</p><p class="sub">SPY spot $773.24 · 133–146 DTE · VIX 15.95</p></div></div>
+  <p>August 07, 2026 · TRADE LOGSPY Diagonal Call Spread — Dec 18 / Dec 31 800/795: Cheaper Synthetic Long $795 Call at 39% Lognormal POP</p>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
@@ -59,99 +58,127 @@
 </div>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-
-
-
+<p>Bullish call diagonal debit spread on SPY. Long $795C Dec 31, 2026 (146 DTE) / Short $800C Dec 18, 2026 (133 DTE). Net debit $3.70/share ($370/contract, live mi</p>
 <h2>Why This Structure</h2>
-<p>The diagonal call spread expresses a <strong>directional-bullish view on SPY over the next 4–5 months</strong>, structured as a <strong>cheaper synthetic long $795 call</strong>. The synthetic long call profile comes from going long the back-month $795C (which has more intrinsic and more time value) and short the front-month $800C (which is OTM and decays faster). The net effect is a position that behaves like a long $795 call but costs $3.70/share instead of the outright $795C's $23.07/share — <strong>a 6.2× reduction in capital deployed for the same directional exposure</strong> (though with capped upside at $800).</p>
-<p>Why a diagonal over an outright long $795 call? An outright long $795C costs $23.07/share ($2,307/contract) with unlimited upside but full premium at risk if SPY doesn't move. The diagonal costs $3.70/share ($370/contract) — 16% of the outright cost — and caps the upside at $800 (the short strike), but offers a $5-wide profit zone that fully recovers the debit at $795.50. The diagonal is the right structure when the bullish view is <strong>range-bound to a target ceiling</strong> rather than unlimited upside. If SPY rallies through $800, the diagonal caps at $130 max profit; the outright long call keeps going.</p>
+<p>The diagonal call spread expresses a<strong>directional-bullish view on SPY over the next 4–5 months</strong>, structured as a<strong>cheaper synthetic long $795 call</strong>. The synthetic long call profile comes from going long the back-month $795C (which has more intrinsic and more time value) and short the front-month $800C (which is OTM and decays faster). The net effect is a position that behaves like a long $795 call but costs $3.70/share instead of the outright $795C's $23.07/share —<strong>a 6.2× reduction in capital deployed for the same directional exposure</strong>(though with capped upside at $800).</p>
+<p>Why a diagonal over an outright long $795 call? An outright long $795C costs $23.07/share ($2,307/contract) with unlimited upside but full premium at risk if SPY doesn't move. The diagonal costs $3.70/share ($370/contract) — 16% of the outright cost — and caps the upside at $800 (the short strike), but offers a $5-wide profit zone that fully recovers the debit at $795.50. The diagonal is the right structure when the bullish view is<strong>range-bound to a target ceiling</strong>rather than unlimited upside. If SPY rallies through $800, the diagonal caps at $130 max profit; the outright long call keeps going.</p>
 <p>Why these expiries (Dec 18 / Dec 31)? The 13-day diagonal span is the standard "front-month standard + back-month weekly" structure for end-of-year trades. Dec 18 is the standard 3rd-Friday monthly expiry for SPY options. Dec 31 is the year-end Thursday weekly. The 13-day gap captures the steepest part of the front-month theta decay curve (front-month options lose time value fastest in the last 30 days) without extending into a true LEAP structure. The back-month weekly captures the next quarterly cycle while keeping capital efficient.</p>
 <p>Why $800 short / $795 long strikes specifically? At spot $773.24, the short $800C is 3.46% above spot and the long $795C is 2.81% above spot. The $5 strike width gives a max profit of $130 (5 × 100 - 370) and a max loss of $370 (the debit). The short strike at $800 is meaningful — it requires SPY to rally ~3.5% over the next 4 months — but achievable in a normal bull cycle. The long strike at $795 is closer to spot, which gives the long leg more intrinsic value as SPY rises. The 0.65% spread between strikes ($795 vs $800) is what creates the asymmetric payoff: long captures ~2.8% of upside from spot, short caps further gains above $800.</p>
-<p>Why SPY over SPX for this structure? SPY options have <strong>American-style early assignment risk</strong> on the short leg (cash-securable if exercised). For the deep-OTM short $800C, this risk is negligible at entry (3.46% OTM) but increases as SPY approaches $800. The mitigation is to <strong>close the short leg before Dec 18 expiry</strong> if SPY is anywhere near $800. SPX would eliminate this risk (European-style cash-settled) but SPY has tighter bid/ask spreads at retail volume and the strikes match standard round-number targets better ($795/$800 vs $7,950/$8,000). The trade-off is favorable for a 4.5-month position.</p>
+<p>Why SPY over SPX for this structure? SPY options have<strong>American-style early assignment risk</strong>on the short leg (cash-securable if exercised). For the deep-OTM short $800C, this risk is negligible at entry (3.46% OTM) but increases as SPY approaches $800. The mitigation is to<strong>close the short leg before Dec 18 expiry</strong>if SPY is anywhere near $800. SPX would eliminate this risk (European-style cash-settled) but SPY has tighter bid/ask spreads at retail volume and the strikes match standard round-number targets better ($795/$800 vs $7,950/$8,000). The trade-off is favorable for a 4.5-month position.</p>
 <h2>Thesis</h2>
+<p><strong>Why SPY, why now:</strong>SPY closed Aug 7 at $773.24, up 0.6% from the prior day's $768.56 and 0.4% week-over-week. The market has been range-bound between $760 and $785 over the last two weeks, with VIX at 15.95 (calm). The bullish thesis is that<strong>Q4 2026 historically delivers positive returns</strong>— September/October seasonal weakness gives way to a year-end rally in most years, and the Fed's rate path (next FOMC Sep 16–17, expected 25 bp cut) is supportive of risk assets. The diagonal captures 4.5 months of upside exposure for $370/contract, with a known exit window (Dec 18 short leg) before any major year-end event.</p>
 <ul>
-  <li><strong>Why SPY, why now:</strong> SPY closed Aug 7 at $773.24, up 0.6% from the prior day's $768.56 and 0.4% week-over-week. The market has been range-bound between $760 and $785 over the last two weeks, with VIX at 15.95 (calm). The bullish thesis is that <strong>Q4 2026 historically delivers positive returns</strong> — September/October seasonal weakness gives way to a year-end rally in most years, and the Fed's rate path (next FOMC Sep 16–17, expected 25 bp cut) is supportive of risk assets. The diagonal captures 4.5 months of upside exposure for $370/contract, with a known exit window (Dec 18 short leg) before any major year-end event.</li>
+  <li><strong>Why diagonal over alternatives:</strong>A naked long $795C costs $2,307/contract — 6.2× more capital for the same directional exposure. A bull call vertical (long $795C / short $810C, same expiry) would cost ~$7/share ($700/contract) for a $15 max profit vs the diagonal's $130/$370. A call debit spread with closer strikes (long $795C / short $800C,<strong>same expiry</strong>) would cost ~$4.50/share ($450/contract) for $50 max profit — less efficient than the diagonal which costs less for similar upside in the $795–$800 zone. A covered call (long 100 SPY at $77,324 + short $800C) would tie up $77,324 of capital for $1,937 of premium — capital-inefficient. The diagonal's edge is<strong>capital efficiency + duration asymmetry</strong>: the back-month leg decays slowly (long-dated), the front-month leg decays fast (short-dated), and the net theta is approximately flat while directional exposure is preserved.</li>
+  <li><strong>Why not just buy the long $795C and skip the short:</strong>Without the short leg, the position becomes an outright long $795C at $23.07/share ($2,307/contract) — 6.2× the diagonal's capital. The short leg subsidizes the long leg by $19.37/share ($1,937/contract), reducing the cost to $3.70/share. The trade-off is that upside is capped at $800 (vs unlimited for the outright long), but the cap is at a meaningful level (3.46% above spot).</li>
+  <li><strong>Why not a calendar spread (same strike, different expiries):</strong>A calendar at the $795 strike (long $795C Dec 31 / short $795C Dec 18) would benefit from time decay between the two expiries but would not express a directional view. The diagonal adds a $5 directional tilt by shifting the strikes, converting a non-directional calendar into a bullish diagonal with similar risk/reward.</li>
 </ul>
-<ul>
-  <li><strong>Why diagonal over alternatives:</strong> A naked long $795C costs $2,307/contract — 6.2× more capital for the same directional exposure. A bull call vertical (long $795C / short $810C, same expiry) would cost ~$7/share ($700/contract) for a $15 max profit vs the diagonal's $130/$370. A call debit spread with closer strikes (long $795C / short $800C, <strong>same expiry</strong>) would cost ~$4.50/share ($450/contract) for $50 max profit — less efficient than the diagonal which costs less for similar upside in the $795–$800 zone. A covered call (long 100 SPY at $77,324 + short $800C) would tie up $77,324 of capital for $1,937 of premium — capital-inefficient. The diagonal's edge is <strong>capital efficiency + duration asymmetry</strong>: the back-month leg decays slowly (long-dated), the front-month leg decays fast (short-dated), and the net theta is approximately flat while directional exposure is preserved.</li>
-</ul>
-<ul>
-  <li><strong>Why not just buy the long $795C and skip the short:</strong> Without the short leg, the position becomes an outright long $795C at $23.07/share ($2,307/contract) — 6.2× the diagonal's capital. The short leg subsidizes the long leg by $19.37/share ($1,937/contract), reducing the cost to $3.70/share. The trade-off is that upside is capped at $800 (vs unlimited for the outright long), but the cap is at a meaningful level (3.46% above spot).</li>
-</ul>
-<ul>
-  <li><strong>Why not a calendar spread (same strike, different expiries):</strong> A calendar at the $795 strike (long $795C Dec 31 / short $795C Dec 18) would benefit from time decay between the two expiries but would not express a directional view. The diagonal adds a $5 directional tilt by shifting the strikes, converting a non-directional calendar into a bullish diagonal with similar risk/reward.</li>
-</ul>
+<p>-</p>
 <h2>Risk</h2>
-<table>
-<thead>
-<tr><th>Risk</th><th>Magnitude</th><th>Mitigation</th></tr>
-<tr><td>SPY drops through $795 long strike (downside breach)</td><td>Up to full $370 max loss per contract (debit paid, both legs expire worthless)</td><td>Stop loss at 1.5× debit ($555 cost to close); or close if SPY closes below $785 on any daily print (long leg near worthless)</td></tr>
-<tr><td>SPY rallies through $800 short strike (upside cap)</td><td>Profit capped at $130/contract — no further upside beyond $800</td><td>Acceptable per thesis (range-bounded to $800); can close short leg before Dec 18 to remove cap if SPY breaks $800 early</td></tr>
-<tr><td>Vol contraction (VIX drops to 12 or below)</td><td>~$150–$250/contract loss on long vega (long premium loses value)</td><td>Long vega hurts when IV falls. Diagonal's net vega is +$10.89/contract per 1% IV; a 4-point VIX drop (15.95 → 11.95) costs ~$44/contract. Manageable in a calm-tape regime.</td></tr>
-<tr><td>Vol expansion (VIX spike to 25+)</td><td>Positive — long vega benefits. ~+$110/contract if VIX spikes 10 points</td><td>No mitigation needed — net positive</td></tr>
-<tr><td>Macro event in next 4 months (geopolitical, Fed surprise, recession)</td><td>Could blow through long $795 strike intraday</td><td>Monitor headlines; FOMC Sep 16–17 and Oct 28–29 are the next binary events. Close if a major catalyst materializes before Dec 18.</td></tr>
-<tr><td>Scenario: early assignment on short $800C (American-style)</td><td>Possible if SPY closes at or above $800 before Dec 18 ex-div date</td><td>Close short leg before Dec 18 if SPY ≥ $795 (lock in max profit $130). SPY is not currently near $800; assignment risk is negligible at entry.</td></tr>
-<tr><td>Scenario: liquidity gap on SPY 795C Dec 31 (only 967 OI, 55 daily volume)</td><td>Bid/ask could widen to $0.30+ if a fast market hits</td><td>Use limit orders; close with limit at mid or better. The thin back-month OI is the weakest leg — manage actively, especially in the last week before Dec 18.</td></tr>
-<tr><td>Scenario: theta acceleration mismatch between legs in last 30 DTE</td><td>Front-month decays faster than back-month in absolute terms; could create unexpected MTM swings</td><td>Monitor weekly net theta; close if net P/L moves adversely by more than 1.5× debit.</td></tr>
-</tbody>
-</table>
-
-<div class="position-payoff-layout"><div class="position-payoff-content">
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Risk</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Magnitude</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Mitigation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPY drops through $795 long strike (downside breach)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Up to full $370 max loss per contract (debit paid, both legs expire worthless)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stop loss at 1.5× debit ($555 cost to close); or close if SPY closes below $785 on any daily print (long leg near worthless)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">SPY rallies through $800 short strike (upside cap)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Profit capped at $130/contract — no further upside beyond $800</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Acceptable per thesis (range-bounded to $800); can close short leg before Dec 18 to remove cap if SPY breaks $800 early</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vol contraction (VIX drops to 12 or below)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~$150–$250/contract loss on long vega (long premium loses value)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Long vega hurts when IV falls. Diagonal's net vega is +$10.89/contract per 1% IV; a 4-point VIX drop (15.95 → 11.95) costs ~$44/contract. Manageable in a calm-tape regime.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vol expansion (VIX spike to 25+)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Positive — long vega benefits. ~+$110/contract if VIX spikes 10 points</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">No mitigation needed — net positive</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Macro event in next 4 months (geopolitical, Fed surprise, recession)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Could blow through long $795 strike intraday</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Monitor headlines; FOMC Sep 16–17 and Oct 28–29 are the next binary events. Close if a major catalyst materializes before Dec 18.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Scenario: early assignment on short $800C (American-style)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Possible if SPY closes at or above $800 before Dec 18 ex-div date</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close short leg before Dec 18 if SPY ≥ $795 (lock in max profit $130). SPY is not currently near $800; assignment risk is negligible at entry.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Scenario: liquidity gap on SPY 795C Dec 31 (only 967 OI, 55 daily volume)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Bid/ask could widen to $0.30+ if a fast market hits</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Use limit orders; close with limit at mid or better. The thin back-month OI is the weakest leg — manage actively, especially in the last week before Dec 18.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Scenario: theta acceleration mismatch between legs in last 30 DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Front-month decays faster than back-month in absolute terms; could create unexpected MTM swings</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Monitor weekly net theta; close if net P/L moves adversely by more than 1.5× debit.</td>
+</tr>
+</tbody></table></div>
 <h2>Position Payoff at Three Time Horizons</h2>
 <p>The chart above shows the position's P/L as a function of SPY's price at three evaluation windows: now (Aug 7, 2026, ~133–146 DTE), at short-leg expiry (Dec 18, 2026, with 13 DTE remaining on the long leg), and at long-leg expiry (Dec 31, 2026). The at-expiry curve is the canonical P/L shape for a $5-wide diagonal: a $5-wide profit plateau between $795 and $800, capped at +$130, with a $370 max loss below $795. The Dec 18 (mid-life) curve shows the peak profit shifting up because the long leg still has 13 days of residual time value above intrinsic — the long premium decays in those final 13 days, harvesting an additional $50–$100/contract if SPY is in the right zone. The "now" curve is a relatively flat small-positive P/L because both legs are at full premium with no time value harvested yet.</p>
-<p>You can build and track this exact diagonal at <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">Optionstrat</a> with the <code>?ref=ventureprise</code> link from your affiliate dashboard. The saved structure is at <a href="https://optionstrat.com/I39rC2KcWKCI" target="_blank" rel="noopener">optionstrat.com/I39rC2KcWKCI</a>.</p>
-<p><strong>Read the chart:</strong></p>
+<p>You can build and track this exact diagonal at[Optionstratwith the<code>?ref=ventureprise</code>link from your affiliate dashboard. The saved structure is at[optionstrat.com/I39rC2KcWKCI.</p>
+<p><strong>Read the chart:</strong><strong>Spot $773.24</strong>sits below the profit zone — at current spot, the position is at max loss (debit paid, no intrinsic value captured yet). The position needs SPY to rally to $791.30 (lower breakeven) to recover the debit and $795+ to lock in profit.</p>
 <ul>
-  <li><strong>Spot $773.24</strong> sits below the profit zone — at current spot, the position is at max loss (debit paid, no intrinsic value captured yet). The position needs SPY to rally to $791.30 (lower breakeven) to recover the debit and $795+ to lock in profit.</li>
-  <li><strong>The profit plateau ($130)</strong> opens at $795 (long strike — at-the-money for the long leg) and runs to $800 (short strike — caps further upside). Anywhere in this range at Dec 18 or Dec 31 expiry, the position captures the full $5 width minus the debit.</li>
-  <li><strong>The "short cap" line at $800</strong> is the structural ceiling — above $800, the short leg becomes ITM and offsets the long leg's intrinsic gain at exactly $5 per $1 move, keeping P/L flat at +$130.</li>
-  <li><strong>The Dec 18 (short-leg expiry) curve peaks higher than the Dec 31 (long-leg expiry) curve</strong> because the long leg still has 13 days of residual time value at Dec 18 — that time value is captured as additional profit if SPY is in the profit zone. After Dec 18, if the position is held through to Dec 31, the long leg loses another 13 days of premium.</li>
-  <li><strong>The flat-line "now" curve</strong> is the entry state: small positive P/L because the long leg's theta decay hasn't started harvesting yet, and both legs are at full premium. Over time, this curve flattens into the Dec 18 shape (long premium decayed by 13 days) and then into the Dec 31 shape (long premium decayed by 146 days).</li>
+  <li><strong>The profit plateau ($130)</strong>opens at $795 (long strike — at-the-money for the long leg) and runs to $800 (short strike — caps further upside). Anywhere in this range at Dec 18 or Dec 31 expiry, the position captures the full $5 width minus the debit.</li>
+  <li><strong>The "short cap" line at $800</strong>is the structural ceiling — above $800, the short leg becomes ITM and offsets the long leg's intrinsic gain at exactly $5 per $1 move, keeping P/L flat at +$130.</li>
+  <li><strong>The Dec 18 (short-leg expiry) curve peaks higher than the Dec 31 (long-leg expiry) curve</strong>because the long leg still has 13 days of residual time value at Dec 18 — that time value is captured as additional profit if SPY is in the profit zone. After Dec 18, if the position is held through to Dec 31, the long leg loses another 13 days of premium.</li>
+  <li><strong>The flat-line "now" curve</strong>is the entry state: small positive P/L because the long leg's theta decay hasn't started harvesting yet, and both legs are at full premium. Over time, this curve flattens into the Dec 18 shape (long premium decayed by 13 days) and then into the Dec 31 shape (long premium decayed by 146 days).</li>
 </ul>
-<p><strong>Key levels on the chart:</strong></p>
+<p>-</p>
+<p><strong>Key levels on the chart:</strong><strong>Spot $773.24</strong>— current underlying; position is at max loss.</p>
 <ul>
-  <li><strong>Spot $773.24</strong> — current underlying; position is at max loss.</li>
-  <li><strong>Lower breakeven $791.30</strong> — SPY needs to rally 2.33% from spot to wipe out the debit.</li>
-  <li><strong>Long strike $795.00</strong> — the profit zone opens here (long leg becomes ITM).</li>
-  <li><strong>Short strike $800.00</strong> — the profit zone caps here (short leg becomes ITM, capping further upside).</li>
-  <li><strong>Max profit $130.00</strong> at any SPY close between $795 and $800 at Dec 18 or Dec 31 expiry.</li>
-  <li><strong>Max loss $370.00</strong> (= net debit) at any SPY close at or below $795 at Dec 31.</li>
+  <li><strong>Lower breakeven $791.30</strong>— SPY needs to rally 2.33% from spot to wipe out the debit.</li>
+  <li><strong>Long strike $795.00</strong>— the profit zone opens here (long leg becomes ITM).</li>
+  <li><strong>Short strike $800.00</strong>— the profit zone caps here (short leg becomes ITM, capping further upside).</li>
+  <li><strong>Max profit $130.00</strong>at any SPY close between $795 and $800 at Dec 18 or Dec 31 expiry.</li>
+  <li><strong>Max loss $370.00</strong>(= net debit) at any SPY close at or below $795 at Dec 31.</li>
 </ul>
-</div><aside class="trade-hero-fields"><p class="hero-label">Trade: SPY Dec 18 / Dec 31 800/795 Diagonal Call Spread (133/146 DTE)</p><dl><dt>Instrument</dt><dd>SPY equity index options (Dec 18 + Dec 31, 2026 standard + EOM-style weekly)</dd>
-<dt>Underlying</dt><dd>SPY (S&P 500 ETF; American-style, equity-settled, 1× SPY = 100 shares per contract)</dd>
-<dt>Structure</dt><dd>Bullish Call Diagonal Debit Spread — 2 legs, different expiries (133 DTE front / 146 DTE back)</dd>
-<dt>Strikes</dt><dd>$795 (long back-month) / $800 (short front-month)</dd>
-<dt>Leg 1</dt><dd>BTO +1× SPY 795C Dec 31, 2026 at $23.07 live mid (OptionStrat basis $22.66 — within 1.8%)</dd>
-<dt>Leg 2</dt><dd>STO −1× SPY 800C Dec 18, 2026 at $19.37 live mid (OptionStrat basis $18.975 — within 2.1%)</dd>
-<dt>Width</dt><dd>$5 ($795 long strike to $800 short strike)</dd>
-<dt>Diagonal span</dt><dd>13 days (front expiry Dec 18 to back expiry Dec 31)</dd>
-<dt>Front-month expiry</dt><dd>Dec 18, 2026 (133 DTE at entry; standard 3rd-Friday monthly, closes 1 week before Christmas)</dd>
-<dt>Back-month expiry</dt><dd>Dec 31, 2026 (146 DTE at entry; year-end weekly, Thursday expiry)</dd>
-<dt>Settlement</dt><dd>SPY options are American-style with equity settlement (deliver 100 SPY shares if assigned). Both legs are deep OTM at entry (short $800C is 3.46% above spot; long $795C is 2.81% above spot).</dd>
-<dt>Net debit (live)</dt><dd>$3.70/share = $370.00/contract</dd>
-<dt>Contracts</dt><dd>1 diagonal</dd>
-<dt>Total debit</dt><dd>$370.00 (1 × $370.00)</dd>
-<dt>Max profit zone</dt><dd>$795 ≤ SPY ≤ $800 at either Dec 18 or Dec 31 expiry (width $5)</dd>
-<dt>Max profit</dt><dd>$130.00/contract (= $5 width × 100 − $370 debit; realized when SPY ≥ $800 and short leg is closed/expires)</dd>
-<dt>Max loss</dt><dd>$370.00/contract (= net debit, defined risk; hit if both legs expire worthless, i.e. SPY < $795 at Dec 31)</dd>
-<dt>Lower breakeven</dt><dd>$791.30 ($795 long strike − $3.70 net debit)</dd>
-<dt>Reward-to-risk</dt><dd>0.35:1 ($130 max profit / $370 max loss)</dd>
-<dt>Cushion to short strike</dt><dd>SPY needs +3.46% from $773.24 to reach $800 short strike</dd>
-<dt>Cushion to long strike</dt><dd>SPY needs +2.81% from $773.24 to reach $795 long strike (at-the-money)</dd>
-<dt>IV at entry (long leg)</dt><dd>~16.5% (live chain; Dec 31 weekly)</dd>
-<dt>IV at entry (short leg)</dt><dd>~16.3% (live chain; Dec 18 standard monthly)</dd>
-<dt>Net delta at entry</dt><dd>~+0.03 BSM (essentially delta-neutral at entry; long $795C delta +0.46, short $800C delta +0.43)</dd>
-<dt>Net gamma at entry</dt><dd>~−0.026/contract (slightly short gamma — opposite of a long call's profile)</dd>
-<dt>Net theta at entry</dt><dd>~$0.00/day per contract (long theta + short theta nearly cancel — diagonal's defining feature)</dd>
-<dt>Net vega at entry</dt><dd>~+$10.89/contract per 1% IV (long vega — benefits from rising IV, opposite of a short call's profile)</dd>
-<dt>POP (lognormal)</dt><dd>~39% P(SPY > $800 at Dec 18) using σ=16.28%, drift (r−q−½σ²) over 133 DTE</dd>
-<dt>Conditional POP</dt><dd>~70% conditional on reaching $795 at any point (long leg captures intrinsic); realistic expected outcome: a partial profit between $30–$130</dd>
-<dt>Entry time</dt><dd>Aug 7, 2026, mid-day (SPY spot observation at 15:46 UTC / 11:46 ET)</dd>
-<dt>Management rule</dt><dd>Close at Dec 18 short-leg expiry (avoid assignment risk on the short American call); roll or close before Dec 31 expiry based on long leg value</dd>
-<dt>Stop loss</dt><dd>1.5× debit ($555 cost to close) OR SPY closes below $785 (long leg near worthless). NEVER let the position exceed $370 max loss (debit paid).</dd>
-<dt>Position size note</dt><dd>Max loss $370 = 0.12% of $300k NLV — well under the 0.25% per-trade guideline and under the $5,000 absolute cap.</dd></dl></aside></div>
-
+<p>-</p>
+<p>Trade: SPY Dec 18 / Dec 31 800/795 Diagonal Call Spread (133/146 DTE)</p>
+<p><strong>Instrument</strong> SPY equity index options (Dec 18 + Dec 31, 2026 standard + EOM-style weekly)</p>
+<p><strong>Underlying</strong> SPY (S&P 500 ETF; American-style, equity-settled, 1× SPY = 100 shares per contract)</p>
+<p><strong>Structure</strong> Bullish Call Diagonal Debit Spread — 2 legs, different expiries (133 DTE front / 146 DTE back)</p>
+<p><strong>Strikes</strong> $795 (long back-month) / $800 (short front-month)</p>
+<p><strong>Leg 1</strong> BTO +1× SPY 795C Dec 31, 2026 at $23.07 live mid (OptionStrat basis $22.66 — within 1.8%)</p>
+<p><strong>Leg 2</strong> STO −1× SPY 800C Dec 18, 2026 at $19.37 live mid (OptionStrat basis $18.975 — within 2.1%)</p>
+<p><strong>Width</strong> $5 ($795 long strike to $800 short strike)</p>
+<p><strong>Diagonal span</strong> 13 days (front expiry Dec 18 to back expiry Dec 31)</p>
+<p><strong>Front-month expiry</strong> Dec 18, 2026 (133 DTE at entry; standard 3rd-Friday monthly, closes 1 week before Christmas)</p>
+<p><strong>Back-month expiry</strong> Dec 31, 2026 (146 DTE at entry; year-end weekly, Thursday expiry)</p>
+<p><strong>Settlement</strong> SPY options are American-style with equity settlement (deliver 100 SPY shares if assigned). Both legs are deep OTM at entry (short $800C is 3.46% above spot; long $795C is 2.81% above spot).</p>
+<p><strong>Net debit (live)</strong> $3.70/share = $370.00/contract</p>
+<p><strong>Contracts</strong> 1 diagonal</p>
+<p><strong>Total debit</strong> $370.00 (1 × $370.00)</p>
+<p><strong>Max profit zone</strong> $795 ≤ SPY ≤ $800 at either Dec 18 or Dec 31 expiry (width $5)</p>
+<p><strong>Max profit</strong> $130.00/contract (= $5 width × 100 − $370 debit; realized when SPY ≥ $800 and short leg is closed/expires)</p>
+<p><strong>Max loss</strong> $370.00/contract (= net debit, defined risk; hit if both legs expire worthless, i.e. SPY<$795 at Dec 31)</p>
+<p><strong>Lower breakeven</strong> $791.30 ($795 long strike − $3.70 net debit)</p>
+<p><strong>Reward-to-risk</strong> 0.35:1 ($130 max profit / $370 max loss)</p>
+<p><strong>Cushion to short strike</strong> SPY needs +3.46% from $773.24 to reach $800 short strike</p>
+<p><strong>Cushion to long strike</strong> SPY needs +2.81% from $773.24 to reach $795 long strike (at-the-money)</p>
+<p><strong>IV at entry (long leg)</strong> ~16.5% (live chain; Dec 31 weekly)</p>
+<p><strong>IV at entry (short leg)</strong> ~16.3% (live chain; Dec 18 standard monthly)</p>
+<p><strong>Net delta at entry</strong> ~+0.03 BSM (essentially delta-neutral at entry; long $795C delta +0.46, short $800C delta +0.43)</p>
+<p><strong>Net gamma at entry</strong> ~−0.026/contract (slightly short gamma — opposite of a long call's profile)</p>
+<p><strong>Net theta at entry</strong> ~$0.00/day per contract (long theta + short theta nearly cancel — diagonal's defining feature)</p>
+<p><strong>Net vega at entry</strong> ~+$10.89/contract per 1% IV (long vega — benefits from rising IV, opposite of a short call's profile)</p>
+<p><strong>POP (lognormal)</strong> ~39% P(SPY > $800 at Dec 18) using σ=16.28%, drift (r−q−½σ²) over 133 DTE</p>
+<p><strong>Conditional POP</strong> ~70% conditional on reaching $795 at any point (long leg captures intrinsic); realistic expected outcome: a partial profit between $30–$130</p>
+<p><strong>Entry time</strong> Aug 7, 2026, mid-day (SPY spot observation at 15:46 UTC / 11:46 ET)</p>
+<p><strong>Management rule</strong> Close at Dec 18 short-leg expiry (avoid assignment risk on the short American call); roll or close before Dec 31 expiry based on long leg value</p>
+<p><strong>Stop loss</strong> 1.5× debit ($555 cost to close) OR SPY closes below $785 (long leg near worthless). NEVER let the position exceed $370 max loss (debit paid).</p>
+<p><strong>Position size note</strong> Max loss $370 = 0.12% of $300k NLV — well under the 0.25% per-trade guideline and under the $5,000 absolute cap.</p>
 <h2>Greeks Snapshot (Black-Scholes)</h2>
+<p><strong>Delta (Δ)</strong><strong>Gamma (Γ)</strong><strong>Theta (Θ)</strong><strong>Vega (ν)</strong><strong>Rho (ρ)</strong></p>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr>
@@ -161,93 +188,141 @@
 </tr></thead>
 <tbody>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Delta (Δ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~+0.03 BSM net (long $795C delta +0.46, short $800C delta +0.43)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">~+0.03 BSM net (long $795C delta +0.46, short $800C delta +0.43)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Delta-neutral at entry. As SPY rises, the long leg's delta grows faster than the short leg's, making the position net long delta — a synthetic long call profile.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Gamma (Γ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~−0.026/contract</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">~−0.026/contract</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slightly short gamma. Position loses delta quickly as SPY moves against the strikes — opposite of a long call's positive gamma.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Theta (Θ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~$0.00/day (net)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">~$0.00/day (net)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">The diagonal's defining feature: long back-month theta (~+$1.93/day × long IV exposure) and short front-month theta (~−$1.82/day × short IV exposure) nearly cancel. Net theta is small but slightly positive.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Vega (ν)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~+$10.89/contract per 1% IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">~+$10.89/contract per 1% IV</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Long vega (synthetic long call profile). A 1-point drop in VIX (15.95 → 14.95) loses ~$10.89/contract; a 1-point rise (15.95 → 16.95) gains ~$10.89/contract.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Rho (ρ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~+$0.05 per 1% rate</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">~+$0.05 per 1% rate</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Small positive rate sensitivity (long premium dominates). Negligible relative to vol and theta for a 4.5-month position.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 </tbody></table></div>
 <p>Numbers computed at entry spot $773.24, 133 DTE (short leg) / 146 DTE (long leg), IV surface 16.28% (front-month) / 16.54% (back-month) per live chain, r=4.5%, q=1.3% (SPY dividend yield). Per-contract = per-share × 100. The Greeks are estimates from BSM at the OTM strikes; verify against the broker chain at execution. The structure is essentially delta-neutral, slightly short gamma, theta-neutral, long vega — a synthetic long $795 call with capped upside at $800.</p>
 <h2>Intraday Setup (entry)</h2>
+<p><strong>Pre-market context:</strong>SPY opened at $773.24 (live spot at 11:46 ET). SPY closed the prior day at $768.56 (+0.61% overnight on no major news). VIX is at 15.95 — calm tape. No imminent macro catalyst in the next 2 weeks (next FOMC is September 16–17, next CPI is September 11, both outside the highest-gamma window for a 4.5-month trade). The IV surface is suppressed (call IV 16.3% / 16.5% — well below the 18–22% range that typically signals neutral sentiment), which makes the long-premium structure attractive but the short-leg premium collection modest.</p>
 <ul>
-  <li><strong>Pre-market context:</strong> SPY opened at $773.24 (live spot at 11:46 ET). SPY closed the prior day at $768.56 (+0.61% overnight on no major news). VIX is at 15.95 — calm tape. No imminent macro catalyst in the next 2 weeks (next FOMC is September 16–17, next CPI is September 11, both outside the highest-gamma window for a 4.5-month trade). The IV surface is suppressed (call IV 16.3% / 16.5% — well below the 18–22% range that typically signals neutral sentiment), which makes the long-premium structure attractive but the short-leg premium collection modest.</li>
-  <li><strong>Entry signal:</strong> The setup is structural: a 4.5-month diagonal at 3.46% OTM short strike, on a calm tape, capturing Q4 seasonality. No specific catalyst-driven entry; this is a structural premium-and-direction trade.</li>
-  <li><strong>Execution:</strong> Limit orders on both legs, net debit ≤ $3.75/share. The $795C Dec 31 has 55 volume today and 967 OI — moderately liquid for a far-dated weekly. The $800C Dec 18 has 126 volume and 20,074 OI — very liquid (standard monthly). Bid/ask spreads: 795C $0.06 ($23.04/$23.10), 800C $0.06 ($19.34/$19.40) — both tight. Fill at mid with limit orders.</li>
-  <li><strong>Position size check:</strong> Max risk $370 = 0.12% of $300k NLV. <strong>Well under the playbook's 0.25% per-trade guideline and well under the $5,000 absolute cap.</strong> Sized appropriately for a directional-bullish structural position.</li>
+  <li><strong>Entry signal:</strong>The setup is structural: a 4.5-month diagonal at 3.46% OTM short strike, on a calm tape, capturing Q4 seasonality. No specific catalyst-driven entry; this is a structural premium-and-direction trade.</li>
+  <li><strong>Execution:</strong>Limit orders on both legs, net debit ≤ $3.75/share. The $795C Dec 31 has 55 volume today and 967 OI — moderately liquid for a far-dated weekly. The $800C Dec 18 has 126 volume and 20,074 OI — very liquid (standard monthly). Bid/ask spreads: 795C $0.06 ($23.04/$23.10), 800C $0.06 ($19.34/$19.40) — both tight. Fill at mid with limit orders.</li>
+  <li><strong>Position size check:</strong>Max risk $370 = 0.12% of $300k NLV.<strong>Well under the playbook's 0.25% per-trade guideline and well under the $5,000 absolute cap.</strong>Sized appropriately for a directional-bullish structural position.</li>
 </ul>
+<p>-</p>
 <h2>Management Plan</h2>
+<p><strong>Through Oct 7, 2026 (~60 days in, ~73 DTE remaining on front leg):</strong>Do nothing. The position is defined-risk, directional-bullish, and theta-neutral. VIX is at 15.95 — calm regime. Monitor weekly for any macro headlines that could spike vol.</p>
 <ul>
-  <li><strong>Through Oct 7, 2026 (~60 days in, ~73 DTE remaining on front leg):</strong> Do nothing. The position is defined-risk, directional-bullish, and theta-neutral. VIX is at 15.95 — calm regime. Monitor weekly for any macro headlines that could spike vol.</li>
-  <li><strong>Oct 7 – Nov 7 (~60–90 days in, ~41–72 DTE on front):</strong> Begin watching delta closely. If VIX rises to 22+ or SPY moves >5% from spot in either direction, begin sizing for a potential close. If SPY remains within $760–$790, let theta and vega work.</li>
-  <li><strong>Nov 7 – Dec 11 (~95–125 days in, ~7–41 DTE on front):</strong> Take 50% of max profit (close at $185 cost-to-close = $185 realized profit) if SPY is within $795–$800 and stable. If SPY is approaching $800 from below, consider closing the short leg early to remove the upside cap (locks in $130 max profit).</li>
-  <li><strong>Dec 11 – Dec 18 (~127–133 days in, last week before short leg expiry):</strong> Hard time stop on the short leg. <strong>The short $800C must be closed by Dec 18 if SPY is anywhere near or above $800 to avoid American-style assignment.</strong> If SPY < $795 at Dec 18, close the entire position (both legs) to lock in remaining value.</li>
-  <li><strong>Dec 18 – Dec 31 (long leg only, ~13 DTE remaining):</strong> If the short leg is closed/expired, the position becomes a long $795C with 13 DTE. Hold to Dec 31 if SPY > $795; close if SPY drops below $790.</li>
-  <li><strong>Stop loss:</strong> 1.5× debit ($555 cost to close) OR SPY closes below $785 (long leg near worthless) OR VIX spikes above 25 (vol expansion — actually positive for this position but signals regime change). NEVER let the position exceed $370 max loss (debit paid).</li>
+  <li><strong>Oct 7 – Nov 7 (~60–90 days in, ~41–72 DTE on front):</strong>Begin watching delta closely. If VIX rises to 22+ or SPY moves >5% from spot in either direction, begin sizing for a potential close. If SPY remains within $760–$790, let theta and vega work.</li>
+  <li><strong>Nov 7 – Dec 11 (~95–125 days in, ~7–41 DTE on front):</strong>Take 50% of max profit (close at $185 cost-to-close = $185 realized profit) if SPY is within $795–$800 and stable. If SPY is approaching $800 from below, consider closing the short leg early to remove the upside cap (locks in $130 max profit).</li>
+  <li><strong>Dec 11 – Dec 18 (~127–133 days in, last week before short leg expiry):</strong>Hard time stop on the short leg.<strong>The short $800C must be closed by Dec 18 if SPY is anywhere near or above $800 to avoid American-style assignment.</strong>If SPY<$795 at Dec 18, close the entire position (both legs) to lock in remaining value.</li>
+  <li><strong>Dec 18 – Dec 31 (long leg only, ~13 DTE remaining):</strong>If the short leg is closed/expired, the position becomes a long $795C with 13 DTE. Hold to Dec 31 if SPY > $795; close if SPY drops below $790.</li>
+  <li><strong>Stop loss:</strong>1.5× debit ($555 cost to close) OR SPY closes below $785 (long leg near worthless) OR VIX spikes above 25 (vol expansion — actually positive for this position but signals regime change). NEVER let the position exceed $370 max loss (debit paid).</li>
 </ul>
+<p>-</p>
 <h2>Status</h2>
-<table>
-<thead>
-<tr><th>Date</th><th>SPY Price</th><th>Position Value</th><th>P&L</th><th>Notes</th></tr>
-</thead>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Date</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">SPY Price</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Position Value</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">P&L</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
 <tbody>
-<tr><td>2026-08-07 (entry)</td><td>$773.24</td><td>$370.00 debit paid</td><td>—</td><td>Opened. VIX 15.95. Short $800C 3.46% OTM. Live chain credit $370 (OptionStrat basis $368.50 — within 0.5%).</td></tr>
-<tr><td><YYYY-MM-DD> (30-day review)</td><td>$<XX.XX></td><td>$<X,XXX></td><td><+/−>$<XXX></td><td><Notes: thesis check, MTM, theta captured, VIX behavior.></td></tr>
-<tr><td><YYYY-MM-DD> (60-day review)</td><td>$<XX.XX></td><td>$<X,XXX></td><td><+/−>$<XXX></td><td><Notes: vol behavior, position management.></td></tr>
-<tr><td><YYYY-MM-DD> (90-day review)</td><td>$<XX.XX></td><td>$<X,XXX></td><td><+/−>$<XXX></td><td><Notes: pre-expiry decisions, close plan.></td></tr>
-</tbody>
-</table>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2026-08-07 (entry)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$773.24</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$370.00 debit paid</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">—</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Opened. VIX 15.95. Short $800C 3.46% OTM. Live chain credit $370 (OptionStrat basis $368.50 — within 0.5%).</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(30-day review)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">+/−>$</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(60-day review)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">+/−>$</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(90-day review)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">+/−>$</td>
+</tr>
+</tbody></table></div>
 <h2>Outcome</h2>
-<table>
-<thead>
-<tr><th>Metric</th><th>Value</th></tr>
-</thead>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Metric</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Value</th>
+</tr></thead>
 <tbody>
-<tr><td>Realized P&L</td><td><+/−>$<N,NNN.NN> (1 contract × (close value − debit paid))</td></tr>
-<tr><td>Holding time</td><td><N> days (up to 146 DTE at entry)</td></tr>
-<tr><td>Net theta captured</td><td>~$<X.XX> of the $370 debit paid (<N>% recovered via decay on the short leg)</td></tr>
-<tr><td>Remaining premium</td><td>$<X.XX> of long leg expired with intrinsic OR long leg closed before expiry</td></tr>
-<tr><td>Hit target?</td><td>Yes — 50% of max profit ($185/contract realized), closed at <N>% decay / No — held to expiry at max profit $130 / Closed early at 1.5× stop</td></tr>
-</tbody>
-</table>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Realized P&L</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+/−>$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">(1 contract × (close value − debit paid))</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Holding time</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">days (up to 146 DTE at entry)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Net theta captured</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">of the $370 debit paid (</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">% recovered via decay on the short leg)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Remaining premium</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">of long leg expired with intrinsic OR long leg closed before expiry</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Hit target?</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Yes — 50% of max profit ($185/contract realized), closed at</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">% decay / No — held to expiry at max profit $130 / Closed early at 1.5× stop</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+</tbody></table></div>
 <h2>Lessons</h2>
+<p><strong>What worked:</strong>The diagonal structure at $800/$795 on a calm tape (VIX 15.95) gave a defined-risk, capital-efficient bullish exposure at 16% of the outright long call's cost ($370 vs $2,307). The 4.5-month duration to the back-month leg aligns with Q4 seasonality expectations. The short strike at $800 (3.46% above spot) provides a meaningful but achievable target over 4 months.</p>
 <ul>
-  <li><strong>What worked:</strong> The diagonal structure at $800/$795 on a calm tape (VIX 15.95) gave a defined-risk, capital-efficient bullish exposure at 16% of the outright long call's cost ($370 vs $2,307). The 4.5-month duration to the back-month leg aligns with Q4 seasonality expectations. The short strike at $800 (3.46% above spot) provides a meaningful but achievable target over 4 months.</li>
+  <li><strong>What I'd do differently:</strong>OptionStrat's basis values ($22.66 / $18.975) were both within 2% of live mid — no staleness issues this time. The 13-day diagonal span is a useful template for year-end trades when the front-month standard and back-month weekly are both available.</li>
+  <li><strong>Vol surface behavior:</strong>Call-side IV (16.3% front / 16.5% back) was low relative to typical pre-event regimes, which makes the long premium structure's cost lower than usual but also means the long vega benefit is muted (less premium to lose if IV drops). The structural edge is the duration asymmetry: short front-month decays faster than back-month, harvesting time premium while directional exposure is preserved.</li>
+  <li><strong>Theta math:</strong>At entry, net theta is approximately zero — the diagonal's defining feature. Over time, as the front-month approaches its expiry, the short leg's theta accelerates (faster decay in the last 30 DTE), creating a small positive net theta in the final weeks. If held to Dec 18 short-leg expiry, the position captures ~$50–$100 of theta decay from the short leg's accelerated time-value loss.</li>
+  <li><strong>For the playbook:</strong>A 4.5-month bullish diagonal with $5 strike width and 13-day expiry span is a confirmed-template trade for year-end bullish positioning. Capital efficiency is 6.2× better than an outright long call. Add to playbook as a "range-bounded bullish, year-end seasonality" template; use live chain mid at execution, not OptionStrat's basis (basis was within 2% this time, but always verify).</li>
 </ul>
-<ul>
-  <li><strong>What I'd do differently:</strong> OptionStrat's basis values ($22.66 / $18.975) were both within 2% of live mid — no staleness issues this time. The 13-day diagonal span is a useful template for year-end trades when the front-month standard and back-month weekly are both available.</li>
-</ul>
-<ul>
-  <li><strong>Vol surface behavior:</strong> Call-side IV (16.3% front / 16.5% back) was low relative to typical pre-event regimes, which makes the long premium structure's cost lower than usual but also means the long vega benefit is muted (less premium to lose if IV drops). The structural edge is the duration asymmetry: short front-month decays faster than back-month, harvesting time premium while directional exposure is preserved.</li>
-</ul>
-<ul>
-  <li><strong>Theta math:</strong> At entry, net theta is approximately zero — the diagonal's defining feature. Over time, as the front-month approaches its expiry, the short leg's theta accelerates (faster decay in the last 30 DTE), creating a small positive net theta in the final weeks. If held to Dec 18 short-leg expiry, the position captures ~$50–$100 of theta decay from the short leg's accelerated time-value loss.</li>
-</ul>
-<ul>
-  <li><strong>For the playbook:</strong> A 4.5-month bullish diagonal with $5 strike width and 13-day expiry span is a confirmed-template trade for year-end bullish positioning. Capital efficiency is 6.2× better than an outright long call. Add to playbook as a "range-bounded bullish, year-end seasonality" template; use live chain mid at execution, not OptionStrat's basis (basis was within 2% this time, but always verify).</li>
-</ul>
+<p>-</p>
 <h2>Review Log</h2>
-<ul>
-  <li><strong>2026-08-07 (entry):</strong> Bullish diagonal opened at $370 debit (live chain) on SPY Dec 18 / Dec 31 800/795. SPY spot $773.24 (+0.61% from prior day). VIX 15.95. Short strike 3.46% OTM. Max loss $370 (under $5k cap, 0.12% NLV). Live chain cross-check: OptionStrat basis $22.66 / $18.975 within 2% of live $23.07 / $19.37 — fresh. American-style short leg, equity-settled; assignment risk mitigated by deep OTM at entry (3.46%) and Dec 18 expiry pre-Christmas.</li>
-</ul>
+<p><strong>2026-08-07 (entry):</strong>Bullish diagonal opened at $370 debit (live chain) on SPY Dec 18 / Dec 31 800/795. SPY spot $773.24 (+0.61% from prior day). VIX 15.95. Short strike 3.46% OTM. Max loss $370 (under $5k cap, 0.12% NLV). Live chain cross-check: OptionStrat basis $22.66 / $18.975 within 2% of live $23.07 / $19.37 — fresh. American-style short leg, equity-settled; assignment risk mitigated by deep OTM at entry (3.46%) and Dec 18 expiry pre-Christmas.</p>
+<p>-</p>
   
 <div class="share-bar">
  <span class="share-label">Share</span>

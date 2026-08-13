@@ -50,8 +50,7 @@
   <p style="font-size:1.05rem;color:#666;line-height:1.6;">Short iron condor on XSP Dec 18, 2026 (134 DTE, AM-settled standard monthly, symmetric $20 wings). Sell 660P/Buy 640P, Sell 850C/Buy 870C. Net credit $333/contr</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
-  <div class="trade-hero-chart"><p class="hero-label">P/L Curve — Three Time Horizons</p><figure><img src="images/pl-curve.png" alt="XSP Dec 18 2026 870/850/640/660 Iron Condor P/L curve at three time horizons (symmetric $20 wings). Short 660P @ $6.155 / Long 640P @ $4.99 / Short 850C @ $4.43 / Long 870C @ $2.265 (live mid). Net credit $3.33/share ($333/contract), max profit $333 between $660–$850, max loss $1,667 each side (symmetric wings). Spot $771.76 (XSP/10 of SPX $7,717.55), VIX 15.95, 134 DTE, AM-settled standard monthly." loading="lazy"><figcaption class="chart-affiliate">Build and track this trade at <a href="https://optionstrat.com/y0Dusrs9CXN8?ref=ventureprise" target="_blank" rel="noopener">Optionstrat ↗</a></figcaption></figure></div>
-<div class="trade-hero-stats"><div class="trade-hero-stat hot"><p class="label">Max Profit</p><p class="value">$333.00</p><p class="sub">XSP between $660 and $850 at expiry</p></div><div class="trade-hero-stat cool"><p class="label">Max Loss</p><p class="value">$1,667.00</p><p class="sub">$20 wing − $3.33 credit each side (symmetric)</p></div><div class="trade-hero-stat neutral"><p class="label">Net Credit</p><p class="value">$3.33</p><p class="sub">1 iron condor · $333.00 total</p></div><div class="trade-hero-stat"><p class="label">POP / DTE</p><p class="value">~76%</p><p class="sub">XSP spot $771.76 · 134 DTE · VIX 15.95</p></div></div>
+  <p>August 06, 2026 · TRADE LOGXSP Iron Condor — Dec 18, 2026 870/850/640/660: Deep-OTM Symmetric Wings, 134 DTE, Wider Cushion</p>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
@@ -59,109 +58,139 @@
 </div>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-
-
-
+<p>Short iron condor on XSP Dec 18, 2026 (134 DTE, AM-settled standard monthly, symmetric $20 wings). Sell 660P/Buy 640P, Sell 850C/Buy 870C. Net credit $333/contr</p>
 <h2>Why This Structure</h2>
-<p>The short iron condor expresses a <strong>defined-risk, delta-neutral view that XSP stays in a $656.67–$853.33 corridor over the next 134 days</strong>, with the bulk of premium coming from selling both sides of the skew. The 660P/850C short strikes are placed ~14–15% from spot — wider than the Nov 20 trade's 9–10% OTM distance, giving more cushion against directional moves. The wings ($640 long put, $870 long call) cap the loss at $1,667 per contract each side. The put wing's max loss of $1,667 is within the $5,000 per-trade cap from the playbook SOP but exceeds the 0.25% per-trade NLV guideline — see the Intraday Setup note below.</p>
+<p>The short iron condor expresses a<strong>defined-risk, delta-neutral view that XSP stays in a $656.67–$853.33 corridor over the next 134 days</strong>, with the bulk of premium coming from selling both sides of the skew. The 660P/850C short strikes are placed ~14–15% from spot — wider than the Nov 20 trade's 9–10% OTM distance, giving more cushion against directional moves. The wings ($640 long put, $870 long call) cap the loss at $1,667 per contract each side. The put wing's max loss of $1,667 is within the $5,000 per-trade cap from the playbook SOP but exceeds the 0.25% per-trade NLV guideline — see the Intraday Setup note below.</p>
 <p>Why a symmetric iron condor over an asymmetric one (like the Nov 20 trade's $15 put / $10 call wings)? Symmetric wings are easier to model and manage — the max loss is identical on both sides, no asymmetry to track. The wider $20 wings ($20 vs $15) give the trade more room before the short strikes are threatened. The trade-off: symmetric $20 wings collect less premium per contract than the Nov 20 asymmetric trade ($333 vs $224) — wait, no, MORE premium ($333 vs $224). But the max loss is also higher ($1,667 vs $1,276). The reward-to-risk is similar (0.20:1 vs 0.18:1). The Dec 18 trade gives more absolute premium and more absolute cushion in exchange for a similar risk-adjusted return.</p>
 <p>Why 14–15% OTM vs 9–10% OTM on the Nov 20 trade? The longer DTE (134 vs 106) plus the deeper OTM strikes give the Dec 18 trade a wider profit zone ($196.66 vs $154.48) and more cushion against directional moves. This is a more conservative structure — higher absolute credit but at deeper OTM distance. It's the natural choice when you want a longer holding period with more breathing room.</p>
 <p>Why an iron condor over a single credit spread (just the put side, for example)? A single bull put spread at the 660/640 strikes would collect $1.165/share ($116.50/contract) with max loss $1,884. The iron condor adds $2.165/share on the call side ($216.50/contract) but adds a $1,667 max loss on the call side. Net: $333 credit vs $1,667 max loss (each wing symmetric), vs the bull put spread alone's $116.50 credit vs $1,884 max loss. The iron condor trades $216.50 of additional call-side premium for a $217 reduction in max loss (vs the standalone bull put) — the call side's 850 strike is 10% above spot, with IV at 14% and delta at 0.10. That additional premium is well-priced for a 134-day, OTM, AM-settled monthly on a calm tape (VIX 15.95).</p>
 <p>Why XSP over SPX? XSP is the mini-S&P 500 — same European-style cash settlement, same AM-settled standard monthly calendar, but at 1/10th the notional. The strikes around 640/660/850/870 are practical (vs 6400/6600/8500/8700 on SPX), and the bid/ask spreads on XSP options in this OTM zone are tight ($0.14–$0.16 on the put side, $0.16–$0.18 on the call side — well within the 3-tier liquidity window for index options). The 660P has 10 contracts of volume today and 1057 open interest (highly liquid); the 640P is thinner (5 volume, 244 OI) but fillable in 1–2 contracts at mid. The 850C has 7 volume, 128 OI; the 870C is thinner (2 volume, 33 OI) but fillable. For a 1-contract trade, all four legs are tradable.</p>
-<p>Why December 18, 2026 expiry specifically? 134 DTE puts the position in the <strong>sweet spot for short iron condors</strong>: long enough that theta decay is steady and meaningful (~$1.30/day today — we collect as short premium), short enough that we don't have to babysit a position for 6+ months. The Dec 18 monthly is the standard AM-settled expiry (last trade day Thursday Dec 17 — Friday's open print settles the contract). This matters for time-stops: any close above $853 or below $657 on Thursday Dec 17 triggers a hard decision before the Friday settlement print.</p>
+<p>Why December 18, 2026 expiry specifically? 134 DTE puts the position in the<strong>sweet spot for short iron condors</strong>: long enough that theta decay is steady and meaningful (~$1.30/day today — we collect as short premium), short enough that we don't have to babysit a position for 6+ months. The Dec 18 monthly is the standard AM-settled expiry (last trade day Thursday Dec 17 — Friday's open print settles the contract). This matters for time-stops: any close above $853 or below $657 on Thursday Dec 17 triggers a hard decision before the Friday settlement print.</p>
 <p>Why 660/850 short strikes (vs 680/830, for example)? Strikes 14–15% from spot strike a balance. Tighter (680/830, ~12% from spot) would give higher POP (~85%) but lower credit (~$2.50–$2.80/share, $250–$280 max profit) — better POP but worse reward-per-dollar-at-risk. Wider (620/890, ~20% from spot) would give lower POP (~65%) but higher credit (~$4.00–$4.50/share) — better reward but worse POP and more capital at risk. 14–15% from spot is the textbook sweet spot for a delta-neutral short vol position with 130+ DTE on a calm tape: enough premium to be worth the risk, enough OTM distance that a 10% directional move doesn't breach the short strikes.</p>
 <h2>Thesis</h2>
+<p><strong>Why XSP, why now:</strong>VIX is at 15.95 — a calm tape. SPX is at $7,723.55, ~flat today after the prior day's −0.17% close. The negative skew (puts more expensive than calls at equivalent OTM distance — 23% IV on the 640P vs 14% IV on the 870C) is normal market structure but means the put side of the iron condor collects more premium per wing than the call side. That skew premium is a structural edge: institutions and ETFs are buying SPX/XSP puts as portfolio hedges, and that demand pulls the put IV up. The short iron condor is the natural vehicle to harvest that demand. With no imminent macro event in the next 30 days (next FOMC is September 16–17, CPI is September 11 — both outside the highest-gamma window for this trade), vol is suppressed and theta decay is the dominant force.</p>
 <ul>
-  <li><strong>Why XSP, why now:</strong> VIX is at 15.95 — a calm tape. SPX is at $7,723.55, ~flat today after the prior day's −0.17% close. The negative skew (puts more expensive than calls at equivalent OTM distance — 23% IV on the 640P vs 14% IV on the 870C) is normal market structure but means the put side of the iron condor collects more premium per wing than the call side. That skew premium is a structural edge: institutions and ETFs are buying SPX/XSP puts as portfolio hedges, and that demand pulls the put IV up. The short iron condor is the natural vehicle to harvest that demand. With no imminent macro event in the next 30 days (next FOMC is September 16–17, CPI is September 11 — both outside the highest-gamma window for this trade), vol is suppressed and theta decay is the dominant force.</li>
+  <li><strong>Why Dec 18 vs Nov 20 (the earlier trade today):</strong>Two reasons. (1)<strong>Longer DTE</strong>(134 vs 106) gives more time for theta to work and more cushion against a directional move. The Dec 18 trade is the "set and forget" version of the Nov 20 trade. (2)<strong>Deeper OTM</strong>(14–15% vs 9–10%) gives more room before either short strike is threatened. The Nov 20 trade is the "closer to spot, faster theta, lower POP" version. Both are valid templates; the choice depends on view (more conservative vs more aggressive). With VIX at 15.95, both fit the calm-tape playbook. Holding both at 1-contract each keeps total risk under $3k (well within $5k cap), but doubles the management burden.</li>
+  <li><strong>Why short iron condor over alternatives:</strong>A long premium structure (long straddle, long strangle) would benefit if vol expanded — but vol expansion typically requires a catalyst, and the next catalyst is 5+ weeks away. A calendar spread would benefit from time decay between two expiries — but it has unbounded downside if the underlying blows through the long strike. A diagonal would mix direction + time — but it's directional, and the view here is neutral. A covered call (long XSP at $771.76 + short 850C) requires $77,176 of capital to collect $443 of premium ($4.43 × 100) for 134 days — that's 0.57% return on capital, vs the iron condor's $333 credit on $1,667 max loss (~20% return-on-risk if held to max profit). The iron condor is the right structure for a defined-risk, neutral-direction, vol-selling view with a known max profit.</li>
+  <li><strong>Why not a wider-body condor (660/660 or 850/850 with no wings, naked short options):</strong>Naked short 660P would collect ~$6.155/share but carry unbounded downside risk (XSP can go to zero — that's a $77,176 loss per contract). Naked short 850C carries the same unbounded upside risk. The wings ($640 long put, $870 long call) cap the loss at $1,667 per contract — defined risk is the entire point. Naked short options are not a structure for the playbook.</li>
+  <li><strong>Why not just sell the put side and skip the call side:</strong>A bear-call-spread-equivalent alone would also be neutral-bullish, but only collects the call-side premium ($2.165/share on the 850/870 strikes). The full iron condor collects both the put-side ($1.165/share) and call-side ($2.165/share) premiums. The additional $1.165/share ($116.50/contract) on the put side requires accepting the additional $1,667 max loss on the put side (vs the call side's $1,667 max loss) — but the put side is in the higher-IV zone (negative skew), and the 660P has 1057 open interest (highly liquid). The math works: the iron condor captures the full vol surface, not just half of it.</li>
 </ul>
-<ul>
-  <li><strong>Why Dec 18 vs Nov 20 (the earlier trade today):</strong> Two reasons. (1) <strong>Longer DTE</strong> (134 vs 106) gives more time for theta to work and more cushion against a directional move. The Dec 18 trade is the "set and forget" version of the Nov 20 trade. (2) <strong>Deeper OTM</strong> (14–15% vs 9–10%) gives more room before either short strike is threatened. The Nov 20 trade is the "closer to spot, faster theta, lower POP" version. Both are valid templates; the choice depends on view (more conservative vs more aggressive). With VIX at 15.95, both fit the calm-tape playbook. Holding both at 1-contract each keeps total risk under $3k (well within $5k cap), but doubles the management burden.</li>
-</ul>
-<ul>
-  <li><strong>Why short iron condor over alternatives:</strong> A long premium structure (long straddle, long strangle) would benefit if vol expanded — but vol expansion typically requires a catalyst, and the next catalyst is 5+ weeks away. A calendar spread would benefit from time decay between two expiries — but it has unbounded downside if the underlying blows through the long strike. A diagonal would mix direction + time — but it's directional, and the view here is neutral. A covered call (long XSP at $771.76 + short 850C) requires $77,176 of capital to collect $443 of premium ($4.43 × 100) for 134 days — that's 0.57% return on capital, vs the iron condor's $333 credit on $1,667 max loss (~20% return-on-risk if held to max profit). The iron condor is the right structure for a defined-risk, neutral-direction, vol-selling view with a known max profit.</li>
-</ul>
-<ul>
-  <li><strong>Why not a wider-body condor (660/660 or 850/850 with no wings, naked short options):</strong> Naked short 660P would collect ~$6.155/share but carry unbounded downside risk (XSP can go to zero — that's a $77,176 loss per contract). Naked short 850C carries the same unbounded upside risk. The wings ($640 long put, $870 long call) cap the loss at $1,667 per contract — defined risk is the entire point. Naked short options are not a structure for the playbook.</li>
-</ul>
-<ul>
-  <li><strong>Why not just sell the put side and skip the call side:</strong> A bear-call-spread-equivalent alone would also be neutral-bullish, but only collects the call-side premium ($2.165/share on the 850/870 strikes). The full iron condor collects both the put-side ($1.165/share) and call-side ($2.165/share) premiums. The additional $1.165/share ($116.50/contract) on the put side requires accepting the additional $1,667 max loss on the put side (vs the call side's $1,667 max loss) — but the put side is in the higher-IV zone (negative skew), and the 660P has 1057 open interest (highly liquid). The math works: the iron condor captures the full vol surface, not just half of it.</li>
-</ul>
+<p>-</p>
 <h2>Risk</h2>
-<table>
-<thead>
-<tr><th>Risk</th><th>Magnitude</th><th>Mitigation</th></tr>
-<tr><td>XSP drops through $660 short put (downside breach)</td><td>Up to full $1,667 max loss per contract (put wing — $20 wide)</td><td>Stop loss at 2× credit ($666 cost to close); or close if XSP closes below $640 on any daily print (put wing fully breached)</td></tr>
-<tr><td>XSP rallies through $850 short call (upside breach)</td><td>Up to $1,667 max loss per contract (call wing — $20 wide, same as put)</td><td>Same stop; close if XSP closes above $870 (call wing breached)</td></tr>
-<tr><td>Vol expansion (VIX spike to 25+)</td><td>~$400–$500/contract loss on short premium positions</td><td>Short vega hurts when IV rises. Acceptable risk in a 134-DTE position; consider closing early if VIX moves +30% in a week (rare)</td></tr>
-<tr><td>Macro event in next 30 days (geopolitical, Fed surprise)</td><td>Could blow through either short strike intraday</td><td>No FOMC/CPI in the high-gamma window (next FOMC Sep 16–17); monitor headlines daily; close if a binary event materializes</td></tr>
-<tr><td>Theta acceleration in last 30 DTE</td><td>Position value may swing ±$300/day near expiry</td><td>Close at 21 DTE if either short strike is within 3% of being threatened; do not hold into gamma blowup window</td></tr>
-<tr><td>Scenario: liquidity gap on XSP 870C (only 33 OI)</td><td>Bid/ask could widen to $0.30+ if a fast market hits</td><td>Use limit orders; close with limit at mid or better. The thin OI on 870C is the weakest leg — manage actively</td></tr>
-<tr><td>Scenario: early assignment (mitigated)</td><td>Not applicable — XSP is European-style cash-settled; no early exercise on short legs</td></tr>
-<tr><td>Scenario: XSP cash settlement timing on AM monthly</td><td>Settlement at Friday's open print — gap risk Thursday night into Friday</td><td>Time stop at Thursday Dec 17 close: any position still open must be closed by 4 PM ET Thursday</td></tr>
-<tr><td>Scenario: dual-position concentration (Nov 20 + Dec 18 ICs)</td><td>Combined max loss $1,276 + $1,667 = $2,943; both breaches could compound</td><td>Both positions are independent on the same underlying. Total exposure $2,943 is under the $5,000 cap but watch concentration risk if vol spikes.</td></tr>
-</tbody>
-</table>
-
-<div class="position-payoff-layout"><div class="position-payoff-content">
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Risk</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Magnitude</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Mitigation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XSP drops through $660 short put (downside breach)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Up to full $1,667 max loss per contract (put wing — $20 wide)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Stop loss at 2× credit ($666 cost to close); or close if XSP closes below $640 on any daily print (put wing fully breached)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XSP rallies through $850 short call (upside breach)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Up to $1,667 max loss per contract (call wing — $20 wide, same as put)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Same stop; close if XSP closes above $870 (call wing breached)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vol expansion (VIX spike to 25+)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~$400–$500/contract loss on short premium positions</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Short vega hurts when IV rises. Acceptable risk in a 134-DTE position; consider closing early if VIX moves +30% in a week (rare)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Macro event in next 30 days (geopolitical, Fed surprise)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Could blow through either short strike intraday</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">No FOMC/CPI in the high-gamma window (next FOMC Sep 16–17); monitor headlines daily; close if a binary event materializes</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Theta acceleration in last 30 DTE</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Position value may swing ±$300/day near expiry</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close at 21 DTE if either short strike is within 3% of being threatened; do not hold into gamma blowup window</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Scenario: liquidity gap on XSP 870C (only 33 OI)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Bid/ask could widen to $0.30+ if a fast market hits</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Use limit orders; close with limit at mid or better. The thin OI on 870C is the weakest leg — manage actively</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Scenario: early assignment (mitigated)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Not applicable — XSP is European-style cash-settled; no early exercise on short legs</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Scenario: XSP cash settlement timing on AM monthly</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Settlement at Friday's open print — gap risk Thursday night into Friday</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Time stop at Thursday Dec 17 close: any position still open must be closed by 4 PM ET Thursday</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Scenario: dual-position concentration (Nov 20 + Dec 18 ICs)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Combined max loss $1,276 + $1,667 = $2,943; both breaches could compound</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Both positions are independent on the same underlying. Total exposure $2,943 is under the $5,000 cap but watch concentration risk if vol spikes.</td>
+</tr>
+</tbody></table></div>
 <h2>Position Payoff at Three Time Horizons</h2>
-<p>The chart above shows the position's P/L as a function of XSP's price at three evaluation windows: now (~134 DTE, Aug 6), mid-life (~67 DTE, ~Oct 12), and at expiration (Dec 18, 2026). The three curves all show the same flat-topped-trapezoid shape that defines an iron condor: a profit plateau between $660 and $850, capped at +$333, with losses outside the wings capped at −$1,667 each side (symmetric $20 wings). What changes is the <strong>slope of the curves between the wings</strong> — near expiration, the curve approaches the flat expiry shape (with premiums fully decayed); mid-life, the curve has a softer slope because there's still meaningful premium in the OTM strikes.</p>
-<p>You can build and track this exact spread at <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">Optionstrat</a> with the <code>?ref=ventureprise</code> link from your affiliate dashboard.</p>
-<p><strong>Read the chart:</strong></p>
+<p>The chart above shows the position's P/L as a function of XSP's price at three evaluation windows: now (~134 DTE, Aug 6), mid-life (~67 DTE, ~Oct 12), and at expiration (Dec 18, 2026). The three curves all show the same flat-topped-trapezoid shape that defines an iron condor: a profit plateau between $660 and $850, capped at +$333, with losses outside the wings capped at −$1,667 each side (symmetric $20 wings). What changes is the<strong>slope of the curves between the wings</strong>— near expiration, the curve approaches the flat expiry shape (with premiums fully decayed); mid-life, the curve has a softer slope because there's still meaningful premium in the OTM strikes.</p>
+<p>You can build and track this exact spread at[Optionstratwith the<code>?ref=ventureprise</code>link from your affiliate dashboard.</p>
+<p><strong>Read the chart:</strong><strong>Spot $771.76</strong>sits roughly in the middle of the profit zone — at the current spot, the position is near max profit (the long wings have minimal intrinsic, the short strikes are well OTM, the credit is fully captured minus a small amount of remaining time value on the OTM strikes).</p>
 <ul>
-  <li><strong>Spot $771.76</strong> sits roughly in the middle of the profit zone — at the current spot, the position is near max profit (the long wings have minimal intrinsic, the short strikes are well OTM, the credit is fully captured minus a small amount of remaining time value on the OTM strikes).</li>
-  <li><strong>The profit plateau ($333)</strong> opens at $656.67 (lower breakeven, where put-side premium equals the credit) and runs to $853.33 (upper breakeven, where call-side premium equals the credit). Anywhere in this range at expiry, the position captures the full credit.</li>
-  <li><strong>The put-wing max loss plateau (−$1,667)</strong> holds below $640. The put wing is $20 wide (640 to 660); below $640, both put legs are ITM and the spread is at max loss.</li>
-  <li><strong>The call-wing max loss plateau (−$1,667)</strong> holds above $870. The call wing is also $20 wide (850 to 870); above $870, both call legs are ITM and the spread is at max loss.</li>
-  <li><strong>The two ramps are the same length.</strong> Both put-side and call-side ramps cover 20 points and swing $2,000 each (-$1,667 to +$333). The slopes are identical ($100 per $1 of underlying move on each wing).</li>
+  <li><strong>The profit plateau ($333)</strong>opens at $656.67 (lower breakeven, where put-side premium equals the credit) and runs to $853.33 (upper breakeven, where call-side premium equals the credit). Anywhere in this range at expiry, the position captures the full credit.</li>
+  <li><strong>The put-wing max loss plateau (−$1,667)</strong>holds below $640. The put wing is $20 wide (640 to 660); below $640, both put legs are ITM and the spread is at max loss.</li>
+  <li><strong>The call-wing max loss plateau (−$1,667)</strong>holds above $870. The call wing is also $20 wide (850 to 870); above $870, both call legs are ITM and the spread is at max loss.</li>
+  <li><strong>The two ramps are the same length.</strong>Both put-side and call-side ramps cover 20 points and swing $2,000 each (-$1,667 to +$333). The slopes are identical ($100 per $1 of underlying move on each wing).</li>
 </ul>
-<p><strong>Key levels on the chart:</strong></p>
+<p>-</p>
+<p><strong>Key levels on the chart:</strong><strong>Spot $771.76</strong>— current underlying; position is near max profit.</p>
 <ul>
-  <li><strong>Spot $771.76</strong> — current underlying; position is near max profit.</li>
-  <li><strong>Lower breakeven $656.67</strong> — XSP needs to drop 14.92% from spot to wipe out the credit.</li>
-  <li><strong>Upper breakeven $853.33</strong> — XSP needs to rally 10.57% from spot to wipe out the credit.</li>
-  <li><strong>Short put strike $660.00</strong> — the put-side spread is fully at max profit above this; starts losing intrinsic below.</li>
-  <li><strong>Short call strike $850.00</strong> — the call-side spread is fully at max profit below this; starts losing intrinsic above.</li>
-  <li><strong>Long put strike $640.00</strong> — below this, the position is at the <strong>put-wing max loss of −$1,667</strong>.</li>
-  <li><strong>Long call strike $870.00</strong> — above this, the position is at the <strong>call-wing max loss of −$1,667</strong>.</li>
-  <li><strong>Max profit $333.00</strong> at any XSP close between $660 and $850 at expiry.</li>
-  <li><strong>Max loss $1,667.00</strong> (each wing, symmetric) at any XSP close at or below $640 or at or above $870 at expiry.</li>
+  <li><strong>Lower breakeven $656.67</strong>— XSP needs to drop 14.92% from spot to wipe out the credit.</li>
+  <li><strong>Upper breakeven $853.33</strong>— XSP needs to rally 10.57% from spot to wipe out the credit.</li>
+  <li><strong>Short put strike $660.00</strong>— the put-side spread is fully at max profit above this; starts losing intrinsic below.</li>
+  <li><strong>Short call strike $850.00</strong>— the call-side spread is fully at max profit below this; starts losing intrinsic above.</li>
+  <li><strong>Long put strike $640.00</strong>— below this, the position is at the<strong>put-wing max loss of −$1,667</strong>.</li>
+  <li><strong>Long call strike $870.00</strong>— above this, the position is at the<strong>call-wing max loss of −$1,667</strong>.</li>
+  <li><strong>Max profit $333.00</strong>at any XSP close between $660 and $850 at expiry.</li>
+  <li><strong>Max loss $1,667.00</strong>(each wing, symmetric) at any XSP close at or below $640 or at or above $870 at expiry.</li>
 </ul>
-</div><aside class="trade-hero-fields"><p class="hero-label">Trade: XSP Dec 18, 2026 870/850/640/660 Iron Condor (134 DTE)</p><dl><dt>Instrument</dt><dd>XSP equity index options (Dec 18, 2026 standard monthly)</dd>
-<dt>Underlying</dt><dd>XSP (Mini S&P 500 Index, 1/10th of SPX; cash-settled European-style)</dd>
-<dt>Structure</dt><dd>Short Iron Condor — 4 legs, same expiry, two verticals (put side + call side)</dd>
-<dt>Strikes</dt><dd>$640 (long put wing) / $660 (short put) / $850 (short call) / $870 (long call wing)</dd>
-<dt>Leg 1</dt><dd>STO −1× XSP 660P Dec 18, 2026 at $6.155 live mid (yfinance Dec 18 chain)</dd>
-<dt>Leg 2</dt><dd>BTO +1× XSP 640P Dec 18, 2026 at $4.99 live mid (yfinance Dec 18 chain)</dd>
-<dt>Leg 3</dt><dd>STO −1× XSP 850C Dec 18, 2026 at $4.43 live mid (yfinance Dec 18 chain)</dd>
-<dt>Leg 4</dt><dd>BTO +1× XSP 870C Dec 18, 2026 at $2.265 live mid (yfinance Dec 18 chain)</dd>
-<dt>Width (each side)</dt><dd>$20 ($640 to $660 puts; $850 to $870 calls) — SYMMETRIC wings</dd>
-<dt>Body width</dt><dd>$190 ($660 short put to $850 short call)</dd>
-<dt>Expiration</dt><dd>Dec 18, 2026 (134 DTE at entry)</dd>
-<dt>Settlement</dt><dd>AM-settled standard monthly (last trade day Thursday Dec 17, 2026; Friday Dec 18 settlement at open)</dd>
-<dt>Net credit (live)</dt><dd>$3.33/share = $333.00/contract</dd>
-<dt>Contracts</dt><dd>1 iron condor</dd>
-<dt>Total credit</dt><dd>$333.00 (1 × $333.00)</dd>
-<dt>Max profit zone</dt><dd>XSP $660 ≤ S ≤ $850 at Dec 18, 2026 expiry</dd>
-<dt>Max profit</dt><dd>$333.00/contract (= net credit, short premium fully captured)</dd>
-<dt>Max loss (each wing)</dt><dd>$1,667.00/contract = ($20 width − $3.33 credit) × 100, hit when XSP ≤ $640 or XSP ≥ $870 at expiry</dd>
-<dt>Reward-to-risk</dt><dd>0.20:1 ($333 max profit / $1,667 max loss, symmetric)</dd>
-<dt>Lower breakeven</dt><dd>$656.67 ($660 short put − $3.33 credit)</dd>
-<dt>Upper breakeven</dt><dd>$853.33 ($850 short call + $3.33 credit)</dd>
-<dt>Profit zone width</dt><dd>$196.66 (from $656.67 to $853.33)</dd>
-<dt>Cushion to downside</dt><dd>XSP needs −14.92% from $771.76 to reach lower breakeven $656.67; −17.08% to reach $640 long put (max loss)</dd>
-<dt>Cushion to upside</dt><dd>XSP needs +10.57% from $771.76 to reach upper breakeven $853.33; +12.72% to reach $870 long call (max loss)</dd>
-<dt>IV at entry (call side, OTM)</dt><dd>~14% (live chain: 850C IV 14.1%, 870C IV 13.8%)</dd>
-<dt>IV at entry (put side, OTM)</dt><dd>~23% (live chain: 660P IV 22.6%, 640P IV 24.3%; negative skew normal for SPX/XSP)</dd>
-<dt>Net delta at entry</dt><dd>~0.00 (delta-neutral by construction)</dd>
-<dt>Net theta at entry</dt><dd>~+$1.30/day per contract (short premium — we collect time decay; accelerates to ~$30/day in final 60 DTE)</dd>
-<dt>Net vega at entry</dt><dd>~−$8.00 per 1% IV per contract (short vega — we lose if IV rises, benefit if IV drops)</dd>
-<dt>POP (delta-based)</dt><dd>~76% (P(S>660) × P(S<850) ≈ 0.85 × 0.90 ≈ 76%; delta-based 1 − |Δ660P| − |Δ850C| = 1 − 0.10 − 0.10 ≈ 80%)</dd>
-<dt>Entry time</dt><dd>Aug 6, 2026, mid-day (XSP spot observation at 12:04 ET)</dd>
-<dt>Management rule</dt><dd>50% of max profit (close at $167 cost-to-close = $166 realized profit) OR close 21 DTE before expiry if either short strike threatened</dd>
-<dt>Stop loss</dt><dd>2× credit ($666 cost to close) OR XSP closes below $640 (put wing breached) OR XSP closes above $870 (call wing breached). NEVER let the position exceed $1,667 max loss.</dd>
-<dt>Position size note</dt><dd>Max loss $1,667 = 0.56% of $300k NLV — exceeds the 0.25% per-trade guideline but is within the $5,000 absolute cap. See Intraday Setup for the sizing note.</dd></dl></aside></div>
-
+<p>-</p>
+<p>Trade: XSP Dec 18, 2026 870/850/640/660 Iron Condor (134 DTE)</p>
+<p><strong>Instrument</strong> XSP equity index options (Dec 18, 2026 standard monthly)</p>
+<p><strong>Underlying</strong> XSP (Mini S&P 500 Index, 1/10th of SPX; cash-settled European-style)</p>
+<p><strong>Structure</strong> Short Iron Condor — 4 legs, same expiry, two verticals (put side + call side)</p>
+<p><strong>Strikes</strong> $640 (long put wing) / $660 (short put) / $850 (short call) / $870 (long call wing)</p>
+<p><strong>Leg 1</strong> STO −1× XSP 660P Dec 18, 2026 at $6.155 live mid (yfinance Dec 18 chain)</p>
+<p><strong>Leg 2</strong> BTO +1× XSP 640P Dec 18, 2026 at $4.99 live mid (yfinance Dec 18 chain)</p>
+<p><strong>Leg 3</strong> STO −1× XSP 850C Dec 18, 2026 at $4.43 live mid (yfinance Dec 18 chain)</p>
+<p><strong>Leg 4</strong> BTO +1× XSP 870C Dec 18, 2026 at $2.265 live mid (yfinance Dec 18 chain)</p>
+<p><strong>Width (each side)</strong> $20 ($640 to $660 puts; $850 to $870 calls) — SYMMETRIC wings</p>
+<p><strong>Body width</strong> $190 ($660 short put to $850 short call)</p>
+<p><strong>Expiration</strong> Dec 18, 2026 (134 DTE at entry)</p>
+<p><strong>Settlement</strong> AM-settled standard monthly (last trade day Thursday Dec 17, 2026; Friday Dec 18 settlement at open)</p>
+<p><strong>Net credit (live)</strong> $3.33/share = $333.00/contract</p>
+<p><strong>Contracts</strong> 1 iron condor</p>
+<p><strong>Total credit</strong> $333.00 (1 × $333.00)</p>
+<p><strong>Max profit zone</strong> XSP $660 ≤ S ≤ $850 at Dec 18, 2026 expiry</p>
+<p><strong>Max profit</strong> $333.00/contract (= net credit, short premium fully captured)</p>
+<p><strong>Max loss (each wing)</strong> $1,667.00/contract = ($20 width − $3.33 credit) × 100, hit when XSP ≤ $640 or XSP ≥ $870 at expiry</p>
+<p><strong>Reward-to-risk</strong> 0.20:1 ($333 max profit / $1,667 max loss, symmetric)</p>
+<p><strong>Lower breakeven</strong> $656.67 ($660 short put − $3.33 credit)</p>
+<p><strong>Upper breakeven</strong> $853.33 ($850 short call + $3.33 credit)</p>
+<p><strong>Profit zone width</strong> $196.66 (from $656.67 to $853.33)</p>
+<p><strong>Cushion to downside</strong> XSP needs −14.92% from $771.76 to reach lower breakeven $656.67; −17.08% to reach $640 long put (max loss)</p>
+<p><strong>Cushion to upside</strong> XSP needs +10.57% from $771.76 to reach upper breakeven $853.33; +12.72% to reach $870 long call (max loss)</p>
+<p><strong>IV at entry (call side, OTM)</strong> ~14% (live chain: 850C IV 14.1%, 870C IV 13.8%)</p>
+<p><strong>IV at entry (put side, OTM)</strong> ~23% (live chain: 660P IV 22.6%, 640P IV 24.3%; negative skew normal for SPX/XSP)</p>
+<p><strong>Net delta at entry</strong> ~0.00 (delta-neutral by construction)</p>
+<p><strong>Net theta at entry</strong> ~+$1.30/day per contract (short premium — we collect time decay; accelerates to ~$30/day in final 60 DTE)</p>
+<p><strong>Net vega at entry</strong> ~−$8.00 per 1% IV per contract (short vega — we lose if IV rises, benefit if IV drops)</p>
+<p><strong>POP (delta-based)</strong> ~76% (P(S>660) × P(S<850) ≈ 0.85 × 0.90 ≈ 76%; delta-based 1 − |Δ660P| − |Δ850C| = 1 − 0.10 − 0.10 ≈ 80%)</p>
+<p><strong>Entry time</strong> Aug 6, 2026, mid-day (XSP spot observation at 12:04 ET)</p>
+<p><strong>Management rule</strong> 50% of max profit (close at $167 cost-to-close = $166 realized profit) OR close 21 DTE before expiry if either short strike threatened</p>
+<p><strong>Stop loss</strong> 2× credit ($666 cost to close) OR XSP closes below $640 (put wing breached) OR XSP closes above $870 (call wing breached). NEVER let the position exceed $1,667 max loss.</p>
+<p><strong>Position size note</strong> Max loss $1,667 = 0.56% of $300k NLV — exceeds the 0.25% per-trade guideline but is within the $5,000 absolute cap. See Intraday Setup for the sizing note.</p>
 <h2>Greeks Snapshot (Black-Scholes)</h2>
+<p><strong>Delta (Δ)</strong><strong>Gamma (Γ)</strong><strong>Theta (Θ)</strong><strong>Vega (ν)</strong><strong>Rho (ρ)</strong></p>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr>
@@ -171,93 +200,141 @@
 </tr></thead>
 <tbody>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Delta (Δ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~−0.01</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">~−0.01</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Delta-neutral by construction. Short 660P delta ~−0.10 + long 640P delta ~+0.10 ≈ 0; short 850C delta ~−0.10 + long 870C delta ~+0.10 ≈ 0. Net is delta-neutral — the trade is not directional.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Gamma (Γ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~+0.001</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">~+0.001</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Long gamma. Position gains delta as spot moves away from short strikes — gamma is symmetric across the body, which is the typical iron condor profile.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Theta (Θ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~+$1.30/day</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">~+$1.30/day</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net positive theta (short premium — we collect time decay). Decay accelerates in the last 60 DTE; the position collects ~$40 of theta per 30-day month early in the trade, accelerating to ~$300+ per 30-day month in the final 60 DTE.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Vega (ν)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~−$8.00 per 1% IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">~−$8.00 per 1% IV</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net negative vega (larger than the Nov 20 trade because the wings are $20 wide vs $10/$15). Position benefits from falling IV. A 1-point drop in VIX (15.95 → 14.95) gains ~$8.00/contract; a 1-point rise (15.95 → 16.95) loses ~$8.00/contract.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Rho (ρ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~+$0.05 per 1% rate</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">~+$0.05 per 1% rate</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Small positive rate sensitivity (long premium, but the long premium is fully cancelled by the short premium). Negligible relative to vol and theta.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 </tbody></table></div>
 <p>Numbers computed at entry spot $771.76, 134 DTE, IV surface 23% (puts) / 14% (calls) per live chain, r=4.5%, no dividend yield. Per-contract = per-share × 100. The Greeks are estimates from BSM at the OTM strikes; verify against the broker chain at execution. The structure is delta-neutral, long gamma, short theta, short vega — the classic "short volatility" profile.</p>
 <h2>Intraday Setup (entry)</h2>
+<p><strong>Pre-market context:</strong>XSP opened at $771.76 (live spot at 12:04 ET). SPX closed the prior day at $7,723.55 (−0.17%). VIX is at 15.95 (mild; below the 16–18 range that typically signals neutral sentiment). No imminent macro catalyst in the next 30 days — next FOMC is September 16–17, next CPI is September 11, both outside the highest-gamma window for a 134-DTE trade. The IV surface is suppressed (call IV 14%, put IV 23% — normal skew but low absolute levels), which makes the short premium structure attractive.</p>
 <ul>
-  <li><strong>Pre-market context:</strong> XSP opened at $771.76 (live spot at 12:04 ET). SPX closed the prior day at $7,723.55 (−0.17%). VIX is at 15.95 (mild; below the 16–18 range that typically signals neutral sentiment). No imminent macro catalyst in the next 30 days — next FOMC is September 16–17, next CPI is September 11, both outside the highest-gamma window for a 134-DTE trade. The IV surface is suppressed (call IV 14%, put IV 23% — normal skew but low absolute levels), which makes the short premium structure attractive.</li>
-  <li><strong>Entry signal:</strong> The setup is mechanical: strikes 14–15% from spot, IV at 14% / 23%, premium at $3.33/share live ($333/contract) — within the playbook's range for short iron condors on XSP at deeper OTM distance. No specific catalyst-driven entry; this is a structural premium-harvest trade.</li>
-  <li><strong>Execution:</strong> Limit orders on all four legs, net credit ≥ $3.25/share. The 660P has 10 volume today and 1057 OI — liquid. The 640P is thinner (5 volume, 244 OI) but fillable in 1 contract at mid. The 850C has 7 volume, 128 OI — fillable at mid in 1 contract. The 870C has 2 volume, 33 OI — thin; use a limit order at mid ($2.265) and accept the wider bid/ask.</li>
-  <li><strong>Position size check:</strong> Max risk $1,667 = 0.56% of $300k NLV. <strong>This exceeds the playbook's 0.25% per-trade guideline</strong> but is within the $5,000 absolute cap. The symmetric $20 wings push the per-side max loss above the simple 0.25% rule. Two options going forward: (a) accept the overage as a one-time deviation given the calm-tape setup and high POP (~76%), or (b) size to a sub-1-contract notional by skipping the trade entirely (the playbook SOP doesn't support fractional contracts). Operator's call.</li>
-  <li><strong>Dual-position note:</strong> Combined with the Nov 20 IC trade opened earlier today ($1,276 max loss), total exposure is $1,276 + $1,667 = $2,943 — under the $5,000 cap. Both positions are delta-neutral, so they don't compound directional risk; they do compound vol risk (short vega on both, so a VIX spike hits both). Manage them as a single "short vol" portfolio rather than two independent trades.</li>
+  <li><strong>Entry signal:</strong>The setup is mechanical: strikes 14–15% from spot, IV at 14% / 23%, premium at $3.33/share live ($333/contract) — within the playbook's range for short iron condors on XSP at deeper OTM distance. No specific catalyst-driven entry; this is a structural premium-harvest trade.</li>
+  <li><strong>Execution:</strong>Limit orders on all four legs, net credit ≥ $3.25/share. The 660P has 10 volume today and 1057 OI — liquid. The 640P is thinner (5 volume, 244 OI) but fillable in 1 contract at mid. The 850C has 7 volume, 128 OI — fillable at mid in 1 contract. The 870C has 2 volume, 33 OI — thin; use a limit order at mid ($2.265) and accept the wider bid/ask.</li>
+  <li><strong>Position size check:</strong>Max risk $1,667 = 0.56% of $300k NLV.<strong>This exceeds the playbook's 0.25% per-trade guideline</strong>but is within the $5,000 absolute cap. The symmetric $20 wings push the per-side max loss above the simple 0.25% rule. Two options going forward: (a) accept the overage as a one-time deviation given the calm-tape setup and high POP (~76%), or (b) size to a sub-1-contract notional by skipping the trade entirely (the playbook SOP doesn't support fractional contracts). Operator's call.</li>
+  <li><strong>Dual-position note:</strong>Combined with the Nov 20 IC trade opened earlier today ($1,276 max loss), total exposure is $1,276 + $1,667 = $2,943 — under the $5,000 cap. Both positions are delta-neutral, so they don't compound directional risk; they do compound vol risk (short vega on both, so a VIX spike hits both). Manage them as a single "short vol" portfolio rather than two independent trades.</li>
 </ul>
+<p>-</p>
 <h2>Management Plan</h2>
+<p><strong>Through Sep 6, 2026 (0–30 DTE, ~30 days in):</strong>Do nothing. The position is defined-risk, delta-neutral, and theta-positive (for us as short premium sellers). VIX is at 15.95 — well within the calm regime. Monitor weekly for any macro headlines that could spike vol.</p>
 <ul>
-  <li><strong>Through Sep 6, 2026 (0–30 DTE, ~30 days in):</strong> Do nothing. The position is defined-risk, delta-neutral, and theta-positive (for us as short premium sellers). VIX is at 15.95 — well within the calm regime. Monitor weekly for any macro headlines that could spike vol.</li>
-  <li><strong>Sep 6 – Oct 12 (~30–60 DTE):</strong> Begin watching delta closely. If VIX rises to 22+ or XSP moves >7% from spot in either direction, begin sizing for a potential close. If both short strikes remain comfortably OTM (>5% distance), let theta continue to work.</li>
-  <li><strong>Oct 12 – Nov 12 (~60–90 DTE):</strong> Take 50% of max profit (close at $167 cost-to-close = $166 realized profit per contract) if both short strikes remain >3% OTM. If either short strike is within 3% of being threatened, do not take profit — let the position resolve at max profit or close early to manage risk.</li>
-  <li><strong>Nov 12 – Dec 17 (~90–134 DTE, last month):</strong> Hard time stop. Any position still open must be closed by Thursday Dec 17 close (4 PM ET) — the Friday Dec 18 settlement print at the open means overnight gap risk. Do not hold through expiration if the position has not already closed at max profit.</li>
-  <li><strong>Stop loss:</strong> 2× credit ($666 cost to close) OR XSP closes below $640 (downside wing breached) OR XSP closes above $870 (upside wing breached). NEVER let the position exceed $1,667 max loss. Defined risk means defined risk.</li>
+  <li><strong>Sep 6 – Oct 12 (~30–60 DTE):</strong>Begin watching delta closely. If VIX rises to 22+ or XSP moves >7% from spot in either direction, begin sizing for a potential close. If both short strikes remain comfortably OTM (>5% distance), let theta continue to work.</li>
+  <li><strong>Oct 12 – Nov 12 (~60–90 DTE):</strong>Take 50% of max profit (close at $167 cost-to-close = $166 realized profit per contract) if both short strikes remain >3% OTM. If either short strike is within 3% of being threatened, do not take profit — let the position resolve at max profit or close early to manage risk.</li>
+  <li><strong>Nov 12 – Dec 17 (~90–134 DTE, last month):</strong>Hard time stop. Any position still open must be closed by Thursday Dec 17 close (4 PM ET) — the Friday Dec 18 settlement print at the open means overnight gap risk. Do not hold through expiration if the position has not already closed at max profit.</li>
+  <li><strong>Stop loss:</strong>2× credit ($666 cost to close) OR XSP closes below $640 (downside wing breached) OR XSP closes above $870 (upside wing breached). NEVER let the position exceed $1,667 max loss. Defined risk means defined risk.</li>
 </ul>
+<p>-</p>
 <h2>Status</h2>
-<table>
-<thead>
-<tr><th>Date</th><th>XSP Price</th><th>Position Value</th><th>P&L</th><th>Notes</th></tr>
-</thead>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Date</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">XSP Price</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Position Value</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">P&L</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
 <tbody>
-<tr><td>2026-08-06 (entry)</td><td>$771.76</td><td>$333.00 credit received</td><td>—</td><td>Opened. VIX 15.95. Strikes 14–17% OTM each side. Live chain credit $333 (live yfinance mid for all four legs). Symmetric $20 wings.</td></tr>
-<tr><td><YYYY-MM-DD> (30-day review)</td><td>$<XX.XX></td><td>$<X,XXX</td><td><+/−>$<XXX></td><td><Notes: thesis check, MTM, theta captured.></td></tr>
-<tr><td><YYYY-MM-DD> (60-day review)</td><td>$<XX.XX></td><td>$<X,XXX</td><td><+/−>$<XXX></td><td><Notes: vol behavior, position management.</td></tr>
-<tr><td><YYYY-MM-DD> (90-day review)</td><td>$<XX.XX></td><td>$<X,XXX</td><td><+/−>$<XXX></td><td><Notes: pre-expiry decisions, close plan.</td></tr>
-</tbody>
-</table>
-<h2>Outcome</h2>
-<table>
-<thead>
-<tr><th>Metric</th><th>Value</th></tr>
-</thead>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2026-08-06 (entry)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$771.76</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$333.00 credit received</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">—</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Opened. VIX 15.95. Strikes 14–17% OTM each side. Live chain credit $333 (live yfinance mid for all four legs). Symmetric $20 wings.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(30-day review)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">+/−>$</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(60-day review)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">+/−>$</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(90-day review)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">+/−>$</td>
+</tr>
+</tbody></table></div>
+<p>##</p>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Metric</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Value</th>
+</tr></thead>
 <tbody>
-<tr><td>Realized P&L</td><td><+/−>$<N,NNN.NN> (1 contract × (credit captured or loss realized) at close)</td></tr>
-<tr><td>Holding time</td><td><N> days (up to 134 DTE at entry)</td></tr>
-<tr><td>Net theta captured</td><td>~$<X.XX> of the $333.00 collected (<N>% of max profit)</td></tr>
-<tr><td>Remaining premium</td><td>$<X.XX> expired worthless OR position closed before expiry</td></tr>
-<tr><td>Hit target?</td><td>Yes — 50% of max profit ($166/contract realized), closed at <N>% decay / No — held to expiry at max profit $333 / Closed early at 2× stop</td></tr>
-</tbody>
-</table>
-<h2>Lessons</h2>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Realized P&L</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+/−>$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">(1 contract × (credit captured or loss realized) at close)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Holding time</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">days (up to 134 DTE at entry)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Net theta captured</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">of the $333.00 collected (</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">% of max profit)</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Remaining premium</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">expired worthless OR position closed before expiry</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Hit target?</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Yes — 50% of max profit ($166/contract realized), closed at</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">% decay / No — held to expiry at max profit $333 / Closed early at 2× stop</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+</tbody></table></div>
+<p>##</p>
+<p><strong>What worked:</strong></p>
 <ul>
-  <li><strong>What worked:</strong> Strikes 14–17% from spot on a calm-tape (VIX 15.95) gave a high POP (~76%) with a meaningful credit ($333). The asymmetric IV (puts at 23% vs calls at 14%) — negative skew — meant the put side collected meaningful premium even at deep OTM distance, which is the structural edge of selling premium on SPX/XSP. The 134-DTE slot put the position in the "longer theta-decay sweet spot" without extending into the 6+ month holding window where gamma risk gets harder to manage.</li>
+  <li><strong>What I'd do differently:</strong></li>
+  <li><strong>Vol surface behavior:</strong></li>
+  <li><strong>Theta math:</strong></li>
+  <li><strong>For the playbook:</strong></li>
 </ul>
-<ul>
-  <li><strong>What I'd do differently:</strong> The 870C is the weakest leg in terms of liquidity (2 volume, 33 OI). For a single-contract trade, this is fillable; for a multi-contract trade, consider sizing down or skipping if the leg can't be filled at mid. The wider $20 wings mean a bigger max loss than the Nov 20 trade's asymmetric structure — for a calm-tape setup, the asymmetric structure gives better POP per dollar-at-risk. Asymmetric vs symmetric is a tradeoff; both fit the playbook.</li>
-</ul>
-<ul>
-  <li><strong>Vol surface behavior:</strong> The negative skew (puts more expensive than calls) was consistent with the playbook's expectation — institutional hedging demand keeps put IV elevated even at deep OTM distance (23% on 640P, 14% on 870C). This is the structural reason short put-side premium is worth more than short call-side premium on SPX/XSP. The trade is a harvest of that demand, scaled to the deeper OTM distance appropriate for a 134-DTE structure.</li>
-</ul>
-<ul>
-  <li><strong>Theta math:</strong> At 134 DTE, theta collected is ~+$1.30/day per contract today (we are net short premium). By 60 DTE it will be ~+$3.00/day; by 30 DTE ~+$8.00/day; by 14 DTE ~+$20.00/day. Total theta captured over 134 days if held to max profit: roughly $300 of the $333 credit (90% of max profit captured via decay). The remaining ~$33 is the residual premium at expiry on the wings.</li>
-</ul>
-<ul>
-  <li><strong>For the playbook:</strong> A 14–17% OTM symmetric short iron condor on XSP at 130+ DTE on a calm tape (VIX <18) is a confirmed-template trade. The credit-per-dollar-at-risk (~20% if held to max profit) is comparable to the closer-OTM Nov 20 trade (~18%). Add this as a "calm tape, longer duration, deeper OTM" template in the playbook; pairs well with the closer-OTM Nov 20 trade for a multi-expiry short-vol portfolio. Use live chain mid at execution.</li>
-</ul>
-<h2>Review Log</h2>
-<ul>
-  <li><strong>2026-08-06 (entry):</strong> Short iron condor opened at $333 credit (live chain) on XSP Dec 18, 2026 870/850/640/660. VIX 15.95. SPX $7,723.55. POP ~76% delta-based. Max loss $1,667 each side (under $5k cap). AM-settled standard monthly, last trade day Thursday Dec 17. Position size 0.56% NLV. Symmetric $20 wings. Combined with the earlier Nov 20 IC trade opened today, total exposure is $2,943 (under $5k cap). Live yfinance mid used for all four legs at entry.</li>
-</ul>
+<p>-</p>
+<p>##</p>
+<p><strong>2026-08-06 (entry):</strong></p>
+<p>-</p>
   
 <div class="share-bar">
  <span class="share-label">Share</span>

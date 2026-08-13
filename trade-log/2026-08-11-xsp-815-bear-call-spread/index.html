@@ -50,8 +50,7 @@
   <p style="font-size:1.05rem;color:#666;line-height:1.6;">Opened a 1-contract bear call spread on XSP Oct 16, 2026 (66 DTE, AM-settled standard monthly): STO 815C @ $4.17 / BTO 820C @ $3.265. Net credit $0.905/share ($</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
-  <div class="trade-hero-chart"><p class="hero-label">P/L Curve — Entry & Expiry</p><figure><img src="images/pl-curve.png" alt="XSP 815/820 Bear Call Spread capped P/L profile. Short 815C @ $4.17 / Long 820C @ $3.265. Net credit $0.905/share ($90.50/contract), max profit $90.50 if XSP < $815 at Oct 16 expiry, max loss $409.50 capped above $820. Upper breakeven $815.905. Reward:risk 0.22:1 (capped structure). Spot $770.53, VIX 15.47, 66 DTE, AM-settled standard monthly. POP ~82% delta-based. Implied IV (BSM solve from basis) 12.08%." loading="lazy"><figcaption class="chart-affiliate">Build and track this trade at <a href="https://optionstrat.com/SDfLLK6dOHHW?ref=ventureprise" target="_blank" rel="noopener">Optionstrat ↗</a></figcaption></figure></div>
-<div class="trade-hero-stats"><div class="trade-hero-stat hot"><p class="label">Max Profit</p><p class="value">$90.50</p><p class="sub">XSP < $815 at Oct 16 (capped)</p></div><div class="trade-hero-stat cool"><p class="label">Max Loss</p><p class="value">$409.50</p><p class="sub">capped above $820 (defined risk)</p></div><div class="trade-hero-stat neutral"><p class="label">Net Credit</p><p class="value">$0.905</p><p class="sub">1 bear call spread · $90.50 total</p></div><div class="trade-hero-stat"><p class="label">POP / DTE</p><p class="value">~82%</p><p class="sub">XSP spot $770.53 · 66 DTE · VIX 15.47</p></div></div>
+  <p>August 11, 2026 · TRADE LOGXSP Bear Call Spread — Oct 16 815/820: Defined-Risk Theta Harvest Above the 52-Week High</p>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
@@ -59,91 +58,110 @@
 </div>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-
-
-
+<p>Opened a 1-contract bear call spread on XSP Oct 16, 2026 (66 DTE, AM-settled standard monthly): STO 815C @ $4.17 / BTO 820C @ $3.265. Net credit $0.905/share ($</p>
 <h2>Why This Structure</h2>
-<p>A <strong>bullish-neutral call credit spread at ~5.5% OTM</strong> — the structure expresses the view that XSP will stay below $815 over the next 66 days, allowing both legs to expire worthless and the trader to keep the full $0.905/share premium. It's a defined-risk, capped-reward short-premium position with a 82% POP per delta, suited to the current calm low-vol regime (VIX 15.47, XSP near 52-week highs).</p>
-<p>Why a bear call spread over a single naked short call? Naked short 815C would collect $4.17/share ($417/contract) but have <strong>undefined risk</strong> — XSP can theoretically rise $300+ in a day on a gap event, exposing the position to $30,000+ losses. The bear call spread caps the loss at $409.50 by buying the $820C wing. Trade-off: $326.50 less premium per contract (from $417 to $90.50) for a defined $409.50 max loss instead of unbounded downside.</p>
-<p>Why a bear call spread over a put debit spread? A 700/685 bull put spread at 9-10% OTM would collect similar premium (~$1.29/share) but with different risk profile — downside is bounded by the long put wing, and POP is similar (~85%). The bear call spread wins on two specific edges: (1) the call side at 5.5% OTM is in a <em>lower IV zone</em> (12% OTM call vs ~20% OTM put at equivalent distance — negative put skew means puts trade richer); (2) the theta harvest profile is slightly higher per dollar-at-risk in a calm regime because call-side premium decays cleanly above the strike (less put skew volatility).</p>
+<p>A<strong>bullish-neutral call credit spread at ~5.5% OTM</strong>— the structure expresses the view that XSP will stay below $815 over the next 66 days, allowing both legs to expire worthless and the trader to keep the full $0.905/share premium. It's a defined-risk, capped-reward short-premium position with a 82% POP per delta, suited to the current calm low-vol regime (VIX 15.47, XSP near 52-week highs).</p>
+<p>Why a bear call spread over a single naked short call? Naked short 815C would collect $4.17/share ($417/contract) but have<strong>undefined risk</strong>— XSP can theoretically rise $300+ in a day on a gap event, exposing the position to $30,000+ losses. The bear call spread caps the loss at $409.50 by buying the $820C wing. Trade-off: $326.50 less premium per contract (from $417 to $90.50) for a defined $409.50 max loss instead of unbounded downside.</p>
+<p>Why a bear call spread over a put debit spread? A 700/685 bull put spread at 9-10% OTM would collect similar premium (~$1.29/share) but with different risk profile — downside is bounded by the long put wing, and POP is similar (~85%). The bear call spread wins on two specific edges: (1) the call side at 5.5% OTM is in a<em>lower IV zone</em>(12% OTM call vs ~20% OTM put at equivalent distance — negative put skew means puts trade richer); (2) the theta harvest profile is slightly higher per dollar-at-risk in a calm regime because call-side premium decays cleanly above the strike (less put skew volatility).</p>
 <p>Why $815/$820 strikes (vs $810/$815, for example)? Strikes ~5.5-6.5% OTM balance POP and premium. Tighter (810/815, ~5% from spot) would give higher POP (~88%) but lower credit (~$0.60/share, $60 max profit). Wider (820/825, ~6.5% from spot) would give lower POP (~75%) but higher credit (~$1.20/share, $120 max profit). $815/$820 at ~5.5% OTM is the standard sweet spot for 60-90 DTE short-premium verticals on index underlyings in a calm regime: enough premium to justify the trade, enough OTM distance that a 2% gap doesn't breach the short strike.</p>
 <p>Why XSP over SPX? XSP is the mini-S&P 500 — same European-style cash settlement, same AM-settled standard monthly calendar, but at 1/10th the notional. The strikes around $815-$820 are practical (vs $8,150-$8,200 on SPX), and the bid/ask spreads on XSP options in this OTM zone are tight ($0.10-0.20 per leg). The 815C has 200+ contracts of volume today and several thousand open interest; the 820C is similar. For a 1-contract trade, both legs are tradable at mid with minimal slippage.</p>
 <p>Why XSP over SPY? SPY options are American-style with early assignment risk on short ITM calls before ex-dividend dates. SPY pays quarterly dividends (~$0.65/share quarterly) — if XSP rallies through $815 before an ex-div date, the short 815C could be assigned. XSP is European-style cash-settled (no early assignment), making it the cleaner instrument for a short-premium position. The IV on XSP 815C is also slightly tighter (12% BSM solve vs ~13% on SPY equivalent) due to less retail flow.</p>
 <h2>Thesis</h2>
+<p><strong>Why XSP, why now:</strong>XSP closed Aug 11 at $770.53, near the 52-week high. The market has been range-bound between $760 and $785 over the last few weeks, with VIX at 15.47 (calm low-vol regime). Implied volatility on the 815C is just 12% (BSM solve) — substantially below VIX, reflecting the call-side skew discount. The thesis is<strong>continued index chop or modest pullback below $815 over the next 66 days</strong>, allowing both legs to expire worthless. The Fed's next FOMC is Sep 16-17 (expected 25 bp cut per Fed funds futures) — a dovish cut would lift the market but unlikely to push it $45 above spot in one move. Q3 earnings season kicks off in early October — most mega-caps report after Oct 16, so the expiry catches the market<em>before</em>most earnings volatility.</p>
 <ul>
-  <li><strong>Why XSP, why now:</strong> XSP closed Aug 11 at $770.53, near the 52-week high. The market has been range-bound between $760 and $785 over the last few weeks, with VIX at 15.47 (calm low-vol regime). Implied volatility on the 815C is just 12% (BSM solve) — substantially below VIX, reflecting the call-side skew discount. The thesis is <strong>continued index chop or modest pullback below $815 over the next 66 days</strong>, allowing both legs to expire worthless. The Fed's next FOMC is Sep 16-17 (expected 25 bp cut per Fed funds futures) — a dovish cut would lift the market but unlikely to push it $45 above spot in one move. Q3 earnings season kicks off in early October — most mega-caps report after Oct 16, so the expiry catches the market <em>before</em> most earnings volatility.</li>
+  <li><strong>Why a bear call spread over alternatives:</strong>A long 815C Oct 16 alone costs $417 (over 4× the spread's max profit) and would be the pure directional upside hedge. A 815/820 call debit spread costs $0.905/share ($90.50/contract) with the same risk profile as the bear call spread's mirror image — but with a<em>bullish</em>thesis (XSP rises above $815). A long 815P Oct 16 (protective put) costs $417/share and would hedge a long XSP position. The bear call spread wins on defined risk + positive theta + high POP — it's the most efficient structure for the "XSP stays below $815 for 66 days" thesis.</li>
+  <li><strong>Why not a put diagonal or short put:</strong>A short 760P naked would collect more premium (~$3-4/share) but have undefined downside risk (XSP can fall to zero). A put diagonal (long 760P / short 740P) would tilt bearish but require XSP to<em>fall</em>to start paying off. The bear call spread's edge is that the thesis is "XSP doesn't rally hard" — a much more probable outcome in a low-vol regime near 52-week highs than "XSP sells off."</li>
+  <li><strong>Why 66 DTE specifically:</strong>66 DTE puts the position in the<strong>early stage of short-premium decay</strong>— theta is building toward its peak (theta peaks in the last 30-45 DTE for monthly options). With 66 days, the trade collects ~$1.15/day in theta now, accelerating to ~$2-3/day in the final 30 days. Standard 60-90 DTE entry for verticals — long enough for meaningful theta accumulation, short enough that we don't carry a position through earnings season.</li>
+  <li><strong>Why this trade now (Aug 11):</strong>XSP is at 52-week highs with low realized volatility (VIX 15.47) and the 815C trading at just 12% IV. The risk-reward favors selling premium at these elevated index levels. The next major catalyst (Sep FOMC) is 5+ weeks away, giving time decay room to work before any event-risk-driven volatility spike.</li>
 </ul>
-<ul>
-  <li><strong>Why a bear call spread over alternatives:</strong> A long 815C Oct 16 alone costs $417 (over 4× the spread's max profit) and would be the pure directional upside hedge. A 815/820 call debit spread costs $0.905/share ($90.50/contract) with the same risk profile as the bear call spread's mirror image — but with a <em>bullish</em> thesis (XSP rises above $815). A long 815P Oct 16 (protective put) costs $417/share and would hedge a long XSP position. The bear call spread wins on defined risk + positive theta + high POP — it's the most efficient structure for the "XSP stays below $815 for 66 days" thesis.</li>
-</ul>
-<ul>
-  <li><strong>Why not a put diagonal or short put:</strong> A short 760P naked would collect more premium (~$3-4/share) but have undefined downside risk (XSP can fall to zero). A put diagonal (long 760P / short 740P) would tilt bearish but require XSP to <em>fall</em> to start paying off. The bear call spread's edge is that the thesis is "XSP doesn't rally hard" — a much more probable outcome in a low-vol regime near 52-week highs than "XSP sells off."</li>
-</ul>
-<ul>
-  <li><strong>Why 66 DTE specifically:</strong> 66 DTE puts the position in the <strong>early stage of short-premium decay</strong> — theta is building toward its peak (theta peaks in the last 30-45 DTE for monthly options). With 66 days, the trade collects ~$1.15/day in theta now, accelerating to ~$2-3/day in the final 30 days. Standard 60-90 DTE entry for verticals — long enough for meaningful theta accumulation, short enough that we don't carry a position through earnings season.</li>
-</ul>
-<ul>
-  <li><strong>Why this trade now (Aug 11):</strong> XSP is at 52-week highs with low realized volatility (VIX 15.47) and the 815C trading at just 12% IV. The risk-reward favors selling premium at these elevated index levels. The next major catalyst (Sep FOMC) is 5+ weeks away, giving time decay room to work before any event-risk-driven volatility spike.</li>
-</ul>
+<p>-</p>
 <h2>Risk</h2>
-<table>
-<thead>
-<tr><th>Risk</th><th>Magnitude</th><th>Mitigation</th></tr>
-</thead>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Risk</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Magnitude</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Mitigation</th>
+</tr></thead>
 <tbody>
-<tr><td>XSP rallies through $815.91 at Oct 16</td><td>Loss proportional to distance above upper breakeven: -$45 at $816, -$200 at $820, capped at -$409.50 above $820</td><td>Hard stop at 2× credit ($181/contract cost to close). The trade is broken if XSP approaches $810-815 in the final 30 DTE.</td></tr>
-<tr><td>XSP gaps through short strike on Sep FOMC (Sep 16-17)</td><td>Risk of $50-100 loss per $1 gap above short strike; pre-event IV spike also adds vega loss (~-$15-30 per 1% IV rise)</td><td>Close before Sep 16 if XSP is within 1% of $815 (~$807+); or hedge with long 815P (~$2-3 cost) for the event. Alternative: reduce position size if Sep FOMC is uncertain.</td></tr>
-<tr><td>XSP stays below $815 at Oct 16 (most likely outcome)</td><td>Full $90.50 profit realized (max profit)</td><td>This is the *thesis* playing out. Realistic expected outcome: $45-90 profit per contract over 66 days at 82% POP, ~3.3% return on capital at risk.</td></tr>
-<tr><td>Vol expansion (VIX spike to 25+)</td><td>~$50-100/contract loss on short premium positions</td><td>Short vega hurts when IV rises. Acceptable risk in a 66-DTE position; consider closing early if VIX moves +30% in a week (rare without catalyst).</td></tr>
-<tr><td>Time decay risk (theta doesn't materialize)</td><td>If XSP closes above $815.91 at Oct 16, full or partial max loss</td><td>This is the structural risk of all short-premium verticals — the bet on "time to pass below the strike" is the entire thesis.</td></tr>
-<tr><td>Liquidity (XSP is moderately liquid, low risk)</td><td>Both legs bid/ask ~$0.05-0.15, total spread ~$0.20 (well within tolerance for $90.50 max profit)</td><td>XSP options have sufficient volume for 1-contract retail size. Tighten the spread with limit orders if needed.</td></tr>
-<tr><td>Skew shift (call IV rises vs put IV)</td><td>Short call IV rising hurts more than long call IV rising (delta difference)</td><td>Short strike is higher-delta, more sensitive to IV. If skew shifts bullish (call IV rises), consider rolling up the short strike.</td></tr>
-</tbody>
-</table>
-
-<div class="position-payoff-layout"><div class="position-payoff-content">
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XSP rallies through $815.91 at Oct 16</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Loss proportional to distance above upper breakeven: -$45 at $816, -$200 at $820, capped at -$409.50 above $820</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hard stop at 2× credit ($181/contract cost to close). The trade is broken if XSP approaches $810-815 in the final 30 DTE.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XSP gaps through short strike on Sep FOMC (Sep 16-17)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Risk of $50-100 loss per $1 gap above short strike; pre-event IV spike also adds vega loss (~-$15-30 per 1% IV rise)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close before Sep 16 if XSP is within 1% of $815 (~$807+); or hedge with long 815P (~$2-3 cost) for the event. Alternative: reduce position size if Sep FOMC is uncertain.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">XSP stays below $815 at Oct 16 (most likely outcome)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Full $90.50 profit realized (max profit)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">This is the <em>thesis</em> playing out. Realistic expected outcome: $45-90 profit per contract over 66 days at 82% POP, ~3.3% return on capital at risk.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vol expansion (VIX spike to 25+)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~$50-100/contract loss on short premium positions</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Short vega hurts when IV rises. Acceptable risk in a 66-DTE position; consider closing early if VIX moves +30% in a week (rare without catalyst).</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Time decay risk (theta doesn't materialize)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">If XSP closes above $815.91 at Oct 16, full or partial max loss</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">This is the structural risk of all short-premium verticals — the bet on "time to pass below the strike" is the entire thesis.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Liquidity (XSP is moderately liquid, low risk)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Both legs bid/ask ~$0.05-0.15, total spread ~$0.20 (well within tolerance for $90.50 max profit)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">XSP options have sufficient volume for 1-contract retail size. Tighten the spread with limit orders if needed.</td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Skew shift (call IV rises vs put IV)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Short call IV rising hurts more than long call IV rising (delta difference)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Short strike is higher-delta, more sensitive to IV. If skew shifts bullish (call IV rises), consider rolling up the short strike.</td>
+</tr>
+</tbody></table></div>
 <h2>Position Payoff at Two Horizons</h2>
-<p>The chart above shows the position's P/L as a function of XSP's price at two evaluation windows: now (entry, 66 DTE) and at expiry (Oct 16, 2026). The structure is <strong>capped</strong> — meaning above $820, P/L is fixed at the max loss, and below $815, P/L is fixed at the max profit. The transition happens between $815 and $820 (the strike width), with the upper breakeven at $815.905.</p>
-<p><strong>Read the chart:</strong></p>
+<p>The chart above shows the position's P/L as a function of XSP's price at two evaluation windows: now (entry, 66 DTE) and at expiry (Oct 16, 2026). The structure is<strong>capped</strong>— meaning above $820, P/L is fixed at the max loss, and below $815, P/L is fixed at the max profit. The transition happens between $815 and $820 (the strike width), with the upper breakeven at $815.905.</p>
+<p><strong>Read the chart:</strong><strong>Spot $770.53</strong>sits $44.47 below the short $815 strike. At the current spot, the position is showing roughly +$30-$60 P/L per contract on the now-curve (66 DTE), with theta accumulating $1.15/day. At Oct 16 expiry at the current spot, both legs expire worthless and the strategy captures the full $90.50 max profit.</p>
 <ul>
-  <li><strong>Spot $770.53</strong> sits $44.47 below the short $815 strike. At the current spot, the position is showing roughly +$30-$60 P/L per contract on the now-curve (66 DTE), with theta accumulating $1.15/day. At Oct 16 expiry at the current spot, both legs expire worthless and the strategy captures the full $90.50 max profit.</li>
-  <li><strong>The max profit zone (flat line at +$90.50)</strong> sits below $815 — any XSP close below $815 at Oct 16 produces the full max profit. That's a 5.77% cushion from current spot.</li>
-  <li><strong>The loss ramp</strong> (between $815 and $820) transitions linearly from $0 at $815.905 (upper breakeven) to -$409.50 at $820. The slope is -$1 per $1 of XSP move (delta-adjusted: -$1/share per dollar above $815).</li>
-  <li><strong>The max loss zone (flat line at -$409.50)</strong> sits above $820 — any XSP close above $820 at Oct 16 produces the full max loss. The max loss is realized only if XSP rallies more than 6.4% above current spot by Oct 16.</li>
+  <li><strong>The max profit zone (flat line at +$90.50)</strong>sits below $815 — any XSP close below $815 at Oct 16 produces the full max profit. That's a 5.77% cushion from current spot.</li>
+  <li><strong>The loss ramp</strong>(between $815 and $820) transitions linearly from $0 at $815.905 (upper breakeven) to -$409.50 at $820. The slope is -$1 per $1 of XSP move (delta-adjusted: -$1/share per dollar above $815).</li>
+  <li><strong>The max loss zone (flat line at -$409.50)</strong>sits above $820 — any XSP close above $820 at Oct 16 produces the full max loss. The max loss is realized only if XSP rallies more than 6.4% above current spot by Oct 16.</li>
 </ul>
-<p><strong>Capped structure asymmetry:</strong> Unlike an undefined-risk short call (where upside loss grows with XSP), the bear call spread caps the loss at $409.50. This is the defining feature of the structure — you trade $326.50 of premium (from $417 naked to $90.50 spread) for defined risk. The trade is profitable if XSP stays within 5.77% of current spot through Oct 16; it loses if XSP rallies hard before then.</p>
-<figure style="margin:2rem 0;text-align:center;"><img src="images/pl-curve.png" alt="XSP 815/820 Bear Call Spread — capped P/L profile at entry and expiry" loading="lazy" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 2px 12px rgba(0,0,0,0.08);"></figure>
-</div><aside class="trade-hero-fields"><p class="hero-label">Trade: XSP Oct 16 815/820 Bear Call Spread (66 DTE)</p><dl><dt>Instrument</dt><dd>XSP equity index options (Oct 16, 2026 standard monthly, both calls at $815/$820 strikes)</dd>
-<dt>Underlying</dt><dd>XSP (mini S&P 500; 1/10th notional of SPX; European-style, AM-settled standard monthly; 1× XSP contract = 100 shares)</dd>
-<dt>Structure</dt><dd>Bear Call Spread (vertical) — 2 legs, same expiry, different strikes</dd>
-<dt>Strikes</dt><dd>Short $815 / Long $820 (call credit spread, $5 wings)</dd>
-<dt>Leg 1</dt><dd>STO −1× XSP 815C Oct 16, 2026 at $4.17 (OptionStrat basis)</dd>
-<dt>Leg 2</dt><dd>BTO +1× XSP 820C Oct 16, 2026 at $3.265 (OptionStrat basis)</dd>
-<dt>Expiration</dt><dd>2026-10-16 (66 DTE at entry, AM-settled monthly, last trade day Thursday 10/15)</dd>
-<dt>Settlement</dt><dd>AM-settled (European-style exercise, cash-settled; no early assignment risk on short call since no ex-div before Oct 16)</dd>
-<dt>Net credit at fill</dt><dd>$0.905/share = $90.50/contract (OptionStrat basis)</dd>
-<dt>BSM cross-check (short)</dt><dd>$4.170 at σ=12.08%, T=66/365, S=$770.53 — gap −0.0% vs basis $4.17</dd>
-<dt>BSM cross-check (long)</dt><dd>$3.349 at σ=12.08%, T=66/365, S=$770.53 — gap −2.5% vs basis $3.265</dd>
-<dt>Implied IV (BSM solve from basis)</dt><dd>12.08% (vs VIX 15.47 — XSP IV typically trades at ~80-85% of VIX for OTM calls in calm regime)</dd>
-<dt>Contracts</dt><dd>1 bear call spread</dd>
-<dt>Total credit</dt><dd>$90.50 (1 × $90.50)</dd>
-<dt>Max profit zone</dt><dd>XSP < $815 at Oct 16, 2026 expiry (any value below short strike, profit capped at full credit)</dd>
-<dt>Max profit</dt><dd>$90.50/contract (both legs expire worthless, keep full credit)</dd>
-<dt>Max loss</dt><dd>$409.50/contract (= strike width $5 − net credit $0.905, capped above $820)</dd>
-<dt>Upper breakeven</dt><dd>$815.905 ($815 short strike + $0.905 credit/share)</dd>
-<dt>Lower breakeven</dt><dd>N/A (capped structure — profit flattens below $815; no downside breakeven)</dd>
-<dt>Reward:risk</dt><dd>0.22:1 ($90.50 max profit / $409.50 max loss — typical capped vertical)</dd>
-<dt>Cushion to short strike</dt><dd>XSP at $770.53 is $44.47 below $815 strike (5.77% OTM); $5.77 of cushion per $1 of max profit</dd>
-<dt>POP (delta-based)</dt><dd>~82% (1 − Δ_short = 1 − 0.18 ≈ 82%; joint P(S<815) ≈ 84% at 12% IV over 66 DTE)</dd>
-<dt>IV at entry</dt><dd>~12% (BSM solve from basis prices; lower than VIX 15.47 reflecting the OTM call-skew discount)</dd>
-<dt>Net delta (structure)</dt><dd>~−0.031/share = −$3.11/contract per $1 XSP move (slight short delta — sold higher-strike-delta call, less delta)</dd>
-<dt>Theta (structure)</dt><dd>+$1.15/day per contract (positive theta harvest — typical short-premium profile)</dd>
-<dt>Vega (structure)</dt><dd>−$9.39 per 1% IV per contract (short vega — position loses if IV rises, benefits if IV drops)</dd>
-<dt>Entry time</dt><dd>Aug 11, 2026 (OptionStrat save timestamp; mid-day save)</dd>
-<dt>Management rule</dt><dd>50% of max profit (~$45/contract to close) OR close 21 DTE before expiry if XSP approaches short strike</dd>
-<dt>Stop loss</dt><dd>2× credit stop ($181/contract cost to close) OR XSP closes above $815 before Oct 11 (force-close)</dd></dl></aside></div>
-
+<p>-</p>
+<p><strong>Capped structure asymmetry:</strong>Unlike an undefined-risk short call (where upside loss grows with XSP), the bear call spread caps the loss at $409.50. This is the defining feature of the structure — you trade $326.50 of premium (from $417 naked to $90.50 spread) for defined risk. The trade is profitable if XSP stays within 5.77% of current spot through Oct 16; it loses if XSP rallies hard before then.<em>(XSP 815/820 Bear Call Spread — capped P/L profile at entry and expiry)</em></p>
+<p>Trade: XSP Oct 16 815/820 Bear Call Spread (66 DTE)</p>
+<p><strong>Instrument</strong> XSP equity index options (Oct 16, 2026 standard monthly, both calls at $815/$820 strikes)</p>
+<p><strong>Underlying</strong> XSP (mini S&P 500; 1/10th notional of SPX; European-style, AM-settled standard monthly; 1× XSP contract = 100 shares)</p>
+<p><strong>Structure</strong> Bear Call Spread (vertical) — 2 legs, same expiry, different strikes</p>
+<p><strong>Strikes</strong> Short $815 / Long $820 (call credit spread, $5 wings)</p>
+<p><strong>Leg 1</strong> STO −1× XSP 815C Oct 16, 2026 at $4.17 (OptionStrat basis)</p>
+<p><strong>Leg 2</strong> BTO +1× XSP 820C Oct 16, 2026 at $3.265 (OptionStrat basis)</p>
+<p><strong>Expiration</strong> 2026-10-16 (66 DTE at entry, AM-settled monthly, last trade day Thursday 10/15)</p>
+<p><strong>Settlement</strong> AM-settled (European-style exercise, cash-settled; no early assignment risk on short call since no ex-div before Oct 16)</p>
+<p><strong>Net credit at fill</strong> $0.905/share = $90.50/contract (OptionStrat basis)</p>
+<p><strong>BSM cross-check (short)</strong> $4.170 at σ=12.08%, T=66/365, S=$770.53 — gap −0.0% vs basis $4.17</p>
+<p><strong>BSM cross-check (long)</strong> $3.349 at σ=12.08%, T=66/365, S=$770.53 — gap −2.5% vs basis $3.265</p>
+<p><strong>Implied IV (BSM solve from basis)</strong> 12.08% (vs VIX 15.47 — XSP IV typically trades at ~80-85% of VIX for OTM calls in calm regime)</p>
+<p><strong>Contracts</strong> 1 bear call spread</p>
+<p><strong>Total credit</strong> $90.50 (1 × $90.50)</p>
+<p><strong>Max profit zone</strong> XSP<$815 at Oct 16, 2026 expiry (any value below short strike, profit capped at full credit)</p>
+<p><strong>Max profit</strong> $90.50/contract (both legs expire worthless, keep full credit)</p>
+<p><strong>Max loss</strong> $409.50/contract (= strike width $5 − net credit $0.905, capped above $820)</p>
+<p><strong>Upper breakeven</strong> $815.905 ($815 short strike + $0.905 credit/share)</p>
+<p><strong>Lower breakeven</strong> N/A (capped structure — profit flattens below $815; no downside breakeven)</p>
+<p><strong>Reward:risk</strong> 0.22:1 ($90.50 max profit / $409.50 max loss — typical capped vertical)</p>
+<p><strong>Cushion to short strike</strong> XSP at $770.53 is $44.47 below $815 strike (5.77% OTM); $5.77 of cushion per $1 of max profit</p>
+<p><strong>POP (delta-based)</strong> ~82% (1 − Δ_short = 1 − 0.18 ≈ 82%; joint P(S<815) ≈ 84% at 12% IV over 66 DTE)</p>
+<p><strong>IV at entry</strong> ~12% (BSM solve from basis prices; lower than VIX 15.47 reflecting the OTM call-skew discount)</p>
+<p><strong>Net delta (structure)</strong> ~−0.031/share = −$3.11/contract per $1 XSP move (slight short delta — sold higher-strike-delta call, less delta)</p>
+<p><strong>Theta (structure)</strong> +$1.15/day per contract (positive theta harvest — typical short-premium profile)</p>
+<p><strong>Vega (structure)</strong> −$9.39 per 1% IV per contract (short vega — position loses if IV rises, benefits if IV drops)</p>
+<p><strong>Entry time</strong> Aug 11, 2026 (OptionStrat save timestamp; mid-day save)</p>
+<p><strong>Management rule</strong> 50% of max profit (~$45/contract to close) OR close 21 DTE before expiry if XSP approaches short strike</p>
+<p><strong>Stop loss</strong> 2× credit stop ($181/contract cost to close) OR XSP closes above $815 before Oct 11 (force-close)</p>
 <h2>Greeks Snapshot (Black-Scholes at entry)</h2>
+<p><strong>Delta (Δ)</strong><strong>Gamma (Γ)</strong><strong>Theta (Θ)</strong><strong>+$1.15/day</strong><strong>Vega (ν)</strong><em>drop<strong></em>Rho (ρ)</strong></p>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr>
@@ -153,47 +171,47 @@
 </tr></thead>
 <tbody>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Delta (Δ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−$3.11</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">−$3.11</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slight net short delta. XSP needs to fall ~$1 for the structure to gain $3 of delta-neutral P&L. Position is roughly market-neutral on small moves but loses ~$3 per $1 of XSP rally.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Gamma (Γ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−0.0004</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">−0.0004</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Tiny net short gamma. Position loses value if XSP moves sharply in either direction intraday (negligible at this scale).</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Theta (Θ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>+$1.15/day</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net positive theta — this is the trade's edge. Time decay in our favor. Accelerates to ~$2-3/day in the final 30 DTE.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Net positive theta — this is the trade's edge. Time decay in our favor. Accelerates to ~$2-3/day in the final 30 DTE.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Vega (ν)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−$9.39 per 1% IV</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net short vega. Structure wants IV to <em>drop</em> to add value; a sustained IV expansion hurts.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">−$9.39 per 1% IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Net short vega. Structure wants IV to</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">to add value; a sustained IV expansion hurts.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Rho (ρ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−$0.85 per 1% rate</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">−$0.85 per 1% rate</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Mild short rate sensitivity. Fed policy moves during the holding period could affect the trade slightly.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 </tbody></table></div>
 <p><strong>Per-leg breakdown (BSM at entry, σ=12.08%):</strong></p>
 <pre><code class="language-plain">
-Strike  Sign    Price     Delta   Gamma   Theta   Vega   Rho
-815C    -1     $4.17    +0.194   +0.0031  -0.1007 +0.9038 -0.371
-820C    +1     $3.265   +0.163   +0.0029  -0.0893 +0.8099 -0.348
+`Strike Sign Price Delta Gamma Theta Vega Rho
+815C -1 $4.17 +0.194 +0.0031 -0.1007 +0.9038 -0.371
+820C +1 $3.265 +0.163 +0.0029 -0.0893 +0.8099 -0.348
 ─────
-Net:                    -0.0310  -0.0004  +0.0115 -0.0939 -0.023
+Net: -0.0310 -0.0004 +0.0115 -0.0939 -0.023
 </pre>
 <p>Sum the rows by sign to get the per-share totals, then multiply by 100 for per-contract values shown above.</p>
 <h2>Intraday Setup (entry)</h2>
-<p><strong>Pre-market context:</strong> XSP traded in a tight range overnight, with Aug 11 closing near $770 (XSP ≈ SPY; SPY live from yfinance $770.53, VIX 15.47). VIX settled at 15.47 — the calmest regime in weeks, reflecting low event risk through mid-August. The 66-day front-month call IV at the 815 strike (12.08% BSM solve) was substantially below VIX, reflecting the call-side skew discount.</p>
-<p><strong>Entry signal:</strong> At ~12:00 PM ET on Aug 11, I checked the OptionStrat chain at the $815/$820 call strikes for Oct 16. The basis prices were $4.17 (short) and $3.265 (long), netting $0.905 credit. The implied vol surface gave me ~12% on both legs — within the BSM solve tolerance (gap of 0.0% on short and -2.5% on long, both within the 3% acceptable range).</p>
-<p><strong>Execution:</strong> Both legs entered simultaneously via the OptionStrat strategy builder at the basis prices. Slippage should be minimal — XSP options have tight bid/ask spreads at this strike zone.</p>
-<p><strong>Size check:</strong> Total credit $90.50 = 0.03% of $300k NLV — well under the 0.25% per-trade guideline and under the $5,000 absolute cap. Max risk $409.50 is 0.14% of NLV — well under the per-trade cap.</p>
+<p><strong>Pre-market context:</strong>XSP traded in a tight range overnight, with Aug 11 closing near $770 (XSP ≈ SPY; SPY live from yfinance $770.53, VIX 15.47). VIX settled at 15.47 — the calmest regime in weeks, reflecting low event risk through mid-August. The 66-day front-month call IV at the 815 strike (12.08% BSM solve) was substantially below VIX, reflecting the call-side skew discount.</p>
+<p><strong>Entry signal:</strong>At ~12:00 PM ET on Aug 11, I checked the OptionStrat chain at the $815/$820 call strikes for Oct 16. The basis prices were $4.17 (short) and $3.265 (long), netting $0.905 credit. The implied vol surface gave me ~12% on both legs — within the BSM solve tolerance (gap of 0.0% on short and -2.5% on long, both within the 3% acceptable range).</p>
+<p><strong>Execution:</strong>Both legs entered simultaneously via the OptionStrat strategy builder at the basis prices. Slippage should be minimal — XSP options have tight bid/ask spreads at this strike zone.</p>
+<p><strong>Size check:</strong>Total credit $90.50 = 0.03% of $300k NLV — well under the 0.25% per-trade guideline and under the $5,000 absolute cap. Max risk $409.50 is 0.14% of NLV — well under the per-trade cap.</p>
 <h2>Management Plan</h2>
-<p>The standard short-vertical management rule applies, with adjustments for the 66-DTE duration and capped structure:</p>
+<p>The standard short-vertical management rule applies, with adjustments for the 66-DTE duration and capped structure:<strong>50% of max profit</strong><strong>XSP closes below $805 at any time</strong><strong>XSP above $810 in the final 30 DTE</strong><strong>XSP above $815 before Oct 11</strong><strong>2× credit stop</strong><strong>VIX spike to >22 sustained</strong><strong>Pre-FOMC</strong><strong>Pre-CPI</strong></p>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr>
@@ -202,55 +220,65 @@ Net:                    -0.0310  -0.0004  +0.0115 -0.0939 -0.023
 </tr></thead>
 <tbody>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>50% of max profit</strong> (~$45/contract cost to close)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(~$45/contract cost to close)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close the trade. Lock in half the potential upside; remaining premium has higher risk-adjusted return profile but reduced absolute profit.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>XSP closes below $805 at any time</strong> (Sep 1+)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(Sep 1+)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hold if 50% not hit; the position has built meaningful cushion against a 1% rally.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>XSP above $810 in the final 30 DTE</strong> (Sep 16+)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(Sep 16+)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close at market. The structure has lost most of its cushion and the max-loss scenario is approaching.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>XSP above $815 before Oct 11</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Force-close immediately. The trade thesis is broken — XSP has breached the short strike.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Force-close immediately. The trade thesis is broken — XSP has breached the short strike.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>2× credit stop</strong> ($181/contract cost to close)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">($181/contract cost to close)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hard stop. The trade is no longer a short-premium position — it's directional risk.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>VIX spike to >22 sustained</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close early. Short vega hurts when IV rises; sustained IV expansion erodes the premium buffer.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Close early. Short vega hurts when IV rises; sustained IV expansion erodes the premium buffer.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Pre-FOMC</strong> (Sep 16-17)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(Sep 16-17)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hold through event unless XSP is within 2% of $815 entering the event. Calendar structures benefit from event IV expansion (we sold vega, so IV drop helps; but XSP rally into the event would be more concerning).</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Pre-CPI</strong> (Sep 11)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(Sep 11)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Same as FOMC — hold unless XSP within 2% of short strike.</td>
 </tr>
 </tbody></table></div>
-<p><strong>Adjustment idea (advanced):</strong> If XSP stays below $805 in the first 30 days (theta accumulating cleanly), the bear call spread can be <strong>rolled forward</strong> to the Nov 20 monthly at the same strikes, collecting another $0.50-0.80/share credit and extending the theta harvest. This converts a 66-DTE theta trade into a longer-duration position.</p>
+<p><strong>Adjustment idea (advanced):</strong>If XSP stays below $805 in the first 30 days (theta accumulating cleanly), the bear call spread can be<strong>rolled forward</strong>to the Nov 20 monthly at the same strikes, collecting another $0.50-0.80/share credit and extending the theta harvest. This converts a 66-DTE theta trade into a longer-duration position.</p>
 <h2>Status</h2>
-<table>
-<thead>
-<tr><th>Date</th><th>XSP Close</th><th>Position Value</th><th>Unrealized P/L</th><th>Notes</th></tr>
-</thead>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Date</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">XSP Close</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Position Value</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Unrealized P/L</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
 <tbody>
-<tr><td>2026-08-11 (entry)</td><td>$770.53</td><td>+$90.50</td><td>—</td><td>Opened at OptionStrat basis. Spot $44.47 below $815 short strike (5.77% OTM). VIX 15.47. BSM solve σ=12.08%.</td></tr>
-</tbody>
-</table>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2026-08-11 (entry)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$770.53</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$90.50</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">—</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Opened at OptionStrat basis. Spot $44.47 below $815 short strike (5.77% OTM). VIX 15.47. BSM solve σ=12.08%.</td>
+</tr>
+</tbody></table></div>
 <h2>Outcome</h2>
 <p>_To be filled when the trade closes (full close, 50% profit target, or stop)._</p>
 <h2>Lessons</h2>
 <p>_To be added after the trade closes. Pending observations: how the bear call spread behaves in the first 30 days (theta accumulation rate), whether XSP stays below $815 through the Sep FOMC event, and what the actual max-profit realization looks like vs the $90.50 BSM estimate at full expiry._</p>
-<p><strong>Source data:</strong> <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">OptionStrat strategy link</a> (use the <code>?ref=ventureprise</code> link from your affiliate dashboard). Spot price from yfinance (SPY live $770.53, XSP ≈ SPY in dollars); VIX 15.47; option chain basis from OptionStrat's live data feed at entry. BSM cross-check at σ=12.08% (BSM solve from basis prices), r=4.5% (1-month Treasury per OptionStrat's curve).</p>
-<p><strong>Build:</strong> <code>articles/2026-08-11-xsp-815-bear-call-spread/images/build_pl_curve.py</code> (one-off chart generator).</p>
-<p><strong>Disclaimer:</strong> Not investment advice. Options trading involves substantial risk. Past performance does not guarantee future results. Always do your own research and consider your risk tolerance before entering any trade.</p>
+<p><strong>Source data:</strong>[OptionStrat strategy link(use the<code>?ref=ventureprise</code>link from your affiliate dashboard). Spot price from yfinance (SPY live $770.53, XSP ≈ SPY in dollars); VIX 15.47; option chain basis from OptionStrat's live data feed at entry. BSM cross-check at σ=12.08% (BSM solve from basis prices), r=4.5% (1-month Treasury per OptionStrat's curve).</p>
+<p><strong>Build:</strong><code>articles/2026-08-11-xsp-815-bear-call-spread/images/build_pl_curve.py</code>(one-off chart generator).</p>
+<p><strong>Disclaimer:</strong>Not investment advice. Options trading involves substantial risk. Past performance does not guarantee future results. Always do your own research and consider your risk tolerance before entering any trade.</p>
   
 <div class="share-bar">
  <span class="share-label">Share</span>

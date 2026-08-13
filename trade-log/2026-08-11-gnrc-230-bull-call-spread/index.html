@@ -50,8 +50,7 @@
   <p style="font-size:1.05rem;color:#666;line-height:1.6;">Opened a 1-contract bull call spread on GNRC Dec 18, 2026 (129 DTE, standard monthly): BTO 230C @ $24.20 / STO 240C @ $20.65. Net debit $3.55/share ($355/contra</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
-  <div class="trade-hero-chart"><p class="hero-label">P/L Curve — Entry & Expiry</p><figure><img src="images/pl-curve.png" alt="GNRC 230/240 Bull Call Spread capped P/L profile. Long 230C @ $24.20 / Short 240C @ $20.65. Net debit $3.55/share ($355/contract), max profit $645 if GNRC > $240 at Dec 18 expiry, max loss $355 capped below $230. Upper breakeven $233.55. Reward:risk 1.82:1. Spot $214.52, VIX 15.45, 129 DTE. Implied IV (BSM solve from basis) 57.1% — high single-stock IV. BSM-implied P(profit) ~65%." loading="lazy"><figcaption class="chart-affiliate">Build and track this trade at <a href="https://optionstrat.com/k1ggR6RCJ3B4?ref=ventureprise" target="_blank" rel="noopener">Optionstrat ↗</a></figcaption></figure></div>
-<div class="trade-hero-stats"><div class="trade-hero-stat hot"><p class="label">Max Profit</p><p class="value">$645.00</p><p class="sub">GNRC > $240 at Dec 18 (capped)</p></div><div class="trade-hero-stat cool"><p class="label">Max Loss</p><p class="value">$355.00</p><p class="sub">capped below $230 (defined risk)</p></div><div class="trade-hero-stat neutral"><p class="label">Net Debit</p><p class="value">$3.55</p><p class="sub">1 bull call spread · $355.00 total</p></div><div class="trade-hero-stat"><p class="label">DTE / IV</p><p class="value">129 / ~57%</p><p class="sub">GNRC spot $214.52 · VIX 15.45</p></div></div>
+  <p>August 11, 2026 · TRADE LOGGNRC Bull Call Spread — Dec 18 230/240: Defined-Risk Long on Generac at 57% IV</p>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
   <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
@@ -59,92 +58,125 @@
 </div>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-
-
-
+<p>Opened a 1-contract bull call spread on GNRC Dec 18, 2026 (129 DTE, standard monthly): BTO 230C @ $24.20 / STO 240C @ $20.65. Net debit $3.55/share ($355/contra</p>
 <h2>Why This Structure</h2>
-<p>A <strong>defined-risk bullish call debit spread at 7-12% OTM</strong> — the structure expresses the view that GNRC will rally above $233.55 over the next 129 days, allowing the long leg to capture meaningful intrinsic value while the short leg caps the cost basis. It's a long-premium position with capped upside and capped downside, suited to a stock with elevated implied volatility (57% BSM solve) and a constructive technical setup near support.</p>
-<p>Why a bull call spread over a long 230C naked? Naked long 230C would cost $2,420/contract and have <strong>unlimited upside</strong> but full debit risk — if GNRC drops 30%, the position loses ~$700+ per contract. The bull call spread caps the loss at $355 and reduces the capital-at-risk by 85% (from $2,420 to $355). The trade-off: capped max profit at $645 instead of unlimited upside above $240. For a defined-risk bullish view with a 65% P(profit), the spread is the more capital-efficient structure.</p>
+<p>A<strong>defined-risk bullish call debit spread at 7-12% OTM</strong>— the structure expresses the view that GNRC will rally above $233.55 over the next 129 days, allowing the long leg to capture meaningful intrinsic value while the short leg caps the cost basis. It's a long-premium position with capped upside and capped downside, suited to a stock with elevated implied volatility (57% BSM solve) and a constructive technical setup near support.</p>
+<p>Why a bull call spread over a long 230C naked? Naked long 230C would cost $2,420/contract and have<strong>unlimited upside</strong>but full debit risk — if GNRC drops 30%, the position loses ~$700+ per contract. The bull call spread caps the loss at $355 and reduces the capital-at-risk by 85% (from $2,420 to $355). The trade-off: capped max profit at $645 instead of unlimited upside above $240. For a defined-risk bullish view with a 65% P(profit), the spread is the more capital-efficient structure.</p>
 <p>Why a bull call spread over a 230C naked put or short put? The long 230C has 50% delta (deep ITM-ish, near ATM), so it's effectively a "synthetic stock" exposure with positive theta decay offset. Naked short put at $230 strike would collect ~$15-20/share premium but require $23,000 of buying-power reserve (or $23,000 capital if cash-secured) and have defined max loss but require significant capital. The bull call spread ties up $355/contract — 65x more capital-efficient than the cash-secured short put.</p>
-<p>Why $230/$240 strikes (vs $220/$230, for example)? $230/$240 puts the long leg just above current spot (7.2% OTM cushion) and the short leg at 11.9% OTM. Strikes 7-12% from spot balance three factors: (1) <strong>delta exposure</strong> — the long 230C has 50% delta at entry (substantial bullish bias); (2) <strong>premium cost</strong> — $3.55 debit is meaningful but not crippling; (3) <strong>P(profit)</strong> — BSM-implied 65% probability of finishing above $233.55 at expiry. Tighter strikes ($225/$235) would have higher P(profit) but less cushion (5.2% OTM) and more negative gamma. Wider strikes ($235/$245) would have lower debit but lower P(profit) and less directional exposure.</p>
-<p>Why Dec 18 expiry specifically? 129 DTE puts the position in the <strong>early-to-mid stage of long-option premium decay</strong> — theta is still meaningful but not yet at peak (theta peaks at ~30-45 DTE for ATM options). The Dec 18 monthly is the standard expiration, with GNRC's next earnings (typically late Oct/early Nov) falling inside the holding period (this is the <strong>major risk factor</strong> — see Risk section). The 4-month duration gives the trade time to be right on direction, but the earnings event introduces volatility risk that could trigger the stop before directional thesis plays out.</p>
-<p>Why GNRC at this level? GNRC closed Aug 11 at $214.52, recovering from the prior week's lows ($206.09). The stock has been range-bound between $200-$235 over the last 6 weeks, with elevated implied volatility (57% BSM solve) reflecting the upcoming earnings event and uncertainty around the data-center power demand thesis (Generac's natural gas generators and battery systems are positioned for the AI/data-center buildout). The thesis is <strong>continued base-building with potential breakout on Q3 earnings</strong> — if GNRC can rally through $230 by Dec 18, the bull call spread captures the directional move with defined risk.</p>
+<p>Why $230/$240 strikes (vs $220/$230, for example)? $230/$240 puts the long leg just above current spot (7.2% OTM cushion) and the short leg at 11.9% OTM. Strikes 7-12% from spot balance three factors: (1)<strong>delta exposure</strong>— the long 230C has 50% delta at entry (substantial bullish bias); (2)<strong>premium cost</strong>— $3.55 debit is meaningful but not crippling; (3)<strong>P(profit)</strong>— BSM-implied 65% probability of finishing above $233.55 at expiry. Tighter strikes ($225/$235) would have higher P(profit) but less cushion (5.2% OTM) and more negative gamma. Wider strikes ($235/$245) would have lower debit but lower P(profit) and less directional exposure.</p>
+<p>Why Dec 18 expiry specifically? 129 DTE puts the position in the<strong>early-to-mid stage of long-option premium decay</strong>— theta is still meaningful but not yet at peak (theta peaks at ~30-45 DTE for ATM options). The Dec 18 monthly is the standard expiration, with GNRC's next earnings (typically late Oct/early Nov) falling inside the holding period (this is the<strong>major risk factor</strong>— see Risk section). The 4-month duration gives the trade time to be right on direction, but the earnings event introduces volatility risk that could trigger the stop before directional thesis plays out.</p>
+<p>Why GNRC at this level? GNRC closed Aug 11 at $214.52, recovering from the prior week's lows ($206.09). The stock has been range-bound between $200-$235 over the last 6 weeks, with elevated implied volatility (57% BSM solve) reflecting the upcoming earnings event and uncertainty around the data-center power demand thesis (Generac's natural gas generators and battery systems are positioned for the AI/data-center buildout). The thesis is<strong>continued base-building with potential breakout on Q3 earnings</strong>— if GNRC can rally through $230 by Dec 18, the bull call spread captures the directional move with defined risk.</p>
 <h2>Thesis</h2>
+<p><strong>Why GNRC, why now:</strong>GNRC is at $214.52, near the lower end of a multi-month range ($200-$235). The stock has corrected ~25% from 2024 highs ($290+) on cooling data-center power demand expectations and rate-cut uncertainty. Q3 earnings (typical late Oct/early Nov) are a major catalyst — beat-and-raise could drive a $20-30 move in either direction. The bull call spread is positioned to capture upside if the breakout materializes, with defined risk if the breakout fails. The high implied volatility (57%) makes long premium<em>expensive</em>— but the spread's debit ($3.55) is reasonable relative to the $10 strike width.</p>
 <ul>
-  <li><strong>Why GNRC, why now:</strong> GNRC is at $214.52, near the lower end of a multi-month range ($200-$235). The stock has corrected ~25% from 2024 highs ($290+) on cooling data-center power demand expectations and rate-cut uncertainty. Q3 earnings (typical late Oct/early Nov) are a major catalyst — beat-and-raise could drive a $20-30 move in either direction. The bull call spread is positioned to capture upside if the breakout materializes, with defined risk if the breakout fails. The high implied volatility (57%) makes long premium <em>expensive</em> — but the spread's debit ($3.55) is reasonable relative to the $10 strike width.</li>
+  <li><strong>Why a bull call spread over alternatives:</strong>A long 230C naked costs $2,420 (capital-heavy) with unlimited upside but full debit risk. A 220/230 bull put spread would collect $2-3/share premium (~$250/contract) but require GNRC to<em>stay above $220</em>— a more conservative neutral-bullish view. A long 230/240 call ratio (1× long 230C, 2× short 240C) would reduce cost basis but introduce undefined risk above $245. The 230/240 bull call spread is the cleanest structure for the "GNRC trades to $235-$245 in 4 months" thesis with defined risk.</li>
+  <li><strong>Why not just buy 230 shares outright:</strong>$21,452 capital to make $25.48 (12% return) on a move to $240 over 4 months — that's 3.1% return on capital if it works, vs the bull call spread's 1.82:1 reward-to-risk on $355 capital (~12% return if it works, with $355 max loss). For a defined-risk directional view, the spread is more capital-efficient and matches the playbook's per-trade sizing cap.</li>
+  <li><strong>Why 129 DTE specifically:</strong>4-month duration gives the trade runway through GNRC's Q3 earnings (late Oct) and into the seasonally strong Nov-Dec window for industrial cyclicals. The theta decay is modest at 129 DTE (~$0.16/day) but accelerates to ~$0.50-1.00/day in the final 30-45 DTE. Long enough to be right on direction, short enough to avoid carrying the position into 2027 if the thesis doesn't play out.</li>
+  <li><strong>Why this trade now (Aug 11):</strong>GNRC is at a technical support zone ($210-215) with RSI near 40 (oversold territory). The setup favors a long-premium bullish position with defined risk ahead of the Q3 earnings catalyst. The 57% IV is high but reasonable for a single-stock name with a binary event risk (earnings); the spread's capped structure offsets some of the IV risk.</li>
 </ul>
-<ul>
-  <li><strong>Why a bull call spread over alternatives:</strong> A long 230C naked costs $2,420 (capital-heavy) with unlimited upside but full debit risk. A 220/230 bull put spread would collect $2-3/share premium (~$250/contract) but require GNRC to <em>stay above $220</em> — a more conservative neutral-bullish view. A long 230/240 call ratio (1× long 230C, 2× short 240C) would reduce cost basis but introduce undefined risk above $245. The 230/240 bull call spread is the cleanest structure for the "GNRC trades to $235-$245 in 4 months" thesis with defined risk.</li>
-</ul>
-<ul>
-  <li><strong>Why not just buy 230 shares outright:</strong> $21,452 capital to make $25.48 (12% return) on a move to $240 over 4 months — that's 3.1% return on capital if it works, vs the bull call spread's 1.82:1 reward-to-risk on $355 capital (~12% return if it works, with $355 max loss). For a defined-risk directional view, the spread is more capital-efficient and matches the playbook's per-trade sizing cap.</li>
-</ul>
-<ul>
-  <li><strong>Why 129 DTE specifically:</strong> 4-month duration gives the trade runway through GNRC's Q3 earnings (late Oct) and into the seasonally strong Nov-Dec window for industrial cyclicals. The theta decay is modest at 129 DTE (~$0.16/day) but accelerates to ~$0.50-1.00/day in the final 30-45 DTE. Long enough to be right on direction, short enough to avoid carrying the position into 2027 if the thesis doesn't play out.</li>
-</ul>
-<ul>
-  <li><strong>Why this trade now (Aug 11):</strong> GNRC is at a technical support zone ($210-215) with RSI near 40 (oversold territory). The setup favors a long-premium bullish position with defined risk ahead of the Q3 earnings catalyst. The 57% IV is high but reasonable for a single-stock name with a binary event risk (earnings); the spread's capped structure offsets some of the IV risk.</li>
-</ul>
+<p>-</p>
 <h2>Risk</h2>
-<table>
-<thead>
-<tr><th>Risk</th><th>Magnitude</th><th>Mitigation</th></tr>
-</thead>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Risk</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Magnitude</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Mitigation</th>
+</tr></thead>
 <tbody>
-<tr><td>Q3 earnings miss (typically late Oct)</td><td>GNRC can gap ±15-20% on earnings; a $20 drop puts GNRC at ~$195 (below long strike)</td><td>Close before earnings (Oct ~25) to lock in premium OR hold with stop tightened to 1.5× debit ($532). Earnings is the binary event for this trade.</td></tr>
-<tr><td>GNRC stays below $230 at Dec 18 (most likely scenario if no breakout)</td><td>Full $355 max loss (both legs expire worthless)</td><td>Hard stop at 2× debit ($710) — but realistically exit before earnings or at $200 close. The trade is a defined-risk directional bet, not a hold-to-expiry position.</td></tr>
-<tr><td>GNRC rallies but stalls at $235-$240 (profit zone)</td><td>$100-300/contract partial profit at expiry (linear ramp from $233.55 to $240)</td><td>Acceptable; this is the structural "tent" of the spread. Take profit at 50% of max profit (~$322).</td></tr>
-<tr><td>Vol expansion (VIX spike or single-stock IV crush)</td><td>~$0.33/contract per 1% IV rise (essentially neutral vega); price action more impactful than IV</td><td>Vega exposure is small due to spread structure. The bigger risk is GNRC's directional movement, not IV changes.</td></tr>
-<tr><td>Time decay (theta accumulation)</td><td>~−$0.16/contract per day; accelerates to ~$1/day in final 30 DTE if ATM</td><td>Long premium pays theta. Manage via early profit-taking or rolling forward if thesis stays intact but slow.</td></tr>
-<tr><td>Liquidity (GNRC is mid-cap, decent but not S&P liquidity)</td><td>Both legs bid/ask ~$0.30-0.50 (~$0.80 round-trip cost on $355 debit = 0.2%)</td><td>Tight enough for 1-contract retail. GNRC has 50-200 contracts daily volume at these strikes. Scale concerns at >10 contracts.</td></tr>
-<tr><td>Early assignment on short 240C (American-style)</td><td>Low probability unless GNRC is deep ITM with no time value remaining AND ex-div approaching</td><td>GNRC doesn't pay a regular dividend. Monitor if short leg goes ITM with <7 DTE remaining — consider closing to avoid pin risk.</td></tr>
-</tbody>
-</table>
-
-<div class="position-payoff-layout"><div class="position-payoff-content">
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Q3 earnings miss (typically late Oct)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">GNRC can gap ±15-20% on earnings; a $20 drop puts GNRC at ~$195 (below long strike)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close before earnings (Oct ~25) to lock in premium OR hold with stop tightened to 1.5× debit ($532). Earnings is the binary event for this trade.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">GNRC stays below $230 at Dec 18 (most likely scenario if no breakout)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Full $355 max loss (both legs expire worthless)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hard stop at 2× debit ($710) — but realistically exit before earnings or at $200 close. The trade is a defined-risk directional bet, not a hold-to-expiry position.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">GNRC rallies but stalls at $235-$240 (profit zone)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$100-300/contract partial profit at expiry (linear ramp from $233.55 to $240)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Acceptable; this is the structural "tent" of the spread. Take profit at 50% of max profit (~$322).</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Vol expansion (VIX spike or single-stock IV crush)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~$0.33/contract per 1% IV rise (essentially neutral vega); price action more impactful than IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Vega exposure is small due to spread structure. The bigger risk is GNRC's directional movement, not IV changes.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Time decay (theta accumulation)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">~−$0.16/contract per day; accelerates to ~$1/day in final 30 DTE if ATM</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Long premium pays theta. Manage via early profit-taking or rolling forward if thesis stays intact but slow.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Liquidity (GNRC is mid-cap, decent but not S&P liquidity)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Both legs bid/ask ~$0.30-0.50 (~$0.80 round-trip cost on $355 debit = 0.2%)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Tight enough for 1-contract retail. GNRC has 50-200 contracts daily volume at these strikes. Scale concerns at >10 contracts.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+</tr>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Early assignment on short 240C (American-style)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Low probability unless GNRC is deep ITM with no time value remaining AND ex-div approaching</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">GNRC doesn't pay a regular dividend. Monitor if short leg goes ITM with</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">7 DTE remaining — consider closing to avoid pin risk.</td>
+</tr>
+</tbody></table></div>
 <h2>Position Payoff at Two Horizons</h2>
-<p>The chart above shows the position's P/L as a function of GNRC's price at two evaluation windows: now (entry, 129 DTE) and at expiry (Dec 18, 2026). The structure is <strong>capped on both sides</strong> — below $230, P/L is fixed at the max loss ($355), and above $240, P/L is fixed at the max profit ($645). The transition between the two flat regions happens between $230 and $240 (the strike width), with the upper breakeven at $233.55.</p>
-<p><strong>Read the chart:</strong></p>
+<p>The chart above shows the position's P/L as a function of GNRC's price at two evaluation windows: now (entry, 129 DTE) and at expiry (Dec 18, 2026). The structure is<strong>capped on both sides</strong>— below $230, P/L is fixed at the max loss ($355), and above $240, P/L is fixed at the max profit ($645). The transition between the two flat regions happens between $230 and $240 (the strike width), with the upper breakeven at $233.55.</p>
+<p><strong>Read the chart:</strong><strong>Spot $214.52</strong>sits $15.48 below the $230 long strike. At the current spot, the position is showing roughly +$50-$100 P/L per contract on the now-curve (129 DTE) — the long leg has $15.48 of intrinsic + time value, the short leg has ~$0 intrinsic + time value, minus the $3.55 debit. At Dec 18 expiry at the current spot, both legs expire worthless and the strategy realizes the full $355 max loss.</p>
 <ul>
-  <li><strong>Spot $214.52</strong> sits $15.48 below the $230 long strike. At the current spot, the position is showing roughly +$50-$100 P/L per contract on the now-curve (129 DTE) — the long leg has $15.48 of intrinsic + time value, the short leg has ~$0 intrinsic + time value, minus the $3.55 debit. At Dec 18 expiry at the current spot, both legs expire worthless and the strategy realizes the full $355 max loss.</li>
-  <li><strong>The max profit zone (flat line at +$645)</strong> sits above $240 — any GNRC close above $240 at Dec 18 produces the full max profit. From current spot, that's a 11.9% rally needed over 129 days (~33% annualized).</li>
-  <li><strong>The profit ramp</strong> (between $233.55 and $240) transitions linearly from $0 at $233.55 (upper breakeven) to +$645 at $240. The slope is ~+$1/share per $1 of GNRC move.</li>
-  <li><strong>The loss ramp</strong> (between $230 and $233.55) transitions from -$355 at $230 to $0 at $233.55. Below $230, the loss is capped at -$355.</li>
-  <li><strong>The max loss zone (flat line at -$355)</strong> sits below $230 — any GNRC close below $230 at Dec 18 produces the full max loss.</li>
+  <li><strong>The max profit zone (flat line at +$645)</strong>sits above $240 — any GNRC close above $240 at Dec 18 produces the full max profit. From current spot, that's a 11.9% rally needed over 129 days (~33% annualized).</li>
+  <li><strong>The profit ramp</strong>(between $233.55 and $240) transitions linearly from $0 at $233.55 (upper breakeven) to +$645 at $240. The slope is ~+$1/share per $1 of GNRC move.</li>
+  <li><strong>The loss ramp</strong>(between $230 and $233.55) transitions from -$355 at $230 to $0 at $233.55. Below $230, the loss is capped at -$355.</li>
+  <li><strong>The max loss zone (flat line at -$355)</strong>sits below $230 — any GNRC close below $230 at Dec 18 produces the full max loss.</li>
 </ul>
-<p><strong>Capped structure asymmetry:</strong> Unlike an undefined-risk long call (where the upside is unlimited), the bull call spread caps the profit at $645. This is the defining feature — you trade unlimited upside for $2,065 of capital savings (from $2,420 naked to $355 spread). The trade is profitable if GNRC trades above $233.55 at Dec 18 (65% BSM probability); it loses if GNRC stays below $230.</p>
-<figure style="margin:2rem 0;text-align:center;"><img src="images/pl-curve.png" alt="GNRC 230/240 Bull Call Spread — capped P/L profile at entry and expiry" loading="lazy" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 2px 12px rgba(0,0,0,0.08);"></figure>
-</div><aside class="trade-hero-fields"><p class="hero-label">Trade: GNRC Dec 18 230/240 Bull Call Spread (129 DTE)</p><dl><dt>Instrument</dt><dd>GNRC equity options (Dec 18, 2026 standard monthly, both calls at $230/$240 strikes)</dd>
-<dt>Underlying</dt><dd>GNRC (Generac Holdings; NYSE-listed power generation equipment manufacturer; American-style, equity-settled, 1× GNRC contract = 100 shares)</dd>
-<dt>Structure</dt><dd>Bull Call Spread (vertical) — 2 legs, same expiry, different strikes</dd>
-<dt>Strikes</dt><dd>Long $230 / Short $240 (call debit spread, $10 wings)</dd>
-<dt>Leg 1</dt><dd>BTO +1× GNRC 230C Dec 18, 2026 at $24.20 (OptionStrat basis)</dd>
-<dt>Leg 2</dt><dd>STO −1× GNRC 240C Dec 18, 2026 at $20.65 (OptionStrat basis)</dd>
-<dt>Expiration</dt><dd>2026-12-18 (129 DTE at entry, standard monthly, last trade day Thursday 12/17)</dd>
-<dt>Settlement</dt><dd>PM-settled (standard monthly equity options; American-style — early exercise possible on either leg)</dd>
-<dt>Net debit at fill</dt><dd>$3.55/share = $355.00/contract (OptionStrat basis)</dd>
-<dt>BSM cross-check (long)</dt><dd>$24.137 at σ=57.1%, T=129/365, S=$214.52 — gap +0.3% vs basis $24.20</dd>
-<dt>BSM cross-check (short)</dt><dd>$20.713 at σ=57.1%, T=129/365, S=$214.52 — gap −0.3% vs basis $20.65</dd>
-<dt>Implied IV (BSM solve from basis)</dt><dd>57.1% average (long 57.2%, short 56.9% — typical high-IV single-stock name; earnings-driven vol)</dd>
-<dt>Contracts</dt><dd>1 bull call spread</dd>
-<dt>Total debit</dt><dd>$355.00 (1 × $355.00)</dd>
-<dt>Max profit zone</dt><dd>GNRC > $240 at Dec 18, 2026 expiry (any value above short strike, profit capped at full width minus debit)</dd>
-<dt>Max profit</dt><dd>$645.00/contract (capped above $240; both legs deep ITM)</dd>
-<dt>Max loss</dt><dd>$355.00/contract (capped below $230; both legs expire worthless, lose full debit)</dd>
-<dt>Upper breakeven</dt><dd>$233.55 ($230 long strike + $3.55 debit/share)</dd>
-<dt>Lower breakeven</dt><dd>N/A (capped structure — loss flattens below $230; no upside breakeven)</dd>
-<dt>Reward:risk</dt><dd>1.82:1 ($645 max profit / $355 max loss — typical defined-risk debit spread)</dd>
-<dt>Cushion to long strike</dt><dd>GNRC at $214.52 is $15.48 below $230 long strike (7.2% OTM); $4.36 of cushion per $100 of max profit</dd>
-<dt>P(profit) (BSM)</dt><dd>~65% (P(S > $233.55) at σ=57.1%, T=129/365, S=$214.52)</dd>
-<dt>IV at entry</dt><dd>~57% (BSM solve from basis prices; high single-stock IV typical for GNRC pre-earnings)</dd>
-<dt>Net delta (structure)</dt><dd>+0.050/share = +$5.00/contract per $1 GNRC move (slight bullish bias — long lower-delta call)</dd>
-<dt>Theta (structure)</dt><dd>−$0.16/day per contract (slight negative theta — typical long-premium profile, mostly ITM)</dd>
-<dt>Vega (structure)</dt><dd>+$0.33 per 1% IV per contract (essentially vega-neutral — long and short legs nearly offset)</dd>
-<dt>Entry time</dt><dd>Aug 11, 2026 (OptionStrat save timestamp; afternoon save)</dd>
-<dt>Management rule</dt><dd>50% of max profit (~$322/contract to close) OR close 21 DTE before expiry if GNRC < $225</dd>
-<dt>Stop loss</dt><dd>2× debit stop ($710/contract cost to close) OR GNRC closes below $200 before Oct 11 (force-close)</dd></dl></aside></div>
-
+<p>-</p>
+<p><strong>Capped structure asymmetry:</strong>Unlike an undefined-risk long call (where the upside is unlimited), the bull call spread caps the profit at $645. This is the defining feature — you trade unlimited upside for $2,065 of capital savings (from $2,420 naked to $355 spread). The trade is profitable if GNRC trades above $233.55 at Dec 18 (65% BSM probability); it loses if GNRC stays below $230.<em>(GNRC 230/240 Bull Call Spread — capped P/L profile at entry and expiry)</em></p>
+<p>Trade: GNRC Dec 18 230/240 Bull Call Spread (129 DTE)</p>
+<p><strong>Instrument</strong> GNRC equity options (Dec 18, 2026 standard monthly, both calls at $230/$240 strikes)</p>
+<p><strong>Underlying</strong> GNRC (Generac Holdings; NYSE-listed power generation equipment manufacturer; American-style, equity-settled, 1× GNRC contract = 100 shares)</p>
+<p><strong>Structure</strong> Bull Call Spread (vertical) — 2 legs, same expiry, different strikes</p>
+<p><strong>Strikes</strong> Long $230 / Short $240 (call debit spread, $10 wings)</p>
+<p><strong>Leg 1</strong> BTO +1× GNRC 230C Dec 18, 2026 at $24.20 (OptionStrat basis)</p>
+<p><strong>Leg 2</strong> STO −1× GNRC 240C Dec 18, 2026 at $20.65 (OptionStrat basis)</p>
+<p><strong>Expiration</strong> 2026-12-18 (129 DTE at entry, standard monthly, last trade day Thursday 12/17)</p>
+<p><strong>Settlement</strong> PM-settled (standard monthly equity options; American-style — early exercise possible on either leg)</p>
+<p><strong>Net debit at fill</strong> $3.55/share = $355.00/contract (OptionStrat basis)</p>
+<p><strong>BSM cross-check (long)</strong> $24.137 at σ=57.1%, T=129/365, S=$214.52 — gap +0.3% vs basis $24.20</p>
+<p><strong>BSM cross-check (short)</strong> $20.713 at σ=57.1%, T=129/365, S=$214.52 — gap −0.3% vs basis $20.65</p>
+<p><strong>Implied IV (BSM solve from basis)</strong> 57.1% average (long 57.2%, short 56.9% — typical high-IV single-stock name; earnings-driven vol)</p>
+<p><strong>Contracts</strong> 1 bull call spread</p>
+<p><strong>Total debit</strong> $355.00 (1 × $355.00)</p>
+<p><strong>Max profit zone</strong> GNRC > $240 at Dec 18, 2026 expiry (any value above short strike, profit capped at full width minus debit)</p>
+<p><strong>Max profit</strong> $645.00/contract (capped above $240; both legs deep ITM)</p>
+<p><strong>Max loss</strong> $355.00/contract (capped below $230; both legs expire worthless, lose full debit)</p>
+<p><strong>Upper breakeven</strong> $233.55 ($230 long strike + $3.55 debit/share)</p>
+<p><strong>Lower breakeven</strong> N/A (capped structure — loss flattens below $230; no upside breakeven)</p>
+<p><strong>Reward:risk</strong> 1.82:1 ($645 max profit / $355 max loss — typical defined-risk debit spread)</p>
+<p><strong>Cushion to long strike</strong> GNRC at $214.52 is $15.48 below $230 long strike (7.2% OTM); $4.36 of cushion per $100 of max profit</p>
+<p><strong>P(profit) (BSM)</strong> ~65% (P(S > $233.55) at σ=57.1%, T=129/365, S=$214.52)</p>
+<p><strong>IV at entry</strong> ~57% (BSM solve from basis prices; high single-stock IV typical for GNRC pre-earnings)</p>
+<p><strong>Net delta (structure)</strong> +0.050/share = +$5.00/contract per $1 GNRC move (slight bullish bias — long lower-delta call)</p>
+<p><strong>Theta (structure)</strong> −$0.16/day per contract (slight negative theta — typical long-premium profile, mostly ITM)</p>
+<p><strong>Vega (structure)</strong> +$0.33 per 1% IV per contract (essentially vega-neutral — long and short legs nearly offset)</p>
+<p><strong>Entry time</strong> Aug 11, 2026 (OptionStrat save timestamp; afternoon save)</p>
+<p><strong>Management rule</strong> 50% of max profit (~$322/contract to close) OR close 21 DTE before expiry if GNRC<$225</p>
+<p><strong>Stop loss</strong> 2× debit stop ($710/contract cost to close) OR GNRC closes below $200 before Oct 11 (force-close)</p>
 <h2>Greeks Snapshot (Black-Scholes at entry)</h2>
+<p><strong>Delta (Δ)</strong><strong>Gamma (Γ)</strong><strong>Theta (Θ)</strong><strong>−$0.16/day</strong><strong>Vega (ν)</strong><strong>Rho (ρ)</strong></p>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr>
@@ -154,47 +186,47 @@
 </tr></thead>
 <tbody>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Delta (Δ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$5.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">+$5.00</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slight net positive delta. GNRC needs to rally ~$1 for the structure to gain $5 of delta-neutral P&L. Position is modestly bullish-biased.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Gamma (Γ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+0.0003</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">+0.0003</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Tiny net positive gamma. Position benefits marginally if GNRC moves sharply in either direction intraday (negligible at this scale).</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Theta (Θ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>−$0.16/day</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Slight net negative theta — typical long-premium profile. Decay accelerates to ~$0.50-1.00/day in final 30 DTE if ATM.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Slight net negative theta — typical long-premium profile. Decay accelerates to ~$0.50-1.00/day in final 30 DTE if ATM.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Vega (ν)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$0.33 per 1% IV</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">+$0.33 per 1% IV</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Essentially vega-neutral — long and short legs nearly offset. IV changes have minimal impact.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Rho (ρ)</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">+$1.20 per 1% rate</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">+$1.20 per 1% rate</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Mild long rate sensitivity. Fed policy moves during the holding period could affect the trade slightly.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 </tbody></table></div>
 <p><strong>Per-leg breakdown (BSM at entry, σ=57.1%):</strong></p>
 <pre><code class="language-plain">
-Strike  Sign    Price     Delta   Gamma   Theta   Vega   Rho
-230C    +1     $24.20    +0.504   +0.0036  -0.1229 +0.5087 +1.450
-240C    -1     $20.65    +0.454   +0.0035  -0.1213 +0.5055 +1.380
+`Strike Sign Price Delta Gamma Theta Vega Rho
+230C +1 $24.20 +0.504 +0.0036 -0.1229 +0.5087 +1.450
+240C -1 $20.65 +0.454 +0.0035 -0.1213 +0.5055 +1.380
 ─────
-Net:                    +0.0500  +0.0003  -0.0016 +0.0033 +0.0120
+Net: +0.0500 +0.0003 -0.0016 +0.0033 +0.0120
 </pre>
 <p>Sum the rows by sign to get the per-share totals, then multiply by 100 for per-contract values shown above.</p>
 <h2>Intraday Setup (entry)</h2>
-<p><strong>Pre-market context:</strong> GNRC traded in a tight range, with Aug 11 closing at $214.52 (up from prior day's $206.09). The 129-day front-month call IV at the 230 strike (57.2% BSM solve) reflects elevated single-stock vol — typical for GNRC ahead of Q3 earnings (late Oct/early Nov). VIX 15.45 (low-vol regime for index) is largely irrelevant to a single-stock name with binary event risk.</p>
-<p><strong>Entry signal:</strong> At ~1:00 PM ET on Aug 11, I checked the OptionStrat chain at the $230/$240 call strikes for Dec 18. The basis prices were $24.20 (long) and $20.65 (short), netting $3.55 debit. The implied vol surface gave me ~57% on both legs — within the BSM solve tolerance (gap of +0.3% on long and -0.3% on short, both well within the 3% acceptable range).</p>
-<p><strong>Execution:</strong> Both legs entered simultaneously via the OptionStrat strategy builder at the basis prices. Slippage should be minimal — GNRC options have reasonable bid/ask spreads at this strike zone for 1-contract retail size.</p>
-<p><strong>Size check:</strong> Total debit $355.00 = 0.12% of $300k NLV — under the 0.25% per-trade guideline. Max risk $355.00 = 0.12% of NLV — well under the $5,000 absolute cap.</p>
+<p><strong>Pre-market context:</strong>GNRC traded in a tight range, with Aug 11 closing at $214.52 (up from prior day's $206.09). The 129-day front-month call IV at the 230 strike (57.2% BSM solve) reflects elevated single-stock vol — typical for GNRC ahead of Q3 earnings (late Oct/early Nov). VIX 15.45 (low-vol regime for index) is largely irrelevant to a single-stock name with binary event risk.</p>
+<p><strong>Entry signal:</strong>At ~1:00 PM ET on Aug 11, I checked the OptionStrat chain at the $230/$240 call strikes for Dec 18. The basis prices were $24.20 (long) and $20.65 (short), netting $3.55 debit. The implied vol surface gave me ~57% on both legs — within the BSM solve tolerance (gap of +0.3% on long and -0.3% on short, both well within the 3% acceptable range).</p>
+<p><strong>Execution:</strong>Both legs entered simultaneously via the OptionStrat strategy builder at the basis prices. Slippage should be minimal — GNRC options have reasonable bid/ask spreads at this strike zone for 1-contract retail size.</p>
+<p><strong>Size check:</strong>Total debit $355.00 = 0.12% of $300k NLV — under the 0.25% per-trade guideline. Max risk $355.00 = 0.12% of NLV — well under the $5,000 absolute cap.</p>
 <h2>Management Plan</h2>
-<p>The standard long-vertical management rule applies, with adjustments for the 129-DTE duration and earnings event risk:</p>
+<p>The standard long-vertical management rule applies, with adjustments for the 129-DTE duration and earnings event risk:<strong>50% of max profit</strong><strong>GNRC closes above $235 at any time</strong><strong>GNRC above $240 before Dec 1</strong><strong>GNRC below $225 in final 30 DTE</strong><strong>GNRC below $200 at any time</strong><strong>2× debit stop</strong><strong>Pre-Q3 earnings</strong><strong>Decision point</strong><strong>VIX spike to >22 sustained</strong></p>
 <div style="overflow-x:auto;margin:1.25rem 0;">
 <table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
 <thead><tr>
@@ -203,55 +235,65 @@ Net:                    +0.0500  +0.0003  -0.0016 +0.0033 +0.0120
 </tr></thead>
 <tbody>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>50% of max profit</strong> (~$322/contract to close)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(~$322/contract to close)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close the trade. Lock in half the potential upside; remaining premium has lower risk-adjusted return profile.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>GNRC closes above $235 at any time</strong> (Oct 1+)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(Oct 1+)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hold if 50% not hit; the position has built meaningful directional cushion.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>GNRC above $240 before Dec 1</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Consider rolling up or closing for max profit capture; structure has hit its cap.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Consider rolling up or closing for max profit capture; structure has hit its cap.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>GNRC below $225 in final 30 DTE</strong> (Nov 18+)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(Nov 18+)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close at market. The structure has lost most of its directional cushion and the max-loss scenario is approaching.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>GNRC below $200 at any time</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hard close. The trade thesis is broken — GNRC has broken below technical support.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Hard close. The trade thesis is broken — GNRC has broken below technical support.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>2× debit stop</strong> ($710/contract cost to close)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">($710/contract cost to close)</td>
 <td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Hard stop. The trade is no longer a defined-risk position.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>Pre-Q3 earnings</strong> (typically late Oct, ~Oct 25)</td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"><strong>Decision point</strong>: close before earnings to lock in premium OR hold with stop tightened to 1.5× debit ($532). Earnings is the binary catalyst.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">(typically late Oct, ~Oct 25)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">: close before earnings to lock in premium OR hold with stop tightened to 1.5× debit ($532). Earnings is the binary catalyst.</td>
 </tr>
 <tr>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;"><strong>VIX spike to >22 sustained</strong></td>
-<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">Close early. Single-stock vol typically moves with index vol; sustained IV expansion adds risk.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">Close early. Single-stock vol typically moves with index vol; sustained IV expansion adds risk.</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;"></td>
 </tr>
 </tbody></table></div>
-<p><strong>Adjustment idea (advanced):</strong> If GNRC rallies through $240 before Dec 1, the bull call spread can be <strong>closed at max profit</strong> ($645 minus slippage), realizing the full capped upside. If GNRC is at $225-235 in late Oct (just before earnings), consider rolling to a higher-strike spread (e.g., $240/$250) to reset directional exposure for the post-earnings window.</p>
+<p><strong>Adjustment idea (advanced):</strong>If GNRC rallies through $240 before Dec 1, the bull call spread can be<strong>closed at max profit</strong>($645 minus slippage), realizing the full capped upside. If GNRC is at $225-235 in late Oct (just before earnings), consider rolling to a higher-strike spread (e.g., $240/$250) to reset directional exposure for the post-earnings window.</p>
 <h2>Status</h2>
-<table>
-<thead>
-<tr><th>Date</th><th>GNRC Close</th><th>Position Value</th><th>Unrealized P/L</th><th>Notes</th></tr>
-</thead>
+<div style="overflow-x:auto;margin:1.25rem 0;">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;">
+<thead><tr>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Date</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">GNRC Close</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Position Value</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Unrealized P/L</th>
+<th style="text-align:left;padding:10px 12px;border-bottom:2px solid #1e3a5f;background:#f5f5f0;font-weight:600;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;">Notes</th>
+</tr></thead>
 <tbody>
-<tr><td>2026-08-11 (entry)</td><td>$214.52</td><td>−$355.00</td><td>—</td><td>Opened at OptionStrat basis. Spot $15.48 below $230 long strike (7.2% OTM). BSM solve σ=57.1%.</td></tr>
-</tbody>
-</table>
+<tr>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;font-weight:500;">2026-08-11 (entry)</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">$214.52</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">−$355.00</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:right;font-variant-numeric:tabular-nums;">—</td>
+<td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;text-align:left;">Opened at OptionStrat basis. Spot $15.48 below $230 long strike (7.2% OTM). BSM solve σ=57.1%.</td>
+</tr>
+</tbody></table></div>
 <h2>Outcome</h2>
 <p>_To be filled when the trade closes (full close, 50% profit target, or stop)._</p>
 <h2>Lessons</h2>
 <p>_To be added after the trade closes. Pending observations: how GNRC behaves into Q3 earnings (late Oct), whether the breakout thesis plays out above $230, and what the actual max-profit realization looks like vs the $645 BSM estimate at full expiry._</p>
-<p><strong>Source data:</strong> <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">OptionStrat strategy link</a> (use the <code>?ref=ventureprise</code> link from your affiliate dashboard). Spot price from yfinance ($214.52 GNRC, $15.45 VIX); option chain basis from OptionStrat's live data feed at entry. BSM cross-check at σ=57.1% (BSM solve from basis prices), r=4.5% (1-month Treasury per OptionStrat's curve).</p>
-<p><strong>Build:</strong> <code>articles/2026-08-11-gnrc-230-bull-call-spread/images/build_pl_curve.py</code> (one-off chart generator).</p>
-<p><strong>Disclaimer:</strong> Not investment advice. Options trading involves substantial risk. Past performance does not guarantee future results. Always do your own research and consider your risk tolerance before entering any trade.</p>
+<p><strong>Source data:</strong>[OptionStrat strategy link(use the<code>?ref=ventureprise</code>link from your affiliate dashboard). Spot price from yfinance ($214.52 GNRC, $15.45 VIX); option chain basis from OptionStrat's live data feed at entry. BSM cross-check at σ=57.1% (BSM solve from basis prices), r=4.5% (1-month Treasury per OptionStrat's curve).</p>
+<p><strong>Build:</strong><code>articles/2026-08-11-gnrc-230-bull-call-spread/images/build_pl_curve.py</code>(one-off chart generator).</p>
+<p><strong>Disclaimer:</strong>Not investment advice. Options trading involves substantial risk. Past performance does not guarantee future results. Always do your own research and consider your risk tolerance before entering any trade.</p>
   
 <div class="share-bar">
  <span class="share-label">Share</span>
