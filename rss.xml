@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 13 Aug 2026 13:05:20 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 13 Aug 2026 16:40:23 GMT</lastBuildDate>
+  <item>
+    <title>XSP Long Call Condor — Dec 17 '27 780/800/890/900: 491-DTE Range Bet at $8.80 Limit Order</title>
+    <link>https://tredey.com/trade-log/2026-08-13-xsp-long-call-condor/</link>
+    <guid>https://tredey.com/trade-log/2026-08-13-xsp-long-call-condor/</guid>
+    <pubDate>2026-08-13</pubDate>
+    <description>4-leg long call condor on XSP (Mini S&P 500, 1/10th of SPX). BTO 780C / STO 800C / STO 890C / BTO 900C — all Dec 17, 2027 (491 DTE). Limit order placed at $8.80/share ($880/contract). BSM mid net debit ~$0.621/share ($62.10/contract). Max profit $137.90/contract if XSP is $80–$89 at Dec 17, 2027 expiry (per-share: $10 lower body spread − $0.621 debit = $9.379/share × 100). Reward-to-risk 0.16:1 at limit order price; 2.22:1 at BSM mid. Max profit $137.90/contract at XSP $80–$89. XSP spot ~$77.64 (SPX $7,763.80). 491 DTE — 1.3 years of time to expiry.</description>
+  </item>
   <item>
     <title>Market Outlook — Thursday, August 13, 2026: Near All-Time Highs, XLK Leads, Commodities Signal Reflation</title>
     <link>https://tredey.com/forecasts/2026-08-13-market-outlook/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-08-06-xsp-dec-iron-condor/</guid>
     <pubDate>2026-08-06</pubDate>
     <description>Short iron condor on XSP Dec 18, 2026 (134 DTE, AM-settled standard monthly, symmetric $20 wings). Sell 660P/Buy 640P, Sell 850C/Buy 870C. Net credit $333/contr</description>
-  </item>
-  <item>
-    <title>Market Outlook — Wednesday, August 5, 2026: New Highs, Maximum Breadth, Defensive Roll-Over — Pause Risk Building Mid-Week</title>
-    <link>https://tredey.com/forecasts/2026-08-05-market-outlook-shadow/</link>
-    <guid>https://tredey.com/forecasts/2026-08-05-market-outlook-shadow/</guid>
-    <pubDate>2026-08-05</pubDate>
-    <description>SPX 7736.52 at new high, SPY $771.33, QQQ $723.85, IWM $301.71. VIX 16.35 term ratio 0.796. Breadth 100% above 50d. Mega-cap earnings beat. Aug 21 FOMC minutes, Jackson Hole ahead.</description>
   </item>
 </channel>
 </rss>
