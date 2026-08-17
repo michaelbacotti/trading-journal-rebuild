@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Fri, 14 Aug 2026 19:39:01 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 17 Aug 2026 10:39:53 GMT</lastBuildDate>
+  <item>
+    <title>Market Outlook — Monday, Aug 17, 2026: Broad Strength, Compressed Vol, and a Quiet Calendar Ahead</title>
+    <link>https://tredey.com/forecasts/2026-08-17-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-08-17-market-outlook/</guid>
+    <pubDate>2026-08-17</pubDate>
+    <description>SPX ends the week near record 7,785 with maximum breadth and VIX at 14.97. Energy and tech lead as the market enters a quiet pre-Jackson Hole week.</description>
+  </item>
   <item>
     <title>Market Outlook — Friday, August 14, 2026: SPX Near Record Highs, VIX 14.6 Compressed, Breadth at 100%, Jackson Hole Looms, Iran Tension Caps the Tape</title>
     <link>https://tredey.com/forecasts/2026-08-14-market-outlook/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-08-06-nvda-bull-put-spread/</guid>
     <pubDate>2026-08-06</pubDate>
     <description>Working limit order on NVDA Oct 16 180/175 bull put spread at $0.75/share ($75/contract). Above current mid ($0.62); won't fill unless NVDA dips ~1.5% or IV exp</description>
-  </item>
-  <item>
-    <title>NVDA Call Calendar — Nov 20 / Dec 18 '26 240: Long Back, Short Front ($230 Debit)</title>
-    <link>https://tredey.com/trade-log/2026-08-06-nvda-call-calendar/</link>
-    <guid>https://tredey.com/trade-log/2026-08-06-nvda-call-calendar/</guid>
-    <pubDate>2026-08-06</pubDate>
-    <description>Opened NVDA 240 call calendar: long Dec 18 '26 240C, short Nov 20 '26 240C. $2.30 debit/share ($230/contract), 106 DTE front / 134 DTE back. Max loss $230 (debi</description>
   </item>
 </channel>
 </rss>
