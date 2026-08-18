@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 18 Aug 2026 10:40:11 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 18 Aug 2026 17:44:41 GMT</lastBuildDate>
+  <item>
+    <title>XLP Long Call Butterfly — Dec 18 '26 80/90/100: A Defensive Range-Bet Into Sep/Oct</title>
+    <link>https://tredey.com/trade-log/2026-08-18-xlp-long-call-butterfly/</link>
+    <guid>https://tredey.com/trade-log/2026-08-18-xlp-long-call-butterfly/</guid>
+    <pubDate>2026-08-18</pubDate>
+    <description>Opened an XLP Dec 18 2026 80/90/100 long call butterfly (122 DTE), a defined-risk bullish-to-neutral structure with profit zone $84.34–$95.67. Net debit $4.335/share ($433.50/contract). Max profit $566.50 at XLP = $90 at Dec 18 expiry; max loss $433.50. 1-contract sizing. IV ~17–22%. XLP spot $85.84.</description>
+  </item>
   <item>
     <title>Market Outlook — Tuesday, Aug 18, 2026: SPX Edges Toward Records, VIX Drifts Higher, Jackson Hole Sets the Stage</title>
     <link>https://tredey.com/forecasts/2026-08-18-market-outlook/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/forecasts/2026-08-06-market-outlook-shadow/</guid>
     <pubDate>2026-08-06</pubDate>
     <description>SPY $769.79, SPX ~7,720, VIX 15.93 term ratio 0.776. Breadth 100% into a fourth session. XLK +11.61% 5d; XLF +5.51% 20d. ECI Friday 8:30 ET; Jackson Hole ahead.</description>
-  </item>
-  <item>
-    <title>Market Outlook — Thursday, August 6, 2026: SPX Holds Near New Highs, VIX Slides to 15.93, Breadth Still 100%, Tech Leadership Extends, Cyclicals Broadening into Financials and Materials</title>
-    <link>https://tredey.com/forecasts/2026-08-06-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-08-06-market-outlook/</guid>
-    <pubDate>2026-08-06</pubDate>
-    <description>SPY $769.79, SPX ~7720 area, VIX 15.93 term ratio 0.776. SPY +5.53% 5d, QQQ +8.40% 5d. XLK +11.61% 5d leads. Breadth 100%. XLF, XLB lead 20d. XLU -2.78% 5d. ECI Q2 Friday.</description>
   </item>
 </channel>
 </rss>
