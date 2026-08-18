@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 17 Aug 2026 15:56:57 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 18 Aug 2026 10:40:11 GMT</lastBuildDate>
+  <item>
+    <title>Market Outlook — Tuesday, Aug 18, 2026: SPX Edges Toward Records, VIX Drifts Higher, Jackson Hole Sets the Stage</title>
+    <link>https://tredey.com/forecasts/2026-08-18-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-08-18-market-outlook/</guid>
+    <pubDate>2026-08-18</pubDate>
+    <description>SPY $776.34 holds near the all-time high as VIX firms to 15.94 and breadth stays at 100%. XLK and XLE lead, XLU lags -1.9% over 20 days. Jackson Hole begins Thursday.</description>
+  </item>
   <item>
     <title>Market Outlook — Monday, Aug 17, 2026: Broad Strength, Compressed Vol, and a Quiet Calendar Ahead</title>
     <link>https://tredey.com/forecasts/2026-08-17-market-outlook/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/forecasts/2026-08-06-market-outlook/</guid>
     <pubDate>2026-08-06</pubDate>
     <description>SPY $769.79, SPX ~7720 area, VIX 15.93 term ratio 0.776. SPY +5.53% 5d, QQQ +8.40% 5d. XLK +11.61% 5d leads. Breadth 100%. XLF, XLB lead 20d. XLU -2.78% 5d. ECI Q2 Friday.</description>
-  </item>
-  <item>
-    <title>NVDA Bull Put Spread — Oct 16 '26 180/175: Resting Limit at $0.75, Working Order</title>
-    <link>https://tredey.com/trade-log/2026-08-06-nvda-bull-put-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-08-06-nvda-bull-put-spread/</guid>
-    <pubDate>2026-08-06</pubDate>
-    <description>Working limit order on NVDA Oct 16 180/175 bull put spread at $0.75/share ($75/contract). Above current mid ($0.62); won't fill unless NVDA dips ~1.5% or IV exp</description>
   </item>
 </channel>
 </rss>
