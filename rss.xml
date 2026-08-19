@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 18 Aug 2026 17:44:41 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 19 Aug 2026 10:37:36 GMT</lastBuildDate>
+  <item>
+    <title>Market Outlook — Wednesday, Aug 19, 2026: Broad Bull Tape, Flat Yield Curve, Energy Leadership, VIX Compression</title>
+    <link>https://tredey.com/forecasts/2026-08-19-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-08-19-market-outlook/</guid>
+    <pubDate>2026-08-19</pubDate>
+    <description>SPY $767.45, QQQ $717.51, IWM $300.23. VIX 15.86 (term ratio 0.823). All sectors above 50d MA (breadth 100%). XLE leads +8.85% 20d. Bull regime intact. No major catalysts through Aug 28 Jackson Hole.</description>
+  </item>
   <item>
     <title>XLP Long Call Butterfly — Dec 18 '26 80/90/100: A Defensive Range-Bet Into Sep/Oct</title>
     <link>https://tredey.com/trade-log/2026-08-18-xlp-long-call-butterfly/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/trade-log/2026-08-06-aapl-bull-put-spread/</guid>
     <pubDate>2026-08-06</pubDate>
     <description>Opened an AAPL Oct 16 300/295 bull put spread, a 71-DTE equity-level short-premium structure with $12.46 OTM cushion. $155 total credit, $345 defined max loss, </description>
-  </item>
-  <item>
-    <title>Market Outlook — Thursday, August 6, 2026: New Highs Hold, Breadth at Maximum, Earnings Cycle Behind — Pre-ECI Drift, Jackson Hole Looms Mid-Month</title>
-    <link>https://tredey.com/forecasts/2026-08-06-market-outlook-shadow/</link>
-    <guid>https://tredey.com/forecasts/2026-08-06-market-outlook-shadow/</guid>
-    <pubDate>2026-08-06</pubDate>
-    <description>SPY $769.79, SPX ~7,720, VIX 15.93 term ratio 0.776. Breadth 100% into a fourth session. XLK +11.61% 5d; XLF +5.51% 20d. ECI Friday 8:30 ET; Jackson Hole ahead.</description>
   </item>
 </channel>
 </rss>
