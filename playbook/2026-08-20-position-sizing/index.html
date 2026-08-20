@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Position Sizing — The Fixed-Fractional Method | The Trading Journal</title>
+ <meta name="description" content="How the journal sizes every position: fixed-fractional risk per trade, max-loss cap per position, and the relationship between NLV, leverage, and structure choice.">
+ <link rel="canonical" href="https://tredey.com/playbook/2026-08-20-position-sizing/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Position Sizing — The Fixed-Fractional Method | The Trading Journal">
+ <meta property="og:description" content="How the journal sizes every position: fixed-fractional risk per trade, max-loss cap per position, and the relationship between NLV, leverage, and structure choice.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/playbook/2026-08-20-position-sizing/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Position Sizing — The Fixed-Fractional Method | The Trading Journal">
+ <meta name="twitter:description" content="How the journal sizes every position: fixed-fractional risk per trade, max-loss cap per position, and the relationship between NLV, leverage, and structure choice.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 property 550187415, web data stream G-D87HJG5G93 -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-D87HJG5G93"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D87HJG5G93');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">August 20, 2026 &middot; PLAYBOOK / SIZING</div>
+  <h1>Position Sizing — The Fixed-Fractional Method</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">How the journal sizes every position: fixed-fractional risk per trade, max-loss cap per position, and the relationship between NLV, leverage, and structure choice.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>The journal sizes every position to a fixed percentage of Net Liquidating Value (NLV). The current rule is: <strong>no single position may risk more than 2% of NLV at the time of entry</strong>. The rule is mechanical, not discretionary — once the structure is chosen, the size is set by the structure's max-loss divided by 0.02 × NLV.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<h2>Why fixed-fractional and not Kelly</h2>
+<p>The Kelly Criterion is the theoretical optimal sizing for a series of binary bets with known edge. In practice, it assumes you know the exact win probability and pay-off distribution, both of which are estimated rather than known in options trading. The journal's experience is that full-Kelly sizing produces drawdowns that are emotionally unsustainable, even when the trades are profitable in expectation. The compromise is to use a quarter-Kelly or fixed-half-Kelly fraction, which sacrifices some long-run growth rate in exchange for a much smoother drawdown curve.</p>
+<p>The 2% rule is a proxy for that compromise. It is not derived from Kelly directly; it is a round number that the journal tested against the realized drawdown profile of the playbook's structures and judged to be the largest sustainable sizing for a single position. Going to 3% produced clusters of correlated losses that were uncomfortable to manage; going to 1% produced a return profile that was too flat to compound. 2% is the middle.</p>
+<h2>Max-loss is the right denominator</h2>
+<p>The journal sizes by max-loss, not by premium paid or by margin required. The reason is that max-loss is the worst-case scenario for the position — the number the journal needs to be willing to lose in order to take the trade. Premium paid is the cost of the spread; margin required is the broker's collateral requirement; both are smaller than max-loss and both understate the risk. Sizing by max-loss forces the journal to confront the worst case before committing capital, and it puts positions with similar risk profiles on a comparable footing regardless of structure.</p>
+<p>For example, a long call paid at $1.50 with a $1.50 max-loss is sized to risk 2% of NLV. A bull put spread at $2.00 wide with $1.50 max-loss is sized to the same 2% of NLV. The fact that the long call required $1.50 of premium and the credit spread required $0.50 of margin is irrelevant to the size decision — what matters is the worst case.</p>
+<h2>The relationship between sizing and structure choice</h2>
+<p>Sizing interacts with structure choice in a non-obvious way. A position with a 1.5:1 reward-to-risk ratio that wins 60% of the time has a positive expected value, but sizing it to 2% of NLV means the journal needs a 60% hit rate to grow NLV at the rate implied by the structure. If the realized hit rate drops to 50%, the structure is mildly negative-EV; at 2% sizing, the journal will lose slowly but consistently.</p>
+<p>The journal's response to a dropping hit rate is not to increase sizing to make up the difference — it is to reduce position count until the realized hit rate recovers, or to pause the strategy until the market regime shifts. Sizing is not a knob that gets turned to chase returns; it is a constraint that stays fixed while the journal decides which structures to deploy.</p>
+<h2>Correlated positions</h2>
+<p>The 2% rule is per position, not per strategy. If the journal opens three credit spreads on the same index in the same expiration, the total risk is 6% of NLV, even though each individual position is 2%. This is intentional — the three positions are correlated, and the journal wants to know the aggregate exposure to the underlying thesis. The aggregation rule is: <strong>total risk in any single underlying (or highly correlated basket) should not exceed 6% of NLV</strong>. That is roughly three positions at the 2% sizing, or two positions sized more conservatively and one larger one.</p>
+<p>The 6% rule is also where the playbook gives way to journal discretion. A single highly-conviction thesis might warrant a 4% position with no other positions in the same underlying; a low-conviction mean-reversion trade might be sized to 1% with two other small positions in the same basket. The journal does not have a hard rule for this — it has a pattern, and the pattern is documented in the lessons-learned article.</p>
+<h2>Why not martingale or anti-martingale</h2>
+<p>The journal does not increase sizing after a winning streak (anti-martingale) or after a losing streak (martingale). The reasoning is the same for both: position sizing should be a function of the structure's expected value and the current NLV, not of the recent trade history. A win streak does not mean the next trade is more likely to win; a loss streak does not mean the next trade is more likely to lose. The win rate is a property of the structure and the market regime, not of the trader's recent performance. Sizing should reflect the structure, not the streak.</p>
+<h2>What this looks like in practice</h2>
+<p>For a $100,000 NLV book with the 2% rule, a single position's max-loss is capped at $2,000. A $1,500 max-loss would be sized to 1.33 contracts (rounded to 1 or 2 depending on the broker's minimum). A $300 max-loss would be sized to 6.67 contracts, rounded to 7. The actual fill quantity is always a whole number, and the rounding goes in the direction of the smaller contract — the journal errs on the side of less risk when the math doesn't divide cleanly.</p>
+<p>For options with 10:1 multipliers (XSP), the sizing calculation works the same way: a $1,500 max-loss on an XSP spread is still one position at the 2% cap. The multiplier doesn't change the max-loss; it changes the number of contracts that max-loss corresponds to per dollar of width. Sizing by max-loss removes the need to reason about multiplier separately.</p>
+<h2>How the rule has changed</h2>
+<p>The 2% rule was originally 5% when the journal was smaller. The rule was tightened as the NLV grew — the journal observed that the same dollar amounts of risk produced smaller percentage impacts as the account grew, and the temptation to scale up by leaving dollar-amounts-of-risk fixed was real. The 2% rule is the journal's way of decoupling position size from the absolute NLV and tying it to the percentage of the account. The rule can be revisited upward if the realized hit rate justifies it, but the journal has not seen the conditions that would warrant a larger sizing in over a year of trading.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

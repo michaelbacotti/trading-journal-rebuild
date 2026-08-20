@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Options Market Microstructure — How the Bid/Ask and the Open Interest Shape the Trade | The Trading Journal</title>
+ <meta name="description" content="The microstructure of the options market: bid/ask spreads, open interest, volume, and the way the interaction of the order book shapes the journal's entry and exit prices. The hidden cost of every trade that the price doesn't show.">
+ <link rel="canonical" href="https://tredey.com/education/2026-08-20-options-market-microstructure/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Options Market Microstructure — How the Bid/Ask and the Open Interest Shape the Trade | The Trading Journal">
+ <meta property="og:description" content="The microstructure of the options market: bid/ask spreads, open interest, volume, and the way the interaction of the order book shapes the journal's entry and exit prices. The hidden cost of every trade that the price doesn't show.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/education/2026-08-20-options-market-microstructure/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Options Market Microstructure — How the Bid/Ask and the Open Interest Shape the Trade | The Trading Journal">
+ <meta name="twitter:description" content="The microstructure of the options market: bid/ask spreads, open interest, volume, and the way the interaction of the order book shapes the journal's entry and exit prices. The hidden cost of every trade that the price doesn't show.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 property 550187415, web data stream G-D87HJG5G93 -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-D87HJG5G93"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D87HJG5G93');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">August 20, 2026 &middot; EDUCATION / MICROSTRUCTURE</div>
+  <h1>Options Market Microstructure — How the Bid/Ask and the Open Interest Shape the Trade</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">The microstructure of the options market: bid/ask spreads, open interest, volume, and the way the interaction of the order book shapes the journal's entry and exit prices. The hidden cost of every trade that the price doesn't show.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>The options market is a continuous double auction in which market makers post bids and offers for every listed option. The interaction of the market makers' orders, the public's orders, and the options exchange's matching engine determines the price at which the journal's orders fill. The microstructure of the market is the source of the journal's transaction costs, and the journal's methodology is built around the assumption that the transaction costs are predictable and bounded.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<h2>Bid/ask spreads</h2>
+<p>The bid/ask spread is the difference between the highest bid price and the lowest offer price for an option. The bid/ask spread is the market maker's compensation for providing liquidity, and the spread is the source of the most significant transaction cost in the options market.</p>
+<p>The journal's rule for the bid/ask spread is: do not open a position if the bid/ask spread is more than 10% of the option's mid-price. The rule applies to individual options, not to spreads. For a multi-leg spread, the journal's rule is that the net bid/ask spread (the spread of the long leg minus the spread of the short leg) should not be more than 10% of the spread's net mid-price.</p>
+<p>The 10% rule is a hard cap. The journal will not open a position if the bid/ask spread is too wide, regardless of the structure's expected value. The reason is that the expected value calculation assumes the position is opened at the mid-price, and the bid/ask spread is the cost of converting the mid-price assumption to the actual fill price. A wide bid/ask spread is a sign that the market is illiquid, and the journal's rule is to avoid illiquid markets.</p>
+<p>The journal's most common exception to the 10% rule is the back-month options in a diagonal spread. The back-month options have wider bid/ask spreads than the front-month options, and the journal's rule for diagonals is that the back-month leg's bid/ask spread can be up to 15% of the mid-price. The exception is documented in the diagonal spread article.</p>
+<h2>Open interest</h2>
+<p>Open interest is the number of outstanding contracts for an option at a given strike and expiration. The open interest is a measure of the market's commitment to the option, and the open interest is the basis for the journal's liquidity analysis.</p>
+<p>The journal's rule for open interest is: do not open a position in an option with less than 100 contracts of open interest. The 100-contract rule ensures that the journal can close the position at a reasonable price when the time comes. An option with low open interest is more likely to have a wide bid/ask spread and a low volume, which makes the position harder to exit.</p>
+<p>The 100-contract rule is a hard cap. The journal will not open a position in an option with low open interest, regardless of the structure's expected value. The reason is that the position's expected value at entry is based on the assumption that the position can be closed at the mid-price, and an option with low open interest is unlikely to fill at the mid-price.</p>
+<p>The journal's most common exception to the 100-contract rule is the back-month options in a diagonal spread. The back-month options often have lower open interest than the front-month options, and the journal's rule for diagonals is that the back-month leg's open interest can be as low as 50 contracts. The exception is documented in the diagonal spread article.</p>
+<h2>Volume</h2>
+<p>Volume is the number of contracts traded for an option in a given day. The volume is a measure of the market's current activity in the option, and the volume is the basis for the journal's liquidity analysis.</p>
+<p>The journal's rule for volume is: do not open a position in an option with less than 10 contracts of daily volume. The 10-contract rule ensures that the journal's order will not move the market significantly. An option with low volume is more likely to have a wide bid/ask spread and a low open interest, which makes the position harder to exit.</p>
+<p>The 10-contract rule is a hard cap. The journal will not open a position in an option with low volume, regardless of the structure's expected value. The reason is that the position's expected value at entry is based on the assumption that the position can be closed at the mid-price, and an option with low volume is unlikely to fill at the mid-price.</p>
+<p>The 10-contract rule is more restrictive than the 100-contract rule for open interest. The journal's typical option has open interest in the thousands and daily volume in the hundreds; the 10-contract rule is the cap on the option's daily activity, and the 100-contract rule is the cap on the option's outstanding contracts.</p>
+<h2>Slippage</h2>
+<p>Slippage is the difference between the expected fill price and the actual fill price. The slippage is the cost of the order's execution, and the slippage is the basis for the journal's transaction cost analysis.</p>
+<p>The journal's rule for slippage is: the realized slippage on a position should not exceed 5% of the structure's max-profit. The 5% rule is a soft cap; the journal does not refuse to open a position if the slippage is expected to be high, but the journal documents the slippage in the trade log entry and the position-level review.</p>
+<p>The journal's typical slippage is 1-3% of the structure's max-profit. The slippage is higher for back-month options, for low-volume options, and for options that are far out-of-the-money. The journal's rule for the slippage is to monitor the realized slippage across the trade log and to identify the structures that produce the highest slippage.</p>
+<p>The journal's most common cause of high slippage is the multi-leg spread. A multi-leg spread fills all the legs simultaneously, and the slippage is the difference between the expected fill price and the actual fill price. The journal's rule for multi-leg spreads is to use limit orders (not market orders) and to specify the limit price at the mid-price of the spread. The limit order ensures that the spread fills at the expected price or better, and the journal does not pay for the slippage.</p>
+<h2>Transaction costs</h2>
+<p>Transaction costs are the total cost of opening and closing a position, including the bid/ask spread, the commission, the exchange fees, and the regulatory fees. The transaction costs are the realized cost of the position, and the transaction costs are the basis for the journal's realized EV calculation.</p>
+<p>The journal's typical transaction costs are 2-5% of the structure's max-profit. The transaction costs are higher for multi-leg spreads, for back-month options, and for low-volume options. The journal's rule for transaction costs is to monitor the realized costs across the trade log and to identify the structures that produce the highest costs.</p>
+<p>The journal's most common cause of high transaction costs is the commission. The commission is a fixed cost per contract, and the commission is the same regardless of the structure's max-profit. The journal's rule for the commission is to use a broker that offers commission-free closing trades (which the journal's broker does), and the commission is the cost of opening the position only.</p>
+<p>The journal's second most common cause of high transaction costs is the regulatory fees. The regulatory fees are a percentage of the trade's notional value, and the regulatory fees are the same regardless of the broker. The journal's rule for the regulatory fees is to monitor the realized fees across the trade log and to identify the structures that produce the highest fees.</p>
+<h2>The hidden cost of every trade</h2>
+<p>The transaction costs are the hidden cost of every trade. The price of the option does not include the bid/ask spread, the commission, or the regulatory fees; the transaction costs are the difference between the expected price and the realized price. The journal's methodology is built around the assumption that the transaction costs are predictable and bounded, and the journal's process discipline is designed to monitor the realized costs.</p>
+<p>The journal's rule for the hidden cost is: the position's expected value at entry must be greater than 2% of the structure's max-profit above the transaction costs. The 2% rule is the margin of safety for the transaction costs, and the journal's typical expected value is 5-10% of the structure's max-profit. The 2% rule ensures that the position's expected value is not consumed by the transaction costs.</p>
+<p>The journal's view is that the transaction costs are a real cost of trading, and the journal's methodology is built around the assumption that the transaction costs are a real cost. The journal's expected value calculations include the transaction costs, and the journal's realized EV is the expected value minus the realized transaction costs. The journal's process discipline is the mechanism by which the transaction costs are monitored and the methodology is revised.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

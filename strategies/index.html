@@ -8,16 +8,16 @@
  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
  <title>Options Strategies | The Trading Journal</title>
- <meta name="description" content="Walk-throughs of the spread structures used in the journal: verticals, iron condors, calendars, diagonals.">
+ <meta name="description" content="Walk-throughs of the spread structures used in the journal: verticals, iron condors, calendars, diagonals. Anatomy, greeks, entry triggers, risk profile, and exit logic for each.">
  <link rel="canonical" href="https://tredey.com/strategies/">
  <meta property="og:type" content="website">
  <meta property="og:title" content="Options Strategies | The Trading Journal">
- <meta property="og:description" content="Walk-throughs of the spread structures used in the journal: verticals, iron condors, calendars, diagonals.">
+ <meta property="og:description" content="Walk-throughs of the spread structures used in the journal: verticals, iron condors, calendars, diagonals. Anatomy, greeks, entry triggers, risk profile, and exit logic for each.">
  <meta property="og:image" content="https://tredey.com/og-image.svg">
  <meta property="og:url" content="https://tredey.com/strategies/">
  <meta name="twitter:card" content="summary_large_image">
  <meta name="twitter:title" content="Options Strategies | The Trading Journal">
- <meta name="twitter:description" content="Walk-throughs of the spread structures used in the journal: verticals, iron condors, calendars, diagonals.">
+ <meta name="twitter:description" content="Walk-throughs of the spread structures used in the journal: verticals, iron condors, calendars, diagonals. Anatomy, greeks, entry triggers, risk profile, and exit logic for each.">
  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
  <link rel="manifest" href="/site.webmanifest">
  <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
@@ -45,11 +45,26 @@
 
 <div class="page-hero">
  <h1>Options Strategies</h1>
- <p>Walk-throughs of the spread structures used in the journal: verticals, iron condors, calendars, diagonals.</p>
+ <p>Walk-throughs of the spread structures used in the journal: verticals, iron condors, calendars, diagonals. Each strategy article covers the structure's anatomy, the greeks at entry, the typical entry triggers, the risk profile, and the exit logic. The strategies articles are reference material — they describe how a structure works in the abstract — and they are paired with the trade log, which shows how the structure actually performed in the journal's hands. The strategies section is organized by structure, not by ticker. The articles on bull put spreads, iron condors, calendar spreads, and long call condors are written so that a reader can understand the structure before evaluating the trade log entries that used it. Where the strategy articles overlap with the playbook, the playbook wins on rules and the strategies articles win on anatomy. The strategies section also covers the structures that worked badly — the covered call, the long straddle, the long call held too far out of the money. Those articles describe why the structure failed in the journal's hands and what the alternative would have been, so a reader who is considering the same structure can see the failure mode before sizing the position. The strategies articles are the most-read section on the site because they are the most reusable. A reader who is evaluating a credit spread in their own account can read the strategies article and the corresponding trade log entries in parallel, and see how the structure performed across multiple market regimes.</p>
 </div>
 <div class="page-content">
  <div class="archive-grid" style="display:flex;flex-direction:column;gap:0;">
   <div class="resource-card" style="padding:1rem;border-bottom:1px solid var(--color-border);">
+  <div style="font-size:.7rem;font-weight:600;color:#1e3a5f;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.25rem;">STRATEGY / DIRECTIONAL</div>
+  <h3 style="font-size:1.1rem;margin-bottom:.5rem;"><a href="/strategies/2026-08-20-debit-vertical-spread/" style="color:#000;">Debit Vertical Spread — The Defined-Risk Directional</a></h3>
+  <p style="font-size:.9rem;color:#666;line-height:1.5;">Anatomy of a debit vertical spread: lower max-loss than a long call, capped upside, and the trade-off between risk reduction and profit potential. When the spread fits a directional thesis better than a single-leg long option.</p>
+  <div style="font-size:.75rem;color:#888;margin-top:.5rem;">August 20, 2026</div>
+</div><div class="resource-card" style="padding:1rem;border-bottom:1px solid var(--color-border);">
+  <div style="font-size:.7rem;font-weight:600;color:#1e3a5f;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.25rem;">STRATEGY / TIME</div>
+  <h3 style="font-size:1.1rem;margin-bottom:.5rem;"><a href="/strategies/2026-08-20-diagonal-spread/" style="color:#000;">Diagonal Spread — The Time-Distributed Position</a></h3>
+  <p style="font-size:.9rem;color:#666;line-height:1.5;">Anatomy of a diagonal spread: long option at a longer expiration, short option at a shorter expiration, the structure's time-distributed payoff, and when the diagonal fits better than a vertical or a calendar.</p>
+  <div style="font-size:.75rem;color:#888;margin-top:.5rem;">August 20, 2026</div>
+</div><div class="resource-card" style="padding:1rem;border-bottom:1px solid var(--color-border);">
+  <div style="font-size:.7rem;font-weight:600;color:#1e3a5f;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.25rem;">STRATEGY / MEAN-REVERSION</div>
+  <h3 style="font-size:1.1rem;margin-bottom:.5rem;"><a href="/strategies/2026-08-20-iron-butterfly/" style="color:#000;">Iron Butterfly — The High-Probability Mean-Reversion</a></h3>
+  <p style="font-size:.9rem;color:#666;line-height:1.5;">Anatomy of an iron butterfly: short straddle with protective wings, very high probability of profit, defined risk, and the trade-off between premium collected and the cost of being wrong. When the structure fits a low-volatility regime better than an iron condor.</p>
+  <div style="font-size:.75rem;color:#888;margin-top:.5rem;">August 20, 2026</div>
+</div><div class="resource-card" style="padding:1rem;border-bottom:1px solid var(--color-border);">
   <div style="font-size:.7rem;font-weight:600;color:#1e3a5f;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.25rem;">STRATEGY / TIME SPREAD</div>
   <h3 style="font-size:1.1rem;margin-bottom:.5rem;"><a href="/strategies/2026-07-24-calendar-call-spread/" style="color:#000;">Calendar Call Spread: Same Strike, Different Expiries, Theta in the Middle</a></h3>
   <p style="font-size:.9rem;color:#666;line-height:1.5;">Anatomy of the calendar call spread: a two-leg same-strike time spread that profits when the underlying parks near the strike at the front-month's expiry. The pure theta-harvest structure in the playbook, defined-risk by construction.</p>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Reading the Trade Log — How to Evaluate the Journal's Methodology | The Trading Journal</title>
+ <meta name="description" content="How to read the trade log: filtering by structure, by ticker, by outcome; the difference between hit rate and expected value; and the patterns to look for when evaluating the journal's methodology.">
+ <link rel="canonical" href="https://tredey.com/education/2026-08-20-reading-the-trade-log/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Reading the Trade Log — How to Evaluate the Journal's Methodology | The Trading Journal">
+ <meta property="og:description" content="How to read the trade log: filtering by structure, by ticker, by outcome; the difference between hit rate and expected value; and the patterns to look for when evaluating the journal's methodology.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/education/2026-08-20-reading-the-trade-log/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Reading the Trade Log — How to Evaluate the Journal's Methodology | The Trading Journal">
+ <meta name="twitter:description" content="How to read the trade log: filtering by structure, by ticker, by outcome; the difference between hit rate and expected value; and the patterns to look for when evaluating the journal's methodology.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 property 550187415, web data stream G-D87HJG5G93 -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-D87HJG5G93"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D87HJG5G93');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">August 20, 2026 &middot; EDUCATION / EVALUATION</div>
+  <h1>Reading the Trade Log — How to Evaluate the Journal's Methodology</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">How to read the trade log: filtering by structure, by ticker, by outcome; the difference between hit rate and expected value; and the patterns to look for when evaluating the journal's methodology.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>The trade log is the journal's source of truth, but reading it requires some context. A reader who looks at the trade log without understanding the methodology will see a list of positions, not a record of decisions. This article explains how to read the trade log in a way that surfaces the methodology's strengths and weaknesses.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<h2>The trade log is not a stock-picking service</h2>
+<p>The first thing to understand is that the trade log is a record of the journal's decisions, not a recommendation to enter the same trades. The journal's positions are sized to the journal's NLV, timed to the journal's directional bias, and adjusted according to the journal's playbook. A reader who copies the trades without understanding the rationale will be entering positions at different sizes, with different timing, and with different adjustment rules.</p>
+<p>The trade log is also not a forecast. The journal's directional bias is provided by the forecast methodology published on Dependability, and the trade log shows the positions that the journal opened based on that bias. The trade log is the execution layer, not the prediction layer.</p>
+<h2>The two ways to read the trade log</h2>
+<p>There are two ways to read the trade log:</p>
+<p><strong>1. As a list of individual positions.</strong> Read each entry, understand the structure, understand the reasoning, and evaluate the outcome. This is the most common way to read the trade log, and it is the way that produces the most context for each individual decision.</p>
+<p><strong>2. As a statistical sample.</strong> Filter the trade log by structure, by ticker, by outcome, or by some other dimension, and look at the aggregate statistics. The aggregate statistics show the methodology's strengths and weaknesses at a higher level than the individual entries.</p>
+<p>The journal recommends both approaches. The individual entries provide the context for the aggregate statistics, and the aggregate statistics identify the patterns that are not visible from the individual entries.</p>
+<h2>The hit rate vs. the expected value</h2>
+<p>The journal's hit rate is the percentage of positions that closed at a profit. The journal's expected value is the probability-weighted average of the profit and loss outcomes. The two are related but not the same.</p>
+<p>A high hit rate with a low expected value is a sign of a methodology that wins often but loses big. A low hit rate with a high expected value is a sign of a methodology that loses often but wins big. The journal's methodology is built around the second approach: the hit rate is typically 55-65%, but the winners are larger than the losers because the risk/reward on the structures is favorable.</p>
+<p>The journal's realized hit rate is computed against the expected value, not against the position count. A position that closed at a profit when the expected value was positive is recorded as an expected win; a position that closed at a loss when the expected value was positive is recorded as an unexpected loss. The journal's goal is to have a high realized hit rate against the expected value, not a high hit rate against the position count.</p>
+<h2>Filtering by structure</h2>
+<p>The trade log can be filtered by structure. The journal's most common structures are:</p>
+<ul>
+  <li><strong>Bull put spreads.</strong> A bullish-to-neutral short-premium structure. The journal's most common structure, used when the directional bias is bullish-to-neutral and the IV rank is high.</li>
+  <li><strong>Bear call spreads.</strong> A bearish-to-neutral short-premium structure. The journal uses this structure when the directional bias is bearish-to-neutral and the IV rank is high.</li>
+  <li><strong>Long call verticals.</strong> A bullish long-premium structure. The journal uses this structure when the directional bias is bullish and the IV rank is low.</li>
+  <li><strong>Long put verticals.</strong> A bearish long-premium structure. The journal uses this structure when the directional bias is bearish and the IV rank is low.</li>
+  <li><strong>Iron condors.</strong> A neutral short-premium structure. The journal uses this structure when the directional bias is neutral and the IV rank is high.</li>
+  <li><strong>Iron butterflies.</strong> A high-probability short-premium structure. The journal uses this structure when the directional bias is neutral and the IV rank is very high.</li>
+</ul>
+<p>The aggregate statistics for each structure show the realized hit rate, the average profit, the average loss, and the expected value. The journal reviews these statistics periodically to identify the structures that are performing better or worse than expected.</p>
+<h2>Filtering by ticker</h2>
+<p>The trade log can be filtered by ticker. The journal's most common tickers are SPX, XSP, QQQ, and IWM. The trade log shows the realized performance for each underlying, which can be useful for identifying the underlyings where the journal's methodology works best.</p>
+<p>The journal's realized performance on SPX is the most representative, because the majority of the journal's positions are on SPX. The realized performance on other underlyings is more volatile, because the sample size is smaller. A reader who wants to evaluate the journal's methodology on a specific underlying should filter the trade log by that underlying and look at the aggregate statistics.</p>
+<h2>Filtering by outcome</h2>
+<p>The trade log can be filtered by outcome. The most common filters are:</p>
+<ul>
+  <li><strong>Closed at target.</strong> Positions that closed at the journal's profit target. The journal's hit rate for these positions is the highest of any outcome category.</li>
+  <li><strong>Closed at stop.</strong> Positions that closed at the journal's stop. The journal's hit rate for these positions is the lowest of any outcome category.</li>
+  <li><strong>Closed early.</strong> Positions that were closed before the target or the stop. The journal's reasons for closing early are documented in the trade log entry.</li>
+  <li><strong>Open.</strong> Positions that are still open. These positions are not included in the realized hit rate, but they are included in the journal's portfolio.</li>
+</ul>
+<p>The journal reviews the outcome categories periodically to identify patterns. A high rate of "closed early" positions on a specific structure is a sign that the structure's target or stop is set incorrectly, and the journal may adjust the rules for that structure.</p>
+<h2>The patterns to look for</h2>
+<p>The patterns that are most informative when evaluating the journal's methodology are:</p>
+<ul>
+  <li><strong>Structure-level hit rate.</strong> The realized hit rate for each structure should be close to the entry-time expected value. A structure with a hit rate that is significantly below the expected value is a structure that needs to be revised.</li>
+  <li><strong>Ticker-level hit rate.</strong> The realized hit rate for each ticker should be similar to the structure-level hit rate. A ticker with a hit rate that is significantly below the structure-level is a ticker where the journal's methodology is not working.</li>
+  <li><strong>Time-of-day patterns.</strong> The journal's positions are typically entered at the open or mid-day. The realized hit rate for positions entered at the open vs. mid-day is monitored to identify the times of day that produce the best outcomes.</li>
+  <li><strong>Adjustment patterns.</strong> The journal's most common adjustments are rolls, hedges, and closes. The realized P&L of each adjustment type is reviewed to identify the adjustments that are most associated with profitable outcomes.</li>
+  <li><strong>Volatility regime patterns.</strong> The journal's realized hit rate is monitored against the IV rank at entry. The relationship between IV rank and hit rate shows whether the journal's IV-regime rules are working.</li>
+</ul>
+<h2>How the journal uses the patterns</h2>
+<p>The journal uses the patterns to revise the playbook. A rule that produces consistent losses in the trade log is a rule that needs to be revised. A rule that produces consistent wins is a rule that should be tightened (e.g., the size should be increased, or the rule should be applied more broadly).</p>
+<p>The journal's rule revision process is documented in the lessons-learned article. The process is: identify the pattern, propose a revision, test the revision in the trade log, and update the playbook if the revision improves the expected value. The process is iterative, and the playbook is updated periodically as the patterns emerge.</p>
+<p>The journal's most common rule revisions are: adjusting the strike selection for a specific structure, adjusting the position size for a specific IV regime, and adjusting the target or stop for a specific structure. The revisions are documented in the playbook with the date of the revision and the reason for the revision. A reader who wants to evaluate the journal's methodology over time can read the playbook's revision history and compare it to the trade log's realized outcomes.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Statistical Foundation — Why the Math Works | The Trading Journal</title>
+ <meta name="description" content="The statistical foundation of the journal's methodology: the normal distribution, the central limit theorem, the law of large numbers, and how each applies to the realized outcomes of the playbook's structures.">
+ <link rel="canonical" href="https://tredey.com/education/2026-08-20-statistical-foundation/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Statistical Foundation — Why the Math Works | The Trading Journal">
+ <meta property="og:description" content="The statistical foundation of the journal's methodology: the normal distribution, the central limit theorem, the law of large numbers, and how each applies to the realized outcomes of the playbook's structures.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/education/2026-08-20-statistical-foundation/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Statistical Foundation — Why the Math Works | The Trading Journal">
+ <meta name="twitter:description" content="The statistical foundation of the journal's methodology: the normal distribution, the central limit theorem, the law of large numbers, and how each applies to the realized outcomes of the playbook's structures.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 property 550187415, web data stream G-D87HJG5G93 -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-D87HJG5G93"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D87HJG5G93');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">August 20, 2026 &middot; EDUCATION / STATISTICS</div>
+  <h1>Statistical Foundation — Why the Math Works</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">The statistical foundation of the journal's methodology: the normal distribution, the central limit theorem, the law of large numbers, and how each applies to the realized outcomes of the playbook's structures.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>The journal's methodology is built on a small number of statistical principles. The principles are not arbitrary; they are the foundation of the option-pricing model, the probability-of-profit estimates, and the realized outcomes of the playbook's structures. This article explains the principles and how they apply to the journal's daily work.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<h2>The normal distribution</h2>
+<p>The normal distribution (also called the Gaussian distribution) is the bell-shaped probability distribution that describes the distribution of returns for many financial instruments. The normal distribution is symmetric around the mean, with about 68% of the observations within one standard deviation and about 95% within two standard deviations.</p>
+<p>The normal distribution is the foundation of the Black-Scholes option-pricing model. The model assumes that the underlying's returns are normally distributed, and the option's price is computed from the distribution's probability of the underlying expiring in-the-money. The model's assumption of normality is not exact (real returns have "fat tails" — extreme events are more common than the normal distribution predicts), but the model is a reasonable approximation for most option-pricing purposes.</p>
+<p>The journal's use of the normal distribution is in the probability-of-profit estimates and the expected value calculations. The option market's implied volatility is the standard deviation of the normal distribution that produces the option's market price. The journal's probability adjustments are based on the implied volatility, and the journal's expected value calculations are based on the probability of the underlying being in-the-money at expiration.</p>
+<h2>The central limit theorem</h2>
+<p>The central limit theorem is the statistical principle that the sum of a large number of independent random variables is approximately normally distributed, regardless of the distribution of the individual variables. The theorem is the foundation of the journal's confidence in the expected value calculations: the realized P&L of a large number of independent positions is approximately normally distributed, and the expected value of the P&L is approximately equal to the average of the expected values of the individual positions.</p>
+<p>The central limit theorem applies to the journal's portfolio in two ways:</p>
+<p><strong>1. The realized P&L of the portfolio is approximately normally distributed.</strong> The portfolio is a sum of a large number of independent positions, and the realized P&L of the portfolio is approximately normally distributed. The journal's rule for the portfolio's variance is based on the central limit theorem: the portfolio's variance decreases as the number of positions increases, assuming the positions are independent.</p>
+<p><strong>2. The realized hit rate is approximately the expected hit rate.</strong> The hit rate is the average of the binary outcomes (1 for a win, 0 for a loss), and the average of a large number of binary outcomes is approximately normally distributed. The journal's rule for the realized hit rate is that the realized rate should be within two standard deviations of the expected rate, where the standard deviation is the expected rate × (1 - expected rate) / sqrt(N).</p>
+<h2>The law of large numbers</h2>
+<p>The law of large numbers is the statistical principle that the average of a large number of independent random variables converges to the expected value as the number of variables increases. The law is the foundation of the journal's confidence that the realized outcomes will converge to the expected outcomes over time.</p>
+<p>The law of large numbers applies to the journal's portfolio in two ways:</p>
+<p><strong>1. The realized P&L of the portfolio converges to the expected P&L.</strong> The expected P&L of the portfolio is the sum of the expected P&Ls of the individual positions. As the number of positions increases, the realized P&L of the portfolio converges to the expected P&L. The journal's rule for the realized P&L is that the realized P&L should be within 10% of the expected P&L over a 12-month period.</p>
+<p><strong>2. The realized hit rate converges to the expected hit rate.</strong> The expected hit rate is the average of the probabilities of profit at entry. As the number of positions increases, the realized hit rate converges to the expected hit rate. The journal's rule for the realized hit rate is that the realized hit rate should be within 5 percentage points of the expected hit rate over a 12-month period.</p>
+<p>The journal's 12-month period is the minimum for the law of large numbers to apply. The journal's typical 12-month period has 200-300 positions, which is large enough for the central limit theorem and the law of large numbers to produce a meaningful convergence.</p>
+<h2>The implications of the principles</h2>
+<p>The statistical principles have three implications for the journal's methodology:</p>
+<p><strong>1. The realized outcomes will not match the expected outcomes in the short term.</strong> The realized outcomes of a small number of positions are noisy, and the realized outcomes will deviate from the expected outcomes by more than the expected standard deviation. The journal's rule for the short-term deviations is to evaluate the methodology over a 12-month period, not over a week or a month.</p>
+<p><strong>2. The realized outcomes will converge to the expected outcomes over the long term.</strong> The realized outcomes of a large number of positions converge to the expected outcomes, and the convergence is faster when the positions are independent. The journal's rule for the long-term convergence is to keep the positions independent (no correlated bets) and to evaluate the methodology over a 12-month period.</p>
+<p><strong>3. The portfolio's variance is a function of the correlation between the positions.</strong> The portfolio's variance is the sum of the individual variances plus the sum of the pairwise covariances. The journal's rule for the portfolio's variance is to limit the correlation between the positions (no more than 6% per underlying, no more than 8% per broad-market factor).</p>
+<h2>The limits of the principles</h2>
+<p>The statistical principles have limits. The normal distribution is not an exact description of the underlying's returns; the central limit theorem applies to a large number of independent positions; the law of large numbers applies over a long period of time. The journal's methodology is built around the principles, but the journal acknowledges that the principles are approximations.</p>
+<p>The journal's most important limit is that the underlying's returns are not exactly normally distributed. Real returns have fat tails, and the option market's implied volatility is only an approximation of the realized volatility. The journal's expected value calculations are based on the normal distribution, and the realized EV is typically 60-80% of the theoretical EV at entry. The gap is the cost of the normal distribution's approximation.</p>
+<p>The journal's second most important limit is that the positions are not perfectly independent. The journal's portfolio has correlations between the positions (the broad-market factor is common to many of them), and the portfolio's variance is higher than the variance of independent positions. The journal's portfolio construction rules are designed to limit the correlation, but the correlation is not zero.</p>
+<p>The journal's third most important limit is that the future is not the past. The statistical principles assume that the underlying's distribution is stationary, but the underlying's distribution changes over time. The journal's process discipline is designed to identify the changes in the distribution and to revise the playbook accordingly.</p>
+<h2>The role of the principles in the playbook</h2>
+<p>The statistical principles are the foundation of the playbook's rules. The expected value calculation is based on the normal distribution; the probability of profit is based on the implied volatility; the realized hit rate is expected to converge to the expected hit rate over time. The playbook's rules are designed to exploit the principles, and the journal's process discipline is designed to evaluate the rules against the realized outcomes.</p>
+<p>The journal's view is that the statistical principles are a guide, not a guarantee. The principles are the best available framework for understanding the options market, but the principles are not perfect. The journal's methodology is built on the principles, and the journal's revisions are based on the realized outcomes. The principles and the realized outcomes together produce the journal's process.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

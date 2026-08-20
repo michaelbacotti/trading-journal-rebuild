@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Adjustment Rules — When to Roll, When to Hedge, When to Hold | The Trading Journal</title>
+ <meta name="description" content="The judgment framework for managing open positions: when to roll a spread, when to hedge with a long option, when to hold through volatility, and when to accept the loss and move on.">
+ <link rel="canonical" href="https://tredey.com/playbook/2026-08-20-adjustment-rules/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Adjustment Rules — When to Roll, When to Hedge, When to Hold | The Trading Journal">
+ <meta property="og:description" content="The judgment framework for managing open positions: when to roll a spread, when to hedge with a long option, when to hold through volatility, and when to accept the loss and move on.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/playbook/2026-08-20-adjustment-rules/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Adjustment Rules — When to Roll, When to Hedge, When to Hold | The Trading Journal">
+ <meta name="twitter:description" content="The judgment framework for managing open positions: when to roll a spread, when to hedge with a long option, when to hold through volatility, and when to accept the loss and move on.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 property 550187415, web data stream G-D87HJG5G93 -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-D87HJG5G93"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D87HJG5G93');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">August 20, 2026 &middot; PLAYBOOK / MANAGEMENT</div>
+  <h1>Adjustment Rules — When to Roll, When to Hedge, When to Hold</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">The judgment framework for managing open positions: when to roll a spread, when to hedge with a long option, when to hold through volatility, and when to accept the loss and move on.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>The journal's adjustment rules are the most discretionary part of the playbook. The entry rules are mechanical (size to 2% of NLV, structure from the playbook, strike selection from the strategies articles); the adjustment rules are judgment calls that depend on the realized price action, the time remaining, and the implied volatility regime. The goal of the rules is to make the judgment calls consistent across positions, not to remove judgment entirely.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<h2>Three categories of adjustment</h2>
+<p>The playbook groups adjustments into three categories, each with a clear decision rule:</p>
+<p><strong>1. Defensive adjustments</strong> — actions taken to reduce the position's exposure to a specific risk. Examples: closing a wing to lock in partial profit, rolling a credit spread down to follow the underlying, adding a long option to cap the worst case. Defensive adjustments are taken when the position has moved against the thesis but the thesis itself is still valid.</p>
+<p><strong>2. Offensive adjustments</strong> — actions taken to increase the position's exposure to a thesis that has strengthened. Examples: rolling a credit spread closer to the money to collect more premium, adding a same-direction leg to scale the position up. Offensive adjustments are taken when the underlying has moved in the expected direction and the structure can be improved for a favorable price.</p>
+<p><strong>3. Exit adjustments</strong> — actions taken to close the position, either at a target or by accepting the loss. Examples: closing a spread at 50% of max profit, closing a spread at the stop level, closing a spread early because the thesis has been invalidated. Exit adjustments are the most common category and the most important.</p>
+<p>The decision rule is: <strong>if the thesis is still valid, take a defensive adjustment; if the thesis has strengthened, take an offensive adjustment; if the thesis has been invalidated, exit the position</strong>. The hard part is the "is the thesis still valid" question, which is by definition a judgment call.</p>
+<h2>The 50% rule for closing winners</h2>
+<p>The journal closes credit spreads at 50% of max profit. The reasoning is that the second 50% of max profit takes roughly as long to collect as the first 50%, but exposes the position to the same max-loss for the same time period. At 50% of max profit, the journal has captured the bulk of the structure's expected value, and the remaining time decay is not worth the risk of holding the position to expiration.</p>
+<p>The 50% rule is one of the most consistently applied rules in the playbook. The exceptions are: (1) positions that have less than 7 days to expiration, where the remaining time value is small enough that holding to expiration makes more sense than risking a reversal on an early close; (2) positions that are delta-neutral at the 50% mark, where the journal may hold the position one more day to capture the residual time decay before expiration; and (3) positions that the journal wants to roll forward to the next expiration because the underlying thesis has not played out yet.</p>
+<h2>The stop-loss rule</h2>
+<p>The journal does not have a hard stop-loss on every position. The reasoning is that options spreads have a defined max-loss at entry, and the journal chose the size to be comfortable losing that amount. A stop-loss at a level above the max-loss would fire only if the position was already at max-loss, which is information the journal already has. A stop-loss at a level below the max-loss would force an exit before the thesis has had time to play out, which is usually the wrong decision for short-premium structures where the time decay is the edge.</p>
+<p>The exception is debit spreads with a directional thesis. For a long-debit position, the journal uses a 50% stop-loss — close the position if it reaches 50% of max loss — because the time decay on a long-debit position works against the journal, and the longer the position is held, the less time it has to recover. A 50% stop-loss on a debit spread is the analog of the 50% take-profit on a credit spread: limit the time spent underwater.</p>
+<h2>Rolling forward vs. rolling out</h2>
+<p>When a credit spread is approaching expiration and the underlying has not moved as expected, the journal has two choices: roll the spread forward to the next expiration (closing the current spread and opening a new one at the same strike in the next cycle), or roll the spread out to a longer-dated expiration (closing the current spread and opening a new one at a farther expiration, typically monthly). The decision rule is:</p>
+<ul>
+  <li><strong>Roll forward</strong> when the underlying has moved toward the short strike, but the move is not large enough to put the position at risk. The forward roll collects another cycle of premium and gives the position more time to work.</li>
+  <li><strong>Roll out</strong> when the underlying has moved against the short strike, the position is close to the max-loss, and the journal wants to buy time for the position to recover. The out roll is more expensive (collects less premium per day) but gains more time.</li>
+</ul>
+<p>The journal rolls forward more often than it rolls out. Rolls out are taken when the position would be closed at the stop otherwise, and the journal wants to give the thesis one more cycle to play out. Rolls out are explicitly time-limited: the journal will roll out a position exactly once before closing it, regardless of the result. Two rolls out on the same position is treated as a failed thesis, not a recovery opportunity.</p>
+<h2>Hedging with long options</h2>
+<p>The journal will sometimes add a long option to a position to cap the worst case. The most common version is adding a long call to a short call position to define the max-loss precisely. This is a defensive adjustment: the long call costs premium, but it converts the position from "unlimited upside risk" to "defined max loss," and the journal decides that the cost of the hedge is worth the peace of mind.</p>
+<p>The journal does not hedge as a general rule. The reasons: (1) hedging adds a position to monitor, and the journal's portfolio is small enough that every additional position is meaningful overhead; (2) most of the structures in the playbook are already defined-risk, so hedging is usually unnecessary; (3) the hedges that the journal has tried historically have produced worse outcomes than just sizing the position correctly. The hedge is a tool, not a default.</p>
+<h2>When to accept the loss</h2>
+<p>The most important adjustment rule is the one that says: <strong>sometimes the right answer is to close the position and accept the loss</strong>. The journal's experience is that the most damaging trades are not the ones that hit max-loss on entry — those are sized for, and the journal is prepared to lose that amount — but the ones that get held too long past the point where the thesis is still valid. A position that was a good idea at entry can become a bad idea at hour 24, and the journal's rule is to close it within an hour of deciding that the thesis is no longer valid.</p>
+<p>The journal tracks the "thesis-valid" decision explicitly. Every position has a note in the trade log that says what would invalidate the thesis (e.g., "XSP breaks below $720 on a closing basis" or "VIX closes above 22 for two consecutive days"). When the invalidation level is hit, the position is closed. When the invalidation level is approached but not hit, the journal takes a defensive adjustment instead of an exit. The distinction matters: invalidation is a thesis-level decision, defensive adjustment is a position-level decision.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

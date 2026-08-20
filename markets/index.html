@@ -8,16 +8,16 @@
  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
  <title>Markets — SPX, XSP & Sector ETFs | The Trading Journal</title>
- <meta name="description" content="The instruments the journal focuses on: SPX, XSP, and the 11 sector ETFs.">
+ <meta name="description" content="The instruments the journal focuses on: SPX, XSP, and the 11 sector ETFs — plus the rationale for instrument selection, the SPX/XSP sizing decision, and how the journal frames single-name trades.">
  <link rel="canonical" href="https://tredey.com/markets/">
  <meta property="og:type" content="website">
  <meta property="og:title" content="Markets — SPX, XSP & Sector ETFs | The Trading Journal">
- <meta property="og:description" content="The instruments the journal focuses on: SPX, XSP, and the 11 sector ETFs.">
+ <meta property="og:description" content="The instruments the journal focuses on: SPX, XSP, and the 11 sector ETFs — plus the rationale for instrument selection, the SPX/XSP sizing decision, and how the journal frames single-name trades.">
  <meta property="og:image" content="https://tredey.com/og-image.svg">
  <meta property="og:url" content="https://tredey.com/markets/">
  <meta name="twitter:card" content="summary_large_image">
  <meta name="twitter:title" content="Markets — SPX, XSP & Sector ETFs | The Trading Journal">
- <meta name="twitter:description" content="The instruments the journal focuses on: SPX, XSP, and the 11 sector ETFs.">
+ <meta name="twitter:description" content="The instruments the journal focuses on: SPX, XSP, and the 11 sector ETFs — plus the rationale for instrument selection, the SPX/XSP sizing decision, and how the journal frames single-name trades.">
  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
  <link rel="manifest" href="/site.webmanifest">
  <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
@@ -45,7 +45,7 @@
 
 <div class="page-hero">
  <h1>Markets</h1>
- <p>The instruments the journal focuses on and the rationale for the focus.</p>
+ <p>The instruments the journal focuses on, the rationale for the focus, and how the instrument choice shapes the strategies that get traded. The markets page is the bridge between the methodology (about what the journal is trying to do) and the playbook (about how the journal does it). The instruments below are the only ones the journal trades — adding a new instrument is a deliberate decision that gets documented in the playbook, not a one-off trade that gets explained in the trade log.</p>
 </div>
 <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
 
@@ -71,7 +71,13 @@
  <p>SPX uses a $100 multiplier. XSP uses a $10 multiplier. The premium ratio is exactly 10:1. For a given
  strike, an XSP spread is 1/10th the notional of the equivalent SPX spread. XSP is used when the desired
  position size is between the SPX "round number" sizes — for example, a $1,500 max-loss target is awkward
- to build in SPX but natural in XSP. The journal uses both.</p>
+ to build in SPX but natural in XSP. The journal uses both. The decision rule is mechanical: start with
+ the desired risk in dollars, then pick the multiplier that produces the cleanest size. XSP is the
+ precision tool; SPX is the workhorse. Most short-premium credit spreads are opened in SPX (cleaner
+ fills, larger premium per contract) while long-dated defined-risk structures with smaller max-loss
+ targets are opened in XSP (1/10th the notional, same P/L profile). The journal does not size by
+ "number of contracts" — it sizes by "max loss in dollars" — so the SPX/XSP pick is a sizing decision,
+ not a thesis decision.</p>
 
  <h2>Sector ETFs (Selective)</h2>
  <p>When relative-value opportunities arise, the journal may trade options on the 11 sector SPDR ETFs:</p>
@@ -90,7 +96,10 @@
  </ul>
  <p>Sector trades are usually directional plays (debit spreads, single-leg longs) where the
  thesis is a relative outperformance/underperformance call against SPX. They are smaller in size and
- less frequent than the index trades.</p>
+ less frequent than the index trades. Sector trades are sized to roughly 1/4 of an equivalent SPX
+ position because the realized volatility of single-sector ETFs is higher than that of the broad
+ index, and the journal wants the per-position risk to be comparable to the index book on a
+ vol-adjusted basis.</p>
 
  <h2>Core vs. Single-Name Trades</h2>
  <p>The portfolio's core holdings are in index options: SPX/XSP (S&amp;P 500 large-cap), RUT (Russell
@@ -108,7 +117,21 @@
  <h2>Volatility as an Instrument</h2>
  <p>VIX options and VXX are referenced in the methodology and the playbook for hedging and for trading
  volatility regimes, but they are not a primary instrument. VIX options have their own behavioral
- peculiarities (contango, mean reversion) and are treated as a separate chapter in the playbook.</p>
+ peculiarities (contango, mean reversion) and are treated as a separate chapter in the playbook.
+ The journal uses VIX-related products only as a hedge against existing index positions, never as
+ a standalone directional bet. The reasoning: VIX is a derivative of expected future realized
+ volatility, not a tradable instrument in the same sense as SPX. Trading VIX directionally is a
+ bet on the behavior of other traders' expectations, which adds a layer of indirect reasoning that
+ the journal prefers to avoid in the core book.</p>
+
+ <h2>Reading the Trade Log by Instrument</h2>
+ <p>The trade log is sortable by ticker. The distribution over the journal's history usually shows
+ 60-70% SPX/XSP, 10-15% RUT, 5-10% sector ETFs, and 5-15% single-name trades. A reader who wants
+ to evaluate the journal's methodology on a specific instrument should filter the trade log to that
+ instrument and review the realized outcomes across the relevant strategies. The journal does not
+ publish a per-instrument hit-rate summary — the trade log is the source of truth, and any
+ summary statistic the journal publishes is reproducible from the trade log by any reader who has
+ the same data.</p>
 
 </div>
 

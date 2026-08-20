@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Diagonal Spread — The Time-Distributed Position | The Trading Journal</title>
+ <meta name="description" content="Anatomy of a diagonal spread: long option at a longer expiration, short option at a shorter expiration, the structure's time-distributed payoff, and when the diagonal fits better than a vertical or a calendar.">
+ <link rel="canonical" href="https://tredey.com/strategies/2026-08-20-diagonal-spread/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Diagonal Spread — The Time-Distributed Position | The Trading Journal">
+ <meta property="og:description" content="Anatomy of a diagonal spread: long option at a longer expiration, short option at a shorter expiration, the structure's time-distributed payoff, and when the diagonal fits better than a vertical or a calendar.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/strategies/2026-08-20-diagonal-spread/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Diagonal Spread — The Time-Distributed Position | The Trading Journal">
+ <meta name="twitter:description" content="Anatomy of a diagonal spread: long option at a longer expiration, short option at a shorter expiration, the structure's time-distributed payoff, and when the diagonal fits better than a vertical or a calendar.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 property 550187415, web data stream G-D87HJG5G93 -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-D87HJG5G93"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D87HJG5G93');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">August 20, 2026 &middot; STRATEGY / TIME</div>
+  <h1>Diagonal Spread — The Time-Distributed Position</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">Anatomy of a diagonal spread: long option at a longer expiration, short option at a shorter expiration, the structure's time-distributed payoff, and when the diagonal fits better than a vertical or a calendar.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>A diagonal spread is the structure the journal uses when the directional thesis is "underlying moves by X over a longer time horizon" and the journal wants to capture both the directional move and the time decay of a shorter-dated option. The structure is: long option at strike A and expiration T1, short option at strike B and expiration T2, where T1 > T2. The strikes are typically different (the long strike is closer to the current underlying than the short strike), and the expirations are typically 30-90 days apart.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<h2>Anatomy at entry</h2>
+<p>For a bullish call diagonal (long call diagonal, used when the directional bias is bullish), the structure is: long call at strike A in the back expiration, short call at strike B in the front expiration. The strike A is typically at-the-money in the back expiration; the strike B is slightly out-of-the-money in the front expiration. The net debit is the difference between the long call's premium and the short call's premium.</p>
+<p>The structure has a complex payoff diagram. The maximum loss occurs when the underlying is below the short strike at the front expiration, and the short call expires worthless. The position is then equivalent to a long call at the back strike, with the back strike being the long strike A. The max-loss is the net debit paid at entry.</p>
+<p>The maximum profit is more complex. As the front expiration approaches, the short call's time value decays. If the underlying is near the short strike, the short call will be exercised or closed at the front expiration, and the position becomes a long call at the back strike. The position then has the same risk/reward as a long call, but the cost basis is lower than a long call because the short call's premium was collected.</p>
+<p>The structure has a "sweet spot" where the underlying is near the short strike at the front expiration. In this case, the short call is at-the-money, and its time value has decayed significantly. The position's value is roughly the long call's intrinsic value minus the short call's intrinsic value, which is the difference between the strikes. The position's profit is the difference between the strikes minus the net debit.</p>
+<h2>When the diagonal fits better than a vertical or a calendar</h2>
+<p>The diagonal occupies a middle ground between the vertical spread and the calendar spread. The vertical spread is a defined-risk, defined-reward position with a single expiration; the calendar spread is a defined-risk position with two expirations at the same strike; the diagonal spread is a defined-risk position with two expirations at different strikes.</p>
+<p>The diagonal fits better than a vertical when:</p>
+<ul>
+  <li><strong>The thesis has a longer time horizon.</strong> A vertical spread's max-profit is realized at the single expiration; a diagonal spread's max-profit can be realized at the front expiration or carried into the back expiration. The diagonal is the right structure when the journal wants to expose the position to the underlying's directional move over a longer period.</li>
+  <li><strong>The journal wants to reduce the net debit.</strong> A long call at the back expiration costs more than a long call at the front expiration. Selling a short call at the front expiration reduces the net debit, sometimes to zero or even a credit. The diagonal is the right structure when the journal wants to take a directional view with a lower cost basis than a long call.</li>
+  <li><strong>The IV term structure is favorable.</strong> When the front-month IV is higher than the back-month IV (a "backwardation" in volatility), the diagonal is more attractive because the short call's premium is higher than usual. The diagonal is less attractive when the front-month IV is lower than the back-month IV.</li>
+</ul>
+<p>The diagonal fits better than a calendar when:</p>
+<ul>
+  <li><strong>The thesis has a directional component.</strong> A calendar spread is a neutral position that benefits from the underlying staying near the strike; a diagonal spread can be directional if the long and short strikes are different. The diagonal is the right structure when the journal has a directional view but wants to use the time decay of a calendar to reduce the cost.</li>
+  <li><strong>The journal wants a wider profit zone.</strong> A calendar spread's profit zone is narrow (a few points around the strike); a diagonal spread's profit zone is wider (the difference between the strikes). The diagonal is the right structure when the journal wants more flexibility in the profit target.</li>
+</ul>
+<p>The diagonal fits worse when:</p>
+<ul>
+  <li><strong>The journal wants a simple position.</strong> The diagonal is a complex structure with multiple legs and multiple expirations. The journal's preferred structures are simple, and the diagonal is reserved for situations where the complexity is justified by the directional thesis.</li>
+  <li><strong>The bid/ask on the back-month options is wide.</strong> A diagonal fills both legs simultaneously, and the net fill price is the difference between the long fill and the short fill. If the back-month options have wide bid/ask spreads, the journal pays more than expected on the diagonal, and the structure's expected value is reduced.</li>
+</ul>
+<h2>Strike selection</h2>
+<p>The journal's strike selection for a diagonal follows three rules:</p>
+<p><strong>1. The long strike is at-the-money in the back expiration.</strong> The long strike is the position's exposure to the directional move. The journal picks the long strike at the current underlying price, adjusted for the directional bias. A bullish diagonal has the long strike at or slightly above the current underlying.</p>
+<p><strong>2. The short strike is slightly out-of-the-money in the front expiration.</strong> The short strike is the position's exposure to the time decay. The journal picks the short strike at the price target for the front expiration. A bullish diagonal has the short strike at the price where the journal expects the underlying to be at the front expiration.</p>
+<p><strong>3. The expiration spread is 30-90 days.</strong> The journal uses a 30-90 day spread between the front and back expirations. A 30-day spread is the minimum for the diagonal to have meaningful time decay; a 90-day spread is the maximum for the diagonal to have meaningful exposure to the front expiration.</p>
+<p>The strike selection is the most discretionary part of the diagonal structure. The journal's rule is that the long strike is at-the-money and the short strike is at the price target, but the actual strikes are chosen based on the journal's directional view and the option chain's available strikes.</p>
+<h2>Greeks at entry</h2>
+<p>The diagonal has a complex greeks profile. The delta is positive for a bullish diagonal and negative for a bearish diagonal. The theta is positive (the position benefits from time decay) but the rate of decay depends on the difference between the front and back expirations. The vega is positive (the position benefits from an IV expansion in the back expiration).</p>
+<p>The journal's rule for the diagonal is to size the position to 1% of NLV rather than the usual 2% because the structure's greeks are more complex than a vertical or a calendar. The position is more sensitive to changes in the underlying and in the IV than a vertical, and the journal's sizing rule accounts for the increased sensitivity.</p>
+<h2>Adjustments</h2>
+<p>The diagonal is the journal's most complex structure to adjust. The common adjustments are:</p>
+<ul>
+  <li><strong>Roll the short option forward.</strong> When the front expiration is approaching and the short option is still in the position, the journal rolls the short option to the next expiration. This is a defensive adjustment that preserves the position's time decay while extending the position's duration.</li>
+  <li><strong>Roll the short option closer to the money.</strong> When the underlying has moved toward the short strike, the journal rolls the short option closer to the money to collect more premium. This is an offensive adjustment that improves the position's profit potential.</li>
+  <li><strong>Close the position at the target.</strong> The diagonal's target is typically 50-100% of the net debit, depending on the position's greeks at the target. The journal closes the position at the target if the underlying has moved in the expected direction.</li>
+</ul>
+<p>The journal's rule for the diagonal is to size the position to 1% of NLV and to be prepared to close the position at any time. The diagonal is the most flexible structure in the journal's playbook, but the flexibility comes at the cost of complexity, and the journal does not run the diagonal more often than a few times per month.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

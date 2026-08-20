@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Iron Butterfly — The High-Probability Mean-Reversion | The Trading Journal</title>
+ <meta name="description" content="Anatomy of an iron butterfly: short straddle with protective wings, very high probability of profit, defined risk, and the trade-off between premium collected and the cost of being wrong. When the structure fits a low-volatility regime better than an iron condor.">
+ <link rel="canonical" href="https://tredey.com/strategies/2026-08-20-iron-butterfly/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Iron Butterfly — The High-Probability Mean-Reversion | The Trading Journal">
+ <meta property="og:description" content="Anatomy of an iron butterfly: short straddle with protective wings, very high probability of profit, defined risk, and the trade-off between premium collected and the cost of being wrong. When the structure fits a low-volatility regime better than an iron condor.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/strategies/2026-08-20-iron-butterfly/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Iron Butterfly — The High-Probability Mean-Reversion | The Trading Journal">
+ <meta name="twitter:description" content="Anatomy of an iron butterfly: short straddle with protective wings, very high probability of profit, defined risk, and the trade-off between premium collected and the cost of being wrong. When the structure fits a low-volatility regime better than an iron condor.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 property 550187415, web data stream G-D87HJG5G93 -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-D87HJG5G93"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D87HJG5G93');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">August 20, 2026 &middot; STRATEGY / MEAN-REVERSION</div>
+  <h1>Iron Butterfly — The High-Probability Mean-Reversion</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">Anatomy of an iron butterfly: short straddle with protective wings, very high probability of profit, defined risk, and the trade-off between premium collected and the cost of being wrong. When the structure fits a low-volatility regime better than an iron condor.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>An iron butterfly is the structure the journal uses when the directional bias is "underlying stays near the current price, with low realized volatility" and the journal wants the highest possible probability of profit at the cost of a wider distribution of outcomes. The structure is: short one straddle (short call + short put at the same strike near the current underlying) and long one strangle (long call + long put at wider strikes, both wings equidistant from the center). The net premium is the max-profit; the wings define the max-loss.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<h2>Anatomy at entry</h2>
+<p>For an iron butterfly at the current underlying (e.g., SPX at 760): short the 760 call and 760 put, long the 780 call and 740 put. The short strikes are at-the-money; the long strikes are 20 points away in each direction. The journal collects the net premium from the short straddle, pays the premium for the long strangle, and the net credit is the structure's max-profit.</p>
+<p>The max-loss is the width of the wings minus the net credit. For a 20-point-wide wing, the max-loss is $20 - net credit (in SPX terms, $2,000 - net credit per contract). The breakeven points are the short strike +/- the net credit; for a 760 short strike and $5.00 net credit, the breakevens are 755 and 765.</p>
+<p>The structure has a very high probability of profit if the underlying stays between the breakevens at expiration. The journal usually targets a 65-75% probability of profit at entry, which requires the iron butterfly to be priced close to the wings (i.e., the net credit is close to the max-loss of the position).</p>
+<h2>When the iron butterfly fits better than an iron condor</h2>
+<p>The iron butterfly is to the iron condor as a long call is to a long call vertical: the iron butterfly has a more concentrated payoff, the iron condor has a wider distribution. The iron butterfly is the right structure when:</p>
+<ul>
+  <li><strong>The journal expects very low volatility.</strong> The wings are closer to the money on the iron butterfly (20 points on SPX vs. 30-40 points for an iron condor), which means the underlying is more likely to stay inside the wings. The risk is that the wings are also more likely to be hit.</li>
+  <li><strong>The IV is high.</strong> When implied volatility is elevated, the short straddle is expensive, and the long strangle is also expensive. The net credit is high relative to the width, which improves the probability of profit. The iron butterfly is the most IV-sensitive structure in the journal's playbook.</li>
+  <li><strong>The journal has a tight price target.</strong> The center of the iron butterfly is the short strike. If the journal thinks SPX will close at 760, the iron butterfly at 760 captures the full premium if the underlying is anywhere between 755 and 765. The iron condor at 755/765 would capture slightly less premium in exchange for a wider range.</li>
+</ul>
+<p>The iron butterfly fits worse when:</p>
+<ul>
+  <li><strong>The realized volatility is expected to be high.</strong> A 5% move in the underlying will hit the iron butterfly's wings; the same move on an iron condor with wider wings stays inside the profit zone.</li>
+  <li><strong>The trade duration is short.</strong> The iron butterfly's theta is highest at the money, and the structure's value decays fastest in the 7-14 days before expiration. A short-duration trade (less than 14 DTE) will see the structure's value drop rapidly, which is fine if the journal is targeting the time decay, but the journal prefers to enter the iron butterfly with 30-45 DTE to avoid the gamma-induced volatility near expiration.</li>
+</ul>
+<h2>Strike selection</h2>
+<p>The journal's strike selection for an iron butterfly follows three rules:</p>
+<p><strong>1. The short strike is at-the-money or one strike in-the-money.</strong> The short strike is the center of the structure. The journal picks the short strike at the price where the journal expects the underlying to close at expiration, not where the underlying is currently trading. If the journal expects SPX to drift up to 765 by expiration, the short strike is 765, not 760.</p>
+<p><strong>2. The wings are equidistant from the short strike.</strong> The journal uses equal-width wings (e.g., 760/780/740, or 765/785/745) so that the max-loss is the same on both sides of the position. Unequal wings create an asymmetric position that the journal does not want on a mean-reversion trade.</p>
+<p><strong>3. The wing width is chosen based on the expected move.</strong> A 20-point wing on SPX is appropriate for a 1.5-2% expected move; a 30-point wing is appropriate for a 2-3% expected move. The journal does not use wing widths wider than 40 points on SPX (4 points on XSP) because the structure starts to behave like an iron condor past that width.</p>
+<h2>Greeks at entry</h2>
+<p>The iron butterfly is a short-gamma, short-vega, positive-theta structure. The gamma is negative because the position is short the at-the-money straddle, which is the highest-gamma region. The vega is negative because the position benefits from low IV; an IV expansion hurts the position. The theta is positive because the position benefits from time decay.</p>
+<p>For an iron butterfly entered at 30 DTE, the typical greeks at entry are: delta ~0 (the position is delta-neutral at the short strike), theta +0.15/day, vega -0.20, gamma -0.05. The high theta is the journal's edge: the position makes money every day as long as the underlying stays near the short strike. The negative gamma is the risk: a fast move in the underlying hurts the position disproportionately, and the journal monitors the position more closely as the underlying approaches the wings.</p>
+<h2>Adjustments</h2>
+<p>The iron butterfly is the most-adjusted structure in the journal's playbook. The common adjustments are:</p>
+<ul>
+  <li><strong>Close the position at 25-50% of max profit.</strong> The iron butterfly's max profit is realized at expiration inside the wings; the journal closes the position well before expiration to avoid the gamma risk. The 50% take-profit rule applies, but the journal often closes at 25-30% of max profit on the iron butterfly to lock in the theta-based gain before the underlying has a chance to move.</li>
+  <li><strong>Roll the short strike to the current underlying.</strong> If the underlying has moved away from the original short strike, the journal can roll the short strike to follow the underlying, collecting additional premium in the process. This is an offensive adjustment that resets the position's center.</li>
+  <li><strong>Close one wing to convert the position to a vertical.</strong> If the underlying has moved decisively in one direction, the journal closes the wing on the opposite side, converting the position to a single-direction vertical. This is a defensive adjustment that reduces the position's complexity but keeps the directional thesis alive.</li>
+</ul>
+<h2>Why the journal doesn't run the iron butterfly at large size</h2>
+<p>The iron butterfly's high probability of profit is offset by the fact that the rare losses are large. The structure is roughly equivalent to a series of small wins with occasional max-loss events; the expected value is positive, but the distribution is right-skewed (lots of small wins, rare large losses). The journal sizes the iron butterfly smaller than other structures to account for the wide distribution. The journal's rule for the iron butterfly is to size to 1% of NLV rather than the usual 2%, on the theory that the max-loss event is more likely to be a multi-sigma outcome than a typical theta decay.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

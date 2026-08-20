@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Trade Entries — The Anatomy of a Trade Log Record | The Trading Journal</title>
+ <meta name="description" content="The standard format for every trade log entry: instrument, structure, strikes, expiration, premium, target, stop, reasoning, and the expected value calculation that justifies the position.">
+ <link rel="canonical" href="https://tredey.com/playbook/2026-08-20-trade-entries-and-records/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Trade Entries — The Anatomy of a Trade Log Record | The Trading Journal">
+ <meta property="og:description" content="The standard format for every trade log entry: instrument, structure, strikes, expiration, premium, target, stop, reasoning, and the expected value calculation that justifies the position.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/playbook/2026-08-20-trade-entries-and-records/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Trade Entries — The Anatomy of a Trade Log Record | The Trading Journal">
+ <meta name="twitter:description" content="The standard format for every trade log entry: instrument, structure, strikes, expiration, premium, target, stop, reasoning, and the expected value calculation that justifies the position.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 property 550187415, web data stream G-D87HJG5G93 -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-D87HJG5G93"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D87HJG5G93');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">August 20, 2026 &middot; PLAYBOOK / RECORDS</div>
+  <h1>Trade Entries — The Anatomy of a Trade Log Record</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">The standard format for every trade log entry: instrument, structure, strikes, expiration, premium, target, stop, reasoning, and the expected value calculation that justifies the position.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>Every trade log entry on this site follows the same format. The format is not arbitrary — it is the minimum information needed to evaluate the trade retrospectively, and the format is what allows the journal to reproduce the analysis on a future position of the same structure. A reader who understands the format can read any trade log entry and reconstruct the position, the reasoning, and the expected value calculation.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<h2>The fields</h2>
+<p>Every trade log entry includes:</p>
+<p><strong>1. Instrument.</strong> The underlying ticker (SPX, XSP, etc.) and the option type (call, put). The instrument is the root identifier of the position.</p>
+<p><strong>2. Structure.</strong> The option spread structure (vertical credit spread, debit spread, iron condor, etc.). The structure determines the payoff diagram and the max-loss / max-profit.</p>
+<p><strong>3. Strikes.</strong> The specific strikes of the long and short legs. For a bull put spread at 740/742, the long strike is 740 and the short strike is 742.</p>
+<p><strong>4. Expiration.</strong> The expiration date of the options. The journal usually trades 30-45 DTE options for credit spreads and 60-90 DTE options for debit spreads.</p>
+<p><strong>5. Premium.</strong> The net premium paid or collected. For a credit spread, this is the credit received; for a debit spread, this is the debit paid.</p>
+<p><strong>6. Max-loss.</strong> The maximum loss the position can incur at expiration. For a vertical spread, the max-loss is the width of the spread minus the net premium.</p>
+<p><strong>7. Max-profit.</strong> The maximum profit the position can earn at expiration. For a credit spread, the max-profit is the net credit; for a debit spread, the max-profit is the width of the spread minus the net debit.</p>
+<p><strong>8. Target.</strong> The profit target at which the journal will close the position. The journal's target is typically 50% of max profit for short-premium structures and 50-100% of max profit for long-premium structures.</p>
+<p><strong>9. Stop.</strong> The loss level at which the journal will close the position. The journal's stop is the max-loss for credit spreads and 50% of max-loss for debit spreads.</p>
+<p><strong>10. Reasoning.</strong> The thesis behind the entry. The reasoning includes the directional bias, the IV regime, the price target, and the expected value calculation.</p>
+<p><strong>11. Outcome.</strong> The realized P&L when the position is closed. The outcome includes the date of close, the premium at close, and the realized profit or loss.</p>
+<h2>The reasoning in detail</h2>
+<p>The reasoning is the most important field in the trade log entry. The reasoning is what the journal is held to when the position is evaluated retrospectively. A trade log entry without a clear reasoning is just a record of what happened; a trade log entry with a clear reasoning is a record of what was expected and why.</p>
+<p>The reasoning typically includes:</p>
+<p><strong>Directional bias.</strong> The forecast methodology published on Dependability provides the directional bias for the broad market. The journal's trade log entry cites the directional bias and explains how the position aligns with it.</p>
+<p><strong>Price target.</strong> The price at which the journal expects the underlying to be at expiration. The price target is the basis for the strike selection.</p>
+<p><strong>Time horizon.</strong> The expected duration of the position. The journal's positions are typically 30-45 DTE for short-premium and 60-90 DTE for long-premium, but the time horizon can be shorter if the position is targeting a specific catalyst.</p>
+<p><strong>Volatility regime.</strong> The current IV rank and the expected IV change during the life of the position. The journal uses the IV regime to choose between short-premium and long-premium structures.</p>
+<p><strong>Expected value.</strong> The expected value calculation that justifies the position. The expected value is a function of the probability of profit, the max-profit, the probability of loss, and the max-loss. A position with a positive expected value is one where the journal expects to make money in the long run, even if the position loses in the short term.</p>
+<p><strong>Risk/reward.</strong> The ratio of max-profit to max-loss. The journal's preferred risk/reward is at least 1:1 for credit spreads and at least 1:2 for debit spreads. The risk/reward is a function of the strike selection and the premium at entry.</p>
+<p><strong>Catalysts.</strong> Any known events that could affect the position during its life. The journal's most common catalysts are FOMC meetings, CPI releases, and earnings announcements. The journal adjusts the position size and the strike selection to account for the catalyst.</p>
+<h2>The expected value calculation</h2>
+<p>The expected value calculation is the core of the trade log entry. The expected value is the probability-weighted average of the possible outcomes. For a credit spread with a 70% probability of profit, a max-profit of $1.50, and a max-loss of $3.50:</p>
+<p>EV = (0.70 × $1.50) - (0.30 × $3.50) = $1.05 - $1.05 = $0.00</p>
+<p>This position has zero expected value at the entry prices. The journal would not open this position. The threshold for opening a position is an expected value of at least $0.05 per contract, or roughly 5% of the max-profit. The threshold is mechanical, not discretionary — the journal does not open positions with negative or zero expected value.</p>
+<p>The probability of profit is the key input. The journal uses the broker's published probability of profit as the base case, and adjusts the probability based on the journal's directional bias. If the journal's directional bias is bullish and the position is a bullish call spread, the journal will increase the probability of profit by 5-10% to reflect the directional view. If the journal's directional bias is bearish, the journal will decrease the probability of profit by the same amount.</p>
+<p>The probability adjustment is the most discretionary part of the expected value calculation. The journal's rule is that the probability adjustment is at most 10% in either direction, and the adjustment is documented in the trade log entry. A reader who disagrees with the adjustment can recompute the expected value with the unadjusted probability.</p>
+<h2>The outcome</h2>
+<p>The outcome is the realized P&L when the position is closed. The journal tracks the outcome against the expected value: positions that closed at a profit when the expected value was positive are recorded as expected wins; positions that closed at a loss when the expected value was positive are recorded as unexpected losses. The journal's realized hit rate is computed against the expected value, not against the position count.</p>
+<p>The outcome field also includes the date of close, the premium at close, and the realized profit or loss. The journal's trade log is the source of truth for the realized P&L of every position; the dashboard and the monthly summary are computed from the trade log.</p>
+<p>A position that is closed at the target is recorded as "closed at target." A position that is closed at the stop is recorded as "closed at stop." A position that is closed before the target or stop is recorded as "closed early" with a note explaining the reason for the early close. The early closes are tracked separately and reviewed periodically to identify patterns.</p>
+<h2>How the records are used</h2>
+<p>The trade log is the journal's source of truth for what it actually did. The trade log is used to:</p>
+<ul>
+  <li><strong>Compute the realized hit rate.</strong> The journal's hit rate is the percentage of positions that closed at a profit, computed against the positions that have reached the target or the stop.</li>
+  <li><strong>Compute the realized P&L.</strong> The journal's realized P&L is the sum of the outcomes of all closed positions, including transaction costs.</li>
+  <li><strong>Identify patterns in the adjustments.</strong> The journal reviews the trade log periodically to identify patterns in the adjustments: which structures are adjusted most often, which underlying adjustments are most common, which adjustment types (rolls, hedges, closes) are most associated with profitable outcomes.</li>
+  <li><strong>Validate the playbook.</strong> The journal's playbook is updated periodically based on the patterns in the trade log. A rule that was correct in the abstract but produces consistent losses in the trade log is a rule that needs to be revised.</li>
+</ul>
+<p>The trade log is also the journal's way of being accountable to its readers. A reader who wants to evaluate the journal's methodology can read the playbook for the rules, the strategies articles for the structures, and the trade log for the outcomes. The three sources together provide a complete picture of the journal's process.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>

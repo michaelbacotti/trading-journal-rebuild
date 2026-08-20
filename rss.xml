@@ -5,146 +5,146 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 20 Aug 2026 17:11:33 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 20 Aug 2026 19:27:36 GMT</lastBuildDate>
   <item>
-    <title>Market Outlook — Thursday, Aug 20, 2026: 100% Breadth Holds, Energy Leads, Jackson Hole in Focus</title>
-    <link>https://tredey.com/forecasts/2026-08-20-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-08-20-market-outlook/</guid>
+    <title>Adjustment Rules — When to Roll, When to Hedge, When to Hold</title>
+    <link>https://tredey.com/playbook/2026-08-20-adjustment-rules/</link>
+    <guid>https://tredey.com/playbook/2026-08-20-adjustment-rules/</guid>
     <pubDate>2026-08-20</pubDate>
-    <description>SPY $769.06, QQQ $716.08, IWM $301.72. VIX 15.16 (term ratio 0.738). Breadth 100% above 50d MA. XLE +7.40% on the 20-day, leading all sectors. XLV strong at +10.19%. XLK worst 5-day sector at -2.76%. Jackson Hole begins Friday — Fed blackout starts today.</description>
+    <description>The judgment framework for managing open positions: when to roll a spread, when to hedge with a long option, when to hold through volatility, and when to accept the loss and move on.</description>
   </item>
   <item>
-    <title>Market Outlook — Wednesday, Aug 19, 2026: Broad Bull Tape, Flat Yield Curve, Energy Leadership, VIX Compression</title>
-    <link>https://tredey.com/forecasts/2026-08-19-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-08-19-market-outlook/</guid>
-    <pubDate>2026-08-19</pubDate>
-    <description>SPY $767.45, QQQ $717.51, IWM $300.23. VIX 15.86 (term ratio 0.823). All sectors above 50d MA (breadth 100%). XLE leads +8.85% 20d. Bull regime intact. No major catalysts through Aug 28 Jackson Hole.</description>
+    <title>Correlation and Portfolio Construction</title>
+    <link>https://tredey.com/education/2026-08-20-correlation-and-portfolio-construction/</link>
+    <guid>https://tredey.com/education/2026-08-20-correlation-and-portfolio-construction/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>How correlated positions affect total portfolio risk, the difference between name-level and market-level correlation, and the journal's rules for basket exposure and concentration limits.</description>
   </item>
   <item>
-    <title>XLP Long Call Butterfly — Dec 18 '26 80/90/100: A Defensive Range-Bet Into Sep/Oct</title>
-    <link>https://tredey.com/trade-log/2026-08-18-xlp-long-call-butterfly/</link>
-    <guid>https://tredey.com/trade-log/2026-08-18-xlp-long-call-butterfly/</guid>
-    <pubDate>2026-08-18</pubDate>
-    <description>Opened an XLP Dec 18 2026 80/90/100 long call butterfly (122 DTE), a defined-risk bullish-to-neutral structure with profit zone $84.34–$95.67. Net debit $4.335/share ($433.50/contract). Max profit $566.50 at XLP = $90 at Dec 18 expiry; max loss $433.50. 1-contract sizing. IV ~17–22%. XLP spot $85.84.</description>
+    <title>Debit Vertical Spread — The Defined-Risk Directional</title>
+    <link>https://tredey.com/strategies/2026-08-20-debit-vertical-spread/</link>
+    <guid>https://tredey.com/strategies/2026-08-20-debit-vertical-spread/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>Anatomy of a debit vertical spread: lower max-loss than a long call, capped upside, and the trade-off between risk reduction and profit potential. When the spread fits a directional thesis better than a single-leg long option.</description>
   </item>
   <item>
-    <title>Market Outlook — Tuesday, Aug 18, 2026: SPX Edges Toward Records, VIX Drifts Higher, Jackson Hole Sets the Stage</title>
-    <link>https://tredey.com/forecasts/2026-08-18-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-08-18-market-outlook/</guid>
-    <pubDate>2026-08-18</pubDate>
-    <description>SPY $776.34 holds near the all-time high as VIX firms to 15.94 and breadth stays at 100%. XLK and XLE lead, XLU lags -1.9% over 20 days. Jackson Hole begins Thursday.</description>
+    <title>Diagonal Spread — The Time-Distributed Position</title>
+    <link>https://tredey.com/strategies/2026-08-20-diagonal-spread/</link>
+    <guid>https://tredey.com/strategies/2026-08-20-diagonal-spread/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>Anatomy of a diagonal spread: long option at a longer expiration, short option at a shorter expiration, the structure's time-distributed payoff, and when the diagonal fits better than a vertical or a calendar.</description>
   </item>
   <item>
-    <title>Market Outlook — Monday, Aug 17, 2026: Broad Strength, Compressed Vol, and a Quiet Calendar Ahead</title>
-    <link>https://tredey.com/forecasts/2026-08-17-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-08-17-market-outlook/</guid>
-    <pubDate>2026-08-17</pubDate>
-    <description>SPX ends the week near record 7,785 with maximum breadth and VIX at 14.97. Energy and tech lead as the market enters a quiet pre-Jackson Hole week.</description>
+    <title>Edge Sources — Where the Journal's Returns Come From</title>
+    <link>https://tredey.com/playbook/2026-08-20-edge-sources/</link>
+    <guid>https://tredey.com/playbook/2026-08-20-edge-sources/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>The structural, statistical, and informational edges that the journal's playbook exploits — why each exists, how the journal identifies them, and how the edge degrades over time.</description>
   </item>
   <item>
-    <title>Market Outlook — Friday, August 14, 2026: SPX Near Record Highs, VIX 14.6 Compressed, Breadth at 100%, Jackson Hole Looms, Iran Tension Caps the Tape</title>
-    <link>https://tredey.com/forecasts/2026-08-14-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-08-14-market-outlook/</guid>
-    <pubDate>2026-08-14</pubDate>
-    <description>SPY $777.88 near record highs, VIX 14.6 compressed, breadth 100%, XLK leads 5d. Iran tension, Jackson Hole 14 days. Bull regime intact; oil rally caps upside.</description>
+    <title>Exit Discipline — The Hardest Part of the Trade</title>
+    <link>https://tredey.com/playbook/2026-08-20-exit-discipline/</link>
+    <guid>https://tredey.com/playbook/2026-08-20-exit-discipline/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>The discipline of closing positions at the right time: the take-profit rule, the stop-loss rule, the early-close rules, and the most common reasons traders exit too early or too late.</description>
   </item>
   <item>
-    <title>XSP Long Call Condor — Dec 17 '27 780/800/890/900: 491-DTE Range Bet at $8.80 Limit Order</title>
-    <link>https://tredey.com/trade-log/2026-08-13-xsp-long-call-condor/</link>
-    <guid>https://tredey.com/trade-log/2026-08-13-xsp-long-call-condor/</guid>
-    <pubDate>2026-08-13</pubDate>
-    <description>4-leg long call condor on XSP (Mini S&P 500, 1/10th of SPX). BTO 780C / STO 800C / STO 890C / BTO 900C — all Dec 17, 2027 (491 DTE). Limit order placed at $8.80/share ($880/contract). BSM mid net debit ~$0.621/share ($62.10/contract). Max profit $137.90/contract if XSP is $80–$89 at Dec 17, 2027 expiry (per-share: $10 lower body spread − $0.621 debit = $9.379/share × 100). Reward-to-risk 0.16:1 at limit order price; 2.22:1 at BSM mid. Max profit $137.90/contract at XSP $80–$89. XSP spot ~$77.64 (SPX $7,763.80). 491 DTE — 1.3 years of time to expiry.</description>
+    <title>Expected Value — The Math Behind Every Trade</title>
+    <link>https://tredey.com/education/2026-08-20-expected-value/</link>
+    <guid>https://tredey.com/education/2026-08-20-expected-value/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>The expected value formula for options trades, how the journal calculates probability of profit, the difference between theoretical and realized expected value, and why a positive EV is necessary but not sufficient.</description>
   </item>
   <item>
-    <title>Market Outlook — Thursday, August 13, 2026: Near All-Time Highs, XLK Leads, Commodities Signal Reflation</title>
-    <link>https://tredey.com/forecasts/2026-08-13-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-08-13-market-outlook/</guid>
-    <pubDate>2026-08-13</pubDate>
-    <description>SPX 7,748.50, SPY $772.49, QQQ $723.70. VIX 14.60 backwardated (term ratio 0.696). XLK +1.90% 5d; XLE +4.93% 5d; XLY -0.18% 5d. PPI tonight 8:30am ET; Jackson Hole Aug 21-23. Gold +3.91% 5d signals macro demand.</description>
+    <title>The Greeks — Delta, Gamma, Theta, Vega, Rho</title>
+    <link>https://tredey.com/education/2026-08-20-greeks-explained/</link>
+    <guid>https://tredey.com/education/2026-08-20-greeks-explained/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>The five option greeks: delta, gamma, theta, vega, rho — what each measures, how they interact in a position, and the greeks the journal monitors at entry and during the life of the position.</description>
   </item>
   <item>
-    <title>GNRC Bull Call Spread — Dec 18 230/240: Defined-Risk Long on Generac at 57% IV</title>
-    <link>https://tredey.com/trade-log/2026-08-11-gnrc-230-bull-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-08-11-gnrc-230-bull-call-spread/</guid>
-    <pubDate>2026-08-11</pubDate>
-    <description>Opened a 1-contract bull call spread on GNRC Dec 18, 2026 (129 DTE, standard monthly): BTO 230C @ $24.20 / STO 240C @ $20.65. Net debit $3.55/share ($355/contra</description>
+    <title>Implied Volatility — The Price of Optionality</title>
+    <link>https://tredey.com/education/2026-08-20-implied-volatility/</link>
+    <guid>https://tredey.com/education/2026-08-20-implied-volatility/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>What implied volatility is, how it differs from realized volatility, why the option's price is dominated by IV rather than the underlying's expected move, and how the journal uses IV rank to choose structures.</description>
   </item>
   <item>
-    <title>SPY Calendar Put Spread — Oct 16 / Oct 30 760: Cheaper $760 Synthetic Put on Index Chop</title>
-    <link>https://tredey.com/trade-log/2026-08-11-spy-760-calendar-put-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-08-11-spy-760-calendar-put-spread/</guid>
-    <pubDate>2026-08-11</pubDate>
-    <description>Opened a same-strike SPY calendar put spread at $760, short Oct 16 / long Oct 30, on continued index chop near the 52-week high. Net debit $1.995/share ($199.50</description>
+    <title>Iron Butterfly — The High-Probability Mean-Reversion</title>
+    <link>https://tredey.com/strategies/2026-08-20-iron-butterfly/</link>
+    <guid>https://tredey.com/strategies/2026-08-20-iron-butterfly/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>Anatomy of an iron butterfly: short straddle with protective wings, very high probability of profit, defined risk, and the trade-off between premium collected and the cost of being wrong. When the structure fits a low-volatility regime better than an iron condor.</description>
   </item>
   <item>
-    <title>XSP Bear Call Spread — Oct 16 815/820: Defined-Risk Theta Harvest Above the 52-Week High</title>
-    <link>https://tredey.com/trade-log/2026-08-11-xsp-815-bear-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-08-11-xsp-815-bear-call-spread/</guid>
-    <pubDate>2026-08-11</pubDate>
-    <description>Opened a 1-contract bear call spread on XSP Oct 16, 2026 (66 DTE, AM-settled standard monthly): STO 815C @ $4.17 / BTO 820C @ $3.265. Net credit $0.905/share ($</description>
+    <title>Journal Discipline — The Process Audit</title>
+    <link>https://tredey.com/playbook/2026-08-20-journal-discipline/</link>
+    <guid>https://tredey.com/playbook/2026-08-20-journal-discipline/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>How the journal audits its own process: position-level review, weekly recap, monthly methodology audit, and the role of the trade log in catching pattern errors before they cost the book.</description>
   </item>
   <item>
-    <title>INTC Diagonal Call Spread — Nov 20 / Dec 18 '26 110/105: Long Back $105C, Short Front $110C ($343 Debit)</title>
-    <link>https://tredey.com/trade-log/2026-08-10-intc-diagonal-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-08-10-intc-diagonal-call-spread/</guid>
-    <pubDate>2026-08-10</pubDate>
-    <description>Bullish diagonal debit spread on INTC. Short $110C Nov 20, 2026 (102 DTE) / Long $105C Dec 18, 2026 (130 DTE). Net debit $3.425/share ($342.50/contract, live mid). Max loss $342.50 (debit), realized max profit $157.50 covered-call cap if held to Dec 18 with INTC ≥ $110. INTC spot $98.14 — short strike +12.07% OTM. Reward-to-risk 0.46:1. OptionStrat basis within 1.3% / 0.16% of live mid. American-style equity, assignment risk on short leg.</description>
+    <title>Journaling Cadence — Daily, Weekly, Monthly, Quarterly</title>
+    <link>https://tredey.com/playbook/2026-08-20-journaling-cadence/</link>
+    <guid>https://tredey.com/playbook/2026-08-20-journaling-cadence/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>The four cadences of the journal's process discipline: the daily note, the weekly recap, the monthly methodology audit, and the quarterly strategic review. The four together produce the playbook's living-document quality.</description>
   </item>
   <item>
-    <title>META Bull Call Spread — Oct 16 '26 605/610: AI-Adjacent Long for $210 Debit (1.38:1 Reward-to-Risk)</title>
-    <link>https://tredey.com/trade-log/2026-08-10-meta-bull-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-08-10-meta-bull-call-spread/</guid>
-    <pubDate>2026-08-10</pubDate>
-    <description>Bullish vertical debit spread on META (Meta Platforms). Long $605C Oct 16, 2026 (67 DTE) / Short $610C Oct 16, 2026 (67 DTE). Net debit $2.10/share ($210/contract, live mid). Max profit $290 if META ≥ $610 at Oct 16, max loss $210 (debit). Lower breakeven $607.10. META spot $593.47 — short strike +2.79% OTM. Reward-to-risk 1.38:1. OptionStrat basis $34.175/$32 within 1.41%/1.24% of live mid. American-style equity, assignment risk on short leg.</description>
+    <title>Options Market Microstructure — How the Bid/Ask and the Open Interest Shape the Trade</title>
+    <link>https://tredey.com/education/2026-08-20-options-market-microstructure/</link>
+    <guid>https://tredey.com/education/2026-08-20-options-market-microstructure/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>The microstructure of the options market: bid/ask spreads, open interest, volume, and the way the interaction of the order book shapes the journal's entry and exit prices. The hidden cost of every trade that the price doesn't show.</description>
   </item>
   <item>
-    <title>META Long Call Condor — Dec 18 '26 640/650/760/750: $100-Wide Profit Zone for $222 Debit (3.49:1 Reward-to-Risk)</title>
-    <link>https://tredey.com/trade-log/2026-08-10-meta-long-call-condor/</link>
-    <guid>https://tredey.com/trade-log/2026-08-10-meta-long-call-condor/</guid>
-    <pubDate>2026-08-10</pubDate>
-    <description>4-leg long call condor on META (Meta Platforms). Long $640C Dec 18 / Short $650C Dec 18 (lower body) + Short $750C Dec 18 / Long $760C Dec 18 (upper body). Net debit $2.225/share ($222.50/contract, live mid). Max profit $777.50 if META between $650–$750 at Dec 18, max loss $222.50 (debit). Lower breakeven $647.775, upper breakeven $752.225. META spot $593.39 — profit zone 9.52%–26.36% above spot. Reward-to-risk 3.49:1. OptionStrat basis $41.725/$38.375/$16.375/$15.10 within 0.52%/0.00%/0.33% of live mid. American-style equity, assignment risk on both short legs.</description>
+    <title>Options vs. Equity Trading — Why the Journal Focuses on Options</title>
+    <link>https://tredey.com/education/2026-08-20-options-vs-equity-trading/</link>
+    <guid>https://tredey.com/education/2026-08-20-options-vs-equity-trading/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>The structural differences between options trading and equity trading: leverage, time decay, defined risk, and the ways the differences shape the journal's methodology. Why the journal focuses on options and how the focus changes the strategy.</description>
   </item>
   <item>
-    <title>SLV Bull Call Spread — Nov 20 '26 60/62: Defined-Risk Silver Long for $72 Debit (1.76:1 Reward-to-Risk)</title>
-    <link>https://tredey.com/trade-log/2026-08-10-slv-bull-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-08-10-slv-bull-call-spread/</guid>
-    <pubDate>2026-08-10</pubDate>
-    <description>Bullish vertical debit spread on SLV (iShares Silver Trust). Long $60C Nov 20, 2026 (102 DTE) / Short $62C Nov 20, 2026 (102 DTE). Net debit $0.725/share ($72.50/contract, live mid). Max profit $127.50 if SLV ≥ $62 at Nov 20, max loss $72.50 (debit). Lower breakeven $60.725. SLV spot $58.88 — short strike +5.30% OTM. Reward-to-risk 1.76:1. OptionStrat basis $5.05/$4.35 within 0.49%/0.00% of live mid. American-style equity ETF, assignment risk on short leg.</description>
+    <title>Position Sizing — The Fixed-Fractional Method</title>
+    <link>https://tredey.com/playbook/2026-08-20-position-sizing/</link>
+    <guid>https://tredey.com/playbook/2026-08-20-position-sizing/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>How the journal sizes every position: fixed-fractional risk per trade, max-loss cap per position, and the relationship between NLV, leverage, and structure choice.</description>
   </item>
   <item>
-    <title>Market Outlook — Monday, August 10, 2026: Bull Trend Intact, CPI Tops the Week, Mega-Cap Tech Leads</title>
-    <link>https://tredey.com/forecasts/2026-08-10-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-08-10-market-outlook/</guid>
-    <pubDate>2026-08-10</pubDate>
-    <description>SPY $773.26, QQQ $723.03, SPX ~7,758. VIX 15.47, term ratio 0.753 backwardated. 100% breadth above 50d MA. XLK +7.20% 5d leads; XLE -3.44% 5d lags. CPI Aug 11 is the week's macro pivot.</description>
+    <title>Reading the Trade Log — How to Evaluate the Journal's Methodology</title>
+    <link>https://tredey.com/education/2026-08-20-reading-the-trade-log/</link>
+    <guid>https://tredey.com/education/2026-08-20-reading-the-trade-log/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>How to read the trade log: filtering by structure, by ticker, by outcome; the difference between hit rate and expected value; and the patterns to look for when evaluating the journal's methodology.</description>
   </item>
   <item>
-    <title>Market Outlook — Friday, August 7, 2026: Broad Strength, Mild Pullback, Bull Trend Intact</title>
-    <link>https://tredey.com/forecasts/2026-08-07-market-outlook/</link>
-    <guid>https://tredey.com/forecasts/2026-08-07-market-outlook/</guid>
-    <pubDate>2026-08-07</pubDate>
-    <description>SPY $768.56, QQQ $714.65, SPX ~7700. VIX 15.29, term ratio 0.744 backwardated. 100% breadth above 50d MA. XLK +5.46% 5d leads; XLU -2.87% 5d lags. No major events within 5 days.</description>
+    <title>Risk Management — The Framework That Keeps the Journal in the Game</title>
+    <link>https://tredey.com/playbook/2026-08-20-risk-management/</link>
+    <guid>https://tredey.com/playbook/2026-08-20-risk-management/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>The journal's risk management framework: position-level risk, portfolio-level risk, drawdown limits, and the difference between acceptable and unacceptable loss. The rules that the journal will not break even when the playbook says it should.</description>
   </item>
   <item>
-    <title>SPY Diagonal Call Spread — Dec 18 / Dec 31 800/795: Cheaper Synthetic Long $795 Call at 39% Lognormal POP</title>
-    <link>https://tredey.com/trade-log/2026-08-07-spy-diagonal-call-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-08-07-spy-diagonal-call-spread/</guid>
-    <pubDate>2026-08-07</pubDate>
-    <description>Bullish call diagonal debit spread on SPY. Long $795C Dec 31, 2026 (146 DTE) / Short $800C Dec 18, 2026 (133 DTE). Net debit $3.70/share ($370/contract, live mi</description>
+    <title>Rules vs. Discretion — Where the Journal Lets the Trader Decide</title>
+    <link>https://tredey.com/playbook/2026-08-20-rules-vs-discretion/</link>
+    <guid>https://tredey.com/playbook/2026-08-20-rules-vs-discretion/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>The line between mechanical rules and discretionary judgment in the playbook: which decisions are rule-based, which are discretionary, and why the journal keeps the discretionary set as small as possible.</description>
   </item>
   <item>
-    <title>XSP Iron Condor — Nov 20, 2026 860/850/685/700: Short Vol in a Calm Tape at 71% POP</title>
-    <link>https://tredey.com/trade-log/2026-08-06-xsp-iron-condor/</link>
-    <guid>https://tredey.com/trade-log/2026-08-06-xsp-iron-condor/</guid>
-    <pubDate>2026-08-06</pubDate>
-    <description>Short iron condor on XSP Nov 20, 2026 (106 DTE, AM-settled standard monthly). Sell 700P/Buy 685P, Sell 850C/Buy 860C. Net credit $224/contract ($2.24/share live mid), max profit $224, max loss $776 (under $5k cap), POP ~71% delta-based. Strikes 9–10% OTM each side; VIX 15.95; XSP spot $772.36; OptionStrat link + live yfinance chain cross-checked.</description>
+    <title>Statistical Foundation — Why the Math Works</title>
+    <link>https://tredey.com/education/2026-08-20-statistical-foundation/</link>
+    <guid>https://tredey.com/education/2026-08-20-statistical-foundation/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>The statistical foundation of the journal's methodology: the normal distribution, the central limit theorem, the law of large numbers, and how each applies to the realized outcomes of the playbook's structures.</description>
   </item>
   <item>
-    <title>AAPL Bull Put Spread — Oct 16 '26 300/295: An Equity-Pin With Vol Tailwind</title>
-    <link>https://tredey.com/trade-log/2026-08-06-aapl-bull-put-spread/</link>
-    <guid>https://tredey.com/trade-log/2026-08-06-aapl-bull-put-spread/</guid>
-    <pubDate>2026-08-06</pubDate>
-    <description>Opened an AAPL Oct 16 300/295 bull put spread, a 71-DTE equity-level short-premium structure with $12.46 OTM cushion. $155 total credit, $345 defined max loss, </description>
+    <title>Trade Entries — The Anatomy of a Trade Log Record</title>
+    <link>https://tredey.com/playbook/2026-08-20-trade-entries-and-records/</link>
+    <guid>https://tredey.com/playbook/2026-08-20-trade-entries-and-records/</guid>
+    <pubDate>2026-08-20</pubDate>
+    <description>The standard format for every trade log entry: instrument, structure, strikes, expiration, premium, target, stop, reasoning, and the expected value calculation that justifies the position.</description>
   </item>
 </channel>
 </rss>

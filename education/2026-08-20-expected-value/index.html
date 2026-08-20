@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+ <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+ <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+ <title>Expected Value — The Math Behind Every Trade | The Trading Journal</title>
+ <meta name="description" content="The expected value formula for options trades, how the journal calculates probability of profit, the difference between theoretical and realized expected value, and why a positive EV is necessary but not sufficient.">
+ <link rel="canonical" href="https://tredey.com/education/2026-08-20-expected-value/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Expected Value — The Math Behind Every Trade | The Trading Journal">
+ <meta property="og:description" content="The expected value formula for options trades, how the journal calculates probability of profit, the difference between theoretical and realized expected value, and why a positive EV is necessary but not sufficient.">
+ <meta property="og:image" content="https://tredey.com/og-image.svg">
+ <meta property="og:url" content="https://tredey.com/education/2026-08-20-expected-value/">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Expected Value — The Math Behind Every Trade | The Trading Journal">
+ <meta name="twitter:description" content="The expected value formula for options trades, how the journal calculates probability of profit, the difference between theoretical and realized expected value, and why a positive EV is necessary but not sufficient.">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="manifest" href="/site.webmanifest">
+ <!-- Plain stylesheet load. Do NOT use media="print" onload="this.media='all'" loader —
+      that pattern keeps the stylesheet in print-only mode if the JS swap is delayed
+      or never fires, which leaves the entire site unstyled (each <p> becomes a block
+      instead of using the design system). -->
+ <link rel="stylesheet" href="/style.css">
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9312870448453345" crossorigin="anonymous"></script>
+ <!-- Google tag (gtag.js) — GA4 property 550187415, web data stream G-D87HJG5G93 -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-D87HJG5G93"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D87HJG5G93');
+ </script>
+ <!--EXTRA_HEAD-->
+</head>
+<body>
+
+ <div id="site-utility"></div>
+ <div id="site-nav"></div>
+
+ <main>
+
+<article>
+ <div class="page-hero" style="padding:3rem 0 1.5rem;">
+  <div class="date-text">August 20, 2026 &middot; EDUCATION / MATH</div>
+  <h1>Expected Value — The Math Behind Every Trade</h1>
+  <p style="font-size:1.05rem;color:#666;line-height:1.6;">The expected value formula for options trades, how the journal calculates probability of profit, the difference between theoretical and realized expected value, and why a positive EV is necessary but not sufficient.</p>
+ </div>
+ <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
+  <p>Expected value (EV) is the probability-weighted average of the possible outcomes of a trade. The EV is the single most important number in the journal's methodology: every position the journal opens has a positive expected value at entry, and the journal's process discipline is designed to ensure that the realized EV is also positive over time.</p>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1328672966" data-ad-format="auto"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+<div style="margin:2rem 0;padding:1.25rem 1.5rem;background:var(--color-surface);border-left:4px solid #1e3a5f;border-radius:0 var(--radius) var(--radius) 0;">
+ <div style="font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#1e3a5f;margin-bottom:.4rem;">RECOMMENDED TOOL</div>
+ <p style="margin:0;font-size:.95rem;line-height:1.6;">We use <a href="https://optionstrat.com/ventureprise" target="_blank" rel="noopener" style="color:#1e3a5f;font-weight:600;">OptionsStrat</a> for visualizing option strategies. The platform shows the risk/reward profile, breakevens, probability of profit, and Greeks across every spread structure used in the playbook.</p>
+ <p style="margin:.5rem 0 0;font-size:.78rem;color:#666;">Disclosure: this is an affiliate link. The journal may earn a commission if you sign up. The recommendation is on the merits — the journal uses OptionsStrat daily and would recommend it without the affiliate relationship.</p>
+</div>
+
+<h2>The basic formula</h2>
+<p>For a trade with two possible outcomes (profit or loss), the EV is:</p>
+<p>EV = (P_profit × Max Profit) - (P_loss × Max Loss)</p>
+<p>Where P_profit and P_loss are the probabilities of the two outcomes. The EV is positive when the expected gain on the profitable outcomes exceeds the expected loss on the unprofitable outcomes.</p>
+<p>For a credit spread with a 70% probability of profit, a max-profit of $1.50, and a max-loss of $3.50:</p>
+<p>EV = (0.70 × $1.50) - (0.30 × $3.50) = $1.05 - $1.05 = $0.00</p>
+<p>The position has zero expected value at entry. The journal would not open this position.</p>
+<p>For a credit spread with a 65% probability of profit, a max-profit of $1.50, and a max-loss of $3.50:</p>
+<p>EV = (0.65 × $1.50) - (0.35 × $3.50) = $0.975 - $1.225 = -$0.25</p>
+<p>The position has negative expected value. The journal would not open this position either.</p>
+<p>For a credit spread with a 75% probability of profit, a max-profit of $1.50, and a max-loss of $3.50:</p>
+<p>EV = (0.75 × $1.50) - (0.25 × $3.50) = $1.125 - $0.875 = $0.25</p>
+<p>The position has positive expected value. The journal would open this position.</p>
+<h2>Multiple outcomes</h2>
+<p>The basic formula extends to trades with more than two outcomes. For an iron butterfly with three possible outcomes (profit at the center, loss at the wings, max profit at the short strike), the EV is:</p>
+<p>EV = (P_center × Max Profit) + (P_wings × Max Loss) + (P_at_strike × Max Profit)</p>
+<p>Where P_center is the probability of the underlying staying between the breakevens, P_wings is the probability of the underlying moving outside the wings, and P_at_strike is the probability of the underlying closing at the short strike. The probabilities are computed from the option market's implied volatility.</p>
+<p>The journal's rule is that the EV for any position must be at least $0.05 per contract, or roughly 5% of the max-profit. The threshold is mechanical, not discretionary. The journal does not open positions with negative or zero EV.</p>
+<h2>The probability of profit</h2>
+<p>The probability of profit is the key input in the EV calculation. The journal uses the broker's published probability of profit as the base case, and adjusts the probability based on the journal's directional bias.</p>
+<p>The broker's probability of profit is computed from the option market's implied volatility. The implied volatility is the option market's estimate of the future realized volatility, and the probability of profit is the probability that the underlying will close within the breakeven range at expiration. The broker's published probability is a reasonable estimate for the at-the-money breakeven, but the probability is less accurate for the wings of the spread.</p>
+<p>The journal's adjustment to the probability is based on the directional bias. If the directional bias is bullish and the position is a bullish call spread, the journal will increase the probability of profit by 5-10% to reflect the directional view. The adjustment is based on the historical accuracy of the forecast methodology published on Dependability; the journal has observed that the forecast's directional bias is correct about 60% of the time, which is a 10% increase over the base rate.</p>
+<p>The probability adjustment is the most discretionary part of the EV calculation. The journal's rule is that the adjustment is at most 10% in either direction, and the adjustment is documented in the trade log entry. A reader who disagrees with the adjustment can recompute the EV with the unadjusted probability.</p>
+<h2>Theoretical vs. realized EV</h2>
+<p>The theoretical EV is the EV at entry, computed from the option market's implied volatility and the journal's probability adjustment. The realized EV is the EV at close, computed from the actual outcomes of the closed positions.</p>
+<p>The realized EV is the journal's true measure of the methodology's effectiveness. The journal's goal is to have a realized EV that is at least as high as the theoretical EV at entry. A realized EV that is significantly below the theoretical EV is a sign that the methodology is not working as expected.</p>
+<p>The journal's typical realized EV is 60-80% of the theoretical EV at entry. The gap is due to three factors: (1) the journal's probability adjustment is not always correct, and the realized hit rate is sometimes lower than the adjusted probability; (2) the transaction costs (commissions, bid/ask spreads) reduce the realized EV by 5-10%; (3) the early closes at the 50% profit target capture only a portion of the structure's max-profit, which reduces the realized EV.</p>
+<p>The journal's rule for the realized EV is that it should be at least 50% of the theoretical EV at entry. A realized EV that is below 50% of the theoretical EV is a sign that the methodology needs to be revised.</p>
+<h2>Why a positive EV is necessary but not sufficient</h2>
+<p>A positive EV at entry is necessary for the journal to open the position, but it is not sufficient for the position to be profitable. The EV is a probability-weighted average, and the realized outcome is just one sample from the distribution. A position with a positive EV can still lose money in the short term; the EV is the long-run average, not the short-run outcome.</p>
+<p>The journal's process discipline is the mechanism by which the long-run EV is realized. The discipline ensures that the journal opens positions with a positive EV, holds the positions according to the playbook's rules, and closes the positions at the target or the stop. The discipline is what separates the journal from a trader who opens positions with a positive EV but closes them at the wrong time.</p>
+<p>The journal's rule for the EV is that the position must have a positive EV at entry, and the position must be held according to the playbook's rules. The two are inseparable: a position with a positive EV that is closed at the wrong time is not a position with a positive EV at all.</p>
+<h2>The EV in the context of the portfolio</h2>
+<p>The EV of a single position is not the same as the EV of the portfolio. The portfolio's EV is the sum of the EVs of the individual positions, but the portfolio's variance is also affected by the correlations between the positions. A portfolio of positions with positive EVs is a portfolio with a positive expected value, but the portfolio's variance may be too high to be sustainable.</p>
+<p>The journal's portfolio construction rules are designed to keep the portfolio's variance at a sustainable level. The 6% rule per underlying, the 8% rule per broad-market factor, and the 2% rule per position all limit the portfolio's variance. The rules are not arbitrary; they are the journal's way of converting the individual positions' EVs into a portfolio that has a positive EV at a sustainable variance.</p>
+<p>The portfolio's EV is reviewed monthly in the methodology audit. The audit computes the portfolio's realized EV over the trailing 12 months and compares it to the expected EV at entry. A realized EV that is significantly below the expected EV is a sign that the portfolio construction rules need to be revised.</p>
+  
+<div class="share-bar">
+ <span class="share-label">Share</span>
+ <a class="share-btn share-x" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+ </a>
+ <a class="share-btn share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+ </a>
+ <button class="share-btn share-copy" aria-label="Copy link" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.querySelector('.copy-label').textContent='Copied!';setTimeout(()=>{this.querySelector('.copy-label').textContent='Copy'},2000)})">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  <span class="copy-label">Copy</span>
+ </button>
+</div>
+
+  <div class="disclaimer">
+   <strong>Disclaimer.</strong> The Trading Journal publishes this content for informational and educational purposes only.
+   Nothing here is investment advice. Trading options involves substantial risk of loss and is not appropriate for
+   every investor. Past performance, including the journal entries on this site, does not guarantee future results.
+   You are solely responsible for your trading decisions. See the <a href="/disclaimer/">full disclaimer</a>.
+  </div>
+ </div>
+</article>
+
+<div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+ </main>
+
+ <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
+  <div style="font-size:.75rem;color:#666;margin-bottom:6px;">Advertisement</div>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9312870448453345" data-ad-slot="1216992329" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ </div>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+ <div id="site-footer"></div>
+
+ <script src="/nav.js"></script>
+ <script src="/footer.js"></script>
+
+</body>
+</html>
