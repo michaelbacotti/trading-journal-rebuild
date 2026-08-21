@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 20 Aug 2026 19:27:36 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 21 Aug 2026 10:40:16 GMT</lastBuildDate>
+  <item>
+    <title>Market Outlook — Friday, Aug 21, 2026: Jackson Hole Day, Breadth Pulls Back to 75%, Tech Continues to Weaken</title>
+    <link>https://tredey.com/forecasts/2026-08-21-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-08-21-market-outlook/</guid>
+    <pubDate>2026-08-21</pubDate>
+    <description>SPY $762.60, QQQ $710.93, IWM $297.67. VIX 15.72 (term ratio 0.825). Breadth pulled back from 100% to 75% above 50d MA. XLE +7.36% on the 20-day, still leading all sectors. XLV +6.78%. XLK worst 5-day sector at -4.02%. Jackson Hole Day — Fed Chair keynote expected Friday afternoon.</description>
+  </item>
   <item>
     <title>Adjustment Rules — When to Roll, When to Hedge, When to Hold</title>
     <link>https://tredey.com/playbook/2026-08-20-adjustment-rules/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/education/2026-08-20-statistical-foundation/</guid>
     <pubDate>2026-08-20</pubDate>
     <description>The statistical foundation of the journal's methodology: the normal distribution, the central limit theorem, the law of large numbers, and how each applies to the realized outcomes of the playbook's structures.</description>
-  </item>
-  <item>
-    <title>Trade Entries — The Anatomy of a Trade Log Record</title>
-    <link>https://tredey.com/playbook/2026-08-20-trade-entries-and-records/</link>
-    <guid>https://tredey.com/playbook/2026-08-20-trade-entries-and-records/</guid>
-    <pubDate>2026-08-20</pubDate>
-    <description>The standard format for every trade log entry: instrument, structure, strikes, expiration, premium, target, stop, reasoning, and the expected value calculation that justifies the position.</description>
   </item>
 </channel>
 </rss>
