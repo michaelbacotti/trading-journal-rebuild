@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Sun, 23 Aug 2026 15:07:42 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 24 Aug 2026 10:39:37 GMT</lastBuildDate>
+  <item>
+    <title>Market Outlook — Monday, Aug 24, 2026: Breadth Snaps Back to 100%, VIX Holds 15.9, Energy Leads</title>
+    <link>https://tredey.com/forecasts/2026-08-24-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-08-24-market-outlook/</guid>
+    <pubDate>2026-08-24</pubDate>
+    <description>SPY $765.72, QQQ $713.44, IWM $299.96. VIX 15.91. Breadth 100% (vs 75% Fri). XLE +6.74%, XLV +7.41% 20d. XLK -3.53% 5d. Post-Jackson Hole: Fed pivot holds.</description>
+  </item>
   <item>
     <title>Market Outlook — Friday, Aug 21, 2026: Jackson Hole Day, Breadth Pulls Back to 75%, Tech Continues to Weaken</title>
     <link>https://tredey.com/forecasts/2026-08-21-market-outlook/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/playbook/2026-08-20-rules-vs-discretion/</guid>
     <pubDate>2026-08-20</pubDate>
     <description>The line between mechanical rules and discretionary judgment in the playbook: which decisions are rule-based, which are discretionary, and why the journal keeps the discretionary set as small as possible.</description>
-  </item>
-  <item>
-    <title>Statistical Foundation — Why the Math Works</title>
-    <link>https://tredey.com/education/2026-08-20-statistical-foundation/</link>
-    <guid>https://tredey.com/education/2026-08-20-statistical-foundation/</guid>
-    <pubDate>2026-08-20</pubDate>
-    <description>The statistical foundation of the journal's methodology: the normal distribution, the central limit theorem, the law of large numbers, and how each applies to the realized outcomes of the playbook's structures.</description>
   </item>
 </channel>
 </rss>
