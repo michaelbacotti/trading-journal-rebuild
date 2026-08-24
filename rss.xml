@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 24 Aug 2026 10:39:37 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 24 Aug 2026 22:05:06 GMT</lastBuildDate>
+  <item>
+    <title>BE Long Call Butterfly — Jan 15 '27 260/280/300: A 144-DTE Vol-Crush Lottery Ticket</title>
+    <link>https://tredey.com/trade-log/2026-08-24-be-long-call-butterfly/</link>
+    <guid>https://tredey.com/trade-log/2026-08-24-be-long-call-butterfly/</guid>
+    <pubDate>2026-08-24</pubDate>
+    <description>Opened a BE Jan 15 2027 260/280/300 long call butterfly (144 DTE), a defined-risk, far-OTM call-only structure with reward:risk 31:1. Net debit $0.625/share ($62.50/contract). Max profit $1,937.50/contract at BE = $280; max loss $62.50. 1-contract sizing. IV ~94% (high — reflects BE's jump-risk pricing). PoP (any profit, drift-implied) ~15%; PoP (max profit zone, $260.62-$299.38) ~9.6%. BE spot $204.02.</description>
+  </item>
   <item>
     <title>Market Outlook — Monday, Aug 24, 2026: Breadth Snaps Back to 100%, VIX Holds 15.9, Energy Leads</title>
     <link>https://tredey.com/forecasts/2026-08-24-market-outlook/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/playbook/2026-08-20-risk-management/</guid>
     <pubDate>2026-08-20</pubDate>
     <description>The journal's risk management framework: position-level risk, portfolio-level risk, drawdown limits, and the difference between acceptable and unacceptable loss. The rules that the journal will not break even when the playbook says it should.</description>
-  </item>
-  <item>
-    <title>Rules vs. Discretion — Where the Journal Lets the Trader Decide</title>
-    <link>https://tredey.com/playbook/2026-08-20-rules-vs-discretion/</link>
-    <guid>https://tredey.com/playbook/2026-08-20-rules-vs-discretion/</guid>
-    <pubDate>2026-08-20</pubDate>
-    <description>The line between mechanical rules and discretionary judgment in the playbook: which decisions are rule-based, which are discretionary, and why the journal keeps the discretionary set as small as possible.</description>
   </item>
 </channel>
 </rss>
