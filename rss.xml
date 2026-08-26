@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 25 Aug 2026 13:41:18 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 26 Aug 2026 13:34:49 GMT</lastBuildDate>
+  <item>
+    <title>Market Outlook — Wednesday, Aug 26, 2026: Breadth Steady at 75%, QQQ Recovers Off 50-Day Break, XLE 5-Day Turns Negative</title>
+    <link>https://tredey.com/forecasts/2026-08-26-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-08-26-market-outlook/</guid>
+    <pubDate>2026-08-26</pubDate>
+    <description>SPY $765.91, QQQ $710.72 (still below 50-day MA $713.14), IWM $299.23. VIX 15.71. Breadth steady at 75%. QQQ 5d recovered from -3.23% to -0.95%. XLE 5d turned from +0.85% to -2.54%.</description>
+  </item>
   <item>
     <title>Market Outlook — Tuesday, Aug 25, 2026: Breadth Slips to 75%, QQQ Breaks 50-Day, XLE Widens Lead to +8.1%</title>
     <link>https://tredey.com/forecasts/2026-08-25-market-outlook/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/playbook/2026-08-20-position-sizing/</guid>
     <pubDate>2026-08-20</pubDate>
     <description>How the journal sizes every position: fixed-fractional risk per trade, max-loss cap per position, and the relationship between NLV, leverage, and structure choice.</description>
-  </item>
-  <item>
-    <title>Reading the Trade Log — How to Evaluate the Journal's Methodology</title>
-    <link>https://tredey.com/education/2026-08-20-reading-the-trade-log/</link>
-    <guid>https://tredey.com/education/2026-08-20-reading-the-trade-log/</guid>
-    <pubDate>2026-08-20</pubDate>
-    <description>How to read the trade log: filtering by structure, by ticker, by outcome; the difference between hit rate and expected value; and the patterns to look for when evaluating the journal's methodology.</description>
   </item>
 </channel>
 </rss>
