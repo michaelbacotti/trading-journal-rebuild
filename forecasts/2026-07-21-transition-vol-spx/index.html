@@ -50,16 +50,6 @@
   <p style="font-size:1.05rem;color:#666;line-height:1.6;">SPX closed Monday at $7,443.28. TRANSITION regime — price between MA50 and MA200, no clear trend. SPX Aug 21 AM-settled long strangle 7095/7890, $4,285 debit, ~32% POP, vol expansion play.</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
-  
-<section class="eeat-block" aria-label="About this article">
-  <h2>About this article</h2>
-  <p><strong>Editor:</strong> Mike Bacotti, founder of <a href="/about/">Tredey</a>. Mike has tracked options, index-derivative structure, and daily U.S. equity markets since 2017, with a working book in SPX/XSP index options and a public trade log that records every entry, adjustment, and close.</p>
-  <p><strong>Launched:</strong> Tredey went live in <time datetime="2024">2024</time> as an editorial trading-journal site covering SPX/XSP options, daily market outlooks, and the standard operating procedure that governs every position recorded on the trade log.</p>
-  <p><strong>Editorial process:</strong> Each forecast distils overnight data and primary sources (Cboe option chains, Federal Reserve releases, Treasury auctions, FRED historicals) into the worked-example frame: <em>what the tape is saying, the mechanism behind the move, what to do this week</em>. Forecasts are reviewed against the live close on the next publication; the track record is self-auditing on the <a href="/forecasts/">forecasts page</a>.</p>
-  <p><strong>Corrections policy:</strong> When an article gets a fact wrong (wrong strike, wrong P&L, wrong expected-move calculation), we correct it inline and append a dated correction note at the top of the affected page. Substantive corrections are credited to the reporter with permission. Send corrections to the address on the <a href="/contact/">contact page</a>.</p>
-  <p><strong>Disclosure:</strong> Tredey does not provide trading signals, price targets, or financial advice. The desk may hold the positions, options, or underlyings mentioned in a forecast or trade-log entry at the time of publication; positions are disclosed in the trade-log entry itself. Nothing on this site is investment advice &mdash; see the <a href="/disclaimer/">full disclaimer</a>.</p>
-</section>
-
   <p>SPX closed Monday at $7,443.28 with a tape that has lost its trend — SPY is essentially flat over 20 sessions (−0.62%) and tech (XLK) is the worst-performing sector at −8.1% over the same window. The price sits between its 50-day and 200-day moving averages, breadth has narrowed from 75% to 50% of large-caps above their 50-day MA, and the VIX term structure has flipped into mild contango (VIX 17.55 / VIX3M 20.54, ratio 0.855) — a regime signature that favors vol expansion over directional positioning.</p>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
@@ -476,6 +466,16 @@
 <p><strong>Live chain source.</strong> Strikes, mid premiums, and Greeks were pulled from the live yfinance SPX option chain at 06:41 ET on July 21, 2026. The long put 7095 mid was $37.15 (bid $36.90, ask $37.40, IV 17.7%, volume 29); the long call 7890 mid was $5.70 (bid $5.50, ask $5.90, IV 12.1%, volume 113). Total live debit was $42.85 per share or $4,285 per contract. BSM flat-IV estimate using VIX 17.55% was $5,892 (+38% above live) — within tolerance for a long-vol structure where skew and term structure create wide BSM-vs-live gaps; live values are used throughout this article. Strike selection was driven by the live chain, not by OptionStrat; build the structure in your broker and confirm premiums before placing any orders.</p>
 <p><strong>Build your own structure.</strong> <a href="https://optionstrat.com/ventureprise?ref=ventureprise" target="_blank" rel="noopener">OptionsStrat affiliate link</a> lets you model the long strangle and see the full risk curve, including vega exposure and time-decay curves that don't appear in a simple P&L table. Verify all strikes and premium with your broker before placing any orders.</p>
 <p><strong>Settlement note.</strong> Standard monthly SPX options are AM-settled — they expire on the Friday opening print, not the close. The last trade day for the Aug 21 expiry is Thursday, August 20, 2026. After Thursday's close, the position cannot be managed; overnight Thursday news lands directly in the settlement print.</p>
+  
+<section class="eeat-block" aria-label="About this article">
+  <h2>About this article</h2>
+  <p><strong>Editor:</strong> <a href="/about/">Tredey</a> Editorial Desk. The desk has tracked options, index-derivative structure, and daily U.S. equity markets since 2017, with a working book in SPX/XSP index options and a public trade log that records every entry, adjustment, and close.</p>
+  <p><strong>Launched:</strong> Tredey went live in <time datetime="2024">2024</time> as an editorial trading-journal site covering SPX/XSP options, daily market outlooks, and the standard operating procedure that governs every position recorded on the trade log.</p>
+  <p><strong>Editorial process:</strong> Each forecast distils overnight data and primary sources (Cboe option chains, Federal Reserve releases, Treasury auctions, FRED historicals) into the worked-example frame: <em>what the tape is saying, the mechanism behind the move, what to do this week</em>. Forecasts are reviewed against the live close on the next publication; the track record is self-auditing on the <a href="/forecasts/">forecasts page</a>.</p>
+  <p><strong>Corrections policy:</strong> When an article gets a fact wrong (wrong strike, wrong P&L, wrong expected-move calculation), we correct it inline and append a dated correction note at the top of the affected page. Substantive corrections are credited to the reporter with permission. Send corrections to the address on the <a href="/contact/">contact page</a>.</p>
+  <p><strong>Disclosure:</strong> Tredey does not provide trading signals, price targets, or financial advice. The desk may hold the positions, options, or underlyings mentioned in a forecast or trade-log entry at the time of publication; positions are disclosed in the trade-log entry itself. Nothing on this site is investment advice &mdash; see the <a href="/disclaimer/">full disclaimer</a>.</p>
+</section>
+
   
 <div class="share-bar">
  <span class="share-label">Share</span>

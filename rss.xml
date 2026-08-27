@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Wed, 26 Aug 2026 13:34:49 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 27 Aug 2026 10:48:44 GMT</lastBuildDate>
+  <item>
+    <title>Market Outlook — Thu, Aug 27, 2026: Bull Trend Holds, Low Volatility Demands Discipline</title>
+    <link>https://tredey.com/forecasts/2026-08-27-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-08-27-market-outlook/</guid>
+    <pubDate>2026-08-27</pubDate>
+    <description>SPX oscillates near 7,675 as the bull trend persists with VIX at 14.94. Breadth at 75%, sector rotation favors tech leadership while defensives lag. Elevated forward risk priced into the term structure warrants measured exposure.</description>
+  </item>
   <item>
     <title>Market Outlook — Wednesday, Aug 26, 2026: Breadth Steady at 75%, QQQ Recovers Off 50-Day Break, XLE 5-Day Turns Negative</title>
     <link>https://tredey.com/forecasts/2026-08-26-market-outlook/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/education/2026-08-20-options-vs-equity-trading/</guid>
     <pubDate>2026-08-20</pubDate>
     <description>The structural differences between options trading and equity trading: leverage, time decay, defined risk, and the ways the differences shape the journal's methodology. Why the journal focuses on options and how the focus changes the strategy.</description>
-  </item>
-  <item>
-    <title>Position Sizing — The Fixed-Fractional Method</title>
-    <link>https://tredey.com/playbook/2026-08-20-position-sizing/</link>
-    <guid>https://tredey.com/playbook/2026-08-20-position-sizing/</guid>
-    <pubDate>2026-08-20</pubDate>
-    <description>How the journal sizes every position: fixed-fractional risk per trade, max-loss cap per position, and the relationship between NLV, leverage, and structure choice.</description>
   </item>
 </channel>
 </rss>

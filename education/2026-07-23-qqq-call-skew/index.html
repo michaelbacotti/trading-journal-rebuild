@@ -50,16 +50,6 @@
   <p style="font-size:1.05rem;color:#666;line-height:1.6;">Why QQQ has more call skew than SPX, how to measure call skew from a live option chain, when skew widens (and when it compresses), and how the long call condor trades it. Includes the live IV surface from three July 23 trades as case studies.</p>
  </div>
  <div class="article-body" style="max-width:760px;margin:0 auto;padding:0 1.5rem 2rem;">
-  
-<section class="eeat-block" aria-label="About this article">
-  <h2>About this article</h2>
-  <p><strong>Editor:</strong> Mike Bacotti, founder of <a href="/about/">Tredey</a>. Mike has tracked options, index-derivative structure, and daily U.S. equity markets since 2017, with a working book in SPX/XSP index options and a public trade log that records every entry, adjustment, and close.</p>
-  <p><strong>Launched:</strong> Tredey went live in <time datetime="2024">2024</time> as an editorial trading-journal site covering SPX/XSP options, daily market outlooks, and the standard operating procedure that governs every position recorded on the trade log.</p>
-  <p><strong>Editorial process:</strong> Each forecast distils overnight data and primary sources (Cboe option chains, Federal Reserve releases, Treasury auctions, FRED historicals) into the worked-example frame: <em>what the tape is saying, the mechanism behind the move, what to do this week</em>. Forecasts are reviewed against the live close on the next publication; the track record is self-auditing on the <a href="/forecasts/">forecasts page</a>.</p>
-  <p><strong>Corrections policy:</strong> When an article gets a fact wrong (wrong strike, wrong P&L, wrong expected-move calculation), we correct it inline and append a dated correction note at the top of the affected page. Substantive corrections are credited to the reporter with permission. Send corrections to the address on the <a href="/contact/">contact page</a>.</p>
-  <p><strong>Disclosure:</strong> Tredey does not provide trading signals, price targets, or financial advice. The desk may hold the positions, options, or underlyings mentioned in a forecast or trade-log entry at the time of publication; positions are disclosed in the trade-log entry itself. Nothing on this site is investment advice &mdash; see the <a href="/disclaimer/">full disclaimer</a>.</p>
-</section>
-
   <p>The long call condor trades in this journal — XSP, QQQ, RSP, DRAM — all share one alpha source: <strong>call-side implied volatility skew compression</strong>. When the IV gradient from the lower body strike to the upper body strike is wide (300-800 bp), the structure collects more premium at the body floor (where theta is highest) and pays less premium at the body ceiling (where theta is lowest). As time passes and the skew normalizes, the position earns theta asymmetrically in its favor.</p>
 
 <div style="margin:2rem 0;padding:.75rem;background:var(--surface);border-radius:var(--radius);text-align:center;">
@@ -242,6 +232,16 @@ print(f"QQQ {exp} call skew at +15% OTM: {skew_bp:.0f} bp")
   <li><a href="/playbook/2026-07-05-sop/">Playbook SOP</a> — sizing and management rules</li>
 </ul>
 <p>Call skew is the alpha source for the playbook's range-bound trades on QQQ. The trade-log shows how it has been deployed in real-time across multiple earnings and FOMC cycles. The next earnings cluster (NVDA late August, AAPL/MSFT/GOOG September) is the next skew-compression opportunity.</p>
+  
+<section class="eeat-block" aria-label="About this article">
+  <h2>About this article</h2>
+  <p><strong>Editor:</strong> <a href="/about/">Tredey</a> Editorial Desk. The desk has tracked options, index-derivative structure, and daily U.S. equity markets since 2017, with a working book in SPX/XSP index options and a public trade log that records every entry, adjustment, and close.</p>
+  <p><strong>Launched:</strong> Tredey went live in <time datetime="2024">2024</time> as an editorial trading-journal site covering SPX/XSP options, daily market outlooks, and the standard operating procedure that governs every position recorded on the trade log.</p>
+  <p><strong>Editorial process:</strong> Each forecast distils overnight data and primary sources (Cboe option chains, Federal Reserve releases, Treasury auctions, FRED historicals) into the worked-example frame: <em>what the tape is saying, the mechanism behind the move, what to do this week</em>. Forecasts are reviewed against the live close on the next publication; the track record is self-auditing on the <a href="/forecasts/">forecasts page</a>.</p>
+  <p><strong>Corrections policy:</strong> When an article gets a fact wrong (wrong strike, wrong P&L, wrong expected-move calculation), we correct it inline and append a dated correction note at the top of the affected page. Substantive corrections are credited to the reporter with permission. Send corrections to the address on the <a href="/contact/">contact page</a>.</p>
+  <p><strong>Disclosure:</strong> Tredey does not provide trading signals, price targets, or financial advice. The desk may hold the positions, options, or underlyings mentioned in a forecast or trade-log entry at the time of publication; positions are disclosed in the trade-log entry itself. Nothing on this site is investment advice &mdash; see the <a href="/disclaimer/">full disclaimer</a>.</p>
+</section>
+
   
 <div class="share-bar">
  <span class="share-label">Share</span>
