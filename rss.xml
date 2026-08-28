@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 27 Aug 2026 12:20:21 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 28 Aug 2026 10:38:56 GMT</lastBuildDate>
+  <item>
+    <title>Market Outlook — Fri, Aug 28, 2026: SPX Reclaims 7,730, Breadth Hits 100%, Tech Leadership Returns</title>
+    <link>https://tredey.com/forecasts/2026-08-28-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-08-28-market-outlook/</guid>
+    <pubDate>2026-08-28</pubDate>
+    <description>SPX 7,730.99 (+0.72%) with breadth at 100% — extreme. VIX 14.48, tech led (XLK +3.01% 5d), energy stalled (XLE -2.29%). Bull regime intact ahead of September catalysts.</description>
+  </item>
   <item>
     <title>Market Outlook — Thu, Aug 27, 2026: Bull Trend Holds, Low Volatility Demands Discipline</title>
     <link>https://tredey.com/forecasts/2026-08-27-market-outlook/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/education/2026-08-20-options-market-microstructure/</guid>
     <pubDate>2026-08-20</pubDate>
     <description>The microstructure of the options market: bid/ask spreads, open interest, volume, and the way the interaction of the order book shapes the journal's entry and exit prices. The hidden cost of every trade that the price doesn't show.</description>
-  </item>
-  <item>
-    <title>Options vs. Equity Trading — Why the Journal Focuses on Options</title>
-    <link>https://tredey.com/education/2026-08-20-options-vs-equity-trading/</link>
-    <guid>https://tredey.com/education/2026-08-20-options-vs-equity-trading/</guid>
-    <pubDate>2026-08-20</pubDate>
-    <description>The structural differences between options trading and equity trading: leverage, time decay, defined risk, and the ways the differences shape the journal's methodology. Why the journal focuses on options and how the focus changes the strategy.</description>
   </item>
 </channel>
 </rss>
