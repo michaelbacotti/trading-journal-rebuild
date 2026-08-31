@@ -5,7 +5,14 @@
   <link>https://tredey.com/</link>
   <description>A daily log of trades, lessons, and probabilities</description>
   <language>en-us</language>
-  <lastBuildDate>Fri, 28 Aug 2026 10:38:56 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 31 Aug 2026 10:36:16 GMT</lastBuildDate>
+  <item>
+    <title>Market Outlook — Monday, August 31, 2026: Broad Rally Attempt Stalls as Bulls Pause</title>
+    <link>https://tredey.com/forecasts/2026-08-31-market-outlook/</link>
+    <guid>https://tredey.com/forecasts/2026-08-31-market-outlook/</guid>
+    <pubDate>2026-08-31</pubDate>
+    <description>SPX pivots near 7,712 as breadth holds firm at 75% above 50d MA, XLK and XLE pace sector leadership, and the FOMC cut consensus cedes focus to the September 17-18 meeting. Key levels, sector rotation, and risks ahead.</description>
+  </item>
   <item>
     <title>Market Outlook — Fri, Aug 28, 2026: SPX Reclaims 7,730, Breadth Hits 100%, Tech Leadership Returns</title>
     <link>https://tredey.com/forecasts/2026-08-28-market-outlook/</link>
@@ -138,13 +145,6 @@
     <guid>https://tredey.com/playbook/2026-08-20-journaling-cadence/</guid>
     <pubDate>2026-08-20</pubDate>
     <description>The four cadences of the journal's process discipline: the daily note, the weekly recap, the monthly methodology audit, and the quarterly strategic review. The four together produce the playbook's living-document quality.</description>
-  </item>
-  <item>
-    <title>Options Market Microstructure — How the Bid/Ask and the Open Interest Shape the Trade</title>
-    <link>https://tredey.com/education/2026-08-20-options-market-microstructure/</link>
-    <guid>https://tredey.com/education/2026-08-20-options-market-microstructure/</guid>
-    <pubDate>2026-08-20</pubDate>
-    <description>The microstructure of the options market: bid/ask spreads, open interest, volume, and the way the interaction of the order book shapes the journal's entry and exit prices. The hidden cost of every trade that the price doesn't show.</description>
   </item>
 </channel>
 </rss>
